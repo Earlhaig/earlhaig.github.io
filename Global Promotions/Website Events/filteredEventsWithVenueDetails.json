@@ -1,2683 +1,2674 @@
-{
-  "pagination": {
-    "object_count": 34,
-    "page_number": 1,
-    "page_size": 50,
-    "page_count": 1,
-    "has_more_items": false
-  },
-  "events": [
-    {
-      "name": {
-        "text": "PEEL YOUR OWN SPUDS",
-        "html": "PEEL YOUR OWN SPUDS"
-      },
-      "description": {
-        "text": "St Patricks Day Special featuring everybodys favourite Irish band !",
-        "html": "St Patricks Day Special featuring everybodys favourite Irish band !"
-      },
-      "url": "https://www.eventbrite.co.uk/e/peel-your-own-spuds-tickets-803846746257",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-03-17T19:30:00",
-        "utc": "2024-03-17T19:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-03-18T00:00:00",
-        "utc": "2024-03-18T00:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-01-19T10:56:40Z",
-      "changed": "2024-03-12T15:45:38Z",
-      "published": "2024-01-19T11:20:47Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "St Patricks Day Special featuring everybodys favourite Irish band !",
-      "facebook_event_id": null,
-      "logo_id": "678150009",
-      "organizer_id": "1782096963",
-      "venue_id": "193430389",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "803846746257",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/803846746257/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 177
-          },
-          "width": 442,
-          "height": 221
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F678150009%2F25081229167%2F1%2Foriginal.20240119-111625?auto=format%2Ccompress&q=75&sharp=10&s=55a6254981bbd9431a27329f310b7286",
-          "width": 452,
-          "height": 640
-        },
-        "id": "678150009",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F678150009%2F25081229167%2F1%2Foriginal.20240119-111625?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C177%2C442%2C221&s=9dcfa027f46b8b03535367a981d675d8",
-        "aspect_ratio": "2",
-        "edge_color": null,
-        "edge_color_set": true
-      }
+[
+  {
+    "name": {
+      "text": "PEEL YOUR OWN SPUDS",
+      "html": "PEEL YOUR OWN SPUDS"
     },
-    {
-      "name": {
-        "text": "THE SPECIALS  LTD",
-        "html": "THE SPECIALS  LTD"
-      },
-      "description": {
-        "text": "Authentic tribute to The Specials featuring all of the classic Two Tone anthems",
-        "html": "Authentic tribute to The Specials featuring all of the classic Two Tone anthems"
-      },
-      "url": "https://www.eventbrite.co.uk/e/the-specials-ltd-tickets-774776706987",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-03-22T19:30:00",
-        "utc": "2024-03-22T19:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-03-22T22:30:00",
-        "utc": "2024-03-22T22:30:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-12-09T14:49:40Z",
-      "changed": "2024-03-02T18:42:44Z",
-      "published": "2023-12-09T14:59:43Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "Authentic tribute to The Specials featuring all of the classic Two Tone anthems",
-      "facebook_event_id": null,
-      "logo_id": "665293409",
-      "organizer_id": "1782096963",
-      "venue_id": "187768089",
-      "category_id": "199",
-      "subcategory_id": null,
-      "format_id": "6",
-      "id": "774776706987",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/774776706987/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 647
-          },
-          "width": 1232,
-          "height": 616
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F665293409%2F25081229167%2F1%2Foriginal.20231231-125241?auto=format%2Ccompress&q=75&sharp=10&s=1016e64a43e256298f6d3105360fa544",
-          "width": 1247,
-          "height": 1740
-        },
-        "id": "665293409",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F665293409%2F25081229167%2F1%2Foriginal.20231231-125241?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C647%2C1232%2C616&s=21d670ce2420c57c686bb35710c8612c",
-        "aspect_ratio": "2",
-        "edge_color": "#ffffff",
-        "edge_color_set": true
-      }
+    "description": {
+      "text": "St Patricks Day Special featuring everybodys favourite Irish band !",
+      "html": "St Patricks Day Special featuring everybodys favourite Irish band !"
     },
-    {
-      "name": {
-        "text": "THE DOORS RISING",
-        "html": "THE DOORS RISING"
-      },
-      "description": {
-        "text": "An excellent reincarnation of The Doors  performing all of their classic songs.",
-        "html": "An excellent reincarnation of The Doors  performing all of their classic songs."
-      },
-      "url": "https://www.eventbrite.co.uk/e/the-doors-rising-tickets-763575564067",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-03-23T19:30:00",
-        "utc": "2024-03-23T19:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-03-23T23:00:00",
-        "utc": "2024-03-23T23:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-11-20T19:54:35Z",
-      "changed": "2024-03-10T00:42:55Z",
-      "published": "2023-11-20T20:13:31Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "An excellent reincarnation of The Doors  performing all of their classic songs.",
-      "facebook_event_id": null,
-      "logo_id": "645324939",
-      "organizer_id": "1782096963",
-      "venue_id": "185153139",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "763575564067",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/763575564067/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 5
-          },
-          "width": 842,
-          "height": 421
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645324939%2F25081229167%2F1%2Foriginal.20231120-195557?auto=format%2Ccompress&q=75&sharp=10&s=6eeb8ff472f87bee35065c81f5b89d20",
-          "width": 842,
-          "height": 1191
-        },
-        "id": "645324939",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645324939%2F25081229167%2F1%2Foriginal.20231120-195557?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C5%2C842%2C421&s=4476a59f3bb360ca61116193ec21f8a4",
-        "aspect_ratio": "2",
-        "edge_color": "#000000",
-        "edge_color_set": true
-      }
+    "url": "https://www.eventbrite.co.uk/e/peel-your-own-spuds-tickets-803846746257",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-03-17T19:30:00",
+      "utc": "2024-03-17T19:30:00Z"
     },
-    {
-      "name": {
-        "text": "CELEBRATE ZAPPA - The Treacherous Cretins feat Robert Martin",
-        "html": "CELEBRATE ZAPPA - The Treacherous Cretins feat Robert Martin"
-      },
-      "description": {
-        "text": "A  Celebration of the music of FRANK ZAPPA featuring a member of the Mothers Of Invention Robert Martin",
-        "html": "A  Celebration of the music of FRANK ZAPPA featuring a member of the Mothers Of Invention Robert Martin"
-      },
-      "url": "https://www.eventbrite.co.uk/e/celebrate-zappa-the-treacherous-cretins-feat-robert-martin-tickets-713766363407",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-04-11T19:30:00",
-        "utc": "2024-04-11T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-04-11T23:00:00",
-        "utc": "2024-04-11T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-09-05T14:32:20Z",
-      "changed": "2024-03-09T17:00:41Z",
-      "published": "2023-09-05T14:53:20Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "A  Celebration of the music of FRANK ZAPPA featuring a member of the Mothers Of Invention Robert Martin",
-      "facebook_event_id": null,
-      "logo_id": "590418629",
-      "organizer_id": "1782096963",
-      "venue_id": "172316049",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "713766363407",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/713766363407/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 51
-          },
-          "width": 1080,
-          "height": 540
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F590418629%2F25081229167%2F1%2Foriginal.20230905-143257?auto=format%2Ccompress&q=75&sharp=10&s=bfc8ff0285dd003e653437e40d6ad5a6",
-          "width": 1080,
-          "height": 1528
-        },
-        "id": "590418629",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F590418629%2F25081229167%2F1%2Foriginal.20230905-143257?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C51%2C1080%2C540&s=b6222dd3dd9e692be0e5e7c7e0f3a5fc",
-        "aspect_ratio": "2",
-        "edge_color": "#342a1f",
-        "edge_color_set": true
-      }
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-03-18T00:00:00",
+      "utc": "2024-03-18T00:00:00Z"
     },
-    {
-      "name": {
-        "text": "DIRTY /DC",
-        "html": "DIRTY /DC"
-      },
-      "description": {
-        "text": "A fantastic tribute to one of the most popular classic rock bands of the past 40 years.Two hours of non stop high octane rock n roll !!",
-        "html": "A fantastic tribute to one of the most popular classic rock bands of the past 40 years.Two hours of non stop high octane rock n roll !!"
-      },
-      "url": "https://www.eventbrite.co.uk/e/dirty-dc-tickets-761821256887",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-04-20T19:30:00",
-        "utc": "2024-04-20T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-04-20T23:00:00",
-        "utc": "2024-04-20T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-11-18T18:16:44Z",
-      "changed": "2024-02-25T22:26:07Z",
-      "published": "2023-11-18T18:26:59Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "A fantastic tribute to one of the most popular classic rock bands of the past 40 years.Two hours of non stop high octane rock n roll !!",
-      "facebook_event_id": null,
-      "logo_id": "644368889",
-      "organizer_id": "1782096963",
-      "venue_id": "184926889",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "761821256887",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/761821256887/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 5
-          },
-          "width": 842,
-          "height": 421
+    "organization_id": "25081229167",
+    "created": "2024-01-19T10:56:40Z",
+    "changed": "2024-03-12T15:45:38Z",
+    "published": "2024-01-19T11:20:47Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "St Patricks Day Special featuring everybodys favourite Irish band !",
+    "facebook_event_id": null,
+    "logo_id": "678150009",
+    "organizer_id": "1782096963",
+    "venue_id": "193430389",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "803846746257",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/803846746257/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 177
         },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644368889%2F25081229167%2F1%2Foriginal.20231118-181737?auto=format%2Ccompress&q=75&sharp=10&s=660825e03e7b29d0a50da167081b0fd5",
-          "width": 842,
-          "height": 1191
-        },
-        "id": "644368889",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644368889%2F25081229167%2F1%2Foriginal.20231118-181737?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C5%2C842%2C421&s=be0f31454680335f4baf096564db5788",
-        "aspect_ratio": "2",
-        "edge_color": "#000000",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "FOCUS",
-        "html": "FOCUS"
-      },
-      "description": {
-        "text": "Dutch Prog Rock Legends  FOCUS  performing their classic repertoire.",
-        "html": "Dutch Prog Rock Legends  FOCUS  performing their classic repertoire."
-      },
-      "url": "https://www.eventbrite.co.uk/e/focus-tickets-726687741597",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-04-26T19:30:00",
-        "utc": "2024-04-26T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-04-26T23:00:00",
-        "utc": "2024-04-26T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-09-26T11:11:24Z",
-      "changed": "2024-03-11T18:31:00Z",
-      "published": "2023-09-26T12:00:06Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "Dutch Prog Rock Legends  FOCUS  performing their classic repertoire.",
-      "facebook_event_id": null,
-      "logo_id": "606484419",
-      "organizer_id": "1782096963",
-      "venue_id": "175974949",
-      "category_id": "199",
-      "subcategory_id": null,
-      "format_id": "1",
-      "id": "726687741597",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/726687741597/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 4724,
-          "height": 2362
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F606484419%2F25081229167%2F1%2Foriginal.20230926-111201?auto=format%2Ccompress&q=75&sharp=10&s=9ab1a231d2abc3482764866a9acc5926",
-          "width": 4724,
-          "height": 3308
-        },
-        "id": "606484419",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F606484419%2F25081229167%2F1%2Foriginal.20230926-111201?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C4724%2C2362&s=3527b73abc05f594b001cd744352b688",
-        "aspect_ratio": "2",
-        "edge_color": "#36496a",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "LETZ  ZEP",
-        "html": "LETZ  ZEP"
-      },
-      "description": {
-        "text": "The UKs premier tribute to LED ZEPPELIN  .A two hour performance led by charismatic singer Billy Kulke performing all the classic anthems  .",
-        "html": "The UKs premier tribute to LED ZEPPELIN  .A two hour performance led by charismatic singer Billy Kulke performing all the classic anthems  ."
-      },
-      "url": "https://www.eventbrite.co.uk/e/letz-zep-tickets-761811628087",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-04-27T19:30:00",
-        "utc": "2024-04-27T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-04-27T23:00:00",
-        "utc": "2024-04-27T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-11-18T17:56:10Z",
-      "changed": "2024-03-03T22:50:08Z",
-      "published": "2023-11-18T18:11:19Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "The UKs premier tribute to LED ZEPPELIN  .A two hour performance led by charismatic singer Billy Kulke performing all the classic anthems  .",
-      "facebook_event_id": null,
-      "logo_id": "644363369",
-      "organizer_id": "1782096963",
-      "venue_id": "184925229",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "761811628087",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/761811628087/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 125
-          },
-          "width": 842,
-          "height": 421
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644363369%2F25081229167%2F1%2Foriginal.20231118-180110?auto=format%2Ccompress&q=75&sharp=10&s=b18f8c497b66eede8070056542107aa4",
-          "width": 842,
-          "height": 1191
-        },
-        "id": "644363369",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644363369%2F25081229167%2F1%2Foriginal.20231118-180110?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C125%2C842%2C421&s=bac429f5e90f4b4ff4d685a97fb097cc",
-        "aspect_ratio": "2",
-        "edge_color": "#bc2c4f",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "THE PIECES OF MIND",
-        "html": "THE PIECES OF MIND"
-      },
-      "description": {
-        "text": "Iconic Newport band formed in the 'sixties and performed with many of the top touring acts of the time. Making a welcome return !",
-        "html": "Iconic Newport band formed in the 'sixties and performed with many of the top touring acts of the time. Making a welcome return !"
-      },
-      "url": "https://www.eventbrite.co.uk/e/the-pieces-of-mind-tickets-790069939457",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-04-28T19:30:00",
-        "utc": "2024-04-28T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-04-29T00:00:00",
-        "utc": "2024-04-28T23:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-01-04T12:57:28Z",
-      "changed": "2024-03-11T13:53:06Z",
-      "published": "2024-01-04T13:28:04Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "Iconic Newport band formed in the 'sixties and performed with many of the top touring acts of the time. Making a welcome return !",
-      "facebook_event_id": null,
-      "logo_id": "667408929",
-      "organizer_id": "1782096963",
-      "venue_id": "190761899",
-      "category_id": "105",
-      "subcategory_id": "5002",
-      "format_id": "6",
-      "id": "790069939457",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/790069939457/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 10
-          },
-          "width": 4878,
-          "height": 2439
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F667408929%2F25081229167%2F1%2Foriginal.20240104-125805?auto=format%2Ccompress&q=75&sharp=10&s=74286b371bc333bb51a8566c6bb8a2a9",
-          "width": 4967,
-          "height": 7016
-        },
-        "id": "667408929",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F667408929%2F25081229167%2F1%2Foriginal.20240104-125805?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C10%2C4878%2C2439&s=14f7827e42f86a368909e3df24b56903",
-        "aspect_ratio": "2",
-        "edge_color": "#fe6d16",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "BOOTLEG  BLONDIE",
-        "html": "BOOTLEG  BLONDIE"
-      },
-      "description": {
-        "text": "A great live show featuring Debbie Harris as lead singer Debbie Harry endorsed by Blondie herself ! A full show of countless hits !!!",
-        "html": "A great live show featuring Debbie Harris as lead singer Debbie Harry endorsed by Blondie herself ! A full show of countless hits !!!"
-      },
-      "url": "https://www.eventbrite.co.uk/e/bootleg-blondie-tickets-761826863657",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-05-03T19:30:00",
-        "utc": "2024-05-03T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-05-03T23:00:00",
-        "utc": "2024-05-03T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-11-18T18:31:44Z",
-      "changed": "2024-02-28T14:06:32Z",
-      "published": "2023-11-18T18:51:48Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "A great live show featuring Debbie Harris as lead singer Debbie Harry endorsed by Blondie herself ! A full show of countless hits !!!",
-      "facebook_event_id": null,
-      "logo_id": "644373239",
-      "organizer_id": "1782096963",
-      "venue_id": "184927659",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "761826863657",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/761826863657/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 65
-          },
-          "width": 842,
-          "height": 421
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644373239%2F25081229167%2F1%2Foriginal.20231118-183245?auto=format%2Ccompress&q=75&sharp=10&s=b2edbe18f16c1c4fd9ebfa832f537838",
-          "width": 842,
-          "height": 1191
-        },
-        "id": "644373239",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644373239%2F25081229167%2F1%2Foriginal.20231118-183245?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C65%2C842%2C421&s=bdeb273b3abef0b59b1d1ac6e2b3df01",
-        "aspect_ratio": "2",
-        "edge_color": "#000000",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "BOOTLEG BLONDIE",
-        "html": "BOOTLEG BLONDIE"
-      },
-      "description": {
-        "text": "Debbie Harris performing an accurate and engaging tribute to Deborah Harry doesnt get much better!\n\nEndorsed by Blondie herself the band has",
-        "html": "Debbie Harris performing an accurate and engaging tribute to Deborah Harry doesnt get much better!\n\nEndorsed by Blondie herself the band has"
-      },
-      "url": "https://www.eventbrite.co.uk/e/bootleg-blondie-tickets-761837836477",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-05-04T19:00:00",
-        "utc": "2024-05-04T18:00:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-05-04T23:00:00",
-        "utc": "2024-05-04T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-11-18T18:56:30Z",
-      "changed": "2024-02-28T19:50:35Z",
-      "published": "2023-11-18T19:18:06Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "Debbie Harris performing an accurate and engaging tribute to Deborah Harry doesnt get much better!\n\nEndorsed by Blondie herself the band has",
-      "facebook_event_id": null,
-      "logo_id": "644380299",
-      "organizer_id": "1782096963",
-      "venue_id": "184929309",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "761837836477",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/761837836477/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 50
-          },
-          "width": 842,
-          "height": 421
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644380299%2F25081229167%2F1%2Foriginal.20231118-185706?auto=format%2Ccompress&q=75&sharp=10&s=35df8a8109a5d573730ea4b143a430a6",
-          "width": 842,
-          "height": 1191
-        },
-        "id": "644380299",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644380299%2F25081229167%2F1%2Foriginal.20231118-185706?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C50%2C842%2C421&s=a737f653424b05530872100db056f1af",
-        "aspect_ratio": "2",
-        "edge_color": "#000000",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "HAYSEED DIXIE",
-        "html": "HAYSEED DIXIE"
-      },
-      "description": {
-        "text": "HAYSEED DIXIE bring along their night of Maximum Rockgrass featuring excellent bluegrass versions of classic rock songs",
-        "html": "HAYSEED DIXIE bring along their night of Maximum Rockgrass featuring excellent bluegrass versions of classic rock songs"
-      },
-      "url": "https://www.eventbrite.co.uk/e/hayseed-dixie-tickets-746413993347",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-05-10T19:30:00",
-        "utc": "2024-05-10T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-05-10T23:00:00",
-        "utc": "2024-05-10T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-10-26T23:18:08Z",
-      "changed": "2024-03-07T07:33:23Z",
-      "published": "2023-10-26T23:28:53Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "HAYSEED DIXIE bring along their night of Maximum Rockgrass featuring excellent bluegrass versions of classic rock songs",
-      "facebook_event_id": null,
-      "logo_id": "629521779",
-      "organizer_id": "1782096963",
-      "venue_id": "181450749",
-      "category_id": "103",
-      "subcategory_id": "3021",
-      "format_id": "6",
-      "id": "746413993347",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/746413993347/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 842,
-          "height": 421
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F629521779%2F25081229167%2F1%2Foriginal.20231026-231843?auto=format%2Ccompress&q=75&sharp=10&s=da9ad67826bc5f7f5e6fc6baa2297214",
-          "width": 842,
-          "height": 842
-        },
-        "id": "629521779",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F629521779%2F25081229167%2F1%2Foriginal.20231026-231843?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C842%2C421&s=1ccc8c6f2884b5cb7367850f11a39d76",
-        "aspect_ratio": "2",
-        "edge_color": "#c07a62",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "BON GIOVI",
-        "html": "BON GIOVI"
-      },
-      "description": {
-        "text": "Top tribute to BON JOVI performing  all of the bands greatest hits",
-        "html": "Top tribute to BON JOVI performing  all of the bands greatest hits"
-      },
-      "url": "https://www.eventbrite.co.uk/e/bon-giovi-tickets-763903555097",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-05-17T19:30:00",
-        "utc": "2024-05-17T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-05-17T23:00:00",
-        "utc": "2024-05-17T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-11-21T13:05:49Z",
-      "changed": "2023-11-21T13:12:50Z",
-      "published": "2023-11-21T13:12:50Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "Top tribute to BON JOVI performing  all of the bands greatest hits",
-      "facebook_event_id": null,
-      "logo_id": "645798539",
-      "organizer_id": "1782096963",
-      "venue_id": "185259619",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "763903555097",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/763903555097/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 842,
-          "height": 421
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645798539%2F25081229167%2F1%2Foriginal.20231121-130634?auto=format%2Ccompress&q=75&sharp=10&s=ac17eaac42cba00684972c62aca69310",
-          "width": 842,
-          "height": 1191
-        },
-        "id": "645798539",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645798539%2F25081229167%2F1%2Foriginal.20231121-130634?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C842%2C421&s=b7013b7ae470b267c1726d1ad1c0ea15",
-        "aspect_ratio": "2",
-        "edge_color": "#000000",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "ABSOLUTE BOWIE",
-        "html": "ABSOLUTE BOWIE"
-      },
-      "description": {
-        "text": "The Ultimate Bowie Tribute",
-        "html": "The Ultimate Bowie Tribute"
-      },
-      "url": "https://www.eventbrite.co.uk/e/absolute-bowie-tickets-775885363007",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-05-24T19:30:00",
-        "utc": "2024-05-24T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-05-24T23:00:00",
-        "utc": "2024-05-24T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-12-11T21:11:48Z",
-      "changed": "2024-02-28T19:50:35Z",
-      "published": "2023-12-11T21:23:41Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "The Ultimate Bowie Tribute",
-      "facebook_event_id": null,
-      "logo_id": "656928229",
-      "organizer_id": "1782096963",
-      "venue_id": "188000729",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "775885363007",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/775885363007/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": null,
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F656928229%2F25081229167%2F1%2Foriginal.20231211-211238?auto=format%2Ccompress&q=75&sharp=10&s=8a4deee528774cc126c736ad23af7657",
-          "width": 452,
-          "height": 640
-        },
-        "id": "656928229",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F656928229%2F25081229167%2F1%2Foriginal.20231211-211238?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=a8b98afa20d0e83b4c1ef1ffe402fae4",
-        "aspect_ratio": "0.705",
-        "edge_color": null,
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "LIMEHOUSE LIZZY",
-        "html": "LIMEHOUSE LIZZY"
-      },
-      "description": {
-        "text": "The Uks Premier tribute to Phil Lynott & Thin Lizzy",
-        "html": "The Uks Premier tribute to Phil Lynott &amp; Thin Lizzy"
-      },
-      "url": "https://www.eventbrite.co.uk/e/limehouse-lizzy-tickets-751838076927",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-05-31T19:30:00",
-        "utc": "2024-05-31T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-05-31T23:00:00",
-        "utc": "2024-05-31T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-11-03T20:12:44Z",
-      "changed": "2024-02-28T19:50:34Z",
-      "published": "2023-11-03T20:18:16Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "The Uks Premier tribute to Phil Lynott & Thin Lizzy",
-      "facebook_event_id": null,
-      "logo_id": "634778939",
-      "organizer_id": "1782096963",
-      "venue_id": "182687269",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "751838076927",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/751838076927/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 21
-          },
-          "width": 842,
-          "height": 421
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F634778939%2F25081229167%2F1%2Foriginal.20231103-201304?auto=format%2Ccompress&q=75&sharp=10&s=ceea90d70d26e87faaacbeb255a23063",
-          "width": 842,
-          "height": 1191
-        },
-        "id": "634778939",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F634778939%2F25081229167%2F1%2Foriginal.20231103-201304?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C21%2C842%2C421&s=2ddd69f73d9c8cc3da2e434a4e003b0d",
-        "aspect_ratio": "2",
-        "edge_color": null,
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "LIMEHOUSE LIZZY",
-        "html": "LIMEHOUSE LIZZY"
-      },
-      "description": {
-        "text": "THe UKs Premier tribute to Phil Lynott and Thin Lizzy",
-        "html": "THe UKs Premier tribute to Phil Lynott and Thin Lizzy"
-      },
-      "url": "https://www.eventbrite.co.uk/e/limehouse-lizzy-tickets-751827074017",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-06-01T19:30:00",
-        "utc": "2024-06-01T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-06-01T23:00:00",
-        "utc": "2024-06-01T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-11-03T19:45:14Z",
-      "changed": "2024-02-02T20:16:55Z",
-      "published": "2023-11-03T20:07:53Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "THe UKs Premier tribute to Phil Lynott and Thin Lizzy",
-      "facebook_event_id": null,
-      "logo_id": "634757809",
-      "organizer_id": "1782096963",
-      "venue_id": "182682839",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "751827074017",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/751827074017/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 24
-          },
-          "width": 842,
-          "height": 421
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F634757809%2F25081229167%2F1%2Foriginal.20231103-194554?auto=format%2Ccompress&q=75&sharp=10&s=c0d619488f880584d5276f4adbe4e183",
-          "width": 842,
-          "height": 1191
-        },
-        "id": "634757809",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F634757809%2F25081229167%2F1%2Foriginal.20231103-194554?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C24%2C842%2C421&s=11c99c03e00d7eb0fb578bbf64d47481",
-        "aspect_ratio": "2",
-        "edge_color": null,
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "LEGEND",
-        "html": "LEGEND"
-      },
-      "description": {
-        "text": "THE UK'S NO 1.TRIBUTE TO BOB MARLEY- A night of reggae classics !",
-        "html": "THE UK'S NO 1.TRIBUTE TO BOB MARLEY- A night of reggae classics !"
-      },
-      "url": "https://www.eventbrite.co.uk/e/legend-tickets-763600558827",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-06-14T19:30:00",
-        "utc": "2024-06-14T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-06-14T23:00:00",
-        "utc": "2024-06-14T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-11-20T20:48:21Z",
-      "changed": "2024-03-12T17:14:00Z",
-      "published": "2023-11-20T20:52:06Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "THE UK'S NO 1.TRIBUTE TO BOB MARLEY- A night of reggae classics !",
-      "facebook_event_id": null,
-      "logo_id": "645370789",
-      "organizer_id": "1782096963",
-      "venue_id": "185164009",
-      "category_id": "103",
-      "subcategory_id": "3015",
-      "format_id": "6",
-      "id": "763600558827",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/763600558827/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 842,
-          "height": 421
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645370789%2F25081229167%2F1%2Foriginal.20231120-204858?auto=format%2Ccompress&q=75&sharp=10&s=d5ae9aac80610649e1e49af87c6906d0",
-          "width": 842,
-          "height": 1191
-        },
-        "id": "645370789",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645370789%2F25081229167%2F1%2Foriginal.20231120-204858?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C842%2C421&s=b53bcc46eacd01a7a4cb727efafa3a7c",
-        "aspect_ratio": "2",
-        "edge_color": "#000000",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "LEGEND",
-        "html": "LEGEND"
-      },
-      "description": {
-        "text": "THE UK'S NO 1. TRIBUTE TO BOB MARLEY. A Night of Reggae Classics !",
-        "html": "THE UK'S NO 1. TRIBUTE TO BOB MARLEY. A Night of Reggae Classics !"
-      },
-      "url": "https://www.eventbrite.co.uk/e/legend-tickets-763604019177",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-06-15T19:30:00",
-        "utc": "2024-06-15T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-06-15T23:00:00",
-        "utc": "2024-06-15T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-11-20T20:55:53Z",
-      "changed": "2024-03-10T18:18:05Z",
-      "published": "2023-11-20T21:00:02Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "THE UK'S NO 1. TRIBUTE TO BOB MARLEY. A Night of Reggae Classics !",
-      "facebook_event_id": null,
-      "logo_id": "645377119",
-      "organizer_id": "1782096963",
-      "venue_id": "185165729",
-      "category_id": "103",
-      "subcategory_id": "3015",
-      "format_id": "6",
-      "id": "763604019177",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/763604019177/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 842,
-          "height": 421
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645377119%2F25081229167%2F1%2Foriginal.20231120-205642?auto=format%2Ccompress&q=75&sharp=10&s=d3765368689107625898657a42b6bc14",
-          "width": 842,
-          "height": 1191
-        },
-        "id": "645377119",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645377119%2F25081229167%2F1%2Foriginal.20231120-205642?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C842%2C421&s=4ba4ebcadd6b6a91e187105934ea237e",
-        "aspect_ratio": "2",
-        "edge_color": null,
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "ARE YOU EXPERIENCED ?",
-        "html": "ARE YOU EXPERIENCED ?"
-      },
-      "description": {
-        "text": "The ultimate tribute to JIMI HENDRIX",
-        "html": "The ultimate tribute to JIMI HENDRIX"
-      },
-      "url": "https://www.eventbrite.co.uk/e/are-you-experienced-tickets-856925456107",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-06-22T19:30:00",
-        "utc": "2024-06-22T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-06-22T23:00:00",
-        "utc": "2024-06-22T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-03-05T11:56:49Z",
-      "changed": "2024-03-06T13:11:19Z",
-      "published": "2024-03-05T12:03:14Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "The ultimate tribute to JIMI HENDRIX",
-      "facebook_event_id": null,
-      "logo_id": "711772169",
-      "organizer_id": "1782096963",
-      "venue_id": "201497879",
-      "category_id": "103",
-      "subcategory_id": "3028",
-      "format_id": "6",
-      "id": "856925456107",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/856925456107/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 3
-          },
-          "width": 224,
-          "height": 112
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711772169%2F25081229167%2F1%2Foriginal.20240305-115723?auto=format%2Ccompress&q=75&sharp=10&s=3fe3422e6c559b185c9b5386512cf79f",
-          "width": 225,
-          "height": 320
-        },
-        "id": "711772169",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711772169%2F25081229167%2F1%2Foriginal.20240305-115723?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C3%2C224%2C112&s=c008a93bd6e4198310be0f34de47c455",
-        "aspect_ratio": "2",
-        "edge_color": "#6b5664",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "BAND OF FRIENDS - Celebrating The Music Of Rory Gallagher",
-        "html": "BAND OF FRIENDS - Celebrating The Music Of Rory Gallagher"
-      },
-      "description": {
-        "text": "Three top musicians ,two who have played alongside the man himself ,celebrating the glorious music of the legendary Rory Gallagher",
-        "html": "Three top musicians ,two who have played alongside the man himself ,celebrating the glorious music of the legendary Rory Gallagher"
-      },
-      "url": "https://www.eventbrite.co.uk/e/band-of-friends-celebrating-the-music-of-rory-gallagher-tickets-850761780387",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-07-31T19:30:00",
-        "utc": "2024-07-31T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-07-31T23:00:00",
-        "utc": "2024-07-31T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-02-26T13:56:23Z",
-      "changed": "2024-03-03T14:20:29Z",
-      "published": "2024-02-26T14:36:43Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "Three top musicians ,two who have played alongside the man himself ,celebrating the glorious music of the legendary Rory Gallagher",
-      "facebook_event_id": null,
-      "logo_id": "705316329",
-      "organizer_id": "1782096963",
-      "venue_id": "199981639",
-      "category_id": "103",
-      "subcategory_id": "3022",
-      "format_id": "6",
-      "id": "850761780387",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/850761780387/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 594,
-          "height": 297
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F705316329%2F25081229167%2F1%2Foriginal.20240226-135709?auto=format%2Ccompress&q=75&sharp=10&s=1a39169f11ab02cce0e450648e912bd9",
-          "width": 595,
-          "height": 842
-        },
-        "id": "705316329",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F705316329%2F25081229167%2F1%2Foriginal.20240226-135709?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C594%2C297&s=20c79c4e5c767f7941b28f48718c80ea",
-        "aspect_ratio": "2",
-        "edge_color": "#050505",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "LOVE with Johnny Echols",
-        "html": "LOVE with Johnny Echols"
-      },
-      "description": {
-        "text": "From USA paying a return visit after their successful show in 2023.",
-        "html": "From USA paying a return visit after their successful show in 2023."
-      },
-      "url": "https://www.eventbrite.co.uk/e/love-with-johnny-echols-tickets-769942467647",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-08-02T19:30:00",
-        "utc": "2024-08-02T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-08-02T23:00:00",
-        "utc": "2024-08-02T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-11-30T22:38:36Z",
-      "changed": "2024-03-11T08:34:31Z",
-      "published": "2023-11-30T22:51:11Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "From USA paying a return visit after their successful show in 2023.",
-      "facebook_event_id": null,
-      "logo_id": "651330549",
-      "organizer_id": "1782096963",
-      "venue_id": "186602829",
-      "category_id": "103",
-      "subcategory_id": "3028",
-      "format_id": "6",
-      "id": "769942467647",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/769942467647/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 42
-          },
-          "width": 452,
-          "height": 226
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F651330549%2F25081229167%2F1%2Foriginal.20231130-224133?auto=format%2Ccompress&q=75&sharp=10&s=6b8401aea8745e1eb478a3792b2a8a59",
-          "width": 452,
-          "height": 640
-        },
-        "id": "651330549",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F651330549%2F25081229167%2F1%2Foriginal.20231130-224133?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C42%2C452%2C226&s=3b59e3a98b68801853b88060a4228033",
-        "aspect_ratio": "2",
-        "edge_color": null,
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "MAN",
-        "html": "MAN"
-      },
-      "description": {
-        "text": "The  MAN  band featuring original member Martin Ace performing their  popular classics mixed with their new album material",
-        "html": "The  MAN  band featuring original member Martin Ace performing their  popular classics mixed with their new album material"
-      },
-      "url": "https://www.eventbrite.co.uk/e/man-tickets-856933129057",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-08-02T19:30:00",
-        "utc": "2024-08-02T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-08-02T23:00:00",
-        "utc": "2024-08-02T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-03-05T12:19:13Z",
-      "changed": "2024-03-05T12:45:28Z",
-      "published": "2024-03-05T12:45:28Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "The  MAN  band featuring original member Martin Ace performing their  popular classics mixed with their new album material",
-      "facebook_event_id": null,
-      "logo_id": "711786039",
-      "organizer_id": "1782096963",
-      "venue_id": "201500849",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "856933129057",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/856933129057/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 226,
-          "height": 113
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711786039%2F25081229167%2F1%2Foriginal.20240305-122254?auto=format%2Ccompress&q=75&sharp=10&s=f379090461195faf94d0395900941f15",
-          "width": 226,
-          "height": 320
-        },
-        "id": "711786039",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711786039%2F25081229167%2F1%2Foriginal.20240305-122254?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C226%2C113&s=ac1b4e36062aa9103c42abee579ef442",
-        "aspect_ratio": "2",
-        "edge_color": "#2a2e2e",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "Europes Premier Tributes to PINK & ROBBiE WILLIAMS",
-        "html": "Europes Premier Tributes to PINK &amp; ROBBiE WILLIAMS"
-      },
-      "description": {
-        "text": "An evening of great entertainment featuring two of the  best tribute acts on the circuit",
-        "html": "An evening of great entertainment featuring two of the  best tribute acts on the circuit"
-      },
-      "url": "https://www.eventbrite.co.uk/e/europes-premier-tributes-to-pink-robbie-williams-tickets-803355657397",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-08-08T18:00:00",
-        "utc": "2024-08-08T17:00:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-08-08T23:00:00",
-        "utc": "2024-08-08T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-01-18T20:03:14Z",
-      "changed": "2024-02-25T14:44:08Z",
-      "published": "2024-01-18T20:49:47Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "An evening of great entertainment featuring two of the  best tribute acts on the circuit",
-      "facebook_event_id": null,
-      "logo_id": "677850059",
-      "organizer_id": "1782096963",
-      "venue_id": "193336969",
-      "category_id": "105",
-      "subcategory_id": "5002",
-      "format_id": "6",
-      "id": "803355657397",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/803355657397/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 567
-          },
-          "width": 1240,
-          "height": 620
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F677850059%2F25081229167%2F1%2Foriginal.20240118-222330?auto=format%2Ccompress&q=75&sharp=10&s=b07946c8776ec8d67655966b3ad476e7",
-          "width": 1240,
-          "height": 1754
-        },
-        "id": "677850059",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F677850059%2F25081229167%2F1%2Foriginal.20240118-222330?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C567%2C1240%2C620&s=c7063e814c535ecb73c4116ad3e6cedb",
-        "aspect_ratio": "2",
-        "edge_color": "#2b3552",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "CREEDENCE CLEARWATER REVIEW",
-        "html": "CREEDENCE CLEARWATER REVIEW"
-      },
-      "description": {
-        "text": "A  great tribute to one of Americas iconic seventies rock bands-All of the greatest hits plus some from John Fogerty's solo repertioire",
-        "html": "A  great tribute to one of Americas iconic seventies rock bands-All of the greatest hits plus some from John Fogerty's solo repertioire"
-      },
-      "url": "https://www.eventbrite.co.uk/e/creedence-clearwater-review-tickets-856235612767",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-08-09T19:30:00",
-        "utc": "2024-08-09T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-08-09T23:00:00",
-        "utc": "2024-08-09T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-03-04T17:00:55Z",
-      "changed": "2024-03-05T16:50:05Z",
-      "published": "2024-03-04T17:13:15Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "A  great tribute to one of Americas iconic seventies rock bands-All of the greatest hits plus some from John Fogerty's solo repertioire",
-      "facebook_event_id": null,
-      "logo_id": "711015979",
-      "organizer_id": "1782096963",
-      "venue_id": "201321659",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "856235612767",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/856235612767/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 519
-          },
-          "width": 842,
-          "height": 421
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711015979%2F25081229167%2F1%2Foriginal.20240304-170143?auto=format%2Ccompress&q=75&sharp=10&s=bac8797abf102b9e0c607e826f6db88a",
-          "width": 842,
-          "height": 1191
-        },
-        "id": "711015979",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711015979%2F25081229167%2F1%2Foriginal.20240304-170143?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C519%2C842%2C421&s=5d8645be02325e88efaef409b92713a0",
-        "aspect_ratio": "2",
-        "edge_color": null,
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "A BAND CALLED MALICE",
-        "html": "A BAND CALLED MALICE"
-      },
-      "description": {
-        "text": "A fantastic night featuring all your favourite  JAM songs- A worthy tribute !",
-        "html": "A fantastic night featuring all your favourite  JAM songs- A worthy tribute !"
-      },
-      "url": "https://www.eventbrite.co.uk/e/a-band-called-malice-tickets-856271058787",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-08-23T19:30:00",
-        "utc": "2024-08-23T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-08-23T23:00:00",
-        "utc": "2024-08-23T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-03-04T18:01:54Z",
-      "changed": "2024-03-09T09:25:33Z",
-      "published": "2024-03-04T18:14:53Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "A fantastic night featuring all your favourite  JAM songs- A worthy tribute !",
-      "facebook_event_id": null,
-      "logo_id": "711083849",
-      "organizer_id": "1782096963",
-      "venue_id": "201337819",
-      "category_id": "103",
-      "subcategory_id": "3009",
-      "format_id": "6",
-      "id": "856271058787",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/856271058787/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 119
-          },
-          "width": 226,
-          "height": 113
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711083849%2F25081229167%2F1%2Foriginal.20240304-180225?auto=format%2Ccompress&q=75&sharp=10&s=50da5958e6ed26e2ae5cae915e0e6c3b",
-          "width": 226,
-          "height": 320
-        },
-        "id": "711083849",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711083849%2F25081229167%2F1%2Foriginal.20240304-180225?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C119%2C226%2C113&s=a1b62220908bcdbd0a93d8483cfdf665",
-        "aspect_ratio": "2",
-        "edge_color": null,
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "DIZZY LIZZY",
-        "html": "DIZZY LIZZY"
-      },
-      "description": {
-        "text": "An authentic tribute to Phil Lynott and Thin Lizzy.A show full of anthemic songs",
-        "html": "An authentic tribute to Phil Lynott and Thin Lizzy.A show full of anthemic songs"
-      },
-      "url": "https://www.eventbrite.co.uk/e/dizzy-lizzy-tickets-856928705827",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-08-31T19:30:00",
-        "utc": "2024-08-31T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-08-31T23:00:00",
-        "utc": "2024-08-31T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-03-05T12:06:55Z",
-      "changed": "2024-03-05T12:12:57Z",
-      "published": "2024-03-05T12:12:57Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "An authentic tribute to Phil Lynott and Thin Lizzy.A show full of anthemic songs",
-      "facebook_event_id": null,
-      "logo_id": "711778539",
-      "organizer_id": "1782096963",
-      "venue_id": "201499219",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "856928705827",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/856928705827/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 42
-          },
-          "width": 226,
-          "height": 113
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711778539%2F25081229167%2F1%2Foriginal.20240305-120832?auto=format%2Ccompress&q=75&sharp=10&s=25f81ee8956ec3f58ca540ca793d119a",
-          "width": 226,
-          "height": 320
-        },
-        "id": "711778539",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711778539%2F25081229167%2F1%2Foriginal.20240305-120832?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C42%2C226%2C113&s=d527c7e54ce0ee693785187f79208128",
-        "aspect_ratio": "2",
-        "edge_color": "#535251",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "THE OASIS EXPERIENCE",
-        "html": "THE OASIS EXPERIENCE"
-      },
-      "description": {
-        "text": "A great tribute to Liam  + Noel Gallaghers  iconic music performed as it should be !",
-        "html": "A great tribute to Liam  + Noel Gallaghers  iconic music performed as it should be !"
-      },
-      "url": "https://www.eventbrite.co.uk/e/the-oasis-experience-tickets-856304629197",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-09-07T19:30:00",
-        "utc": "2024-09-07T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-09-07T23:00:00",
-        "utc": "2024-09-07T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-03-04T19:01:52Z",
-      "changed": "2024-03-04T19:14:50Z",
-      "published": "2024-03-04T19:14:50Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "A great tribute to Liam  + Noel Gallaghers  iconic music performed as it should be !",
-      "facebook_event_id": null,
-      "logo_id": "711145749",
-      "organizer_id": "1782096963",
-      "venue_id": "201351699",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "856304629197",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/856304629197/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 842,
-          "height": 421
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711145749%2F25081229167%2F1%2Foriginal.20240304-190228?auto=format%2Ccompress&q=75&sharp=10&s=d3d7d98d7053b3524c86b00d0f3ec553",
-          "width": 842,
-          "height": 1191
-        },
-        "id": "711145749",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711145749%2F25081229167%2F1%2Foriginal.20240304-190228?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C842%2C421&s=ed69e71c7ef87b46f18b341bb4dbb4c5",
-        "aspect_ratio": "2",
-        "edge_color": null,
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "WHOS NEXT",
-        "html": "WHOS NEXT"
-      },
-      "description": {
-        "text": "A  great tribute to THE WHO  ,playing all of the best songs from their classic singles  and albums.",
-        "html": "A  great tribute to THE WHO  ,playing all of the best songs from their classic singles  and albums."
-      },
-      "url": "https://www.eventbrite.co.uk/e/whos-next-tickets-856947251297",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-09-13T19:30:00",
-        "utc": "2024-09-13T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-09-13T23:00:00",
-        "utc": "2024-09-13T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-03-05T12:49:45Z",
-      "changed": "2024-03-05T12:58:33Z",
-      "published": "2024-03-05T12:58:33Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "A  great tribute to THE WHO  ,playing all of the best songs from their classic singles  and albums.",
-      "facebook_event_id": null,
-      "logo_id": "711801609",
-      "organizer_id": "1782096963",
-      "venue_id": "201504609",
-      "category_id": null,
-      "subcategory_id": null,
-      "format_id": null,
-      "id": "856947251297",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/856947251297/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 452,
-          "height": 226
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711801609%2F25081229167%2F1%2Foriginal.20240305-125033?auto=format%2Ccompress&q=75&sharp=10&s=1a29972c45cd461b20846624cc6be5db",
-          "width": 452,
-          "height": 640
-        },
-        "id": "711801609",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711801609%2F25081229167%2F1%2Foriginal.20240305-125033?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C452%2C226&s=5ad15bf8678a66ee4d746c137d3bdf89",
-        "aspect_ratio": "2",
-        "edge_color": null,
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "WHOS NEXT",
-        "html": "WHOS NEXT"
-      },
-      "description": {
-        "text": "THe Uks No 1 tribute to THE WHO featuring all of the classic hits plus selective album tracks",
-        "html": "THe Uks No 1 tribute to THE WHO featuring all of the classic hits plus selective album tracks"
-      },
-      "url": "https://www.eventbrite.co.uk/e/whos-next-tickets-810190570807",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-09-14T19:30:00",
-        "utc": "2024-09-14T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-09-14T23:30:00",
-        "utc": "2024-09-14T22:30:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-01-25T14:08:15Z",
-      "changed": "2024-01-25T14:24:14Z",
-      "published": "2024-01-25T14:24:14Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "THe Uks No 1 tribute to THE WHO featuring all of the classic hits plus selective album tracks",
-      "facebook_event_id": null,
-      "logo_id": "682502249",
-      "organizer_id": "1782096963",
-      "venue_id": "194643179",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "810190570807",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/810190570807/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 452,
-          "height": 226
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F682502249%2F25081229167%2F1%2Foriginal.20240125-140928?auto=format%2Ccompress&q=75&sharp=10&s=308cce73355e2b13284689b15510fdb7",
-          "width": 452,
-          "height": 640
-        },
-        "id": "682502249",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F682502249%2F25081229167%2F1%2Foriginal.20240125-140928?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C452%2C226&s=1af9bc7091ae287c3cd51171b1f0bccf",
-        "aspect_ratio": "2",
-        "edge_color": null,
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "DESPERADO  - The Heart Of The Eagles",
-        "html": "DESPERADO  - The Heart Of The Eagles"
-      },
-      "description": {
-        "text": "The greatest hits of THE EAGLES . Every one a winner !",
-        "html": "The greatest hits of THE EAGLES . Every one a winner !"
-      },
-      "url": "https://www.eventbrite.co.uk/e/desperado-the-heart-of-the-eagles-tickets-856399292337",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-09-21T19:30:00",
-        "utc": "2024-09-21T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-09-21T23:00:00",
-        "utc": "2024-09-21T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-03-04T21:33:13Z",
-      "changed": "2024-03-05T08:07:11Z",
-      "published": "2024-03-04T21:47:52Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "The greatest hits of THE EAGLES . Every one a winner !",
-      "facebook_event_id": null,
-      "logo_id": "711306479",
-      "organizer_id": "1782096963",
-      "venue_id": "201387669",
-      "category_id": "103",
-      "subcategory_id": "3004",
-      "format_id": "6",
-      "id": "856399292337",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/856399292337/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 594,
-          "height": 297
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711306479%2F25081229167%2F1%2Foriginal.20240304-213447?auto=format%2Ccompress&q=75&sharp=10&s=5d57a3be3db37c6fcdfdd424d22a7abe",
-          "width": 595,
-          "height": 842
-        },
-        "id": "711306479",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711306479%2F25081229167%2F1%2Foriginal.20240304-213447?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C594%2C297&s=ec3802f184ecc3e2c6631ebb52277a2b",
-        "aspect_ratio": "2",
-        "edge_color": null,
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "U2 /uk",
-        "html": "U2 /uk"
-      },
-      "description": {
-        "text": "No 1 tribute to  the legendary U2",
-        "html": "No 1 tribute to  the legendary U2"
-      },
-      "url": "https://www.eventbrite.co.uk/e/u2-uk-tickets-856427366307",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-09-27T19:30:00",
-        "utc": "2024-09-27T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-09-27T23:00:00",
-        "utc": "2024-09-27T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-03-04T22:27:28Z",
-      "changed": "2024-03-04T22:35:39Z",
-      "published": "2024-03-04T22:35:39Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "No 1 tribute to  the legendary U2",
-      "facebook_event_id": null,
-      "logo_id": "711352949",
-      "organizer_id": "1782096963",
-      "venue_id": "201398679",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "856427366307",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/856427366307/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 594,
-          "height": 297
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711352949%2F25081229167%2F1%2Foriginal.20240304-222802?auto=format%2Ccompress&q=75&sharp=10&s=c46e990a93277c53e17d3d43cd71612e",
-          "width": 595,
-          "height": 842
-        },
-        "id": "711352949",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711352949%2F25081229167%2F1%2Foriginal.20240304-222802?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C594%2C297&s=204e9b8226735dc9360c5f6de313bc4c",
-        "aspect_ratio": "2",
-        "edge_color": "#252525",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "BOOTLEG BLONDIE",
-        "html": "BOOTLEG BLONDIE"
-      },
-      "description": {
-        "text": "The no1 tribute to BLONDIE  performing all their  classic hits",
-        "html": "The no1 tribute to BLONDIE  performing all their  classic hits"
-      },
-      "url": "https://www.eventbrite.co.uk/e/bootleg-blondie-tickets-856953158967",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-09-28T19:30:00",
-        "utc": "2024-09-28T18:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-09-28T23:00:00",
-        "utc": "2024-09-28T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-03-05T13:02:14Z",
-      "changed": "2024-03-05T13:10:33Z",
-      "published": "2024-03-05T13:10:33Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "The no1 tribute to BLONDIE  performing all their  classic hits",
-      "facebook_event_id": null,
-      "logo_id": "711809169",
-      "organizer_id": "1782096963",
-      "venue_id": "201506239",
-      "category_id": "103",
-      "subcategory_id": null,
-      "format_id": "6",
-      "id": "856953158967",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/856953158967/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 226,
-          "height": 113
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711809169%2F25081229167%2F1%2Foriginal.20240305-130357?auto=format%2Ccompress&q=75&sharp=10&s=2cdbdd83fe5aed44dd98981e50830135",
-          "width": 226,
-          "height": 320
-        },
-        "id": "711809169",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711809169%2F25081229167%2F1%2Foriginal.20240305-130357?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C226%2C113&s=574e748d22e545fae92e9ba57268e86d",
-        "aspect_ratio": "2",
-        "edge_color": null,
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "LEGEND",
-        "html": "LEGEND"
-      },
-      "description": {
-        "text": "The UK'S Top tribute to BOB MARLEY .A night of reggae classics",
-        "html": "The UK'S Top tribute to BOB MARLEY .A night of reggae classics"
-      },
-      "url": "https://www.eventbrite.co.uk/e/legend-tickets-763910114717",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-10-26T19:00:00",
-        "utc": "2024-10-26T18:00:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-10-26T23:00:00",
-        "utc": "2024-10-26T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2023-11-21T13:27:28Z",
-      "changed": "2023-11-21T13:32:01Z",
-      "published": "2023-11-21T13:32:01Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "The UK'S Top tribute to BOB MARLEY .A night of reggae classics",
-      "facebook_event_id": null,
-      "logo_id": "645809949",
-      "organizer_id": "1782096963",
-      "venue_id": "185262109",
-      "category_id": "103",
-      "subcategory_id": "3015",
-      "format_id": "6",
-      "id": "763910114717",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/763910114717/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 452,
-          "height": 226
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645809949%2F25081229167%2F1%2Foriginal.20231121-132754?auto=format%2Ccompress&q=75&sharp=10&s=d33c835f6da7d335dd4d780c72f9e00e",
-          "width": 452,
-          "height": 640
-        },
-        "id": "645809949",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645809949%2F25081229167%2F1%2Foriginal.20231121-132754?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C452%2C226&s=55099034fe373866fab8ffba41fb8f53",
-        "aspect_ratio": "2",
-        "edge_color": "#000000",
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "ELECTRIK  LIVE ORCHESTRA",
-        "html": "ELECTRIK  LIVE ORCHESTRA"
-      },
-      "description": {
-        "text": "A top tribute to Jeff Lynne and his band ELO.A full performance of all their greatest hits !",
-        "html": "A top tribute to Jeff Lynne and his band ELO.A full performance of all their greatest hits !"
-      },
-      "url": "https://www.eventbrite.co.uk/e/electrik-live-orchestra-tickets-856956829947",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-11-15T19:30:00",
-        "utc": "2024-11-15T19:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-11-15T22:00:00",
-        "utc": "2024-11-15T22:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-03-05T13:16:08Z",
-      "changed": "2024-03-05T13:24:40Z",
-      "published": "2024-03-05T13:24:40Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "A top tribute to Jeff Lynne and his band ELO.A full performance of all their greatest hits !",
-      "facebook_event_id": null,
-      "logo_id": "711817079",
-      "organizer_id": "1782096963",
-      "venue_id": "201508269",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "856956829947",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/856956829947/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": null,
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711817079%2F25081229167%2F1%2Foriginal.20240305-131649?auto=format%2Ccompress&q=75&sharp=10&s=11366505f53a6df844406425967e7665",
-          "width": 226,
-          "height": 320
-        },
-        "id": "711817079",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711817079%2F25081229167%2F1%2Foriginal.20240305-131649?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=c64618287760dd543aaa2884c6f6f8cf",
-        "aspect_ratio": "0.705",
-        "edge_color": null,
-        "edge_color_set": true
-      }
-    },
-    {
-      "name": {
-        "text": "ZZ TOPPD",
-        "html": "ZZ TOPPD"
-      },
-      "description": {
-        "text": "The UKS No 1 Tribute to the legendary ZZ TOP",
-        "html": "The UKS No 1 Tribute to the legendary ZZ TOP"
-      },
-      "url": "https://www.eventbrite.co.uk/e/zz-toppd-tickets-856545730337",
-      "start": {
-        "timezone": "Europe/London",
-        "local": "2024-11-29T19:30:00",
-        "utc": "2024-11-29T19:30:00Z"
-      },
-      "end": {
-        "timezone": "Europe/London",
-        "local": "2024-11-29T23:00:00",
-        "utc": "2024-11-29T23:00:00Z"
-      },
-      "organization_id": "25081229167",
-      "created": "2024-03-05T00:24:58Z",
-      "changed": "2024-03-05T00:34:01Z",
-      "published": "2024-03-05T00:34:01Z",
-      "capacity": null,
-      "capacity_is_custom": null,
-      "status": "live",
-      "currency": "GBP",
-      "listed": true,
-      "shareable": true,
-      "online_event": false,
-      "tx_time_limit": 1200,
-      "hide_start_date": false,
-      "hide_end_date": false,
-      "locale": "en_GB",
-      "is_locked": false,
-      "privacy_setting": "unlocked",
-      "is_series": false,
-      "is_series_parent": false,
-      "inventory_type": "limited",
-      "is_reserved_seating": false,
-      "show_pick_a_seat": false,
-      "show_seatmap_thumbnail": false,
-      "show_colors_in_seatmap_thumbnail": false,
-      "source": "coyote",
-      "is_free": false,
-      "version": null,
-      "summary": "The UKS No 1 Tribute to the legendary ZZ TOP",
-      "facebook_event_id": null,
-      "logo_id": "711437379",
-      "organizer_id": "1782096963",
-      "venue_id": "201417379",
-      "category_id": "103",
-      "subcategory_id": "3017",
-      "format_id": "6",
-      "id": "856545730337",
-      "resource_uri": "https://www.eventbriteapi.com/v3/events/856545730337/",
-      "is_externally_ticketed": false,
-      "logo": {
-        "crop_mask": {
-          "top_left": {
-            "x": 0,
-            "y": 0
-          },
-          "width": 452,
-          "height": 226
-        },
-        "original": {
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711437379%2F25081229167%2F1%2Foriginal.20240305-002558?auto=format%2Ccompress&q=75&sharp=10&s=91d6f66f32996f27dde63973cfd20459",
-          "width": 452,
-          "height": 640
-        },
-        "id": "711437379",
-        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711437379%2F25081229167%2F1%2Foriginal.20240305-002558?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C452%2C226&s=ff5e5203e43f2a149e75575cdf735e04",
-        "aspect_ratio": "2",
-        "edge_color": "#000000",
-        "edge_color_set": true
-      }
+        "width": 442,
+        "height": 221
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F678150009%2F25081229167%2F1%2Foriginal.20240119-111625?auto=format%2Ccompress&q=75&sharp=10&s=55a6254981bbd9431a27329f310b7286",
+        "width": 452,
+        "height": 640
+      },
+      "id": "678150009",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F678150009%2F25081229167%2F1%2Foriginal.20240119-111625?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C177%2C442%2C221&s=9dcfa027f46b8b03535367a981d675d8",
+      "aspect_ratio": "2",
+      "edge_color": null,
+      "edge_color_set": true
     }
-  ]
-}
+  },
+  {
+    "name": {
+      "text": "THE SPECIALS  LTD",
+      "html": "THE SPECIALS  LTD"
+    },
+    "description": {
+      "text": "Authentic tribute to The Specials featuring all of the classic Two Tone anthems",
+      "html": "Authentic tribute to The Specials featuring all of the classic Two Tone anthems"
+    },
+    "url": "https://www.eventbrite.co.uk/e/the-specials-ltd-tickets-774776706987",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-03-22T19:30:00",
+      "utc": "2024-03-22T19:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-03-22T22:30:00",
+      "utc": "2024-03-22T22:30:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-12-09T14:49:40Z",
+    "changed": "2024-03-02T18:42:44Z",
+    "published": "2023-12-09T14:59:43Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "Authentic tribute to The Specials featuring all of the classic Two Tone anthems",
+    "facebook_event_id": null,
+    "logo_id": "665293409",
+    "organizer_id": "1782096963",
+    "venue_id": "187768089",
+    "category_id": "199",
+    "subcategory_id": null,
+    "format_id": "6",
+    "id": "774776706987",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/774776706987/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 647
+        },
+        "width": 1232,
+        "height": 616
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F665293409%2F25081229167%2F1%2Foriginal.20231231-125241?auto=format%2Ccompress&q=75&sharp=10&s=1016e64a43e256298f6d3105360fa544",
+        "width": 1247,
+        "height": 1740
+      },
+      "id": "665293409",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F665293409%2F25081229167%2F1%2Foriginal.20231231-125241?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C647%2C1232%2C616&s=21d670ce2420c57c686bb35710c8612c",
+      "aspect_ratio": "2",
+      "edge_color": "#ffffff",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "THE DOORS RISING",
+      "html": "THE DOORS RISING"
+    },
+    "description": {
+      "text": "An excellent reincarnation of The Doors  performing all of their classic songs.",
+      "html": "An excellent reincarnation of The Doors  performing all of their classic songs."
+    },
+    "url": "https://www.eventbrite.co.uk/e/the-doors-rising-tickets-763575564067",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-03-23T19:30:00",
+      "utc": "2024-03-23T19:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-03-23T23:00:00",
+      "utc": "2024-03-23T23:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-11-20T19:54:35Z",
+    "changed": "2024-03-10T00:42:55Z",
+    "published": "2023-11-20T20:13:31Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "An excellent reincarnation of The Doors  performing all of their classic songs.",
+    "facebook_event_id": null,
+    "logo_id": "645324939",
+    "organizer_id": "1782096963",
+    "venue_id": "185153139",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "763575564067",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/763575564067/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 5
+        },
+        "width": 842,
+        "height": 421
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645324939%2F25081229167%2F1%2Foriginal.20231120-195557?auto=format%2Ccompress&q=75&sharp=10&s=6eeb8ff472f87bee35065c81f5b89d20",
+        "width": 842,
+        "height": 1191
+      },
+      "id": "645324939",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645324939%2F25081229167%2F1%2Foriginal.20231120-195557?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C5%2C842%2C421&s=4476a59f3bb360ca61116193ec21f8a4",
+      "aspect_ratio": "2",
+      "edge_color": "#000000",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "CELEBRATE ZAPPA - The Treacherous Cretins feat Robert Martin",
+      "html": "CELEBRATE ZAPPA - The Treacherous Cretins feat Robert Martin"
+    },
+    "description": {
+      "text": "A  Celebration of the music of FRANK ZAPPA featuring a member of the Mothers Of Invention Robert Martin",
+      "html": "A  Celebration of the music of FRANK ZAPPA featuring a member of the Mothers Of Invention Robert Martin"
+    },
+    "url": "https://www.eventbrite.co.uk/e/celebrate-zappa-the-treacherous-cretins-feat-robert-martin-tickets-713766363407",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-04-11T19:30:00",
+      "utc": "2024-04-11T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-04-11T23:00:00",
+      "utc": "2024-04-11T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-09-05T14:32:20Z",
+    "changed": "2024-03-09T17:00:41Z",
+    "published": "2023-09-05T14:53:20Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "A  Celebration of the music of FRANK ZAPPA featuring a member of the Mothers Of Invention Robert Martin",
+    "facebook_event_id": null,
+    "logo_id": "590418629",
+    "organizer_id": "1782096963",
+    "venue_id": "172316049",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "713766363407",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/713766363407/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 51
+        },
+        "width": 1080,
+        "height": 540
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F590418629%2F25081229167%2F1%2Foriginal.20230905-143257?auto=format%2Ccompress&q=75&sharp=10&s=bfc8ff0285dd003e653437e40d6ad5a6",
+        "width": 1080,
+        "height": 1528
+      },
+      "id": "590418629",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F590418629%2F25081229167%2F1%2Foriginal.20230905-143257?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C51%2C1080%2C540&s=b6222dd3dd9e692be0e5e7c7e0f3a5fc",
+      "aspect_ratio": "2",
+      "edge_color": "#342a1f",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "DIRTY /DC",
+      "html": "DIRTY /DC"
+    },
+    "description": {
+      "text": "A fantastic tribute to one of the most popular classic rock bands of the past 40 years.Two hours of non stop high octane rock n roll !!",
+      "html": "A fantastic tribute to one of the most popular classic rock bands of the past 40 years.Two hours of non stop high octane rock n roll !!"
+    },
+    "url": "https://www.eventbrite.co.uk/e/dirty-dc-tickets-761821256887",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-04-20T19:30:00",
+      "utc": "2024-04-20T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-04-20T23:00:00",
+      "utc": "2024-04-20T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-11-18T18:16:44Z",
+    "changed": "2024-02-25T22:26:07Z",
+    "published": "2023-11-18T18:26:59Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "A fantastic tribute to one of the most popular classic rock bands of the past 40 years.Two hours of non stop high octane rock n roll !!",
+    "facebook_event_id": null,
+    "logo_id": "644368889",
+    "organizer_id": "1782096963",
+    "venue_id": "184926889",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "761821256887",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/761821256887/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 5
+        },
+        "width": 842,
+        "height": 421
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644368889%2F25081229167%2F1%2Foriginal.20231118-181737?auto=format%2Ccompress&q=75&sharp=10&s=660825e03e7b29d0a50da167081b0fd5",
+        "width": 842,
+        "height": 1191
+      },
+      "id": "644368889",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644368889%2F25081229167%2F1%2Foriginal.20231118-181737?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C5%2C842%2C421&s=be0f31454680335f4baf096564db5788",
+      "aspect_ratio": "2",
+      "edge_color": "#000000",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "FOCUS",
+      "html": "FOCUS"
+    },
+    "description": {
+      "text": "Dutch Prog Rock Legends  FOCUS  performing their classic repertoire.",
+      "html": "Dutch Prog Rock Legends  FOCUS  performing their classic repertoire."
+    },
+    "url": "https://www.eventbrite.co.uk/e/focus-tickets-726687741597",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-04-26T19:30:00",
+      "utc": "2024-04-26T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-04-26T23:00:00",
+      "utc": "2024-04-26T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-09-26T11:11:24Z",
+    "changed": "2024-03-11T18:31:00Z",
+    "published": "2023-09-26T12:00:06Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "Dutch Prog Rock Legends  FOCUS  performing their classic repertoire.",
+    "facebook_event_id": null,
+    "logo_id": "606484419",
+    "organizer_id": "1782096963",
+    "venue_id": "175974949",
+    "category_id": "199",
+    "subcategory_id": null,
+    "format_id": "1",
+    "id": "726687741597",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/726687741597/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 4724,
+        "height": 2362
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F606484419%2F25081229167%2F1%2Foriginal.20230926-111201?auto=format%2Ccompress&q=75&sharp=10&s=9ab1a231d2abc3482764866a9acc5926",
+        "width": 4724,
+        "height": 3308
+      },
+      "id": "606484419",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F606484419%2F25081229167%2F1%2Foriginal.20230926-111201?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C4724%2C2362&s=3527b73abc05f594b001cd744352b688",
+      "aspect_ratio": "2",
+      "edge_color": "#36496a",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "LETZ  ZEP",
+      "html": "LETZ  ZEP"
+    },
+    "description": {
+      "text": "The UKs premier tribute to LED ZEPPELIN  .A two hour performance led by charismatic singer Billy Kulke performing all the classic anthems  .",
+      "html": "The UKs premier tribute to LED ZEPPELIN  .A two hour performance led by charismatic singer Billy Kulke performing all the classic anthems  ."
+    },
+    "url": "https://www.eventbrite.co.uk/e/letz-zep-tickets-761811628087",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-04-27T19:30:00",
+      "utc": "2024-04-27T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-04-27T23:00:00",
+      "utc": "2024-04-27T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-11-18T17:56:10Z",
+    "changed": "2024-03-03T22:50:08Z",
+    "published": "2023-11-18T18:11:19Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "The UKs premier tribute to LED ZEPPELIN  .A two hour performance led by charismatic singer Billy Kulke performing all the classic anthems  .",
+    "facebook_event_id": null,
+    "logo_id": "644363369",
+    "organizer_id": "1782096963",
+    "venue_id": "184925229",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "761811628087",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/761811628087/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 125
+        },
+        "width": 842,
+        "height": 421
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644363369%2F25081229167%2F1%2Foriginal.20231118-180110?auto=format%2Ccompress&q=75&sharp=10&s=b18f8c497b66eede8070056542107aa4",
+        "width": 842,
+        "height": 1191
+      },
+      "id": "644363369",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644363369%2F25081229167%2F1%2Foriginal.20231118-180110?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C125%2C842%2C421&s=bac429f5e90f4b4ff4d685a97fb097cc",
+      "aspect_ratio": "2",
+      "edge_color": "#bc2c4f",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "THE PIECES OF MIND",
+      "html": "THE PIECES OF MIND"
+    },
+    "description": {
+      "text": "Iconic Newport band formed in the 'sixties and performed with many of the top touring acts of the time. Making a welcome return !",
+      "html": "Iconic Newport band formed in the 'sixties and performed with many of the top touring acts of the time. Making a welcome return !"
+    },
+    "url": "https://www.eventbrite.co.uk/e/the-pieces-of-mind-tickets-790069939457",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-04-28T19:30:00",
+      "utc": "2024-04-28T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-04-29T00:00:00",
+      "utc": "2024-04-28T23:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-01-04T12:57:28Z",
+    "changed": "2024-03-11T13:53:06Z",
+    "published": "2024-01-04T13:28:04Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "Iconic Newport band formed in the 'sixties and performed with many of the top touring acts of the time. Making a welcome return !",
+    "facebook_event_id": null,
+    "logo_id": "667408929",
+    "organizer_id": "1782096963",
+    "venue_id": "190761899",
+    "category_id": "105",
+    "subcategory_id": "5002",
+    "format_id": "6",
+    "id": "790069939457",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/790069939457/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 10
+        },
+        "width": 4878,
+        "height": 2439
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F667408929%2F25081229167%2F1%2Foriginal.20240104-125805?auto=format%2Ccompress&q=75&sharp=10&s=74286b371bc333bb51a8566c6bb8a2a9",
+        "width": 4967,
+        "height": 7016
+      },
+      "id": "667408929",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F667408929%2F25081229167%2F1%2Foriginal.20240104-125805?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C10%2C4878%2C2439&s=14f7827e42f86a368909e3df24b56903",
+      "aspect_ratio": "2",
+      "edge_color": "#fe6d16",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "BOOTLEG  BLONDIE",
+      "html": "BOOTLEG  BLONDIE"
+    },
+    "description": {
+      "text": "A great live show featuring Debbie Harris as lead singer Debbie Harry endorsed by Blondie herself ! A full show of countless hits !!!",
+      "html": "A great live show featuring Debbie Harris as lead singer Debbie Harry endorsed by Blondie herself ! A full show of countless hits !!!"
+    },
+    "url": "https://www.eventbrite.co.uk/e/bootleg-blondie-tickets-761826863657",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-05-03T19:30:00",
+      "utc": "2024-05-03T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-05-03T23:00:00",
+      "utc": "2024-05-03T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-11-18T18:31:44Z",
+    "changed": "2024-02-28T14:06:32Z",
+    "published": "2023-11-18T18:51:48Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "A great live show featuring Debbie Harris as lead singer Debbie Harry endorsed by Blondie herself ! A full show of countless hits !!!",
+    "facebook_event_id": null,
+    "logo_id": "644373239",
+    "organizer_id": "1782096963",
+    "venue_id": "184927659",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "761826863657",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/761826863657/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 65
+        },
+        "width": 842,
+        "height": 421
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644373239%2F25081229167%2F1%2Foriginal.20231118-183245?auto=format%2Ccompress&q=75&sharp=10&s=b2edbe18f16c1c4fd9ebfa832f537838",
+        "width": 842,
+        "height": 1191
+      },
+      "id": "644373239",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644373239%2F25081229167%2F1%2Foriginal.20231118-183245?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C65%2C842%2C421&s=bdeb273b3abef0b59b1d1ac6e2b3df01",
+      "aspect_ratio": "2",
+      "edge_color": "#000000",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "BOOTLEG BLONDIE",
+      "html": "BOOTLEG BLONDIE"
+    },
+    "description": {
+      "text": "Debbie Harris performing an accurate and engaging tribute to Deborah Harry doesnt get much better!\n\nEndorsed by Blondie herself the band has",
+      "html": "Debbie Harris performing an accurate and engaging tribute to Deborah Harry doesnt get much better!\n\nEndorsed by Blondie herself the band has"
+    },
+    "url": "https://www.eventbrite.co.uk/e/bootleg-blondie-tickets-761837836477",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-05-04T19:00:00",
+      "utc": "2024-05-04T18:00:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-05-04T23:00:00",
+      "utc": "2024-05-04T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-11-18T18:56:30Z",
+    "changed": "2024-02-28T19:50:35Z",
+    "published": "2023-11-18T19:18:06Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "Debbie Harris performing an accurate and engaging tribute to Deborah Harry doesnt get much better!\n\nEndorsed by Blondie herself the band has",
+    "facebook_event_id": null,
+    "logo_id": "644380299",
+    "organizer_id": "1782096963",
+    "venue_id": "184929309",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "761837836477",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/761837836477/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 50
+        },
+        "width": 842,
+        "height": 421
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644380299%2F25081229167%2F1%2Foriginal.20231118-185706?auto=format%2Ccompress&q=75&sharp=10&s=35df8a8109a5d573730ea4b143a430a6",
+        "width": 842,
+        "height": 1191
+      },
+      "id": "644380299",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F644380299%2F25081229167%2F1%2Foriginal.20231118-185706?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C50%2C842%2C421&s=a737f653424b05530872100db056f1af",
+      "aspect_ratio": "2",
+      "edge_color": "#000000",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "HAYSEED DIXIE",
+      "html": "HAYSEED DIXIE"
+    },
+    "description": {
+      "text": "HAYSEED DIXIE bring along their night of Maximum Rockgrass featuring excellent bluegrass versions of classic rock songs",
+      "html": "HAYSEED DIXIE bring along their night of Maximum Rockgrass featuring excellent bluegrass versions of classic rock songs"
+    },
+    "url": "https://www.eventbrite.co.uk/e/hayseed-dixie-tickets-746413993347",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-05-10T19:30:00",
+      "utc": "2024-05-10T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-05-10T23:00:00",
+      "utc": "2024-05-10T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-10-26T23:18:08Z",
+    "changed": "2024-03-07T07:33:23Z",
+    "published": "2023-10-26T23:28:53Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "HAYSEED DIXIE bring along their night of Maximum Rockgrass featuring excellent bluegrass versions of classic rock songs",
+    "facebook_event_id": null,
+    "logo_id": "629521779",
+    "organizer_id": "1782096963",
+    "venue_id": "181450749",
+    "category_id": "103",
+    "subcategory_id": "3021",
+    "format_id": "6",
+    "id": "746413993347",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/746413993347/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 842,
+        "height": 421
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F629521779%2F25081229167%2F1%2Foriginal.20231026-231843?auto=format%2Ccompress&q=75&sharp=10&s=da9ad67826bc5f7f5e6fc6baa2297214",
+        "width": 842,
+        "height": 842
+      },
+      "id": "629521779",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F629521779%2F25081229167%2F1%2Foriginal.20231026-231843?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C842%2C421&s=1ccc8c6f2884b5cb7367850f11a39d76",
+      "aspect_ratio": "2",
+      "edge_color": "#c07a62",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "BON GIOVI",
+      "html": "BON GIOVI"
+    },
+    "description": {
+      "text": "Top tribute to BON JOVI performing  all of the bands greatest hits",
+      "html": "Top tribute to BON JOVI performing  all of the bands greatest hits"
+    },
+    "url": "https://www.eventbrite.co.uk/e/bon-giovi-tickets-763903555097",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-05-17T19:30:00",
+      "utc": "2024-05-17T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-05-17T23:00:00",
+      "utc": "2024-05-17T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-11-21T13:05:49Z",
+    "changed": "2023-11-21T13:12:50Z",
+    "published": "2023-11-21T13:12:50Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "Top tribute to BON JOVI performing  all of the bands greatest hits",
+    "facebook_event_id": null,
+    "logo_id": "645798539",
+    "organizer_id": "1782096963",
+    "venue_id": "185259619",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "763903555097",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/763903555097/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 842,
+        "height": 421
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645798539%2F25081229167%2F1%2Foriginal.20231121-130634?auto=format%2Ccompress&q=75&sharp=10&s=ac17eaac42cba00684972c62aca69310",
+        "width": 842,
+        "height": 1191
+      },
+      "id": "645798539",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645798539%2F25081229167%2F1%2Foriginal.20231121-130634?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C842%2C421&s=b7013b7ae470b267c1726d1ad1c0ea15",
+      "aspect_ratio": "2",
+      "edge_color": "#000000",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "ABSOLUTE BOWIE",
+      "html": "ABSOLUTE BOWIE"
+    },
+    "description": {
+      "text": "The Ultimate Bowie Tribute",
+      "html": "The Ultimate Bowie Tribute"
+    },
+    "url": "https://www.eventbrite.co.uk/e/absolute-bowie-tickets-775885363007",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-05-24T19:30:00",
+      "utc": "2024-05-24T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-05-24T23:00:00",
+      "utc": "2024-05-24T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-12-11T21:11:48Z",
+    "changed": "2024-02-28T19:50:35Z",
+    "published": "2023-12-11T21:23:41Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "The Ultimate Bowie Tribute",
+    "facebook_event_id": null,
+    "logo_id": "656928229",
+    "organizer_id": "1782096963",
+    "venue_id": "188000729",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "775885363007",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/775885363007/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": null,
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F656928229%2F25081229167%2F1%2Foriginal.20231211-211238?auto=format%2Ccompress&q=75&sharp=10&s=8a4deee528774cc126c736ad23af7657",
+        "width": 452,
+        "height": 640
+      },
+      "id": "656928229",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F656928229%2F25081229167%2F1%2Foriginal.20231211-211238?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=a8b98afa20d0e83b4c1ef1ffe402fae4",
+      "aspect_ratio": "0.705",
+      "edge_color": null,
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "LIMEHOUSE LIZZY",
+      "html": "LIMEHOUSE LIZZY"
+    },
+    "description": {
+      "text": "The Uks Premier tribute to Phil Lynott & Thin Lizzy",
+      "html": "The Uks Premier tribute to Phil Lynott &amp; Thin Lizzy"
+    },
+    "url": "https://www.eventbrite.co.uk/e/limehouse-lizzy-tickets-751838076927",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-05-31T19:30:00",
+      "utc": "2024-05-31T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-05-31T23:00:00",
+      "utc": "2024-05-31T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-11-03T20:12:44Z",
+    "changed": "2024-02-28T19:50:34Z",
+    "published": "2023-11-03T20:18:16Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "The Uks Premier tribute to Phil Lynott & Thin Lizzy",
+    "facebook_event_id": null,
+    "logo_id": "634778939",
+    "organizer_id": "1782096963",
+    "venue_id": "182687269",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "751838076927",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/751838076927/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 21
+        },
+        "width": 842,
+        "height": 421
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F634778939%2F25081229167%2F1%2Foriginal.20231103-201304?auto=format%2Ccompress&q=75&sharp=10&s=ceea90d70d26e87faaacbeb255a23063",
+        "width": 842,
+        "height": 1191
+      },
+      "id": "634778939",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F634778939%2F25081229167%2F1%2Foriginal.20231103-201304?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C21%2C842%2C421&s=2ddd69f73d9c8cc3da2e434a4e003b0d",
+      "aspect_ratio": "2",
+      "edge_color": null,
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "LIMEHOUSE LIZZY",
+      "html": "LIMEHOUSE LIZZY"
+    },
+    "description": {
+      "text": "THe UKs Premier tribute to Phil Lynott and Thin Lizzy",
+      "html": "THe UKs Premier tribute to Phil Lynott and Thin Lizzy"
+    },
+    "url": "https://www.eventbrite.co.uk/e/limehouse-lizzy-tickets-751827074017",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-06-01T19:30:00",
+      "utc": "2024-06-01T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-06-01T23:00:00",
+      "utc": "2024-06-01T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-11-03T19:45:14Z",
+    "changed": "2024-02-02T20:16:55Z",
+    "published": "2023-11-03T20:07:53Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "THe UKs Premier tribute to Phil Lynott and Thin Lizzy",
+    "facebook_event_id": null,
+    "logo_id": "634757809",
+    "organizer_id": "1782096963",
+    "venue_id": "182682839",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "751827074017",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/751827074017/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 24
+        },
+        "width": 842,
+        "height": 421
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F634757809%2F25081229167%2F1%2Foriginal.20231103-194554?auto=format%2Ccompress&q=75&sharp=10&s=c0d619488f880584d5276f4adbe4e183",
+        "width": 842,
+        "height": 1191
+      },
+      "id": "634757809",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F634757809%2F25081229167%2F1%2Foriginal.20231103-194554?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C24%2C842%2C421&s=11c99c03e00d7eb0fb578bbf64d47481",
+      "aspect_ratio": "2",
+      "edge_color": null,
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "LEGEND",
+      "html": "LEGEND"
+    },
+    "description": {
+      "text": "THE UK'S NO 1.TRIBUTE TO BOB MARLEY- A night of reggae classics !",
+      "html": "THE UK'S NO 1.TRIBUTE TO BOB MARLEY- A night of reggae classics !"
+    },
+    "url": "https://www.eventbrite.co.uk/e/legend-tickets-763600558827",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-06-14T19:30:00",
+      "utc": "2024-06-14T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-06-14T23:00:00",
+      "utc": "2024-06-14T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-11-20T20:48:21Z",
+    "changed": "2024-03-12T17:14:00Z",
+    "published": "2023-11-20T20:52:06Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "THE UK'S NO 1.TRIBUTE TO BOB MARLEY- A night of reggae classics !",
+    "facebook_event_id": null,
+    "logo_id": "645370789",
+    "organizer_id": "1782096963",
+    "venue_id": "185164009",
+    "category_id": "103",
+    "subcategory_id": "3015",
+    "format_id": "6",
+    "id": "763600558827",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/763600558827/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 842,
+        "height": 421
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645370789%2F25081229167%2F1%2Foriginal.20231120-204858?auto=format%2Ccompress&q=75&sharp=10&s=d5ae9aac80610649e1e49af87c6906d0",
+        "width": 842,
+        "height": 1191
+      },
+      "id": "645370789",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645370789%2F25081229167%2F1%2Foriginal.20231120-204858?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C842%2C421&s=b53bcc46eacd01a7a4cb727efafa3a7c",
+      "aspect_ratio": "2",
+      "edge_color": "#000000",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "LEGEND",
+      "html": "LEGEND"
+    },
+    "description": {
+      "text": "THE UK'S NO 1. TRIBUTE TO BOB MARLEY. A Night of Reggae Classics !",
+      "html": "THE UK'S NO 1. TRIBUTE TO BOB MARLEY. A Night of Reggae Classics !"
+    },
+    "url": "https://www.eventbrite.co.uk/e/legend-tickets-763604019177",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-06-15T19:30:00",
+      "utc": "2024-06-15T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-06-15T23:00:00",
+      "utc": "2024-06-15T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-11-20T20:55:53Z",
+    "changed": "2024-03-10T18:18:05Z",
+    "published": "2023-11-20T21:00:02Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "THE UK'S NO 1. TRIBUTE TO BOB MARLEY. A Night of Reggae Classics !",
+    "facebook_event_id": null,
+    "logo_id": "645377119",
+    "organizer_id": "1782096963",
+    "venue_id": "185165729",
+    "category_id": "103",
+    "subcategory_id": "3015",
+    "format_id": "6",
+    "id": "763604019177",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/763604019177/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 842,
+        "height": 421
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645377119%2F25081229167%2F1%2Foriginal.20231120-205642?auto=format%2Ccompress&q=75&sharp=10&s=d3765368689107625898657a42b6bc14",
+        "width": 842,
+        "height": 1191
+      },
+      "id": "645377119",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645377119%2F25081229167%2F1%2Foriginal.20231120-205642?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C842%2C421&s=4ba4ebcadd6b6a91e187105934ea237e",
+      "aspect_ratio": "2",
+      "edge_color": null,
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "ARE YOU EXPERIENCED ?",
+      "html": "ARE YOU EXPERIENCED ?"
+    },
+    "description": {
+      "text": "The ultimate tribute to JIMI HENDRIX",
+      "html": "The ultimate tribute to JIMI HENDRIX"
+    },
+    "url": "https://www.eventbrite.co.uk/e/are-you-experienced-tickets-856925456107",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-06-22T19:30:00",
+      "utc": "2024-06-22T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-06-22T23:00:00",
+      "utc": "2024-06-22T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-03-05T11:56:49Z",
+    "changed": "2024-03-06T13:11:19Z",
+    "published": "2024-03-05T12:03:14Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "The ultimate tribute to JIMI HENDRIX",
+    "facebook_event_id": null,
+    "logo_id": "711772169",
+    "organizer_id": "1782096963",
+    "venue_id": "201497879",
+    "category_id": "103",
+    "subcategory_id": "3028",
+    "format_id": "6",
+    "id": "856925456107",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/856925456107/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 3
+        },
+        "width": 224,
+        "height": 112
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711772169%2F25081229167%2F1%2Foriginal.20240305-115723?auto=format%2Ccompress&q=75&sharp=10&s=3fe3422e6c559b185c9b5386512cf79f",
+        "width": 225,
+        "height": 320
+      },
+      "id": "711772169",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711772169%2F25081229167%2F1%2Foriginal.20240305-115723?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C3%2C224%2C112&s=c008a93bd6e4198310be0f34de47c455",
+      "aspect_ratio": "2",
+      "edge_color": "#6b5664",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "BAND OF FRIENDS - Celebrating The Music Of Rory Gallagher",
+      "html": "BAND OF FRIENDS - Celebrating The Music Of Rory Gallagher"
+    },
+    "description": {
+      "text": "Three top musicians ,two who have played alongside the man himself ,celebrating the glorious music of the legendary Rory Gallagher",
+      "html": "Three top musicians ,two who have played alongside the man himself ,celebrating the glorious music of the legendary Rory Gallagher"
+    },
+    "url": "https://www.eventbrite.co.uk/e/band-of-friends-celebrating-the-music-of-rory-gallagher-tickets-850761780387",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-07-31T19:30:00",
+      "utc": "2024-07-31T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-07-31T23:00:00",
+      "utc": "2024-07-31T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-02-26T13:56:23Z",
+    "changed": "2024-03-03T14:20:29Z",
+    "published": "2024-02-26T14:36:43Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "Three top musicians ,two who have played alongside the man himself ,celebrating the glorious music of the legendary Rory Gallagher",
+    "facebook_event_id": null,
+    "logo_id": "705316329",
+    "organizer_id": "1782096963",
+    "venue_id": "199981639",
+    "category_id": "103",
+    "subcategory_id": "3022",
+    "format_id": "6",
+    "id": "850761780387",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/850761780387/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 594,
+        "height": 297
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F705316329%2F25081229167%2F1%2Foriginal.20240226-135709?auto=format%2Ccompress&q=75&sharp=10&s=1a39169f11ab02cce0e450648e912bd9",
+        "width": 595,
+        "height": 842
+      },
+      "id": "705316329",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F705316329%2F25081229167%2F1%2Foriginal.20240226-135709?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C594%2C297&s=20c79c4e5c767f7941b28f48718c80ea",
+      "aspect_ratio": "2",
+      "edge_color": "#050505",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "LOVE with Johnny Echols",
+      "html": "LOVE with Johnny Echols"
+    },
+    "description": {
+      "text": "From USA paying a return visit after their successful show in 2023.",
+      "html": "From USA paying a return visit after their successful show in 2023."
+    },
+    "url": "https://www.eventbrite.co.uk/e/love-with-johnny-echols-tickets-769942467647",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-08-02T19:30:00",
+      "utc": "2024-08-02T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-08-02T23:00:00",
+      "utc": "2024-08-02T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-11-30T22:38:36Z",
+    "changed": "2024-03-11T08:34:31Z",
+    "published": "2023-11-30T22:51:11Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "From USA paying a return visit after their successful show in 2023.",
+    "facebook_event_id": null,
+    "logo_id": "651330549",
+    "organizer_id": "1782096963",
+    "venue_id": "186602829",
+    "category_id": "103",
+    "subcategory_id": "3028",
+    "format_id": "6",
+    "id": "769942467647",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/769942467647/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 42
+        },
+        "width": 452,
+        "height": 226
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F651330549%2F25081229167%2F1%2Foriginal.20231130-224133?auto=format%2Ccompress&q=75&sharp=10&s=6b8401aea8745e1eb478a3792b2a8a59",
+        "width": 452,
+        "height": 640
+      },
+      "id": "651330549",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F651330549%2F25081229167%2F1%2Foriginal.20231130-224133?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C42%2C452%2C226&s=3b59e3a98b68801853b88060a4228033",
+      "aspect_ratio": "2",
+      "edge_color": null,
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "MAN",
+      "html": "MAN"
+    },
+    "description": {
+      "text": "The  MAN  band featuring original member Martin Ace performing their  popular classics mixed with their new album material",
+      "html": "The  MAN  band featuring original member Martin Ace performing their  popular classics mixed with their new album material"
+    },
+    "url": "https://www.eventbrite.co.uk/e/man-tickets-856933129057",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-08-02T19:30:00",
+      "utc": "2024-08-02T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-08-02T23:00:00",
+      "utc": "2024-08-02T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-03-05T12:19:13Z",
+    "changed": "2024-03-05T12:45:28Z",
+    "published": "2024-03-05T12:45:28Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "The  MAN  band featuring original member Martin Ace performing their  popular classics mixed with their new album material",
+    "facebook_event_id": null,
+    "logo_id": "711786039",
+    "organizer_id": "1782096963",
+    "venue_id": "201500849",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "856933129057",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/856933129057/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 226,
+        "height": 113
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711786039%2F25081229167%2F1%2Foriginal.20240305-122254?auto=format%2Ccompress&q=75&sharp=10&s=f379090461195faf94d0395900941f15",
+        "width": 226,
+        "height": 320
+      },
+      "id": "711786039",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711786039%2F25081229167%2F1%2Foriginal.20240305-122254?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C226%2C113&s=ac1b4e36062aa9103c42abee579ef442",
+      "aspect_ratio": "2",
+      "edge_color": "#2a2e2e",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "Europes Premier Tributes to PINK & ROBBiE WILLIAMS",
+      "html": "Europes Premier Tributes to PINK &amp; ROBBiE WILLIAMS"
+    },
+    "description": {
+      "text": "An evening of great entertainment featuring two of the  best tribute acts on the circuit",
+      "html": "An evening of great entertainment featuring two of the  best tribute acts on the circuit"
+    },
+    "url": "https://www.eventbrite.co.uk/e/europes-premier-tributes-to-pink-robbie-williams-tickets-803355657397",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-08-08T18:00:00",
+      "utc": "2024-08-08T17:00:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-08-08T23:00:00",
+      "utc": "2024-08-08T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-01-18T20:03:14Z",
+    "changed": "2024-02-25T14:44:08Z",
+    "published": "2024-01-18T20:49:47Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "An evening of great entertainment featuring two of the  best tribute acts on the circuit",
+    "facebook_event_id": null,
+    "logo_id": "677850059",
+    "organizer_id": "1782096963",
+    "venue_id": "193336969",
+    "category_id": "105",
+    "subcategory_id": "5002",
+    "format_id": "6",
+    "id": "803355657397",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/803355657397/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 567
+        },
+        "width": 1240,
+        "height": 620
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F677850059%2F25081229167%2F1%2Foriginal.20240118-222330?auto=format%2Ccompress&q=75&sharp=10&s=b07946c8776ec8d67655966b3ad476e7",
+        "width": 1240,
+        "height": 1754
+      },
+      "id": "677850059",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F677850059%2F25081229167%2F1%2Foriginal.20240118-222330?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C567%2C1240%2C620&s=c7063e814c535ecb73c4116ad3e6cedb",
+      "aspect_ratio": "2",
+      "edge_color": "#2b3552",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "CREEDENCE CLEARWATER REVIEW",
+      "html": "CREEDENCE CLEARWATER REVIEW"
+    },
+    "description": {
+      "text": "A  great tribute to one of Americas iconic seventies rock bands-All of the greatest hits plus some from John Fogerty's solo repertioire",
+      "html": "A  great tribute to one of Americas iconic seventies rock bands-All of the greatest hits plus some from John Fogerty's solo repertioire"
+    },
+    "url": "https://www.eventbrite.co.uk/e/creedence-clearwater-review-tickets-856235612767",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-08-09T19:30:00",
+      "utc": "2024-08-09T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-08-09T23:00:00",
+      "utc": "2024-08-09T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-03-04T17:00:55Z",
+    "changed": "2024-03-05T16:50:05Z",
+    "published": "2024-03-04T17:13:15Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "A  great tribute to one of Americas iconic seventies rock bands-All of the greatest hits plus some from John Fogerty's solo repertioire",
+    "facebook_event_id": null,
+    "logo_id": "711015979",
+    "organizer_id": "1782096963",
+    "venue_id": "201321659",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "856235612767",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/856235612767/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 519
+        },
+        "width": 842,
+        "height": 421
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711015979%2F25081229167%2F1%2Foriginal.20240304-170143?auto=format%2Ccompress&q=75&sharp=10&s=bac8797abf102b9e0c607e826f6db88a",
+        "width": 842,
+        "height": 1191
+      },
+      "id": "711015979",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711015979%2F25081229167%2F1%2Foriginal.20240304-170143?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C519%2C842%2C421&s=5d8645be02325e88efaef409b92713a0",
+      "aspect_ratio": "2",
+      "edge_color": null,
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "A BAND CALLED MALICE",
+      "html": "A BAND CALLED MALICE"
+    },
+    "description": {
+      "text": "A fantastic night featuring all your favourite  JAM songs- A worthy tribute !",
+      "html": "A fantastic night featuring all your favourite  JAM songs- A worthy tribute !"
+    },
+    "url": "https://www.eventbrite.co.uk/e/a-band-called-malice-tickets-856271058787",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-08-23T19:30:00",
+      "utc": "2024-08-23T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-08-23T23:00:00",
+      "utc": "2024-08-23T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-03-04T18:01:54Z",
+    "changed": "2024-03-09T09:25:33Z",
+    "published": "2024-03-04T18:14:53Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "A fantastic night featuring all your favourite  JAM songs- A worthy tribute !",
+    "facebook_event_id": null,
+    "logo_id": "711083849",
+    "organizer_id": "1782096963",
+    "venue_id": "201337819",
+    "category_id": "103",
+    "subcategory_id": "3009",
+    "format_id": "6",
+    "id": "856271058787",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/856271058787/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 119
+        },
+        "width": 226,
+        "height": 113
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711083849%2F25081229167%2F1%2Foriginal.20240304-180225?auto=format%2Ccompress&q=75&sharp=10&s=50da5958e6ed26e2ae5cae915e0e6c3b",
+        "width": 226,
+        "height": 320
+      },
+      "id": "711083849",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711083849%2F25081229167%2F1%2Foriginal.20240304-180225?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C119%2C226%2C113&s=a1b62220908bcdbd0a93d8483cfdf665",
+      "aspect_ratio": "2",
+      "edge_color": null,
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "DIZZY LIZZY",
+      "html": "DIZZY LIZZY"
+    },
+    "description": {
+      "text": "An authentic tribute to Phil Lynott and Thin Lizzy.A show full of anthemic songs",
+      "html": "An authentic tribute to Phil Lynott and Thin Lizzy.A show full of anthemic songs"
+    },
+    "url": "https://www.eventbrite.co.uk/e/dizzy-lizzy-tickets-856928705827",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-08-31T19:30:00",
+      "utc": "2024-08-31T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-08-31T23:00:00",
+      "utc": "2024-08-31T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-03-05T12:06:55Z",
+    "changed": "2024-03-05T12:12:57Z",
+    "published": "2024-03-05T12:12:57Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "An authentic tribute to Phil Lynott and Thin Lizzy.A show full of anthemic songs",
+    "facebook_event_id": null,
+    "logo_id": "711778539",
+    "organizer_id": "1782096963",
+    "venue_id": "201499219",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "856928705827",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/856928705827/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 42
+        },
+        "width": 226,
+        "height": 113
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711778539%2F25081229167%2F1%2Foriginal.20240305-120832?auto=format%2Ccompress&q=75&sharp=10&s=25f81ee8956ec3f58ca540ca793d119a",
+        "width": 226,
+        "height": 320
+      },
+      "id": "711778539",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711778539%2F25081229167%2F1%2Foriginal.20240305-120832?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C42%2C226%2C113&s=d527c7e54ce0ee693785187f79208128",
+      "aspect_ratio": "2",
+      "edge_color": "#535251",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "THE OASIS EXPERIENCE",
+      "html": "THE OASIS EXPERIENCE"
+    },
+    "description": {
+      "text": "A great tribute to Liam  + Noel Gallaghers  iconic music performed as it should be !",
+      "html": "A great tribute to Liam  + Noel Gallaghers  iconic music performed as it should be !"
+    },
+    "url": "https://www.eventbrite.co.uk/e/the-oasis-experience-tickets-856304629197",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-09-07T19:30:00",
+      "utc": "2024-09-07T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-09-07T23:00:00",
+      "utc": "2024-09-07T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-03-04T19:01:52Z",
+    "changed": "2024-03-04T19:14:50Z",
+    "published": "2024-03-04T19:14:50Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "A great tribute to Liam  + Noel Gallaghers  iconic music performed as it should be !",
+    "facebook_event_id": null,
+    "logo_id": "711145749",
+    "organizer_id": "1782096963",
+    "venue_id": "201351699",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "856304629197",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/856304629197/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 842,
+        "height": 421
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711145749%2F25081229167%2F1%2Foriginal.20240304-190228?auto=format%2Ccompress&q=75&sharp=10&s=d3d7d98d7053b3524c86b00d0f3ec553",
+        "width": 842,
+        "height": 1191
+      },
+      "id": "711145749",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711145749%2F25081229167%2F1%2Foriginal.20240304-190228?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C842%2C421&s=ed69e71c7ef87b46f18b341bb4dbb4c5",
+      "aspect_ratio": "2",
+      "edge_color": null,
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "WHOS NEXT",
+      "html": "WHOS NEXT"
+    },
+    "description": {
+      "text": "A  great tribute to THE WHO  ,playing all of the best songs from their classic singles  and albums.",
+      "html": "A  great tribute to THE WHO  ,playing all of the best songs from their classic singles  and albums."
+    },
+    "url": "https://www.eventbrite.co.uk/e/whos-next-tickets-856947251297",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-09-13T19:30:00",
+      "utc": "2024-09-13T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-09-13T23:00:00",
+      "utc": "2024-09-13T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-03-05T12:49:45Z",
+    "changed": "2024-03-05T12:58:33Z",
+    "published": "2024-03-05T12:58:33Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "A  great tribute to THE WHO  ,playing all of the best songs from their classic singles  and albums.",
+    "facebook_event_id": null,
+    "logo_id": "711801609",
+    "organizer_id": "1782096963",
+    "venue_id": "201504609",
+    "category_id": null,
+    "subcategory_id": null,
+    "format_id": null,
+    "id": "856947251297",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/856947251297/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 452,
+        "height": 226
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711801609%2F25081229167%2F1%2Foriginal.20240305-125033?auto=format%2Ccompress&q=75&sharp=10&s=1a29972c45cd461b20846624cc6be5db",
+        "width": 452,
+        "height": 640
+      },
+      "id": "711801609",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711801609%2F25081229167%2F1%2Foriginal.20240305-125033?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C452%2C226&s=5ad15bf8678a66ee4d746c137d3bdf89",
+      "aspect_ratio": "2",
+      "edge_color": null,
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "WHOS NEXT",
+      "html": "WHOS NEXT"
+    },
+    "description": {
+      "text": "THe Uks No 1 tribute to THE WHO featuring all of the classic hits plus selective album tracks",
+      "html": "THe Uks No 1 tribute to THE WHO featuring all of the classic hits plus selective album tracks"
+    },
+    "url": "https://www.eventbrite.co.uk/e/whos-next-tickets-810190570807",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-09-14T19:30:00",
+      "utc": "2024-09-14T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-09-14T23:30:00",
+      "utc": "2024-09-14T22:30:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-01-25T14:08:15Z",
+    "changed": "2024-01-25T14:24:14Z",
+    "published": "2024-01-25T14:24:14Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "THe Uks No 1 tribute to THE WHO featuring all of the classic hits plus selective album tracks",
+    "facebook_event_id": null,
+    "logo_id": "682502249",
+    "organizer_id": "1782096963",
+    "venue_id": "194643179",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "810190570807",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/810190570807/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 452,
+        "height": 226
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F682502249%2F25081229167%2F1%2Foriginal.20240125-140928?auto=format%2Ccompress&q=75&sharp=10&s=308cce73355e2b13284689b15510fdb7",
+        "width": 452,
+        "height": 640
+      },
+      "id": "682502249",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F682502249%2F25081229167%2F1%2Foriginal.20240125-140928?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C452%2C226&s=1af9bc7091ae287c3cd51171b1f0bccf",
+      "aspect_ratio": "2",
+      "edge_color": null,
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "DESPERADO  - The Heart Of The Eagles",
+      "html": "DESPERADO  - The Heart Of The Eagles"
+    },
+    "description": {
+      "text": "The greatest hits of THE EAGLES . Every one a winner !",
+      "html": "The greatest hits of THE EAGLES . Every one a winner !"
+    },
+    "url": "https://www.eventbrite.co.uk/e/desperado-the-heart-of-the-eagles-tickets-856399292337",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-09-21T19:30:00",
+      "utc": "2024-09-21T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-09-21T23:00:00",
+      "utc": "2024-09-21T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-03-04T21:33:13Z",
+    "changed": "2024-03-05T08:07:11Z",
+    "published": "2024-03-04T21:47:52Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "The greatest hits of THE EAGLES . Every one a winner !",
+    "facebook_event_id": null,
+    "logo_id": "711306479",
+    "organizer_id": "1782096963",
+    "venue_id": "201387669",
+    "category_id": "103",
+    "subcategory_id": "3004",
+    "format_id": "6",
+    "id": "856399292337",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/856399292337/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 594,
+        "height": 297
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711306479%2F25081229167%2F1%2Foriginal.20240304-213447?auto=format%2Ccompress&q=75&sharp=10&s=5d57a3be3db37c6fcdfdd424d22a7abe",
+        "width": 595,
+        "height": 842
+      },
+      "id": "711306479",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711306479%2F25081229167%2F1%2Foriginal.20240304-213447?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C594%2C297&s=ec3802f184ecc3e2c6631ebb52277a2b",
+      "aspect_ratio": "2",
+      "edge_color": null,
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "U2 /uk",
+      "html": "U2 /uk"
+    },
+    "description": {
+      "text": "No 1 tribute to  the legendary U2",
+      "html": "No 1 tribute to  the legendary U2"
+    },
+    "url": "https://www.eventbrite.co.uk/e/u2-uk-tickets-856427366307",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-09-27T19:30:00",
+      "utc": "2024-09-27T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-09-27T23:00:00",
+      "utc": "2024-09-27T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-03-04T22:27:28Z",
+    "changed": "2024-03-04T22:35:39Z",
+    "published": "2024-03-04T22:35:39Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "No 1 tribute to  the legendary U2",
+    "facebook_event_id": null,
+    "logo_id": "711352949",
+    "organizer_id": "1782096963",
+    "venue_id": "201398679",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "856427366307",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/856427366307/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 594,
+        "height": 297
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711352949%2F25081229167%2F1%2Foriginal.20240304-222802?auto=format%2Ccompress&q=75&sharp=10&s=c46e990a93277c53e17d3d43cd71612e",
+        "width": 595,
+        "height": 842
+      },
+      "id": "711352949",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711352949%2F25081229167%2F1%2Foriginal.20240304-222802?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C594%2C297&s=204e9b8226735dc9360c5f6de313bc4c",
+      "aspect_ratio": "2",
+      "edge_color": "#252525",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "BOOTLEG BLONDIE",
+      "html": "BOOTLEG BLONDIE"
+    },
+    "description": {
+      "text": "The no1 tribute to BLONDIE  performing all their  classic hits",
+      "html": "The no1 tribute to BLONDIE  performing all their  classic hits"
+    },
+    "url": "https://www.eventbrite.co.uk/e/bootleg-blondie-tickets-856953158967",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-09-28T19:30:00",
+      "utc": "2024-09-28T18:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-09-28T23:00:00",
+      "utc": "2024-09-28T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-03-05T13:02:14Z",
+    "changed": "2024-03-05T13:10:33Z",
+    "published": "2024-03-05T13:10:33Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "The no1 tribute to BLONDIE  performing all their  classic hits",
+    "facebook_event_id": null,
+    "logo_id": "711809169",
+    "organizer_id": "1782096963",
+    "venue_id": "201506239",
+    "category_id": "103",
+    "subcategory_id": null,
+    "format_id": "6",
+    "id": "856953158967",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/856953158967/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 226,
+        "height": 113
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711809169%2F25081229167%2F1%2Foriginal.20240305-130357?auto=format%2Ccompress&q=75&sharp=10&s=2cdbdd83fe5aed44dd98981e50830135",
+        "width": 226,
+        "height": 320
+      },
+      "id": "711809169",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711809169%2F25081229167%2F1%2Foriginal.20240305-130357?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C226%2C113&s=574e748d22e545fae92e9ba57268e86d",
+      "aspect_ratio": "2",
+      "edge_color": null,
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "LEGEND",
+      "html": "LEGEND"
+    },
+    "description": {
+      "text": "The UK'S Top tribute to BOB MARLEY .A night of reggae classics",
+      "html": "The UK'S Top tribute to BOB MARLEY .A night of reggae classics"
+    },
+    "url": "https://www.eventbrite.co.uk/e/legend-tickets-763910114717",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-10-26T19:00:00",
+      "utc": "2024-10-26T18:00:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-10-26T23:00:00",
+      "utc": "2024-10-26T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2023-11-21T13:27:28Z",
+    "changed": "2023-11-21T13:32:01Z",
+    "published": "2023-11-21T13:32:01Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "The UK'S Top tribute to BOB MARLEY .A night of reggae classics",
+    "facebook_event_id": null,
+    "logo_id": "645809949",
+    "organizer_id": "1782096963",
+    "venue_id": "185262109",
+    "category_id": "103",
+    "subcategory_id": "3015",
+    "format_id": "6",
+    "id": "763910114717",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/763910114717/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 452,
+        "height": 226
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645809949%2F25081229167%2F1%2Foriginal.20231121-132754?auto=format%2Ccompress&q=75&sharp=10&s=d33c835f6da7d335dd4d780c72f9e00e",
+        "width": 452,
+        "height": 640
+      },
+      "id": "645809949",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645809949%2F25081229167%2F1%2Foriginal.20231121-132754?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C452%2C226&s=55099034fe373866fab8ffba41fb8f53",
+      "aspect_ratio": "2",
+      "edge_color": "#000000",
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "ELECTRIK  LIVE ORCHESTRA",
+      "html": "ELECTRIK  LIVE ORCHESTRA"
+    },
+    "description": {
+      "text": "A top tribute to Jeff Lynne and his band ELO.A full performance of all their greatest hits !",
+      "html": "A top tribute to Jeff Lynne and his band ELO.A full performance of all their greatest hits !"
+    },
+    "url": "https://www.eventbrite.co.uk/e/electrik-live-orchestra-tickets-856956829947",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-11-15T19:30:00",
+      "utc": "2024-11-15T19:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-11-15T22:00:00",
+      "utc": "2024-11-15T22:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-03-05T13:16:08Z",
+    "changed": "2024-03-05T13:24:40Z",
+    "published": "2024-03-05T13:24:40Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "A top tribute to Jeff Lynne and his band ELO.A full performance of all their greatest hits !",
+    "facebook_event_id": null,
+    "logo_id": "711817079",
+    "organizer_id": "1782096963",
+    "venue_id": "201508269",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "856956829947",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/856956829947/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": null,
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711817079%2F25081229167%2F1%2Foriginal.20240305-131649?auto=format%2Ccompress&q=75&sharp=10&s=11366505f53a6df844406425967e7665",
+        "width": 226,
+        "height": 320
+      },
+      "id": "711817079",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711817079%2F25081229167%2F1%2Foriginal.20240305-131649?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=c64618287760dd543aaa2884c6f6f8cf",
+      "aspect_ratio": "0.705",
+      "edge_color": null,
+      "edge_color_set": true
+    }
+  },
+  {
+    "name": {
+      "text": "ZZ TOPPD",
+      "html": "ZZ TOPPD"
+    },
+    "description": {
+      "text": "The UKS No 1 Tribute to the legendary ZZ TOP",
+      "html": "The UKS No 1 Tribute to the legendary ZZ TOP"
+    },
+    "url": "https://www.eventbrite.co.uk/e/zz-toppd-tickets-856545730337",
+    "start": {
+      "timezone": "Europe/London",
+      "local": "2024-11-29T19:30:00",
+      "utc": "2024-11-29T19:30:00Z"
+    },
+    "end": {
+      "timezone": "Europe/London",
+      "local": "2024-11-29T23:00:00",
+      "utc": "2024-11-29T23:00:00Z"
+    },
+    "organization_id": "25081229167",
+    "created": "2024-03-05T00:24:58Z",
+    "changed": "2024-03-05T00:34:01Z",
+    "published": "2024-03-05T00:34:01Z",
+    "capacity": null,
+    "capacity_is_custom": null,
+    "status": "live",
+    "currency": "GBP",
+    "listed": true,
+    "shareable": true,
+    "online_event": false,
+    "tx_time_limit": 1200,
+    "hide_start_date": false,
+    "hide_end_date": false,
+    "locale": "en_GB",
+    "is_locked": false,
+    "privacy_setting": "unlocked",
+    "is_series": false,
+    "is_series_parent": false,
+    "inventory_type": "limited",
+    "is_reserved_seating": false,
+    "show_pick_a_seat": false,
+    "show_seatmap_thumbnail": false,
+    "show_colors_in_seatmap_thumbnail": false,
+    "source": "coyote",
+    "is_free": false,
+    "version": null,
+    "summary": "The UKS No 1 Tribute to the legendary ZZ TOP",
+    "facebook_event_id": null,
+    "logo_id": "711437379",
+    "organizer_id": "1782096963",
+    "venue_id": "201417379",
+    "category_id": "103",
+    "subcategory_id": "3017",
+    "format_id": "6",
+    "id": "856545730337",
+    "resource_uri": "https://www.eventbriteapi.com/v3/events/856545730337/",
+    "is_externally_ticketed": false,
+    "logo": {
+      "crop_mask": {
+        "top_left": {
+          "x": 0,
+          "y": 0
+        },
+        "width": 452,
+        "height": 226
+      },
+      "original": {
+        "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711437379%2F25081229167%2F1%2Foriginal.20240305-002558?auto=format%2Ccompress&q=75&sharp=10&s=91d6f66f32996f27dde63973cfd20459",
+        "width": 452,
+        "height": 640
+      },
+      "id": "711437379",
+      "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711437379%2F25081229167%2F1%2Foriginal.20240305-002558?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C452%2C226&s=ff5e5203e43f2a149e75575cdf735e04",
+      "aspect_ratio": "2",
+      "edge_color": "#000000",
+      "edge_color_set": true
+    }
+  }
+]
