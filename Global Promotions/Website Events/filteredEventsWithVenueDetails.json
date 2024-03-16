@@ -153,15 +153,6 @@
     "venueAddress": "Derwen Road, BRIDGEND, CF31 1 LH"
   },
   {
-    "name": "ARE YOU EXPERIENCED ?",
-    "description": "The ultimate tribute to JIMI HENDRIX",
-    "url": "https://www.eventbrite.co.uk/e/are-you-experienced-tickets-856925456107",
-    "start": "2024-06-22T19:30:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711772169%2F25081229167%2F1%2Foriginal.20240305-115723?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C3%2C224%2C112&s=c008a93bd6e4198310be0f34de47c455",
-    "venueName": "The Earl Haig Club",
-    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
-  },
-  {
     "name": "BAND OF FRIENDS - Celebrating The Music Of Rory Gallagher",
     "description": "Three top musicians ,two who have played alongside the man himself ,celebrating the glorious music of the legendary Rory Gallagher",
     "url": "https://www.eventbrite.co.uk/e/band-of-friends-celebrating-the-music-of-rory-gallagher-tickets-850761780387",
@@ -288,11 +279,29 @@
     "venueAddress": "High St, Narberth, SA67 7AS"
   },
   {
+    "name": "JIM JONES ALL STARS",
+    "description": "A Night Of Pure Unadulterated Rock N Roll !",
+    "url": "https://www.eventbrite.co.uk/e/jim-jones-all-stars-tickets-863908703187",
+    "start": "2024-11-06T19:30:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F720481849%2F25081229167%2F1%2Foriginal.20240315-160801?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C139%2C226%2C113&s=094d196e4b920df82657e23576f2eca2",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
     "name": "ELECTRIK  LIVE ORCHESTRA",
     "description": "A top tribute to Jeff Lynne and his band ELO.A full performance of all their greatest hits !",
     "url": "https://www.eventbrite.co.uk/e/electrik-live-orchestra-tickets-856956829947",
     "start": "2024-11-15T19:30:00",
     "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711817079%2F25081229167%2F1%2Foriginal.20240305-131649?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=c64618287760dd543aaa2884c6f6f8cf",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "ARE YOU EXPERIENCED ?",
+    "description": "The ultimate tribute to JIMI HENDRIX",
+    "url": "https://www.eventbrite.co.uk/e/are-you-experienced-tickets-856925456107",
+    "start": "2024-11-22T19:30:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F711772169%2F25081229167%2F1%2Foriginal.20240305-115723?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C3%2C224%2C112&s=c008a93bd6e4198310be0f34de47c455",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
