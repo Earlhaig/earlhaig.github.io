@@ -1,14 +1,5 @@
 [
   {
-    "name": "BON GIOVI",
-    "description": "Top tribute to BON JOVI performing  all of the bands greatest hits",
-    "url": "https://www.eventbrite.co.uk/e/bon-giovi-tickets-763903555097",
-    "start": "2024-05-17T19:30:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645798539%2F25081229167%2F1%2Foriginal.20231121-130634?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C842%2C421&s=b7013b7ae470b267c1726d1ad1c0ea15",
-    "venueName": "The Earl Haig Club",
-    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
-  },
-  {
     "name": "ABSOLUTE BOWIE",
     "description": "The Ultimate tribute to David  Bowie and all his reincarnations .",
     "url": "https://www.eventbrite.co.uk/e/absolute-bowie-tickets-775877890657",
@@ -275,6 +266,15 @@
     "url": "https://www.eventbrite.co.uk/e/maetlive-featuring-craig-halford-as-meatloaf-the-neverland-express-tickets-885490765717",
     "start": "2024-12-07T19:30:00",
     "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F746600699%2F25081229167%2F1%2Foriginal.20240418-104238?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C491%2C842%2C421&s=12fea307698945cdcaa05592e005fab8",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "BON GIOVI - due to illness this has been POSTPONED until  Sat 15 Feb 2025",
+    "description": "Bon Giovi the no 1 tribute to Bon Jovi . Due to illness the band has had to reschedule the event  to Saturday 15th February 2025.",
+    "url": "https://www.eventbrite.co.uk/e/bon-giovi-due-to-illness-this-has-been-postponed-until-sat-15-feb-2025-tickets-763903555097",
+    "start": "2025-02-15T19:30:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645798539%2F25081229167%2F1%2Foriginal.20231121-130634?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C842%2C421&s=b7013b7ae470b267c1726d1ad1c0ea15",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   }
