@@ -261,6 +261,15 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
+    "name": "A BAND CALLED MALICE - A tribute to THE JAM",
+    "description": "A top tribute to the music of THE JAM  performing the classic songs of Paul Weller",
+    "url": "https://www.eventbrite.co.uk/e/a-band-called-malice-a-tribute-to-the-jam-tickets-930261175217",
+    "start": "2024-12-06T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F794430429%2F25081229167%2F1%2Foriginal.20240622-152848?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=eb83aa978b70bbe9df19c0f977dddc5e",
+    "venueName": "The Royal British Legion",
+    "venueAddress": "The Royal British Legion, Rumney, CF3 4BN"
+  },
+  {
     "name": "MAETLIVE - featuring Craig Halford as MEATLOAF  & The Neverland Express",
     "description": "A fantastic tribute featuring Craig Halford as MEATLOAF  & The Neverland Express",
     "url": "https://www.eventbrite.co.uk/e/maetlive-featuring-craig-halford-as-meatloaf-the-neverland-express-tickets-885490765717",
@@ -268,6 +277,15 @@
     "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F746600699%2F25081229167%2F1%2Foriginal.20240418-104238?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C491%2C842%2C421&s=12fea307698945cdcaa05592e005fab8",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "THE OASIS EXPERIENCE",
+    "description": "No 1 tribute  to OASIS playing all of their classics.Supported by DJ Liam Curtin",
+    "url": "https://www.eventbrite.co.uk/e/the-oasis-experience-tickets-931586890467",
+    "start": "2024-12-13T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F794513089%2F25081229167%2F1%2Foriginal.20240622-194154?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C41%2C842%2C421&s=b900675bb460e3f2e06ee6514b270500",
+    "venueName": "The Royal British Legion",
+    "venueAddress": "The Royal British Legion, Rumney, CF3 4BN"
   },
   {
     "name": "CHILDREN OF THE GRAVY- MASTERS OF SABBATH",
