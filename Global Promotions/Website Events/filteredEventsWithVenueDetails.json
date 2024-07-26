@@ -297,11 +297,20 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
-    "name": "BON GIOVI - due to illness this has been POSTPONED until  Sat 15 Feb 2025",
-    "description": "Bon Giovi the no 1 tribute to Bon Jovi . Due to illness the band has had to reschedule the event  to Saturday 15th February 2025.",
-    "url": "https://www.eventbrite.co.uk/e/bon-giovi-due-to-illness-this-has-been-postponed-until-sat-15-feb-2025-tickets-763903555097",
-    "start": "2025-02-15T19:30:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F645798539%2F25081229167%2F1%2Foriginal.20231121-130634?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C842%2C421&s=b7013b7ae470b267c1726d1ad1c0ea15",
+    "name": "BON GIOVI",
+    "description": "Bon Giovi the no 1 tribute to Bon Jovi . This event has been rescheduled from 17th May 2024.",
+    "url": "https://www.eventbrite.co.uk/e/bon-giovi-tickets-763903555097",
+    "start": "2025-02-15T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F814460869%2F25081229167%2F1%2Foriginal.20240725-145857?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C3%2C452%2C226&s=19f32acfde96f1fd5533b6af3fbabfc1",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "THE SMALL FAKERS + DJ  Liam Curtin",
+    "description": "The UKs No 1 tribute to Steve Marriott,Ronnie Lane, Ian Mclagan,and Kenney Jones performing all the classis hits and more ....",
+    "url": "https://www.eventbrite.co.uk/e/the-small-fakers-dj-liam-curtin-tickets-957421693057",
+    "start": "2025-02-28T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F814481839%2F25081229167%2F1%2Foriginal.20240725-152624?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C452%2C226&s=4684b04d8b4d606cdefc4c50d1793814",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   }
