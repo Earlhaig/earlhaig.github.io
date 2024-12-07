@@ -1,14 +1,5 @@
 [
   {
-    "name": "A BAND CALLED MALICE - A tribute to THE JAM",
-    "description": "A top tribute to the music of THE JAM  performing the classic songs of Paul Weller",
-    "url": "https://www.eventbrite.co.uk/e/a-band-called-malice-a-tribute-to-the-jam-tickets-930261175217",
-    "start": "2024-12-06T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F794430429%2F25081229167%2F1%2Foriginal.20240622-152848?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=eb83aa978b70bbe9df19c0f977dddc5e",
-    "venueName": "The Royal British Legion",
-    "venueAddress": "The Royal British Legion, Rumney, CF3 4BN"
-  },
-  {
     "name": "MAETLIVE - featuring Craig Halford as MEATLOAF  & The Neverland Express",
     "description": "A fantastic tribute featuring Craig Halford as MEATLOAF  & The Neverland Express",
     "url": "https://www.eventbrite.co.uk/e/maetlive-featuring-craig-halford-as-meatloaf-the-neverland-express-tickets-885490765717",
@@ -135,15 +126,6 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
-    "name": "FOCUS 25",
-    "description": "The Legendary Dutch band making another welcome return",
-    "url": "https://www.eventbrite.co.uk/e/focus-25-tickets-1079561681049",
-    "start": "2025-04-28T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F896592933%2F25081229167%2F1%2Foriginal.20241111-191910?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C904%2C452&s=a18c5764504bcee60a4038786a6496aa",
-    "venueName": "The Earl Haig Club",
-    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
-  },
-  {
     "name": "STEREOIRONICS + MANIAC STREET PREACHERS",
     "description": "Two great tributes to two of  the most iconic bands to come out of Wales.",
     "url": "https://www.eventbrite.co.uk/e/stereoironics-maniac-street-preachers-tickets-1097250378419",
@@ -194,6 +176,15 @@
     "url": "https://www.eventbrite.co.uk/e/the-legendary-curved-air-tickets-1083929906529",
     "start": "2025-11-21T19:15:00",
     "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F899663813%2F25081229167%2F1%2Foriginal.20241115-095905?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C3%2C904%2C452&s=599c3976f9f8a19738a650b5edf88f28",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "FOCUS 26",
+    "description": "The Legendary Dutch band making another welcome return",
+    "url": "https://www.eventbrite.co.uk/e/focus-26-tickets-1079561681049",
+    "start": "2026-04-27T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F912853433%2F25081229167%2F1%2Foriginal.20241206-134149?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C3508%2C1754&s=c98c34be075ffc0fc729e68971a6e575",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   }
