@@ -99,6 +99,24 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
+    "name": "The ROLLIN STONED",
+    "description": "A Great Authentic Tribute to The Stones playing all of their greatest hits !",
+    "url": "https://www.eventbrite.co.uk/e/the-rollin-stoned-tickets-1225495472949",
+    "start": "2025-05-02T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F947033323%2F25081229167%2F1%2Foriginal.20250128-214029?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C301%2C452%2C226&s=22b1ea6989eda22b5dd74d2884eb07ca",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "ELECTRIK LIVE ORCHESTRA",
+    "description": "The Uks No 1 Tribute to Jeff Lynne and ELO",
+    "url": "https://www.eventbrite.co.uk/e/electrik-live-orchestra-tickets-1225575913549",
+    "start": "2025-05-10T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F947088583%2F25081229167%2F1%2Foriginal.20250128-223626?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C122%2C452%2C226&s=72cde78051c1f61ca6f598af7dc6cc45",
+    "venueName": "THE PATTI PAVILION",
+    "venueAddress": "MUMBLES ROAD, SWANSEA, SA1 4PQ"
+  },
+  {
     "name": "LIMEHOUSE LIZZY",
     "description": "The UKS No 1 Tribute to PHIL LYNOTT & THIN LIZZY",
     "url": "https://www.eventbrite.co.uk/e/limehouse-lizzy-tickets-1086055785089",
@@ -135,9 +153,18 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
-    "name": "THE DAYS BETWEEN A Celebration of Jerry Garcia  featDEADENZ & THE TERRAPINS",
-    "description": "THE DAYS BETWEEN A Celebration of the life and music of Jerry Garcia  and The Grateful Dead featuring DEADENZ & THE TERRAPINS",
-    "url": "https://www.eventbrite.co.uk/e/the-days-between-a-celebration-of-jerry-garcia-featdeadenz-the-terrapins-tickets-1222855807639",
+    "name": "BOOTLEG BLONDIE",
+    "description": "The Worlds No 1 Tribute to Debby Harry and Blondie",
+    "url": "https://www.eventbrite.co.uk/e/bootleg-blondie-tickets-1225450006959",
+    "start": "2025-07-18T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F946884583%2F25081229167%2F1%2Foriginal.20250128-192556?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1076%2C538&s=c838283ed805dc44d41b836342b3537f",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "THE DAYS BETWEEN A Celebration of Jerry Garcia feat DEADEDZ & THE TERRAPINS",
+    "description": "THE DAYS BETWEEN A Celebration of the life and music of Jerry Garcia  and The Grateful Dead featuring DEADEDZ & THE TERRAPINS",
+    "url": "https://www.eventbrite.co.uk/e/the-days-between-a-celebration-of-jerry-garcia-feat-deadedz-the-terrapins-tickets-1222855807639",
     "start": "2025-08-09T18:30:00",
     "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F945021283%2F25081229167%2F1%2Foriginal.20250126-190909?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C497%2C1446%2C723&s=0919c1f376b3d11f184e9ea344576bc0",
     "venueName": "The Earl Haig Club",
@@ -149,6 +176,15 @@
     "url": "https://www.eventbrite.co.uk/e/the-vintage-explosion-tickets-1086106777609",
     "start": "2025-08-23T19:15:00",
     "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F900706633%2F25081229167%2F1%2Foriginal.20241117-160843?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C904%2C452&s=b7bc7f16b8688dfa40f242430b74464d",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "ABSOLUTE BOWIE",
+    "description": "The Uks No 1 tribute to David Bowie performing all the great songs from his amazing repertoire.",
+    "url": "https://www.eventbrite.co.uk/e/absolute-bowie-tickets-1225563636829",
+    "start": "2025-09-05T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F947075743%2F25081229167%2F1%2Foriginal.20250128-222202?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C105%2C226%2C113&s=ec6cbab8a3979100f90a3bb8a91e58ee",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
