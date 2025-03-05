@@ -18,15 +18,6 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
-    "name": "The OASIS EXPERIENCE",
-    "description": "The most authentic tribute to the Gallagher brothers featuring lead singer Degsy Williamson .A full on performance of all the bands hits.",
-    "url": "https://www.eventbrite.co.uk/e/the-oasis-experience-tickets-1217710638299",
-    "start": "2025-03-21T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F941766693%2F25081229167%2F1%2Foriginal.20250122-104134?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C3508%2C1754&s=b12a04770782fbb575f434441f9e5137",
-    "venueName": "The Earl Haig Club",
-    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
-  },
-  {
     "name": "QUO CONNECTION",
     "description": "An authentic tribute to STATUS QUO playing all of their classic songs .",
     "url": "https://www.eventbrite.co.uk/e/quo-connection-tickets-1063325478129",
@@ -90,6 +81,15 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
+    "name": "The OASIS EXPERIENCE",
+    "description": "The most authentic tribute to the Gallagher brothers featuring lead singer Degsy Williamson .A full on performance of all the bands hits.",
+    "url": "https://www.eventbrite.co.uk/e/the-oasis-experience-tickets-1217710638299",
+    "start": "2025-05-09T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F974667323%2F25081229167%2F1%2Foriginal.20250304-120140?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C51%2C452%2C226&s=55bdf8f6198cbe51471727d3da1dcea6",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
     "name": "ELECTRIK LIVE ORCHESTRA",
     "description": "The Uks No 1 Tribute to Jeff Lynne and ELO",
     "url": "https://www.eventbrite.co.uk/e/electrik-live-orchestra-tickets-1225575913549",
@@ -97,6 +97,15 @@
     "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F947088583%2F25081229167%2F1%2Foriginal.20250128-223626?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C122%2C452%2C226&s=72cde78051c1f61ca6f598af7dc6cc45",
     "venueName": "THE PATTI PAVILION",
     "venueAddress": "MUMBLES ROAD, SWANSEA, SA1 4PQ"
+  },
+  {
+    "name": "PEEL YOUR OWN SPUDS",
+    "description": "A BANK HOLIDAY SPECIAL !  featuring PYOS a unique band with a large repertoire of lively Irish songs .Great for a knees up !",
+    "url": "https://www.eventbrite.co.uk/e/peel-your-own-spuds-tickets-1269058701739",
+    "start": "2025-05-25T19:00:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F974830333%2F25081229167%2F1%2Foriginal.20250304-152852?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C483%2C904%2C452&s=aac6b64947da77ca62c9ea675da34b17",
+    "venueName": "POTTERS PUB",
+    "venueAddress": "22-24 Upper Dock Street, Newport, NP201DL"
   },
   {
     "name": "LIMEHOUSE LIZZY",
@@ -171,6 +180,24 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
+    "name": "FAUX FIGHTERS UK",
+    "description": "A Top tribute to THE FOO FIGHTERS playing all of their classic anthemic songs",
+    "url": "https://www.eventbrite.co.uk/e/faux-fighters-uk-tickets-1269175812019",
+    "start": "2025-09-06T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F974904613%2F25081229167%2F1%2Foriginal.20250304-162651?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C233%2C904%2C452&s=976def2f8e7822698ca9f2e95f8c4252",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "FLASH - A Tribute to QUEEN",
+    "description": "Top tribute to the Legendary QUEEN .A show full of all their classic hits .",
+    "url": "https://www.eventbrite.co.uk/e/flash-a-tribute-to-queen-tickets-1269223444489",
+    "start": "2025-09-19T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F974960353%2F25081229167%2F1%2Foriginal.20250304-170938?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C207%2C452%2C226&s=32f25d5f627b700418b178fb5e69f96a",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
     "name": "ELECTRIK LIVE ORCHESTRA",
     "description": "The No 1 Tribute To Jeff Lynne & ELO.",
     "url": "https://www.eventbrite.co.uk/e/electrik-live-orchestra-tickets-1226734278249",
@@ -203,6 +230,15 @@
     "url": "https://www.eventbrite.co.uk/e/legend-tickets-1226853575069",
     "start": "2025-10-18T19:15:00",
     "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F947878823%2F25081229167%2F1%2Foriginal.20250129-193741?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C32%2C452%2C226&s=a67db0a3c97c3c7a1191b9764f7ffa46",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "MAETLIVE & The  Neverland Express",
+    "description": "A Tribute to Meatoaf featuring Craig Halford.",
+    "url": "https://www.eventbrite.co.uk/e/maetlive-the-neverland-express-tickets-1269298037599",
+    "start": "2025-11-08T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F974972383%2F25081229167%2F1%2Foriginal.20250304-171930?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=7a8a386abc32c7a27638ac5aa9fd21bb",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
