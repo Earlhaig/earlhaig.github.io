@@ -225,6 +225,15 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
+    "name": "BOOTLEG BLONDIE",
+    "description": "The Worlds No 1. Tribute to BOOTLEG BLONDIE",
+    "url": "https://www.eventbrite.co.uk/e/bootleg-blondie-tickets-1303390579309",
+    "start": "2025-10-31T19:00:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F994457153%2F25081229167%2F1%2Foriginal.20250327-184514?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C37%2C450%2C225&s=2f3577156626ba6d5b8d9a1bd9429a84",
+    "venueName": "The Corn Exchange",
+    "venueAddress": "High Street, Newport, NP20 1AA"
+  },
+  {
     "name": "DESPERADO - HEART OF THE EAGLES",
     "description": "A night of the classic songs  of THE EAGLES . Two hours full of hits performed by a great band",
     "url": "https://www.eventbrite.co.uk/e/desperado-heart-of-the-eagles-tickets-1280583984169",
@@ -268,6 +277,15 @@
     "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F947931733%2F25081229167%2F1%2Foriginal.20250129-202820?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C452%2C226&s=8cffa0d7b65ee0171ff75298fee64b77",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "OZRIC TENTACLES + Special Guests  SYSTEM 7",
+    "description": "OZRIC TENTACLES \nOzric Tentacles ,top UK  prog rock band  plus System 7 featuring Steve Hillage and Miquette Giraudy.",
+    "url": "https://www.eventbrite.co.uk/e/ozric-tentacles-special-guests-system-7-tickets-1303081314289",
+    "start": "2025-11-29T19:00:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F994181923%2F25081229167%2F1%2Foriginal.20250327-143323?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C29%2C452%2C226&s=9783f997b7cb110f0e193b803ce7bfee",
+    "venueName": "THE PATTI PAVILION",
+    "venueAddress": "MUMBLES ROAD, SWANSEA, SA1 4PQ"
   },
   {
     "name": "ED FORCE ONE + PRIEST UNLEASHED",
