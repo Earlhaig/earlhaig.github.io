@@ -54,9 +54,9 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
-    "name": "GREEN HAZE  + DJ Liam Curtin",
+    "name": "GREEN HAZE - NO 1 GREEN DAY TRIBUTE ! + DJ Liam Curtin",
     "description": "The No 1 tribute to GREENDAY featuring all their classic hits .",
-    "url": "https://www.eventbrite.co.uk/e/green-haze-dj-liam-curtin-tickets-1301992046259",
+    "url": "https://www.eventbrite.co.uk/e/green-haze-no-1-green-day-tribute-dj-liam-curtin-tickets-1301992046259",
     "start": "2025-07-25T19:15:00",
     "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F993146473%2F25081229167%2F1%2Foriginal.20250326-133825?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C59%2C452%2C226&s=49eb79dd0b411386f2ce4e0c563235db",
     "venueName": "The Earl Haig Club",
@@ -160,6 +160,15 @@
     "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F947878823%2F25081229167%2F1%2Foriginal.20250129-193741?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C32%2C452%2C226&s=a67db0a3c97c3c7a1191b9764f7ffa46",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "BIG MACS WHOLLY SOUL BAND",
+    "description": "Twelve piece ' sixties soul band featuring Mike McNamara performing all the great songs from Stax, Tamla Motown and Atlantic Records.",
+    "url": "https://www.eventbrite.co.uk/e/big-macs-wholly-soul-band-tickets-1377533823749",
+    "start": "2025-10-24T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1037668733%2F25081229167%2F1%2Foriginal.20250523-152952?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=74ffd56d7db6269cb5d672585fcec4ca",
+    "venueName": "The Clarence Hall",
+    "venueAddress": "Beaufort Street, Crickhowell, NP8 1BN"
   },
   {
     "name": "BOOTLEG BLONDIE",
