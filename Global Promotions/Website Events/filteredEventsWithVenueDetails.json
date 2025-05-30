@@ -1,5 +1,23 @@
 [
   {
+    "name": "FOCUS 26",
+    "description": "The Legendary Dutch band making another welcome return",
+    "url": "https://www.eventbrite.co.uk/e/focus-26-tickets-1079561681049",
+    "start": "2026-04-27T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F912853433%2F25081229167%2F1%2Foriginal.20241206-134149?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C3508%2C1754&s=c98c34be075ffc0fc729e68971a6e575",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "The Legendary CURVED AIR",
+    "description": "Curved Air is a unique band, synthesizing an eclectic blend of musical styles into an instantly identifiable sound.",
+    "url": "https://www.eventbrite.co.uk/e/the-legendary-curved-air-tickets-1083929906529",
+    "start": "2025-11-21T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F899663813%2F25081229167%2F1%2Foriginal.20241115-095905?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C3%2C904%2C452&s=599c3976f9f8a19738a650b5edf88f28",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
     "name": "LIMEHOUSE LIZZY",
     "description": "The UKS No 1 Tribute to PHIL LYNOTT & THIN LIZZY",
     "url": "https://www.eventbrite.co.uk/e/limehouse-lizzy-tickets-1086055785089",
@@ -18,11 +36,11 @@
     "venueAddress": "Beaufort Street, Crickhowell, NP8 1BN"
   },
   {
-    "name": "OYE SANTANA",
-    "description": "The ultimate tribute to Carlo Santana and his band-  rescheduled from 12th September 2025",
-    "url": "https://www.eventbrite.co.uk/e/oye-santana-tickets-1115801465219",
-    "start": "2025-06-06T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1007039233%2F25081229167%2F1%2Foriginal.20250411-193337?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C2%2C452%2C226&s=09b5006014055e4dc0201cec517c3201",
+    "name": "THE VINTAGE EXPLOSION",
+    "description": "Sensational  seven piece band playing a selection of 50s and 60s soul /r'n'b classics plus their own authentic material",
+    "url": "https://www.eventbrite.co.uk/e/the-vintage-explosion-tickets-1086106777609",
+    "start": "2025-08-23T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F900706633%2F25081229167%2F1%2Foriginal.20241117-160843?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C904%2C452&s=b7bc7f16b8688dfa40f242430b74464d",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
@@ -36,20 +54,11 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
-    "name": "BOOTLEG BLONDIE",
-    "description": "The Worlds No 1 Tribute to Debby Harry and Blondie",
-    "url": "https://www.eventbrite.co.uk/e/bootleg-blondie-tickets-1225450006959",
-    "start": "2025-07-18T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F946884583%2F25081229167%2F1%2Foriginal.20250128-192556?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1076%2C538&s=c838283ed805dc44d41b836342b3537f",
-    "venueName": "The Earl Haig Club",
-    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
-  },
-  {
-    "name": "GREEN HAZE - NO 1 GREEN DAY TRIBUTE ! + DJ Liam Curtin",
-    "description": "The No 1 tribute to GREENDAY featuring all their classic hits .",
-    "url": "https://www.eventbrite.co.uk/e/green-haze-no-1-green-day-tribute-dj-liam-curtin-tickets-1301992046259",
-    "start": "2025-07-25T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F993146473%2F25081229167%2F1%2Foriginal.20250326-133825?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C59%2C452%2C226&s=49eb79dd0b411386f2ce4e0c563235db",
+    "name": "OYE SANTANA",
+    "description": "The ultimate tribute to Carlo Santana and his band-  rescheduled from 12th September 2025",
+    "url": "https://www.eventbrite.co.uk/e/oye-santana-tickets-1115801465219",
+    "start": "2025-06-06T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1007039233%2F25081229167%2F1%2Foriginal.20250411-193337?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C2%2C452%2C226&s=09b5006014055e4dc0201cec517c3201",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
@@ -63,38 +72,11 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
-    "name": "THE VINTAGE EXPLOSION",
-    "description": "Sensational  seven piece band playing a selection of 50s and 60s soul /r'n'b classics plus their own authentic material",
-    "url": "https://www.eventbrite.co.uk/e/the-vintage-explosion-tickets-1086106777609",
-    "start": "2025-08-23T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F900706633%2F25081229167%2F1%2Foriginal.20241117-160843?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C904%2C452&s=b7bc7f16b8688dfa40f242430b74464d",
-    "venueName": "The Earl Haig Club",
-    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
-  },
-  {
-    "name": "ABSOLUTE BOWIE",
-    "description": "The Uks No 1 tribute to David Bowie performing all the great songs from his amazing repertoire.",
-    "url": "https://www.eventbrite.co.uk/e/absolute-bowie-tickets-1225563636829",
-    "start": "2025-09-05T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F947075743%2F25081229167%2F1%2Foriginal.20250128-222202?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C105%2C226%2C113&s=ec6cbab8a3979100f90a3bb8a91e58ee",
-    "venueName": "The Earl Haig Club",
-    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
-  },
-  {
-    "name": "FAUX FIGHTERS UK",
-    "description": "A Top tribute to THE FOO FIGHTERS playing all of their classic anthemic songs",
-    "url": "https://www.eventbrite.co.uk/e/faux-fighters-uk-tickets-1269175812019",
-    "start": "2025-09-06T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F974904613%2F25081229167%2F1%2Foriginal.20250304-162651?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C233%2C904%2C452&s=976def2f8e7822698ca9f2e95f8c4252",
-    "venueName": "The Earl Haig Club",
-    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
-  },
-  {
-    "name": "John OTWAY & Wild Willy BARRETT",
-    "description": "A night of Fun and Good Time Rock N Roll !",
-    "url": "https://www.eventbrite.co.uk/e/john-otway-wild-willy-barrett-tickets-1363245356559",
-    "start": "2025-09-12T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1028767113%2F25081229167%2F1%2Foriginal.20250512-153810?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C73%2C904%2C452&s=0eb360f7e6dcb1ba1325c8511742e6e8",
+    "name": "BOOTLEG BLONDIE",
+    "description": "The Worlds No 1 Tribute to Debby Harry and Blondie",
+    "url": "https://www.eventbrite.co.uk/e/bootleg-blondie-tickets-1225450006959",
+    "start": "2025-07-18T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F946884583%2F25081229167%2F1%2Foriginal.20250128-192556?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1076%2C538&s=c838283ed805dc44d41b836342b3537f",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
@@ -108,11 +90,11 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
-    "name": "FLASH - A Tribute to QUEEN",
-    "description": "Top tribute to the Legendary QUEEN .A show full of all their classic hits .",
-    "url": "https://www.eventbrite.co.uk/e/flash-a-tribute-to-queen-tickets-1269223444489",
-    "start": "2025-09-19T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F974960353%2F25081229167%2F1%2Foriginal.20250304-170938?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C207%2C452%2C226&s=32f25d5f627b700418b178fb5e69f96a",
+    "name": "ABSOLUTE BOWIE",
+    "description": "The Uks No 1 tribute to David Bowie performing all the great songs from his amazing repertoire.",
+    "url": "https://www.eventbrite.co.uk/e/absolute-bowie-tickets-1225563636829",
+    "start": "2025-09-05T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F947075743%2F25081229167%2F1%2Foriginal.20250128-222202?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C105%2C226%2C113&s=ec6cbab8a3979100f90a3bb8a91e58ee",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
@@ -153,42 +135,6 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
-    "name": "BIG MACS WHOLLY SOUL BAND",
-    "description": "Twelve piece ' sixties soul band featuring Mike McNamara performing all the great songs from Stax, Tamla Motown and Atlantic Records.",
-    "url": "https://www.eventbrite.co.uk/e/big-macs-wholly-soul-band-tickets-1377533823749",
-    "start": "2025-10-24T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1037668733%2F25081229167%2F1%2Foriginal.20250523-152952?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=74ffd56d7db6269cb5d672585fcec4ca",
-    "venueName": "The Clarence Hall",
-    "venueAddress": "Beaufort Street, Crickhowell, NP8 1BN"
-  },
-  {
-    "name": "BOOTLEG BLONDIE",
-    "description": "The Worlds No 1. Tribute to BOOTLEG BLONDIE",
-    "url": "https://www.eventbrite.co.uk/e/bootleg-blondie-tickets-1303390579309",
-    "start": "2025-10-31T19:00:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F994457153%2F25081229167%2F1%2Foriginal.20250327-184514?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C37%2C450%2C225&s=2f3577156626ba6d5b8d9a1bd9429a84",
-    "venueName": "The Corn Exchange",
-    "venueAddress": "High Street, Newport, NP20 1AA"
-  },
-  {
-    "name": "DESPERADO - HEART OF THE EAGLES",
-    "description": "A night of the classic songs  of THE EAGLES . Two hours full of hits performed by a great band",
-    "url": "https://www.eventbrite.co.uk/e/desperado-heart-of-the-eagles-tickets-1280583984169",
-    "start": "2025-11-01T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F981665433%2F25081229167%2F1%2Foriginal.20250312-104523?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C3%2C452%2C226&s=a4577632fac28109404a3d10a790f840",
-    "venueName": "The Earl Haig Club",
-    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
-  },
-  {
-    "name": "MAETLIVE & The  Neverland Express",
-    "description": "A Tribute to Meatoaf featuring Craig Halford.",
-    "url": "https://www.eventbrite.co.uk/e/maetlive-the-neverland-express-tickets-1269298037599",
-    "start": "2025-11-08T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F974972383%2F25081229167%2F1%2Foriginal.20250304-171930?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=7a8a386abc32c7a27638ac5aa9fd21bb",
-    "venueName": "The Earl Haig Club",
-    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
-  },
-  {
     "name": "METALLICA RELOADED",
     "description": "The Uks top tribute to METALLICA  + DJ",
     "url": "https://www.eventbrite.co.uk/e/metallica-reloaded-tickets-1226878870729",
@@ -198,38 +144,11 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
-    "name": "The Legendary CURVED AIR",
-    "description": "Curved Air is a unique band, synthesizing an eclectic blend of musical styles into an instantly identifiable sound.",
-    "url": "https://www.eventbrite.co.uk/e/the-legendary-curved-air-tickets-1083929906529",
-    "start": "2025-11-21T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F899663813%2F25081229167%2F1%2Foriginal.20241115-095905?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C3%2C904%2C452&s=599c3976f9f8a19738a650b5edf88f28",
-    "venueName": "The Earl Haig Club",
-    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
-  },
-  {
     "name": "ZZ TOPP'D",
     "description": "The UKs No.1Tribute to ZZ TOP",
     "url": "https://www.eventbrite.co.uk/e/zz-toppd-tickets-1226921287599",
     "start": "2025-11-28T19:15:00",
     "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F947931733%2F25081229167%2F1%2Foriginal.20250129-202820?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C452%2C226&s=8cffa0d7b65ee0171ff75298fee64b77",
-    "venueName": "The Earl Haig Club",
-    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
-  },
-  {
-    "name": "OZRIC TENTACLES + Special Guests  SYSTEM 7",
-    "description": "OZRIC TENTACLES \nOzric Tentacles ,top UK  prog rock band  plus System 7 featuring Steve Hillage and Miquette Giraudy.",
-    "url": "https://www.eventbrite.co.uk/e/ozric-tentacles-special-guests-system-7-tickets-1303081314289",
-    "start": "2025-11-29T19:00:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F994937553%2F25081229167%2F1%2Foriginal.20250328-110842?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=94deab4162c8d0b6b03b0f5e23f3a117",
-    "venueName": "THE PATTI PAVILION",
-    "venueAddress": "MUMBLES ROAD, SWANSEA, SA1 4PQ"
-  },
-  {
-    "name": "OZRIC TENTACLES + DJ Liam Curtin",
-    "description": "One of the top prog rock bands",
-    "url": "https://www.eventbrite.co.uk/e/ozric-tentacles-dj-liam-curtin-tickets-1304011787359",
-    "start": "2025-12-03T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F994941323%2F25081229167%2F1%2Foriginal.20250328-111753?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=c3c1a1f8132a76517fe7968dee6a8f73",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
@@ -252,12 +171,93 @@
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
   },
   {
-    "name": "FOCUS 26",
-    "description": "The Legendary Dutch band making another welcome return",
-    "url": "https://www.eventbrite.co.uk/e/focus-26-tickets-1079561681049",
-    "start": "2026-04-27T19:15:00",
-    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F912853433%2F25081229167%2F1%2Foriginal.20241206-134149?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C3508%2C1754&s=c98c34be075ffc0fc729e68971a6e575",
+    "name": "FAUX FIGHTERS UK",
+    "description": "A Top tribute to THE FOO FIGHTERS playing all of their classic anthemic songs",
+    "url": "https://www.eventbrite.co.uk/e/faux-fighters-uk-tickets-1269175812019",
+    "start": "2025-09-06T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F974904613%2F25081229167%2F1%2Foriginal.20250304-162651?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C233%2C904%2C452&s=976def2f8e7822698ca9f2e95f8c4252",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "FLASH - A Tribute to QUEEN",
+    "description": "Top tribute to the Legendary QUEEN .A show full of all their classic hits .",
+    "url": "https://www.eventbrite.co.uk/e/flash-a-tribute-to-queen-tickets-1269223444489",
+    "start": "2025-09-19T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F974960353%2F25081229167%2F1%2Foriginal.20250304-170938?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C207%2C452%2C226&s=32f25d5f627b700418b178fb5e69f96a",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "MAETLIVE & The  Neverland Express",
+    "description": "A Tribute to Meatoaf featuring Craig Halford.",
+    "url": "https://www.eventbrite.co.uk/e/maetlive-the-neverland-express-tickets-1269298037599",
+    "start": "2025-11-08T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F974972383%2F25081229167%2F1%2Foriginal.20250304-171930?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=7a8a386abc32c7a27638ac5aa9fd21bb",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "DESPERADO - HEART OF THE EAGLES",
+    "description": "A night of the classic songs  of THE EAGLES . Two hours full of hits performed by a great band",
+    "url": "https://www.eventbrite.co.uk/e/desperado-heart-of-the-eagles-tickets-1280583984169",
+    "start": "2025-11-01T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F981665433%2F25081229167%2F1%2Foriginal.20250312-104523?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C3%2C452%2C226&s=a4577632fac28109404a3d10a790f840",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "GREEN HAZE - NO 1 GREEN DAY TRIBUTE ! + DJ Liam Curtin",
+    "description": "The No 1 tribute to GREENDAY featuring all their classic hits .",
+    "url": "https://www.eventbrite.co.uk/e/green-haze-no-1-green-day-tribute-dj-liam-curtin-tickets-1301992046259",
+    "start": "2025-07-25T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F993146473%2F25081229167%2F1%2Foriginal.20250326-133825?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C59%2C452%2C226&s=49eb79dd0b411386f2ce4e0c563235db",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "OZRIC TENTACLES + Special Guests  SYSTEM 7",
+    "description": "OZRIC TENTACLES \nOzric Tentacles ,top UK  prog rock band  plus System 7 featuring Steve Hillage and Miquette Giraudy.",
+    "url": "https://www.eventbrite.co.uk/e/ozric-tentacles-special-guests-system-7-tickets-1303081314289",
+    "start": "2025-11-29T19:00:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F994937553%2F25081229167%2F1%2Foriginal.20250328-110842?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=94deab4162c8d0b6b03b0f5e23f3a117",
+    "venueName": "THE PATTI PAVILION",
+    "venueAddress": "MUMBLES ROAD, SWANSEA, SA1 4PQ"
+  },
+  {
+    "name": "BOOTLEG BLONDIE",
+    "description": "The Worlds No 1. Tribute to BOOTLEG BLONDIE",
+    "url": "https://www.eventbrite.co.uk/e/bootleg-blondie-tickets-1303390579309",
+    "start": "2025-10-31T19:00:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F994457153%2F25081229167%2F1%2Foriginal.20250327-184514?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C37%2C450%2C225&s=2f3577156626ba6d5b8d9a1bd9429a84",
+    "venueName": "The Corn Exchange",
+    "venueAddress": "High Street, Newport, NP20 1AA"
+  },
+  {
+    "name": "OZRIC TENTACLES + DJ Liam Curtin",
+    "description": "One of the top prog rock bands",
+    "url": "https://www.eventbrite.co.uk/e/ozric-tentacles-dj-liam-curtin-tickets-1304011787359",
+    "start": "2025-12-03T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F994941323%2F25081229167%2F1%2Foriginal.20250328-111753?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=c3c1a1f8132a76517fe7968dee6a8f73",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "John OTWAY & Wild Willy BARRETT",
+    "description": "A night of Fun and Good Time Rock N Roll !",
+    "url": "https://www.eventbrite.co.uk/e/john-otway-wild-willy-barrett-tickets-1363245356559",
+    "start": "2025-09-12T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1028767113%2F25081229167%2F1%2Foriginal.20250512-153810?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C73%2C904%2C452&s=0eb360f7e6dcb1ba1325c8511742e6e8",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "BIG MACS WHOLLY SOUL BAND",
+    "description": "Twelve piece ' sixties soul band featuring Mike McNamara performing all the great songs from Stax, Tamla Motown and Atlantic Records.",
+    "url": "https://www.eventbrite.co.uk/e/big-macs-wholly-soul-band-tickets-1377533823749",
+    "start": "2025-10-24T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1037668733%2F25081229167%2F1%2Foriginal.20250523-152952?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=74ffd56d7db6269cb5d672585fcec4ca",
+    "venueName": "The Clarence Hall",
+    "venueAddress": "Beaufort Street, Crickhowell, NP8 1BN"
   }
 ]
