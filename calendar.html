@@ -1,0 +1,2527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earl Haig Club — Events</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+    :root {
+      --color-bg: #0d0d0d;
+      --color-surface: #161616;
+      --color-surface-elevated: #1f1f1f;
+      --color-text: #f5f5f5;
+      --color-text-muted: #888;
+      --color-accent: #ff3c38;
+      --color-accent-secondary: #ffb700;
+      --color-accent-tertiary: #00d4aa;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Noise texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.035;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    /* Header */
+    header {
+      position: relative;
+      padding: 3rem 2rem 4rem;
+      text-align: center;
+      background: var(--color-surface);
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 30% 20%, rgba(255, 60, 56, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 50% at 70% 80%, rgba(255, 183, 0, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-accent), var(--color-accent-secondary), var(--color-accent-tertiary));
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-label {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .header-label::before,
+    .header-label::after {
+      content: '';
+      width: 30px;
+      height: 1px;
+      background: var(--color-accent);
+    }
+
+    header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 12vw, 7rem);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      line-height: 0.9;
+      color: var(--color-text);
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    header h1 span {
+      display: block;
+      background: linear-gradient(135deg, var(--color-accent), var(--color-accent-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    header p {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--color-text-muted);
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    nav a {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      padding: 0.75rem 2rem;
+      border: 2px solid transparent;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--color-accent);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    nav a:hover {
+      color: var(--color-text);
+    }
+
+    nav a:hover::before {
+      width: 100%;
+    }
+
+    nav a.active {
+      color: var(--color-accent);
+    }
+
+    nav a.active::before {
+      width: 100%;
+      background: var(--color-accent);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    /* Stats */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      margin-bottom: 3rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .stat {
+      text-align: center;
+      position: relative;
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--color-accent), var(--color-accent-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-top: 0.5rem;
+    }
+
+    /* Search */
+    .search {
+      margin-bottom: 3rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      background: var(--color-surface);
+      border: 2px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0;
+      color: var(--color-text);
+      transition: all 0.3s ease;
+    }
+
+    .search input::placeholder {
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+
+    .search input:focus {
+      outline: none;
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 4px rgba(255, 60, 56, 0.1);
+    }
+
+    /* Bands Grid */
+    .bands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 2rem;
+    }
+
+    .band-card {
+      background: var(--color-surface);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .band-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 0;
+      background: linear-gradient(180deg, var(--color-accent), var(--color-accent-secondary));
+      transition: height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .band-card:hover {
+      transform: translateY(-8px);
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 60, 56, 0.1);
+    }
+
+    .band-card:hover::before {
+      height: 100%;
+    }
+
+    .band-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .band-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .band-card:hover .band-image {
+      transform: scale(1.08);
+    }
+
+    .band-image.placeholder {
+      background:
+        linear-gradient(135deg, var(--color-surface-elevated) 0%, var(--color-bg) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .band-image.placeholder::after {
+      content: '♪';
+      font-size: 4rem;
+      color: rgba(255, 255, 255, 0.1);
+    }
+
+    .band-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(13, 13, 13, 0.95) 100%);
+      pointer-events: none;
+    }
+
+    .band-content {
+      padding: 1.75rem;
+      position: relative;
+    }
+
+    .band-content h2 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      letter-spacing: 0.05em;
+      color: var(--color-text);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .band-card:hover .band-content h2 {
+      color: var(--color-accent);
+    }
+
+    .date {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-accent-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .date::before {
+      content: '●';
+      font-size: 0.5rem;
+    }
+
+    .band-content p {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--color-text-muted);
+    }
+
+    /* Calendar styles */
+    .calendar-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .month-header {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text);
+      margin: 3rem 0 1.5rem 0;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .month-header::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, var(--color-accent), transparent);
+    }
+
+    .month-header:first-child {
+      margin-top: 0;
+    }
+
+    .calendar-event {
+      display: grid;
+      grid-template-columns: 100px 1fr auto;
+      gap: 2rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .calendar-event::before {
+      content: '';
+      position: absolute;
+      left: -2rem;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: transparent;
+      transition: background 0.3s ease;
+    }
+
+    .calendar-event:hover {
+      background: rgba(255, 255, 255, 0.02);
+      padding-left: 1rem;
+      margin-left: -1rem;
+    }
+
+    .calendar-event:hover::before {
+      background: var(--color-accent);
+    }
+
+    .event-date {
+      text-align: left;
+    }
+
+    .event-day {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      line-height: 1;
+      color: var(--color-text);
+      transition: color 0.3s ease;
+    }
+
+    .calendar-event:hover .event-day {
+      color: var(--color-accent);
+    }
+
+    .event-month {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+
+    .event-weekday {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-accent-secondary);
+      margin-top: 0.5rem;
+    }
+
+    .event-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .event-details h3 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--color-text);
+      margin-bottom: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .calendar-event:hover .event-details h3 {
+      color: var(--color-accent);
+    }
+
+    .event-location {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent-tertiary);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .event-location::before {
+      content: '◆';
+      font-size: 0.5rem;
+    }
+
+    .event-bio {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--color-text-muted);
+      max-width: 500px;
+    }
+
+    .fb-btn {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--color-text-muted);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .fb-btn:hover {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: var(--color-bg);
+    }
+
+    .event-image-wrapper {
+      width: 140px;
+      height: 140px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .event-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .calendar-event:hover .event-image {
+      transform: scale(1.1);
+    }
+
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-card {
+      background: var(--color-surface);
+      padding: 2.5rem;
+      max-width: 550px;
+      width: 90%;
+      max-height: 85vh;
+      overflow-y: auto;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .modal-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-accent), var(--color-accent-secondary));
+    }
+
+    .modal-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 1.5rem;
+      padding-right: 2.5rem;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--color-text-muted);
+      font-size: 2rem;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      line-height: 1;
+    }
+
+    .modal-close:hover {
+      color: var(--color-accent);
+    }
+
+    .fb-text {
+      background: var(--color-bg);
+      padding: 1.5rem;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--color-text);
+      white-space: pre-wrap;
+      user-select: all;
+      cursor: text;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .modal-hint {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-top: 1.5rem;
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: var(--color-surface);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 4rem;
+    }
+
+    footer p {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+
+    footer p span {
+      color: var(--color-accent);
+    }
+
+    /* Animation */
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .band-card, .calendar-event {
+      animation: fadeSlideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    }
+
+    .band-card:nth-child(1), .calendar-event:nth-child(1) { animation-delay: 0.05s; }
+    .band-card:nth-child(2), .calendar-event:nth-child(2) { animation-delay: 0.1s; }
+    .band-card:nth-child(3), .calendar-event:nth-child(3) { animation-delay: 0.15s; }
+    .band-card:nth-child(4), .calendar-event:nth-child(4) { animation-delay: 0.2s; }
+    .band-card:nth-child(5), .calendar-event:nth-child(5) { animation-delay: 0.25s; }
+    .band-card:nth-child(6), .calendar-event:nth-child(6) { animation-delay: 0.3s; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .bands-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+
+      .calendar-event {
+        grid-template-columns: 80px 1fr;
+        gap: 1.5rem;
+      }
+
+      .event-image-wrapper {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 2rem 1.5rem 3rem;
+      }
+
+      header h1 {
+        font-size: 3rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      nav a {
+        padding: 0.5rem 1rem;
+      }
+
+      .container {
+        padding: 2rem 1rem;
+      }
+
+      .stats {
+        gap: 2rem;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+      }
+
+      .bands-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .band-image-wrapper {
+        height: 180px;
+      }
+
+      .calendar-event {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.5rem 0;
+      }
+
+      .event-date {
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+      }
+
+      .event-day {
+        font-size: 2.5rem;
+      }
+
+      .month-header {
+        font-size: 1.8rem;
+      }
+
+      .event-details h3 {
+        font-size: 1.5rem;
+      }
+    }
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <span class="header-label">Live Music in Whitchurch</span>
+      <h1>Earl Haig <span>Club</span></h1>
+      <p>Cardiff's home for live bands since 1921</p>
+      <nav>
+        <a href="index.html">Bands</a>
+        <a href="calendar.html" class="active">Events</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-number">50</div>
+        <div class="stat-label">Upcoming Gigs</div>
+      </div>
+    </div>
+
+    <div class="calendar-list">
+      <h2 class="month-header">January 2026</h2>
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">10</div>
+          <div class="event-month">Jan</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Helter Skelter</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Beatles and 60s rock covers with psychedelic flair. Revolver through to Abbey Road — the experimental years.</p>
+          <button class="fb-btn" onclick="openModal(0)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/593981646_1415138793954301_3947679301873451538_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=JM8BXDR99_oQ7kNvwHc5ihN&_nc_oc=AdlkEc-Cdz_KEHgseMo71xNOTDf0crikgLhKygpwG485tEyGAhRGYlLpcG26ZaMHz0w&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=QK7HQlDG3wSPQpXQ0yUHzw&_nc_tpa=Q5bMBQGvX6A1iwCbMfaUyB7CaBJ8x55kFMVvCnAgGVeNR-iu4ICRhimwMYouXLOVYegjvmY2fW0WsHoe&oh=00_AfoipfAa5pXlhw_NJywVdyA2snm7Dj54i1ZcU0O-mcMiiA&oe=6962D9B9" alt="Helter Skelter" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-0" onclick="closeModal(0, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(0)">&times;</button>
+          <h3>Helter Skelter</h3>
+          <div class="fb-text">Helter Skelter
+
+Saturday 10 January 2026 at 20:30
+Bar - Earl Haig Club
+
+Beatles and 60s rock covers with psychedelic flair. Revolver through to Abbey Road — the experimental years.
+
+Turn off your mind, relax, and float downstream.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">11</div>
+          <div class="event-month">Jan</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Mother Truckers</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">American roots rock and country covers done loud and proud. Creedence, Eagles, Lynyrd Skynyrd, and everything in between.</p>
+          <button class="fb-btn" onclick="openModal(1)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/516080080_1281391990662316_2753974935477974698_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=FstzQj5rNagQ7kNvwEvIOWR&_nc_oc=Adnh1rbJfecKM9SY7eMF_ig0QjO0WYHJoUpOatWP00cnsqwvyERAYrOACfs-kEj-B_k&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=XjC9iRFu1pQkS2vV1F-T7g&_nc_tpa=Q5bMBQGocLbzASZ3DcFO1_Ty-6DvETcUzpaSrA-8yWdInReL82tv3Tw0OYzmEKB4-9Zah6cn0YTql4zT&oh=00_Afo_eJXq1vSheBuGW_opmpc_6II78A-pw4gCI669gSBmgw&oe=6962CE69" alt="Mother Truckers" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-1" onclick="closeModal(1, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(1)">&times;</button>
+          <h3>Mother Truckers</h3>
+          <div class="fb-text">Mother Truckers
+
+Sunday 11 January 2026 at 18:00
+Concert Room - Earl Haig Club
+
+American roots rock and country covers done loud and proud. Creedence, Eagles, Lynyrd Skynyrd, and everything in between.
+
+Good-time music for good-time people. Cold beer recommended.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">16</div>
+          <div class="event-month">Jan</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>Snatch it Back</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">High-energy blues covers with a rock edge. Freddie King, Albert Collins, Gary Moore — guitar-driven blues for the modern age.</p>
+          <button class="fb-btn" onclick="openModal(2)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/606027088_1436485415152972_1472662522619398934_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ZsYHmd4lVqQQ7kNvwGZC5Yq&_nc_oc=Admh_8AChn_0AJW9jJctiBzziNsCPGfolAekoyL22lZGAb3xMHmGRGFPyoQIU3n64L0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0qYgMtK3Uxd4-9-q1LDcFg&_nc_tpa=Q5bMBQEZjeKBGQwfHp5grU6Da875Q8-TbWdbl7kmJXp2hEYo55BQSMAF-8b5jv8GahCgW31CY_J5F2E2&oh=00_AfqiGopk67Lf0qoXy3lEzylhPXBl6De-yQKuJIIYoM1nLQ&oe=6962D877" alt="Snatch it Back" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-2" onclick="closeModal(2, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(2)">&times;</button>
+          <h3>Snatch it Back</h3>
+          <div class="fb-text">Snatch it Back
+
+Friday 16 January 2026 at 20:30
+Bar - Earl Haig Club
+
+High-energy blues covers with a rock edge. Freddie King, Albert Collins, Gary Moore — guitar-driven blues for the modern age.
+
+No slow blues here. Just fast, loud, and funky.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">17</div>
+          <div class="event-month">Jan</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Leighton Jones</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Welsh blues guitarist Leighton Jones delivering fiery blues and rock. Original material mixed with covers of the blues greats — B.B. King, Gary Moore, Peter Green.</p>
+          <button class="fb-btn" onclick="openModal(3)">Copy for Facebook</button>
+        </div>
+        
+      </article>
+      <div class="modal-overlay" id="modal-3" onclick="closeModal(3, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(3)">&times;</button>
+          <h3>Leighton Jones</h3>
+          <div class="fb-text">Leighton Jones
+
+Saturday 17 January 2026 at 20:30
+Bar - Earl Haig Club
+
+Welsh blues guitarist Leighton Jones delivering fiery blues and rock. Original material mixed with covers of the blues greats — B.B. King, Gary Moore, Peter Green.
+
+Homegrown blues excellence with decades of experience.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">18</div>
+          <div class="event-month">Jan</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Outback</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Rock covers with an Australian twist. AC/DC, INXS, Midnight Oil alongside American classics from ZZ Top, Creedence, and Tom Petty.</p>
+          <button class="fb-btn" onclick="openModal(4)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/598799553_1425997292868451_1532680115163955929_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=FunxIpKom54Q7kNvwGI4P2L&_nc_oc=AdmUh9WgodeP57xWAhZePMTUMNfWNQyJDjH7_pLUe7gFW542yXxnmCoTCGlwW_mquJE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0qYgMtK3Uxd4-9-q1LDcFg&_nc_tpa=Q5bMBQFyzrLmgyt8vpjwQup6uDBnNFwFxe960hL_Y_jG1sBA-U1ILqI_kTadlYRtTcJ32EMmcfRcb3ah&oh=00_AfoUrZSa-N5vXjLRNfIEYc_uq5iv8fRIjoBSJ-m79q5EJw&oe=6962E681" alt="Outback" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-4" onclick="closeModal(4, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(4)">&times;</button>
+          <h3>Outback</h3>
+          <div class="fb-text">Outback
+
+Sunday 18 January 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Rock covers with an Australian twist. AC/DC, INXS, Midnight Oil alongside American classics from ZZ Top, Creedence, and Tom Petty.
+
+Southern hemisphere swagger meets rock and roll attitude.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">24</div>
+          <div class="event-month">Jan</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Rockin '58</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Rockin' 58 take you back to the golden age of rock 'n' roll — slicked hair, swinging rhythms, and everyone knowing how to dance.</p>
+          <button class="fb-btn" onclick="openModal(5)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583710223_1400875538713960_5765326343619818954_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=j06eszygfcgQ7kNvwGmn1G9&_nc_oc=AdlbEUqHmRh7QAqoLOVFs5NdbZ_nyBefN08Yxo9cLdsdefgblpy4wfcnsKpjRMF2FNc&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0qYgMtK3Uxd4-9-q1LDcFg&_nc_tpa=Q5bMBQH6ehyzxoOiMDUam_KVf23vk89XmpGXq1uN86GQU6zMosCKOCHsEnKdqjIupMiPe2CYOfb_FVUq&oh=00_AfrGMa7JysNmHxDMyxcY3jAICyhBRFYHqWm0hzpmTqgC5w&oe=6962B9A5" alt="Rockin '58" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-5" onclick="closeModal(5, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(5)">&times;</button>
+          <h3>Rockin '58</h3>
+          <div class="fb-text">Rockin '58
+
+Saturday 24 January 2026 at 20:30
+Bar - Earl Haig Club
+
+Rockin' 58 take you back to the golden age of rock 'n' roll — slicked hair, swinging rhythms, and everyone knowing how to dance.
+
+Drape jackets optional. Good time mandatory.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">25</div>
+          <div class="event-month">Jan</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Mark Pontin</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Singer-songwriter Mark Pontin delivering acoustic sets of originals and covers. Folk, blues, and heartfelt songwriting.</p>
+          <button class="fb-btn" onclick="openModal(6)">Copy for Facebook</button>
+        </div>
+        
+      </article>
+      <div class="modal-overlay" id="modal-6" onclick="closeModal(6, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(6)">&times;</button>
+          <h3>Mark Pontin</h3>
+          <div class="fb-text">Mark Pontin
+
+Sunday 25 January 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Singer-songwriter Mark Pontin delivering acoustic sets of originals and covers. Folk, blues, and heartfelt songwriting.
+
+Stories and songs from a true craftsman.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">27</div>
+          <div class="event-month">Jan</div>
+          <div class="event-weekday">Tuesday</div>
+        </div>
+        <div class="event-details">
+          <h3>Dave Durnleys Blues Night</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Dave Durnley hosting a night of electric blues. House band with guest musicians delivering Chicago, Texas, and British blues.</p>
+          <button class="fb-btn" onclick="openModal(7)">Copy for Facebook</button>
+        </div>
+        
+      </article>
+      <div class="modal-overlay" id="modal-7" onclick="closeModal(7, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(7)">&times;</button>
+          <h3>Dave Durnleys Blues Night</h3>
+          <div class="fb-text">Dave Durnleys Blues Night
+
+Tuesday 27 January 2026 at 19:00
+Bar - Earl Haig Club
+
+Dave Durnley hosting a night of electric blues. House band with guest musicians delivering Chicago, Texas, and British blues.
+
+Real blues in a real bar.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">30</div>
+          <div class="event-month">Jan</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>Red Hot Pokers</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Rhythm and blues covers with swing and jump blues influences. Louis Jordan, Ray Charles, early rock and roll — music for dancing.</p>
+          <button class="fb-btn" onclick="openModal(8)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540617683_1326320319502816_4025000482722028033_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=cKQb4gBb2XEQ7kNvwHntrsO&_nc_oc=AdnsErTBJsNAe6b8tEkDTxYmT2pFFzkPLCnBWBCOEab8Y34l7NJjKJLpP11nzCoYc5M&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=OgqCqX-1swewpTT5ox4OWQ&_nc_tpa=Q5bMBQHFu0LLg-Qcl93j3kkCxqeaPrRRaIGjsT9-uBmgD07d1AC2xQTrK5iAPoNOHsqoY_9e9eErr--J&oh=00_AfqUV0WtmpRKrS8rOx-YrNFIY6P_fyuCT2Km_ABtUrz60g&oe=6962C0F0" alt="Red Hot Pokers" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-8" onclick="closeModal(8, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(8)">&times;</button>
+          <h3>Red Hot Pokers</h3>
+          <div class="fb-text">Red Hot Pokers
+
+Friday 30 January 2026 at 20:30
+Bar - Earl Haig Club
+
+Rhythm and blues covers with swing and jump blues influences. Louis Jordan, Ray Charles, early rock and roll — music for dancing.
+
+Horns, piano, and infectious grooves.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">31</div>
+          <div class="event-month">Jan</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Sandboys</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Cardiff blues institution with decades of experience. Chicago blues, Texas shuffle, and British blues boom covers done by musicians who have lived the blues.</p>
+          <button class="fb-btn" onclick="openModal(9)">Copy for Facebook</button>
+        </div>
+        
+      </article>
+      <div class="modal-overlay" id="modal-9" onclick="closeModal(9, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(9)">&times;</button>
+          <h3>Sandboys</h3>
+          <div class="fb-text">Sandboys
+
+Saturday 31 January 2026 at 20:30
+Bar - Earl Haig Club
+
+Cardiff blues institution with decades of experience. Chicago blues, Texas shuffle, and British blues boom covers done by musicians who have lived the blues.
+
+Real blues, played by people who mean it.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    <h2 class="month-header">February 2026</h2>
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">1</div>
+          <div class="event-month">Feb</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Stonehouse</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Rolling Stones tribute capturing the swagger and attitude of the greatest rock and roll band. Brown Sugar, Jumpin Jack Flash, Start Me Up, Sympathy for the Devil.</p>
+          <button class="fb-btn" onclick="openModal(10)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583324855_1401667411968106_2444133714064797480_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=0l2-GxPKyukQ7kNvwEKZH6T&_nc_oc=Adl5oILOvIaCj0r65FIwc7vSo4yd1q5yJqJ2Cjc_CNacy1vHlEy1pyIqE5bDCu4oa98&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=1JhXs3LKWWHMpUluwavrHQ&_nc_tpa=Q5bMBQFNLz1UrR38ntbkrEJtCfeGUoeaMqOIN1gUqVZnYZnSu7DNuNWvMFrd7eEluoo6w3KDMnpPYF2y&oh=00_Afry-v2tCq0RYohGfGGeediTyV-KM7o80HMC1cW-B3yZkA&oe=6962B55F" alt="Stonehouse" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-10" onclick="closeModal(10, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(10)">&times;</button>
+          <h3>Stonehouse</h3>
+          <div class="fb-text">Stonehouse
+
+Sunday 1 February 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Rolling Stones tribute capturing the swagger and attitude of the greatest rock and roll band. Brown Sugar, Jumpin Jack Flash, Start Me Up, Sympathy for the Devil.
+
+All the Glimmer Twin magic without the private jet.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">7</div>
+          <div class="event-month">Feb</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Palm tree Antics</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Indie and alternative rock covers with a relaxed, festival vibe. Arctic Monkeys, The Killers, Tame Impala — modern indie anthems played with laid-back energy.</p>
+          <button class="fb-btn" onclick="openModal(11)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/582987884_1401665345301646_1581223936993479801_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=gtEOCGCYvSwQ7kNvwFOzt5Z&_nc_oc=AdluaHrhMwfIMyM4WFuo9akpCIZXUcA91f9c9nkyzqawgiYYPduuBnBCL8d6yN1JHc0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=1JhXs3LKWWHMpUluwavrHQ&_nc_tpa=Q5bMBQEVYQt7oUP1psXqJRwOrrDYfGYJVR7QIlh4y0jKl9qbdOcXKrW-gaSva399YdXq3L4gnHUO2Nhd&oh=00_AfqRqHr-eks7Sbg4HBMJem6Sqe1hrBoV5Fekv68zNtFU6g&oe=6962E358" alt="Palm tree Antics" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-11" onclick="closeModal(11, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(11)">&times;</button>
+          <h3>Palm tree Antics</h3>
+          <div class="fb-text">Palm tree Antics
+
+Saturday 7 February 2026 at 20:30
+Bar - Earl Haig Club
+
+Indie and alternative rock covers with a relaxed, festival vibe. Arctic Monkeys, The Killers, Tame Impala — modern indie anthems played with laid-back energy.
+
+Summer vibes whatever the weather.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">8</div>
+          <div class="event-month">Feb</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Panic Station</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Stadium rock and 80s pop covers. U2, INXS, Simple Minds, Duran Duran — the sound of arenas scaled perfectly for the Haig bar.</p>
+          <button class="fb-btn" onclick="openModal(12)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/584429176_1401666901968157_907272087649572374_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Kl-pJv2iBcMQ7kNvwEIDqxo&_nc_oc=Adn5_vx-yFskbt_RdwqrAhggu8dHw4Fc_OoE8D4gYLJ_6i8z-xV3BdcCS0uWYAAmieQ&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=1JhXs3LKWWHMpUluwavrHQ&_nc_tpa=Q5bMBQHKScm2OEvgBrKojApSkQLQeUbUmSNwucvI5MNaTsgMJqqf_SW_ThT53yG4xZZOsL_v156syrPU&oh=00_Afq8ofpVhkcKDP_dT_cyA1LN7GNV3h4ZbsUuASCi8IWpuA&oe=6962BA6C" alt="Panic Station" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-12" onclick="closeModal(12, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(12)">&times;</button>
+          <h3>Panic Station</h3>
+          <div class="fb-text">Panic Station
+
+Sunday 8 February 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Stadium rock and 80s pop covers. U2, INXS, Simple Minds, Duran Duran — the sound of arenas scaled perfectly for the Haig bar.
+
+Big choruses, bigger sound, maximum 80s energy.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">13</div>
+          <div class="event-month">Feb</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>Junior Hacksaw</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Punk and new wave covers ripped straight from 1977. Buzzcocks, Undertones, Stiff Little Fingers, The Jam — fast, loud, and played with authentic DIY spirit.</p>
+          <button class="fb-btn" onclick="openModal(13)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583903675_1401663941968453_6536850422458866703_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=HEsOFVRkYGgQ7kNvwGIHPhv&_nc_oc=AdkqOEuR652x21NOHvQ5j0gjGMn75FpHm_0g8IMNVUnDt4XRi9gRjh1NPqoOPWw4FZg&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=1JhXs3LKWWHMpUluwavrHQ&_nc_tpa=Q5bMBQEWLPJy07RAQLQir5S0NdwmQYwH8ukwqsy8q1XI7vbgMJTMISxBVLCHqSQoeIY7bD94bVfF0SOo&oh=00_AfoTwf16n2ZYqO-D59XP4bW9CAMu1fox1r7nFb9zOykcew&oe=6962C6C1" alt="Junior Hacksaw" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-13" onclick="closeModal(13, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(13)">&times;</button>
+          <h3>Junior Hacksaw</h3>
+          <div class="fb-text">Junior Hacksaw
+
+Friday 13 February 2026 at 20:30
+Bar - Earl Haig Club
+
+Punk and new wave covers ripped straight from 1977. Buzzcocks, Undertones, Stiff Little Fingers, The Jam — fast, loud, and played with authentic DIY spirit.
+
+Three chords, two minutes, one attitude.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">14</div>
+          <div class="event-month">Feb</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Rattlesnakes</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Hard-hitting rock covers band specialising in 70s and 80s classics. AC/DC, Thin Lizzy, Free, Bad Company — the golden era of guitar rock played loud and proud.</p>
+          <button class="fb-btn" onclick="openModal(14)">Copy for Facebook</button>
+        </div>
+        
+      </article>
+      <div class="modal-overlay" id="modal-14" onclick="closeModal(14, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(14)">&times;</button>
+          <h3>Rattlesnakes</h3>
+          <div class="fb-text">Rattlesnakes
+
+Saturday 14 February 2026 at 20:30
+Bar - Earl Haig Club
+
+Hard-hitting rock covers band specialising in 70s and 80s classics. AC/DC, Thin Lizzy, Free, Bad Company — the golden era of guitar rock played loud and proud.
+
+Volume warnings apply. Bring earplugs or bring attitude.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">15</div>
+          <div class="event-month">Feb</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Bendricks Rock</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Hard-hitting rock covers from the valleys. Classic rock from Deep Purple to Status Quo, played loud, proud, and with zero apologies.</p>
+          <button class="fb-btn" onclick="openModal(15)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/584057447_1401752641959583_2791725179094258578_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=py53DxdOZrcQ7kNvwGm0xjk&_nc_oc=Adm1RzUC9HBCkKPDieJ0acF06JQPndcEbhn27Bd_GPjzmVCvNwew_pyJumrGQy13iUc&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=1JhXs3LKWWHMpUluwavrHQ&_nc_tpa=Q5bMBQHOSrahSdKlcxcwWve3qCCk7QbYQVn9CdKIYZ4WLXhk2miV7E2Y6K1Xf0PYAj2QyFjig5HR3Yne&oh=00_Afq0MdpY2AZiZ0X-3YO-ieqwwNKIvwB6tjj7p8Svz5KrUQ&oe=6962B9C9" alt="Bendricks Rock" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-15" onclick="closeModal(15, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(15)">&times;</button>
+          <h3>Bendricks Rock</h3>
+          <div class="fb-text">Bendricks Rock
+
+Sunday 15 February 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Hard-hitting rock covers from the valleys. Classic rock from Deep Purple to Status Quo, played loud, proud, and with zero apologies.
+
+Valley boys bringing the noise.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">21</div>
+          <div class="event-month">Feb</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Elk Redemption</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Dynamic 5-piece with 15 years of chemistry taking on songs most bands would not dream of touching. Covers spanning Queen, The Doors, The Beatles, Bob Dylan, Neil Young, Rod Stewart, The Eagles, Small Faces, and Lynyrd Skynyrd.</p>
+          <button class="fb-btn" onclick="openModal(16)">Copy for Facebook</button>
+        </div>
+        
+      </article>
+      <div class="modal-overlay" id="modal-16" onclick="closeModal(16, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(16)">&times;</button>
+          <h3>Elk Redemption</h3>
+          <div class="fb-text">Elk Redemption
+
+Saturday 21 February 2026 at 20:30
+Bar - Earl Haig Club
+
+Dynamic 5-piece with 15 years of chemistry taking on songs most bands would not dream of touching. Covers spanning Queen, The Doors, The Beatles, Bob Dylan, Neil Young, Rod Stewart, The Eagles, Small Faces, and Lynyrd Skynyrd.
+
+Lush harmonies, killer solos, and unique arrangements that make each classic their own.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">22</div>
+          <div class="event-month">Feb</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Moonstorm</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Classic rock covers from the 70s golden age. Led Zeppelin, Deep Purple, Black Sabbath, Uriah Heep — the titans of heavy rock played with the reverence they deserve.</p>
+          <button class="fb-btn" onclick="openModal(17)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/584209752_1401666315301549_1975063040921295952_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=_v7kOl_fiAkQ7kNvwEqG2JT&_nc_oc=Adk8udYVOflR09L_0iblPx4b807Rf6VVusGZRYYebLvJf2uJM_Ri8N8oFDqKVRss5Dg&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=uqYyF991N9g14Er8jBCr_w&_nc_tpa=Q5bMBQF0XDyF5a6_k7MpqTTmFwJlBKajnoscpZO8uVtwppyot8JKkoJbQmc28352QEZHJs9f0P2iAHlq&oh=00_AfomBD0eZdRaD8bZyDV60XOmGswxD_EGNfzM-boY6RcRZA&oe=6962D831" alt="Moonstorm" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-17" onclick="closeModal(17, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(17)">&times;</button>
+          <h3>Moonstorm</h3>
+          <div class="fb-text">Moonstorm
+
+Sunday 22 February 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Classic rock covers from the 70s golden age. Led Zeppelin, Deep Purple, Black Sabbath, Uriah Heep — the titans of heavy rock played with the reverence they deserve.
+
+Marshall stacks, Gibson guitars, no compromises.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">27</div>
+          <div class="event-month">Feb</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>Dean & The Blues Boys</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Classic electric blues covers. Muddy Waters, Howlin Wolf, BB King — the masters of Chicago blues recreated with respect.</p>
+          <button class="fb-btn" onclick="openModal(18)">Copy for Facebook</button>
+        </div>
+        
+      </article>
+      <div class="modal-overlay" id="modal-18" onclick="closeModal(18, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(18)">&times;</button>
+          <h3>Dean & The Blues Boys</h3>
+          <div class="fb-text">Dean & The Blues Boys
+
+Friday 27 February 2026 at 20:30
+Bar - Earl Haig Club
+
+Classic electric blues covers. Muddy Waters, Howlin Wolf, BB King — the masters of Chicago blues recreated with respect.
+
+Straight-ahead blues, no frills.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">28</div>
+          <div class="event-month">Feb</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Wild Flowers</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">South Wales four-piece delivering a powerhouse mix of Punk, Rock, and New Wave classics. Featuring Darren Beale (Boomtown Rats) on guitar, Josh Ace (MAN) on guitar and vocals, Loz Fancourt (Pleasure Dome) on bass, and Jamie Williams on drums.</p>
+          <button class="fb-btn" onclick="openModal(19)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583613233_1401665811968266_3352676807259897880_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=GlB6pRDKppgQ7kNvwGEAz2e&_nc_oc=Adk3COsLElLx9nNWkNH04DY6MJTskC_sc2XYEKxLPoRNq4Y2kS7nHgrrTQ819o_NevM&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=uqYyF991N9g14Er8jBCr_w&_nc_tpa=Q5bMBQHdu_koe7UoE6P2VtWw2qPamkJhmBWV7319VahfYvir8POkw3S1RvXcMkAeDAB-QhLK2jp5WGk8&oh=00_Afot-hgm7QQg1DtcmgiibQX6fNI4FZbMydWMgW6x3AWYkQ&oe=6962C2B7" alt="Wild Flowers" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-19" onclick="closeModal(19, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(19)">&times;</button>
+          <h3>Wild Flowers</h3>
+          <div class="fb-text">Wild Flowers
+
+Saturday 28 February 2026 at 20:30
+Bar - Earl Haig Club
+
+South Wales four-piece delivering a powerhouse mix of Punk, Rock, and New Wave classics. Featuring Darren Beale (Boomtown Rats) on guitar, Josh Ace (MAN) on guitar and vocals, Loz Fancourt (Pleasure Dome) on bass, and Jamie Williams on drums.
+
+Seasoned, world-class performers with serious pedigree — tight, loud, fiery, and unmissable.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    <h2 class="month-header">March 2026</h2>
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">1</div>
+          <div class="event-month">Mar</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Hindenburgs</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">High-energy rock and roll covers from the 60s through to modern day. A Haig favourite known for getting the whole bar on their feet.</p>
+          <button class="fb-btn" onclick="openModal(20)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540626794_1327554619379386_616911358534366615_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=V1KN4Fcg7EkQ7kNvwGfExJV&_nc_oc=AdmPFkpZvFhET1MkO27dWp4cbRdrpx60jHAYIAx-5LHbzm4_MCpr57M5nr93maIdGk8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=9kCM3cknJC0oKnUCxP07-Q&_nc_tpa=Q5bMBQGND3NnHnYJqiwD2LULwMEQ72qrCPlP2gPEtQv9pNrWmzkMK3swGKVBux7-ugSX0aoukl875_Wf&oh=00_AfpUSs4Ig9jraCVZtNRERPAausYbBn5u_nwDkA8TR5wcBg&oe=6962B61D" alt="Hindenburgs" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-20" onclick="closeModal(20, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(20)">&times;</button>
+          <h3>Hindenburgs</h3>
+          <div class="fb-text">Hindenburgs
+
+Sunday 1 March 2026 at 18:00
+Concert Room - Earl Haig Club
+
+High-energy rock and roll covers from the 60s through to modern day. A Haig favourite known for getting the whole bar on their feet.
+
+Expect singalongs, air guitars, and a packed dance floor.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">7</div>
+          <div class="event-month">Mar</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Lonely Hearts</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Beatles tribute covering the full Fab Four catalogue. From Please Please Me to Abbey Road — hits, deep cuts, and everything in between.</p>
+          <button class="fb-btn" onclick="openModal(21)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/496134621_1232708972197285_961894307230370538_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=cZj5JPtElHUQ7kNvwEnpgLC&_nc_oc=Adm87bKRVq2eByIGzBaHkTCvcnYHyburHGabnsyYtOHr9BKxN3SKPSQOx_xdO_JuZzo&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=W8THoNvAc6YuxUCLJDxnCw&_nc_tpa=Q5bMBQHUEho-EufbQGUrGw-y1QePdTbaoz8A8YVYzWpPtIMNpbTr85jXPA3-EE-B3FET2nsh4L-dCmBW&oh=00_AfpJJ2XIun7edypSq2BDtbwrmbxY0hZ1W4Td2cQROwQaPQ&oe=6962D434" alt="Lonely Hearts" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-21" onclick="closeModal(21, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(21)">&times;</button>
+          <h3>Lonely Hearts</h3>
+          <div class="fb-text">Lonely Hearts
+
+Saturday 7 March 2026 at 20:30
+Bar - Earl Haig Club
+
+Beatles tribute covering the full Fab Four catalogue. From Please Please Me to Abbey Road — hits, deep cuts, and everything in between.
+
+All you need is love (and this band).
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">8</div>
+          <div class="event-month">Mar</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Scotch Corner</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Rock and blues covers with Celtic influences woven through. Classic rock staples from Free, Rory Gallagher, and Fleetwood Mac alongside Scottish and Irish flavours.</p>
+          <button class="fb-btn" onclick="openModal(22)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/499688331_1235955838539265_5810158122795151409_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=UU2DAnEy_iwQ7kNvwGPHhSd&_nc_oc=AdkwJ20McrqlxJMCw8of6lJfwiUMt-MPGlxCCKZ3oA8K27zArEE2gfWfKvxqgYEpuk8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=1A7ciH4wsNJ7L5C7WqCDeQ&_nc_tpa=Q5bMBQGXJ-th0-neZ2-fOuNGcVZDld2wpTw1lF0mHsRIv9um0kG4F1LmTsXaYRWz0ekhQm5gxzpciD9c&oh=00_Afob_FYlFCuj7t4ov6nDnOT3BpuF1e8bWliRJghJFAOjVg&oe=6962C55E" alt="Scotch Corner" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-22" onclick="closeModal(22, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(22)">&times;</button>
+          <h3>Scotch Corner</h3>
+          <div class="fb-text">Scotch Corner
+
+Sunday 8 March 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Rock and blues covers with Celtic influences woven through. Classic rock staples from Free, Rory Gallagher, and Fleetwood Mac alongside Scottish and Irish flavours.
+
+Whisky-soaked rock from north of the border.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">13</div>
+          <div class="event-month">Mar</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>The Fugitives</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Cardiff rock and roll institution. Covers spanning 50s rock and roll to 80s classics — Chuck Berry to The Clash, Eddie Cochran to Elvis Costello.</p>
+          <button class="fb-btn" onclick="openModal(23)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/511810854_1273774078088897_9062111406318551819_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=iVwggAvPJUoQ7kNvwE2B0Lw&_nc_oc=Adn1Wf9rnmIDvJx2NSOh29N0JjDLfGiMEkV2f2wDfnQvgSsX58mjdX3qaoVMH_s-vVE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=t-z9n9u4WRw2P3BbQ15MYA&_nc_tpa=Q5bMBQG8ean1gDBff-cqqH-VFS027LpRsFSOWd5eCJ1GaqhOIAZM8PKWIT7oqUDaxpZFBT8DcTIGAqLz&oh=00_AfqSx_zw0Pr9Pt1t0cVpKLPNOQwEnsyGBV6YKsAr_sqMxA&oe=6962DA8C" alt="The Fugitives" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-23" onclick="closeModal(23, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(23)">&times;</button>
+          <h3>The Fugitives</h3>
+          <div class="fb-text">The Fugitives
+
+Friday 13 March 2026 at 20:30
+Bar - Earl Haig Club
+
+Cardiff rock and roll institution. Covers spanning 50s rock and roll to 80s classics — Chuck Berry to The Clash, Eddie Cochran to Elvis Costello.
+
+Four decades of rock, no filler.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">14</div>
+          <div class="event-month">Mar</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>The Jedis</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Rock and pop covers from the 60s to now. Crowd-pleasing setlist with something for everyone — Beatles to Bowie, Oasis to Arctic Monkeys.</p>
+          <button class="fb-btn" onclick="openModal(24)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/510461551_1266560552145460_7358441881257195708_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=7XELSwiEy1AQ7kNvwGdlWLZ&_nc_oc=Adl0cJlF7EM6PNhN3LQ0lQf1G-BgE1eNCI159PMEXKf93fSPnjideWY7PaeBLy3vwwI&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0ymUod4MlVuBoWYpw7W9Lw&_nc_tpa=Q5bMBQHpdgyuQsm5VeQusBbQCTP5g3CUeEGPAVltQRIu9mpW9t30al6Qn0V3GFRnqyfU8YZE6IFHyhjp&oh=00_AfoDFlydF7w_-EhAuXfAkPYeH3347vVO1osPrmDzN1AF7A&oe=6962E12B" alt="The Jedis" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-24" onclick="closeModal(24, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(24)">&times;</button>
+          <h3>The Jedis</h3>
+          <div class="fb-text">The Jedis
+
+Saturday 14 March 2026 at 20:30
+Bar - Earl Haig Club
+
+Rock and pop covers from the 60s to now. Crowd-pleasing setlist with something for everyone — Beatles to Bowie, Oasis to Arctic Monkeys.
+
+The force is strong with these ones.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">15</div>
+          <div class="event-month">Mar</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>The Spunkles</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Punk and new wave covers served with tongue firmly in cheek. Ramones, Clash, Buzzcocks — fast, fun, and absolutely not taking themselves seriously.</p>
+          <button class="fb-btn" onclick="openModal(25)">Copy for Facebook</button>
+        </div>
+        
+      </article>
+      <div class="modal-overlay" id="modal-25" onclick="closeModal(25, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(25)">&times;</button>
+          <h3>The Spunkles</h3>
+          <div class="fb-text">The Spunkles
+
+Sunday 15 March 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Punk and new wave covers served with tongue firmly in cheek. Ramones, Clash, Buzzcocks — fast, fun, and absolutely not taking themselves seriously.
+
+Gobbing optional, dancing mandatory.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">21</div>
+          <div class="event-month">Mar</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Late Shift</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Rock and pop covers spanning decades. Versatile setlist from 60s soul to 90s britpop — something for every taste.</p>
+          <button class="fb-btn" onclick="openModal(26)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/517007521_1280503670751148_2247297700560172870_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=gW757ANP9VgQ7kNvwHnyUW_&_nc_oc=AdlS1Q8dLpZkecfu-6IW7yDZ1utGwLLlX8013c-xIkbq8pCJu0opsUN6BbGXjFyusyg&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=nkG_aVUn60JrgToiRhZYfQ&_nc_tpa=Q5bMBQHDlTIkkvdFR7oNuSLGMnky-MyYAe5WPmdaDsHuoo9AQYVkMjL6uLjdZv-MwDBp2EXpwtRA8YEk&oh=00_AfqGak2lV8CvWZJLCFxhjsue05w3dbPYf-5hwOeBMg9n4A&oe=6962B130" alt="Late Shift" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-26" onclick="closeModal(26, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(26)">&times;</button>
+          <h3>Late Shift</h3>
+          <div class="fb-text">Late Shift
+
+Saturday 21 March 2026 at 20:30
+Bar - Earl Haig Club
+
+Rock and pop covers spanning decades. Versatile setlist from 60s soul to 90s britpop — something for every taste.
+
+Professional sound, crowd-pleasing choices.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">27</div>
+          <div class="event-month">Mar</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>Snatch it Back</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">High-energy blues covers with a rock edge. Freddie King, Albert Collins, Gary Moore — guitar-driven blues for the modern age.</p>
+          <button class="fb-btn" onclick="openModal(27)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/606027088_1436485415152972_1472662522619398934_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ZsYHmd4lVqQQ7kNvwGZC5Yq&_nc_oc=Admh_8AChn_0AJW9jJctiBzziNsCPGfolAekoyL22lZGAb3xMHmGRGFPyoQIU3n64L0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0qYgMtK3Uxd4-9-q1LDcFg&_nc_tpa=Q5bMBQEZjeKBGQwfHp5grU6Da875Q8-TbWdbl7kmJXp2hEYo55BQSMAF-8b5jv8GahCgW31CY_J5F2E2&oh=00_AfqiGopk67Lf0qoXy3lEzylhPXBl6De-yQKuJIIYoM1nLQ&oe=6962D877" alt="Snatch it Back" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-27" onclick="closeModal(27, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(27)">&times;</button>
+          <h3>Snatch it Back</h3>
+          <div class="fb-text">Snatch it Back
+
+Friday 27 March 2026 at 20:30
+Bar - Earl Haig Club
+
+High-energy blues covers with a rock edge. Freddie King, Albert Collins, Gary Moore — guitar-driven blues for the modern age.
+
+No slow blues here. Just fast, loud, and funky.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">28</div>
+          <div class="event-month">Mar</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>The Semantics</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Indie and alternative covers with wit and precision. Smiths, REM, Blur, Radiohead — clever music played by people who care about the details.</p>
+          <button class="fb-btn" onclick="openModal(28)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/538597004_1323651903102991_1351839784528244531_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=DKlCMJrtH4MQ7kNvwGd-8J6&_nc_oc=Admm7kmDSZOM3DpUaLvb_hmk0GYAfjIglatNtkj7HlHkHlEbRBYbOwBflCIomoeEMQI&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0axAxYrownMrASsA9trkSw&_nc_tpa=Q5bMBQFJ7f_n-uU7dHveua1mImIMtoEZaP2Alxk4c7oC3P68xz7vwYcDlu3tD8_BOoCVOCd549NMmy7W&oh=00_AfplLKo2lu9WseND-QV9N_5cNPuPcNTlqpG6wliPZ6qfMA&oe=6962C8AA" alt="The Semantics" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-28" onclick="closeModal(28, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(28)">&times;</button>
+          <h3>The Semantics</h3>
+          <div class="fb-text">The Semantics
+
+Saturday 28 March 2026 at 20:30
+Bar - Earl Haig Club
+
+Indie and alternative covers with wit and precision. Smiths, REM, Blur, Radiohead — clever music played by people who care about the details.
+
+Words matter. Arrangements matter. Quality matters.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    <h2 class="month-header">April 2026</h2>
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">3</div>
+          <div class="event-month">Apr</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>The Bluesters</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Five-piece powerhouse of groove, soul, and serious musicianship — guitar, bass, drums, trumpet, and Hammond organ. Their setlist blends blues, jazz fusion, and funk, drawing from The Meters, Booker T & The MGs, Jimmy Smith, and The Crusaders.</p>
+          <button class="fb-btn" onclick="openModal(29)">Copy for Facebook</button>
+        </div>
+        
+      </article>
+      <div class="modal-overlay" id="modal-29" onclick="closeModal(29, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(29)">&times;</button>
+          <h3>The Bluesters</h3>
+          <div class="fb-text">The Bluesters
+
+Friday 3 April 2026 at 20:30
+Bar - Earl Haig Club
+
+Five-piece powerhouse of groove, soul, and serious musicianship — guitar, bass, drums, trumpet, and Hammond organ. Their setlist blends blues, jazz fusion, and funk, drawing from The Meters, Booker T & The MGs, Jimmy Smith, and The Crusaders.
+
+Expect tight rhythms, soaring solos, and that unmistakable Hammond sound.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">4</div>
+          <div class="event-month">Apr</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Albino Frogs</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Eccentric covers band with a setlist that defies categorisation. Expect the unexpected — deep cuts, oddball choices, and songs you forgot you loved.</p>
+          <button class="fb-btn" onclick="openModal(30)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/539591024_1326549329479915_7023611207170396781_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=MgDlo0yWQgIQ7kNvwGCvYnv&_nc_oc=Adn9FbdJhvcuOgdqdFMwBvS-czDmIOSS4kQia1JGLKD26CUu50ulkBeHr3mU6Hlm65k&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=nTfvMy2a-0rHg0ySLX7xDQ&_nc_tpa=Q5bMBQGP89KX85mr4wICifcNLayBLKHmjMTn_UnbCi79ApJluVCuEumBnC_elJCYeHuTMEQjf-iNtVm5&oh=00_AfqscpoejTE6idXnsmn34RGrB680NWcZHwZXrwVZ2Q6syQ&oe=6962E3F5" alt="Albino Frogs" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-30" onclick="closeModal(30, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(30)">&times;</button>
+          <h3>Albino Frogs</h3>
+          <div class="fb-text">Albino Frogs
+
+Saturday 4 April 2026 at 20:30
+Bar - Earl Haig Club
+
+Eccentric covers band with a setlist that defies categorisation. Expect the unexpected — deep cuts, oddball choices, and songs you forgot you loved.
+
+Gloriously weird in all the right ways.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">5</div>
+          <div class="event-month">Apr</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Red Hot Pokers</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Rhythm and blues covers with swing and jump blues influences. Louis Jordan, Ray Charles, early rock and roll — music for dancing.</p>
+          <button class="fb-btn" onclick="openModal(31)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540617683_1326320319502816_4025000482722028033_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=cKQb4gBb2XEQ7kNvwHntrsO&_nc_oc=AdnsErTBJsNAe6b8tEkDTxYmT2pFFzkPLCnBWBCOEab8Y34l7NJjKJLpP11nzCoYc5M&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=OgqCqX-1swewpTT5ox4OWQ&_nc_tpa=Q5bMBQHFu0LLg-Qcl93j3kkCxqeaPrRRaIGjsT9-uBmgD07d1AC2xQTrK5iAPoNOHsqoY_9e9eErr--J&oh=00_AfqUV0WtmpRKrS8rOx-YrNFIY6P_fyuCT2Km_ABtUrz60g&oe=6962C0F0" alt="Red Hot Pokers" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-31" onclick="closeModal(31, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(31)">&times;</button>
+          <h3>Red Hot Pokers</h3>
+          <div class="fb-text">Red Hot Pokers
+
+Sunday 5 April 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Rhythm and blues covers with swing and jump blues influences. Louis Jordan, Ray Charles, early rock and roll — music for dancing.
+
+Horns, piano, and infectious grooves.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">9</div>
+          <div class="event-month">Apr</div>
+          <div class="event-weekday">Thursday</div>
+        </div>
+        <div class="event-details">
+          <h3>Al Steel & Friends</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Al Steel joined by a rotating cast of Cardiff's finest musicians. Blues, rock, and soul covers with a jam session feel — different lineup, different vibe every time.</p>
+          <button class="fb-btn" onclick="openModal(32)">Copy for Facebook</button>
+        </div>
+        
+      </article>
+      <div class="modal-overlay" id="modal-32" onclick="closeModal(32, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(32)">&times;</button>
+          <h3>Al Steel & Friends</h3>
+          <div class="fb-text">Al Steel & Friends
+
+Thursday 9 April 2026 at 20:30
+Bar - Earl Haig Club
+
+Al Steel joined by a rotating cast of Cardiff's finest musicians. Blues, rock, and soul covers with a jam session feel — different lineup, different vibe every time.
+
+Loose, fun, and never the same twice.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">10</div>
+          <div class="event-month">Apr</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>Tony Morley</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Veteran Welsh guitarist delivering blues and rock with decades of experience behind every note. Gary Moore, Peter Green, Clapton — the blues guitar greats honoured properly.</p>
+          <button class="fb-btn" onclick="openModal(33)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/571107528_1382457650555749_6561174080354064333_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=QD3mVVMkdWgQ7kNvwHQoPjb&_nc_oc=AdmkBj_VPLXMjZeuFodkMiqMOSxUn0xHI_grsw20_LinUKvmip_jwb5awOoQ9sHoBrY&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=rEWzreUi4zj-UYHmD5f7wg&_nc_tpa=Q5bMBQEcKswe5bc49LnhlrTpCDAU3a31JarihhYuJsfkSADSfWZecsIlTxmBtr2U7d8ZI9LeuAsoKamM&oh=00_AfqkqJPt81qPb3g7ao9VBPYRJSSfM-ubPQ8ZD8NLLHylJw&oe=6962C3BB" alt="Tony Morley" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-33" onclick="closeModal(33, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(33)">&times;</button>
+          <h3>Tony Morley</h3>
+          <div class="fb-text">Tony Morley
+
+Friday 10 April 2026 at 20:30
+Bar - Earl Haig Club
+
+Veteran Welsh guitarist delivering blues and rock with decades of experience behind every note. Gary Moore, Peter Green, Clapton — the blues guitar greats honoured properly.
+
+A lifetime of playing in every bend.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">11</div>
+          <div class="event-month">Apr</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Parcel of Rouges</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Celtic folk rock with fiddles, tin whistles, and attitude. Dubliners, Pogues, and traditional Irish music with a punk edge.</p>
+          <button class="fb-btn" onclick="openModal(34)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/506435203_1260395109428671_1278997569847695600_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=HDs2w2hmivkQ7kNvwGZ8oXG&_nc_oc=AdlHpZ0bqsL81aRPIzQt06sxCDblkvBd7pB7aW2AoSoOyYDJhK8o2BZuGcyTznzrN0k&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=OxtZkgnna0Pbfb2nNGnjjQ&_nc_tpa=Q5bMBQF1tuP5lHVGB6HqR_oGTduP9NNOGg4cQFXYdC96UeW9yW7Wd_uUylYyDFFEI55ljFkfwC8PcerI&oh=00_AfolSQ9MOO6VjvvIXRr0BPnpq2gexiwDSB5z1oRAZNNqhw&oe=6962CA5B" alt="Parcel of Rouges" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-34" onclick="closeModal(34, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(34)">&times;</button>
+          <h3>Parcel of Rouges</h3>
+          <div class="fb-text">Parcel of Rouges
+
+Saturday 11 April 2026 at 20:30
+Bar - Earl Haig Club
+
+Celtic folk rock with fiddles, tin whistles, and attitude. Dubliners, Pogues, and traditional Irish music with a punk edge.
+
+Guinness-fuelled mayhem for all occasions.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">12</div>
+          <div class="event-month">Apr</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Outback</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Rock covers with an Australian twist. AC/DC, INXS, Midnight Oil alongside American classics from ZZ Top, Creedence, and Tom Petty.</p>
+          <button class="fb-btn" onclick="openModal(35)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/598799553_1425997292868451_1532680115163955929_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=FunxIpKom54Q7kNvwGI4P2L&_nc_oc=AdmUh9WgodeP57xWAhZePMTUMNfWNQyJDjH7_pLUe7gFW542yXxnmCoTCGlwW_mquJE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0qYgMtK3Uxd4-9-q1LDcFg&_nc_tpa=Q5bMBQFyzrLmgyt8vpjwQup6uDBnNFwFxe960hL_Y_jG1sBA-U1ILqI_kTadlYRtTcJ32EMmcfRcb3ah&oh=00_AfoUrZSa-N5vXjLRNfIEYc_uq5iv8fRIjoBSJ-m79q5EJw&oe=6962E681" alt="Outback" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-35" onclick="closeModal(35, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(35)">&times;</button>
+          <h3>Outback</h3>
+          <div class="fb-text">Outback
+
+Sunday 12 April 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Rock covers with an Australian twist. AC/DC, INXS, Midnight Oil alongside American classics from ZZ Top, Creedence, and Tom Petty.
+
+Southern hemisphere swagger meets rock and roll attitude.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">17</div>
+          <div class="event-month">Apr</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>Marc Davies Band</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Welsh guitarist Marc Davies leading his band through blues, rock, and soul covers. B.B. King to Stevie Wonder, played with style.</p>
+          <button class="fb-btn" onclick="openModal(36)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/493265428_1218243860310463_3503174788021023127_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=oNaSNkpOZWMQ7kNvwE8Xvb0&_nc_oc=AdkGMqcvPHTZ1v-3gOIA7HR3kjyIqaEUGbd2Rk0nM_AwQtFBbWLTUv1PG3Ol-E2RKoE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=W8THoNvAc6YuxUCLJDxnCw&_nc_tpa=Q5bMBQG_slHy6sl30hhdiFkdquRAlQLXGemSRBnHZNSsJ5mqd72wP8OFwX7csR1G8P1MMEX2gstPH3bQ&oh=00_AfonuRuMx4eD3SGbgKr-Ob3TDMysYANxRX2K4gjGj8lseA&oe=6962E51D" alt="Marc Davies Band" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-36" onclick="closeModal(36, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(36)">&times;</button>
+          <h3>Marc Davies Band</h3>
+          <div class="fb-text">Marc Davies Band
+
+Friday 17 April 2026 at 20:30
+Bar - Earl Haig Club
+
+Welsh guitarist Marc Davies leading his band through blues, rock, and soul covers. B.B. King to Stevie Wonder, played with style.
+
+Smooth grooves and sharp licks.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">18</div>
+          <div class="event-month">Apr</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Dansette</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Rock and roll and 60s beat music specialists. Beatles, Kinks, Small Faces, The Who — the British Invasion sound recreated with vintage Vox amps and period-perfect style.</p>
+          <button class="fb-btn" onclick="openModal(37)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540268504_1326550526146462_1602143277764803097_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=21r7xbooRboQ7kNvwF6ckbR&_nc_oc=AdmqHsyPDMkYV2j6eiXgy8WplEAIx_r4jYC79KTvkDyTUslIhCi--Ui73jL8qymtkBQ&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Nbi8Hs0bliZQIb92JMkYFw&_nc_tpa=Q5bMBQHd77p_NU17PMiDwJPMSRV3uWrKLt-WkhnO7-yHPOF4OGLItsxK6gwC-X5Pe2C4Q-HES58a6AGu&oh=00_AfofGsaaTGAlCnz0C1ajy5SDKADi1_40u6It2cc_zswcyw&oe=6962E7FB" alt="Dansette" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-37" onclick="closeModal(37, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(37)">&times;</button>
+          <h3>Dansette</h3>
+          <div class="fb-text">Dansette
+
+Saturday 18 April 2026 at 20:30
+Bar - Earl Haig Club
+
+Rock and roll and 60s beat music specialists. Beatles, Kinks, Small Faces, The Who — the British Invasion sound recreated with vintage Vox amps and period-perfect style.
+
+Sharp suits, sharper haircuts, maximum R&B energy.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">19</div>
+          <div class="event-month">Apr</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Royal Scam</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Steely Dan tribute delivering jazz-rock perfection. Rikki Dont Lose That Number, Reelin In The Years, Peg — sophisticated pop.</p>
+          <button class="fb-btn" onclick="openModal(38)">Copy for Facebook</button>
+        </div>
+        
+      </article>
+      <div class="modal-overlay" id="modal-38" onclick="closeModal(38, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(38)">&times;</button>
+          <h3>Royal Scam</h3>
+          <div class="fb-text">Royal Scam
+
+Sunday 19 April 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Steely Dan tribute delivering jazz-rock perfection. Rikki Dont Lose That Number, Reelin In The Years, Peg — sophisticated pop.
+
+For fans who know the difference.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">25</div>
+          <div class="event-month">Apr</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>The Raiders</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Rock and pop covers raiding the best of five decades. Beatles to Bowie, Queen to Killers — party setlist with professional polish.</p>
+          <button class="fb-btn" onclick="openModal(39)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/505808410_1260402869427895_28407012769851650_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=NlTVfN_AF-EQ7kNvwH2LNqf&_nc_oc=Adk7yXJbRmNz7SyjgaJIvM1hBq8TOr69d0TH6JlD68Gt40AllbxFcjHgn99QzXmW8HI&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=ocF9PGvt4jSm1_9SJFhEdA&_nc_tpa=Q5bMBQH6B1J7gr176na31c1oTYJBnOcx1NlkXXFO9BNtmyyAnoXLWIGT0VmddGFqeTbhujkosUBlsEwv&oh=00_Afrej6HNZ8blzXEUYb5u3iOwHap1H7oOciGuXF5K3doItw&oe=6962D196" alt="The Raiders" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-39" onclick="closeModal(39, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(39)">&times;</button>
+          <h3>The Raiders</h3>
+          <div class="fb-text">The Raiders
+
+Saturday 25 April 2026 at 20:30
+Bar - Earl Haig Club
+
+Rock and pop covers raiding the best of five decades. Beatles to Bowie, Queen to Killers — party setlist with professional polish.
+
+Taking no prisoners, leaving no hit unplayed.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">26</div>
+          <div class="event-month">Apr</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>The Troubadours</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Folk and acoustic covers from Dylan to Mumford. Traditional folk, Americana, and singer-songwriter gems delivered with harmonies and heart.</p>
+          <button class="fb-btn" onclick="openModal(40)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/539620405_1326549889479859_5012033203794354195_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=BTLaRwg-UkEQ7kNvwEBLSnf&_nc_oc=AdkHWri2VY4yONdynOfRgtumxB3YTe16-mG3_6hJnkE8mZlYxG2nORyo9eHWibvBHXk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Nbi8Hs0bliZQIb92JMkYFw&_nc_tpa=Q5bMBQESDHkmSaoNqEZVKL0K941UyR7wUTmpHn0_nwVT14ODS5EioBEgZ4Ung672lsto_c446oixMuYD&oh=00_AfoI4dFXd-h_JwTNrOLtDdEGX86tbjmhcn2ifdHSTpqD6Q&oe=6962B14E" alt="The Troubadours" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-40" onclick="closeModal(40, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(40)">&times;</button>
+          <h3>The Troubadours</h3>
+          <div class="fb-text">The Troubadours
+
+Sunday 26 April 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Folk and acoustic covers from Dylan to Mumford. Traditional folk, Americana, and singer-songwriter gems delivered with harmonies and heart.
+
+Stories, songs, and the spaces between the notes.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    <h2 class="month-header">May 2026</h2>
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">2</div>
+          <div class="event-month">May</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Sundogs</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Americana and country rock covers. Tom Petty, Neil Young, The Band — heartland rock from the other side of the Atlantic.</p>
+          <button class="fb-btn" onclick="openModal(41)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/572034355_1382619250539589_1624039481790790037_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=q4qHYI5yrg4Q7kNvwFn4F1d&_nc_oc=Adm_uSq_RmBfmtYKGIkbju1fgjTTje9ltHBPbUQ0kyQHvR39R6ZZT4zsyuKfCn4_5ek&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=rEWzreUi4zj-UYHmD5f7wg&_nc_tpa=Q5bMBQFdyJSxswTqBHgPPqZJvGiS8Yeo5NmTCLr5l5TIOZbsIBTNb43rDgG28bZ5nPJv7joJkK7GCvJj&oh=00_Afo_4tWerOMCjQmZ6YnYFOEM2B0DaiYaiQH2IhdhVGjAkg&oe=6962CADF" alt="Sundogs" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-41" onclick="closeModal(41, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(41)">&times;</button>
+          <h3>Sundogs</h3>
+          <div class="fb-text">Sundogs
+
+Saturday 2 May 2026 at 20:30
+Bar - Earl Haig Club
+
+Americana and country rock covers. Tom Petty, Neil Young, The Band — heartland rock from the other side of the Atlantic.
+
+Storytelling songs with jangle and twang.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">3</div>
+          <div class="event-month">May</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Expecting Company</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Versatile covers band delivering rock, pop, and party classics from the 70s through to today. Tight four-piece with strong vocals and a setlist designed to please everyone.</p>
+          <button class="fb-btn" onclick="openModal(42)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/582732702_1401667948634719_3214844880455063305_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Fsv_pSt5qvYQ7kNvwGwT-yn&_nc_oc=Adm-vlNTd0JwgnXsexZFhXmvAC_TgQTDdYEe6AUn0NxD9nI1mV_3LjbgbTPTWgmGBC8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=QK7HQlDG3wSPQpXQ0yUHzw&_nc_tpa=Q5bMBQFUsMtAviqdhM70aiRmff9N82TzsJ-T1fNDT6bT9lWjAn5GVNToXCAoPjGqz_F9SJQBUKre-F27&oh=00_AfrpFGKZ8iRXJuoahN-_6K0LAZ2Ahq_xm55P7FjFQw77Pg&oe=6962D889" alt="Expecting Company" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-42" onclick="closeModal(42, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(42)">&times;</button>
+          <h3>Expecting Company</h3>
+          <div class="fb-text">Expecting Company
+
+Sunday 3 May 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Versatile covers band delivering rock, pop, and party classics from the 70s through to today. Tight four-piece with strong vocals and a setlist designed to please everyone.
+
+Professional sound, polished harmonies, guaranteed good time.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">8</div>
+          <div class="event-month">May</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>Snatch it Back</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">High-energy blues covers with a rock edge. Freddie King, Albert Collins, Gary Moore — guitar-driven blues for the modern age.</p>
+          <button class="fb-btn" onclick="openModal(43)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/606027088_1436485415152972_1472662522619398934_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ZsYHmd4lVqQQ7kNvwGZC5Yq&_nc_oc=Admh_8AChn_0AJW9jJctiBzziNsCPGfolAekoyL22lZGAb3xMHmGRGFPyoQIU3n64L0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0qYgMtK3Uxd4-9-q1LDcFg&_nc_tpa=Q5bMBQEZjeKBGQwfHp5grU6Da875Q8-TbWdbl7kmJXp2hEYo55BQSMAF-8b5jv8GahCgW31CY_J5F2E2&oh=00_AfqiGopk67Lf0qoXy3lEzylhPXBl6De-yQKuJIIYoM1nLQ&oe=6962D877" alt="Snatch it Back" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-43" onclick="closeModal(43, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(43)">&times;</button>
+          <h3>Snatch it Back</h3>
+          <div class="fb-text">Snatch it Back
+
+Friday 8 May 2026 at 20:30
+Bar - Earl Haig Club
+
+High-energy blues covers with a rock edge. Freddie King, Albert Collins, Gary Moore — guitar-driven blues for the modern age.
+
+No slow blues here. Just fast, loud, and funky.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">9</div>
+          <div class="event-month">May</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Blues Central</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Five-piece blues band delivering a funky, soulful take on electric blues. Covers spanning T-Bone Walker, B.B. King, Albert King, and Freddie King.</p>
+          <button class="fb-btn" onclick="openModal(44)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540962770_1326544529480395_375971559035566013_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=vWETdjmEucgQ7kNvwFO6cN1&_nc_oc=AdnA_7tljSM48s2t8kE7MwRr02UZNVtlZ2BBQfi9i2KuNRuo54y93E-uO5idXwJvVzs&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=9kCM3cknJC0oKnUCxP07-Q&_nc_tpa=Q5bMBQEYI3Jklxi35GeYtK4hiYnwTJxutw68TQmWDaID6iSZ9dG4Bq7afCG3Tc2Zvq6hw_xPpDov5fVG&oh=00_AfpfTKe1fRtjqjQr_5Mrx389N767BH9Noy7cGFlMO9kgKg&oe=6962C5D6" alt="Blues Central" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-44" onclick="closeModal(44, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(44)">&times;</button>
+          <h3>Blues Central</h3>
+          <div class="fb-text">Blues Central
+
+Saturday 9 May 2026 at 20:30
+Bar - Earl Haig Club
+
+Five-piece blues band delivering a funky, soulful take on electric blues. Covers spanning T-Bone Walker, B.B. King, Albert King, and Freddie King.
+
+Proper blues with a groove — horns, Hammond, and guitar that talks.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">10</div>
+          <div class="event-month">May</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Rattlesnake</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Hard-hitting rock covers band specialising in 70s and 80s classics. AC/DC, Thin Lizzy, Free, Bad Company — the golden era of guitar rock played loud and proud.</p>
+          <button class="fb-btn" onclick="openModal(45)">Copy for Facebook</button>
+        </div>
+        
+      </article>
+      <div class="modal-overlay" id="modal-45" onclick="closeModal(45, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(45)">&times;</button>
+          <h3>Rattlesnake</h3>
+          <div class="fb-text">Rattlesnake
+
+Sunday 10 May 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Hard-hitting rock covers band specialising in 70s and 80s classics. AC/DC, Thin Lizzy, Free, Bad Company — the golden era of guitar rock played loud and proud.
+
+Volume warnings apply. Bring earplugs or bring attitude.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">16</div>
+          <div class="event-month">May</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Pieces of Mind</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Iron Maiden tribute delivering the full New Wave of British Heavy Metal experience. Number of the Beast, Run to the Hills, Trooper — galloping bass, twin harmonies, air raid sirens.</p>
+          <button class="fb-btn" onclick="openModal(46)">Copy for Facebook</button>
+        </div>
+        
+      </article>
+      <div class="modal-overlay" id="modal-46" onclick="closeModal(46, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(46)">&times;</button>
+          <h3>Pieces of Mind</h3>
+          <div class="fb-text">Pieces of Mind
+
+Saturday 16 May 2026 at 20:30
+Bar - Earl Haig Club
+
+Iron Maiden tribute delivering the full New Wave of British Heavy Metal experience. Number of the Beast, Run to the Hills, Trooper — galloping bass, twin harmonies, air raid sirens.
+
+Scream for me, Whitchurch!
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">17</div>
+          <div class="event-month">May</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Revolverlites</h3>
+          <div class="event-location">Concert Room</div>
+          <p class="event-bio">Beatles tribute focusing on the psychedelic years. Rubber Soul through Abbey Road — Strawberry Fields, A Day in the Life, Come Together.</p>
+          <button class="fb-btn" onclick="openModal(47)">Copy for Facebook</button>
+        </div>
+        
+      </article>
+      <div class="modal-overlay" id="modal-47" onclick="closeModal(47, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(47)">&times;</button>
+          <h3>Revolverlites</h3>
+          <div class="fb-text">Revolverlites
+
+Sunday 17 May 2026 at 18:00
+Concert Room - Earl Haig Club
+
+Beatles tribute focusing on the psychedelic years. Rubber Soul through Abbey Road — Strawberry Fields, A Day in the Life, Come Together.
+
+Turn off your mind, relax, and float downstream.
+
+£3 on the door
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">22</div>
+          <div class="event-month">May</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>The Fugitives</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Cardiff rock and roll institution. Covers spanning 50s rock and roll to 80s classics — Chuck Berry to The Clash, Eddie Cochran to Elvis Costello.</p>
+          <button class="fb-btn" onclick="openModal(48)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/511810854_1273774078088897_9062111406318551819_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=iVwggAvPJUoQ7kNvwE2B0Lw&_nc_oc=Adn1Wf9rnmIDvJx2NSOh29N0JjDLfGiMEkV2f2wDfnQvgSsX58mjdX3qaoVMH_s-vVE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=t-z9n9u4WRw2P3BbQ15MYA&_nc_tpa=Q5bMBQG8ean1gDBff-cqqH-VFS027LpRsFSOWd5eCJ1GaqhOIAZM8PKWIT7oqUDaxpZFBT8DcTIGAqLz&oh=00_AfqSx_zw0Pr9Pt1t0cVpKLPNOQwEnsyGBV6YKsAr_sqMxA&oe=6962DA8C" alt="The Fugitives" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-48" onclick="closeModal(48, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(48)">&times;</button>
+          <h3>The Fugitives</h3>
+          <div class="fb-text">The Fugitives
+
+Friday 22 May 2026 at 20:30
+Bar - Earl Haig Club
+
+Cardiff rock and roll institution. Covers spanning 50s rock and roll to 80s classics — Chuck Berry to The Clash, Eddie Cochran to Elvis Costello.
+
+Four decades of rock, no filler.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">23</div>
+          <div class="event-month">May</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Second Chance</h3>
+          <div class="event-location">Bar</div>
+          <p class="event-bio">Classic rock covers band specialising in 70s and 80s anthems. Queen, Journey, Bon Jovi — the power ballad era in full effect.</p>
+          <button class="fb-btn" onclick="openModal(49)">Copy for Facebook</button>
+        </div>
+        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/518092169_1280514230750092_43013902396723937_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ZU5QRBOPibAQ7kNvwEABP_f&_nc_oc=Adm8r-eTCs0QHJRhltwCP6FP845pek1fHrZ1xVq-yda-reeVfQYsqkyNNSZs2qoPF7c&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=OgqCqX-1swewpTT5ox4OWQ&_nc_tpa=Q5bMBQHFHRgYe6sszDG8V5vJgDt13hxEMtzkA0bFNemgZHsUuLD7VaJ4hfhQpkUH7Df8QISwxtQNXLh7&oh=00_AfopHiXJyz4oJJlSlg_5WFa8Z9j88K9a-adEK_3IKSOOyw&oe=6962D0BB" alt="Second Chance" class="event-image" loading="lazy"></div>
+      </article>
+      <div class="modal-overlay" id="modal-49" onclick="closeModal(49, event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+          <button class="modal-close" onclick="closeModal(49)">&times;</button>
+          <h3>Second Chance</h3>
+          <div class="fb-text">Second Chance
+
+Saturday 23 May 2026 at 20:30
+Bar - Earl Haig Club
+
+Classic rock covers band specialising in 70s and 80s anthems. Queen, Journey, Bon Jovi — the power ballad era in full effect.
+
+Lighters up, fists in the air.
+
+Free entry - all welcome!
+
+https://www.earlhaigclub.co.uk</div>
+          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+        </div>
+      </div>
+    
+    </div>
+  </main>
+
+  <footer>
+    <p><span>Earl Haig Club</span> · Whitchurch, Cardiff</p>
+  </footer>
+
+  <script>
+    function openModal(idx) {
+      document.getElementById('modal-' + idx).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(idx, e) {
+      if (e && e.target !== e.currentTarget) return;
+      document.getElementById('modal-' + idx).classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(function(m) {
+          m.classList.remove('active');
+        });
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>
