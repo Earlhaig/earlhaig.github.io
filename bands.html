@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bands | Earl Haig Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #0d0d0d;
+      --color-surface: #161616;
+      --color-surface-elevated: #1f1f1f;
+      --color-text: #ffffff;
+      --color-text-muted: #a0a0a0;
+      --color-accent: #ff3c38;
+      --color-accent-secondary: #ff8c42;
+      --color-accent-tertiary: #ffd166;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Header */
+    header {
+      padding: 3rem 0 2rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-family: var(--font-display);
+      font-size: 5rem;
+      letter-spacing: 0.08em;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--color-text) 0%, var(--color-text-muted) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1.5rem 0;
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      letter-spacing: 0.15em;
+      text-decoration: none;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      position: relative;
+      padding: 0.5rem 0;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--color-accent), var(--color-accent-secondary));
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--color-text);
+    }
+
+    nav a:hover::after, nav a.active::after {
+      width: 100%;
+    }
+
+    /* Search */
+    .search {
+      margin-bottom: 3rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      background: var(--color-surface);
+      border: 2px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0;
+      color: var(--color-text);
+      transition: all 0.3s ease;
+    }
+
+    .search input::placeholder {
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+
+    .search input:focus {
+      outline: none;
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 4px rgba(255, 60, 56, 0.1);
+    }
+
+    /* Bands Grid */
+    .bands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 2rem;
+      padding-bottom: 4rem;
+    }
+
+    .band-card {
+      background: var(--color-surface);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .band-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 0;
+      background: linear-gradient(180deg, var(--color-accent), var(--color-accent-secondary));
+      transition: height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .band-card:hover {
+      transform: translateY(-8px);
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 60, 56, 0.1);
+    }
+
+    .band-card:hover::before {
+      height: 100%;
+    }
+
+    .band-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .band-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .band-card:hover .band-image {
+      transform: scale(1.08);
+    }
+
+    .band-image.placeholder {
+      background: linear-gradient(135deg, var(--color-surface-elevated) 0%, var(--color-bg) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .band-image.placeholder::after {
+      content: '♪';
+      font-size: 4rem;
+      color: rgba(255, 255, 255, 0.1);
+    }
+
+    .band-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(13, 13, 13, 0.95) 100%);
+      pointer-events: none;
+    }
+
+    .band-content {
+      padding: 1.75rem;
+      position: relative;
+    }
+
+    .band-content h2 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      letter-spacing: 0.05em;
+      color: var(--color-text);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .band-card:hover .band-content h2 {
+      color: var(--color-accent);
+    }
+
+    .date {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-accent-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .date::before {
+      content: '●';
+      font-size: 0.5rem;
+    }
+
+    .band-content p {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--color-text-muted);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--color-text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 3rem;
+      }
+      .bands-grid {
+        grid-template-columns: 1fr;
+      }
+      .container {
+        padding: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>THE BANDS</h1>
+      <p>Earl Haig Club • Whitchurch</p>
+    </header>
+
+    <nav>
+      <a href="index.html" class="active">Bands</a>
+      <a href="calendar.html">Calendar</a>
+    </nav>
+
+    <div class="search">
+      <input type="text" id="search" placeholder="Search bands..." oninput="filterBands()">
+    </div>
+
+    <div class="bands-grid">
+      
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/539591024_1326549329479915_7023611207170396781_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=QK2cwdhBk8QQ7kNvwFi5CJ5&_nc_oc=Adl7PmC0XfNdnVfdHFZIcLCNdP1eVP1FYd7BF0BwDVKT_sDzTRxQ1fjNn7XSDjRnef8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=LQMs_Ci9-e2n--j-KBPbRw&_nc_tpa=Q5bMBQHr-i23jIUIOgZ_3jPAurKTdzED-7sIklN5HkmPIcCMTBsUyMxMDxjc9DDZFDGXO9dtkeJUJWTK&oh=00_AfqBEC2tuoE7BSRmtsYXGNpkFZKqAikkOdb-yRxf9vlE9w&oe=6963C4F5" alt="Albino Frogs" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Albino Frogs</h2>
+          <span class="date">Last played 12 Apr 2025</span>
+          <p>|  |From funky, sing-along originals to rhythm-packed jams that keep the floor moving, The Albino Frogs know how to put on a show that’s as vibrant as it is unforgettable. Whether you’re a long-time f...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/584057447_1401752641959583_2791725179094258578_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=py53DxdOZrcQ7kNvwGm0xjk&_nc_oc=Adm1RzUC9HBCkKPDieJ0acF06JQPndcEbhn27Bd_GPjzmVCvNwew_pyJumrGQy13iUc&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3rtfzOY002gHGg6gJZ8M5A&_nc_tpa=Q5bMBQFNpqtF6z6LgVKL1NrejOW2cwkgQTUTJh1VwVg3bcUImTj6ChfqW14Ck_hsxnV4O2JZAvHBBtyD&oh=00_AfrFY1V_JF3ILtdrx10SaOZ2QMP1_QCIyHsc-BVVKzalCw&oe=6963D309" alt="BENDRICKS ROCK" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>BENDRICKS ROCK</h2>
+          <span class="date">Last played 22 Mar 2025</span>
+          <p>• Band on 6pm •Their setlist spans the very best of classic rock and indie rock, covering iconic artists from the 60s right through to modern-day anthems. Expect big riffs, bold vocals, driving rhythm...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540962770_1326544529480395_375971559035566013_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=vWETdjmEucgQ7kNvwFO6cN1&_nc_oc=AdnA_7tljSM48s2t8kE7MwRr02UZNVtlZ2BBQfi9i2KuNRuo54y93E-uO5idXwJvVzs&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=gFaU0tDieUGTL8PrExIwyA&_nc_tpa=Q5bMBQGDISkJ5VWfkexemgv7L5M03_TDKPJW3wmFCwmA48ImsA_PCTaZmDF_XuyxVviKbCi1B8xaaSoE&oh=00_AfpxVwZAuW4Kj21FMHVE12sVkhbrvFbFlXd4CyPFWudVcg&oe=6963DF16" alt="Blues Central" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Blues Central</h2>
+          <span class="date">Last played 5 Jul 2025</span>
+          <p>Saturday December 13th, 2025This sensational 4 to 6-piece band delivers a bold, funky take on the blues—paying powerful tribute to legends like T-Bone Walker, Willie Dixon, and Muddy Waters, while inj...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/585062270_1403102401824607_7313429198470694217_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=manUW9pkFIsQ7kNvwEwZwxB&_nc_oc=AdmrtYccTwY-eCF2bRAnlaAc7SyMwnhJ9YQdsg7SDLIAKYFvnT-_V_psdw0mlR5vOTk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=LQMs_Ci9-e2n--j-KBPbRw&_nc_tpa=Q5bMBQEFvPnki2ISKb8KcmeAw-ee6Rw_kDhJq_6jAsB13ag6PKyk2iirX7X7EfLz6H-XUj7LZHIIU9AN&oh=00_AfqahH7aabsJOs8dRfXvK3_L2NXD97zEuiS3c93oqWwASQ&oe=6963AE17" alt="Blues Sisters" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Blues Sisters</h2>
+          <span class="date">Last played 23 May 2025</span>
+          <p>Female-fronted blues and soul band paying tribute to the classic sounds of Motown, Stax and beyond. Powerful vocals and tight musicianship make for unforgettable performances.</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/491832512_1209092221225627_7771820751065659147_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=rvr8xeRW6SQQ7kNvwGO_Vls&_nc_oc=AdmuqsRVU0S_rPm8ui3GFpNmsTfMQebTwAXb7mVAiwkVE0AncYnvTTgt2Ja8rmpJ7II&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=WJlfQHG9REgs6_4SJ1BA4w&_nc_tpa=Q5bMBQHmIyGjPo89lpF7w6p1ubRV8JdLzGSQIJUhGbPeHw06stE9yGJKZkwPwEp4oB0ylzMwHnsfl2AL&oh=00_Afp7klrxXjiD9kH1P7h2PmL6JVrofaXivr3jcQR0hR6htg&oe=6963E338" alt="Bluesfire" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Bluesfire</h2>
+          <span class="date">Last played 23 Feb 2025</span>
+          <p>High-energy blues rock band bringing the heat with fiery guitar licks and soulful vocals. Their setlist spans classic blues standards to modern blues rock, delivering powerful performances that get cr...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/547103047_1339489631519218_4316007360358763621_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=PRt-bdTA41QQ7kNvwHc6v0s&_nc_oc=Adn2nRc1RYJu2jc7CLp6s3cZH8h-gax6iHX7gP98EBOlzOpKZQbYPwfias9U-0LbqV4&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=dBtMRToO6P3FA0H8EmHMHg&_nc_tpa=Q5bMBQH7I3aMBnhg-zxxE5ZichtLJJtGk_5fVVXGM8_D4wSGVJLLu8YJhPx7Yx69vIJzlbfX15AnKePi&oh=00_AfoHcoSpdJzj3DxoSImaRRZ90gCZ_QajW8UMYc2z9lg5Kw&oe=6963B947" alt="Bus Pass" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Bus Pass</h2>
+          <span class="date">Last played 12 Jul 2025</span>
+          <p>Bus Pass – Timeless Blues-Rock Energy Join us for an unforgettable evening with Bus Pass, a dynamic five-piece band celebrating the golden era of 60s and 70s blues-rock. With seasoned musicians at the...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492723378_1214817627319753_4504969922458879951_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=0VAUiydnPUoQ7kNvwGz_ak-&_nc_oc=Adll7fDvhVeuNnGM4Mpj9aimknp29ZngJ8f8VpPIrhD1GCdk_Z3pOsdyTg7XmxR0tVU&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=B4kmk0o_FrMRxV0w1xq6Fg&_nc_tpa=Q5bMBQGZYUHqvPFFv-1rq8xYN0xyslLOIOyhtuonp-ietdhk76mDOXLs-cy-vcWjdkyUWtjWqpy2fDCo&oh=00_AfpSABM9nXPYb-k_75HTNJVSPL0Y1NPDIBQjsTnStLdwjg&oe=6963BF39" alt="Bus Pass Blues Rock Band" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Bus Pass Blues Rock Band</h2>
+          
+          <p>📅 When: Sunday, March 23rd, 2025🎟 Entry: Get ready to groove with Bus Pass, a sensational 5-piece blues-rock band bringing the best of 60s and 70s blues-rock to life! These seasoned musicians know h...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/496034261_1230599899074859_188085935283302866_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=sK1P_cBn5DAQ7kNvwEvDeNn&_nc_oc=Adkc0z1mooxAIvhEtzKCbNQ6uFEmTKIf0F2Q_de2ClactO8YZ6EscHpUPhw8IOX3o5M&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=vKwJ64-4fLg-cQZV950bLA&_nc_tpa=Q5bMBQFt91SId5D10-aYLkrW_JgYWGqJx_ExzrLgxqXkE-ZKLlh7Lvsk2CEJuBlwgEXvcxFxr0fVAZ5s&oh=00_Afo6sVDOIGTjgqCdBKItlEa9inXOZKOd_h8EYaZv9f-3ow&oe=6963D511" alt="Buttonsville" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Buttonsville</h2>
+          
+          <p>Saturday, August 30th, 2025 – Get ready for a night of deep grooves and killer tunes as Buttonsville make their Earl Haig Club debut! Imagine the soulful swagger of Little Feat colliding with the root...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/593827782_1415136600621187_3573252146180513147_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=qYW51PQ4ZvIQ7kNvwEsbGSg&_nc_oc=AdlV6q3l_Kz_oiC0INZQb2nRni27vhHgEv2AIyRvhM68VwHWAJLNYsceGl7lk1MamPg&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=1tmIbxov2A2f7G2okBGmEg&_nc_tpa=Q5bMBQHsL92n7xZqOnPJJtyagWvKOR4jgTWOVoqg7akrB9wzC5DLV05ntOY2wO5Zopi30Z976h2GSRlw&oh=00_Afr-KSemCPUEsVNwn03ujpebtcc9UHIQ7vE3Jmy_OolONQ&oe=6963BC57" alt="COLD SHOT" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>COLD SHOT</h2>
+          <span class="date">Last played 3 Jan 2026</span>
+          <p>Hard-hitting blues rock band named after the Stevie Ray Vaughan classic. Specialising in Texas blues and rock covers with tight musicianship and raw energy.</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540268504_1326550526146462_1602143277764803097_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=yo90nVPUBsMQ7kNvwHJzfHQ&_nc_oc=AdmaWPWfFOiJVXLSEb_NvgQaTkC8V2ETfrHybSBKIsSKoH5HExbqffNMrPkRaIpu1xk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=dBtMRToO6P3FA0H8EmHMHg&_nc_tpa=Q5bMBQFZP0VI4Hd3UY6f14SUpVTq8r_DXbz66x1YETMTA-K-QZco7qdIuN-ANjmkD7bEeLwWjYvA9fxZ&oh=00_Afq1OIVCupdI9GrjjeiauwNR6ymHFWztwBWhR8KfmRLv0w&oe=6963C8FB" alt="Dansette" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Dansette</h2>
+          <span class="date">Last played 31 May 2025</span>
+          <p>| 8:30pm | Get ready for a night of pure soul power as Dansette take over the Earl Haig Club Bar. This dynamic seven-piece, horn-driven band are masters of the 60’s Soul sound—authentic, energetic, an...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/608892674_1443081004493413_7337120022677873390_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=r3Z3sVGC6KsQ7kNvwHjPp0_&_nc_oc=Adm37E2atWs3mAhU5A3QR6cblpmLAau5YsVphbkKW8NmIvEEwxPs8dEd7kVCPo2sVr4&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Ubn2qYcCbqYNVkjdpRENRA&_nc_tpa=Q5bMBQESEvAhE747IBupmTm_Bml5HMJlm1pzlp5pVeLm1EzUJfxqmlaIGG5iNapQK70OVHL2wZcyvs_4&oh=00_Afrv_RjgKp86Ar7J_9wiWRj8aAimG2HJzB-19ZlLVSYLXg&oe=6963DCD2" alt="Dean & The Blue Bros" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Dean & The Blue Bros</h2>
+          
+          <p>Dean Newman Guitar / Vocals, Markus Buscher Kontrabass,Dieter Mobers Guitar/Sax, Werner (Snoop) Volkner Blues Harp und Roland Kaiser DrumsDon’t miss it!The Earl Haig Club</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583322686_1401664361968411_6922880703729848751_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=rh1QYeCC0MoQ7kNvwFTqjm9&_nc_oc=AdnZHbI-ITYJ06P_bXFM8Ji9jg9Dv0u4ZjD5tjmsveuV9HxNXbAap9P_6cYl0s3IQ3g&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Ubn2qYcCbqYNVkjdpRENRA&_nc_tpa=Q5bMBQFp-LNiTSierOdXmmemDzIHhkvuCBgSA7inGyMpOpIkeeTau00oOAEPH7xF3txE0VIJ_oNPHLyI&oh=00_Afp1MxVMPHGGawKBONClRwCDf-QaChI7Mm6OjawH4ZhFtg&oe=6963DBCC" alt="ELK REDEMPTION" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>ELK REDEMPTION</h2>
+          <span class="date">Last played 28 Jun 2025</span>
+          <p>• Get ready, Whitchurch — Elk Redemption are rolling into the Haig for a rare Saturday night appearance, and they’re bringing 15 years of chemistry, class, and sheer musical firepower with them. This ...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/582732702_1401667948634719_3214844880455063305_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Fsv_pSt5qvYQ7kNvwGwT-yn&_nc_oc=Adm-vlNTd0JwgnXsexZFhXmvAC_TgQTDdYEe6AUn0NxD9nI1mV_3LjbgbTPTWgmGBC8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=1tmIbxov2A2f7G2okBGmEg&_nc_tpa=Q5bMBQHCsvj0kC9HFpKM5oC7siokOauZgkp2Zr0vALDpYHePqW2az1Ks8K7UVEJZVa0d_UC5bikxzm1T&oh=00_AfoNNEv--pAR9vvwzlO92JA5mRGYyOkNilWFVppaJBn_ZQ&oe=6963B989" alt="EXPECTING COMPANY" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>EXPECTING COMPANY</h2>
+          <span class="date">Last played 4 Jan 2026</span>
+          <p>•  • Show 6pmThe Earl Haig ClubGet ready for a night of pure classic rock brilliance as Expecting Company return to the Earl Haig Club Concert Room — and trust us, you’ll want to be in the room for th...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/491564073_1209097151225134_5438361662591759640_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=NOUWJORpAKoQ7kNvwExoize&_nc_oc=AdndcyHOOVVTqfr8wy0bz2aQ1e5hIaOdaxJ5QnWOl9Aa834K3hTIjZ5e3m80VsM4K48&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=dGZ0sj1Mmb5MU4dvGN1zYQ&_nc_tpa=Q5bMBQF04pv7X7EyZUUzTRb07PPmKBNBUDTPNIGQ5sW4YsHlMkJJWod4Ty4rNxfrFGJUKbezLVjlX2Gh&oh=00_AfrpgbQjfOSaJ6Y07cs1CFhi2NM8_v-AC5wfC_t3L2Vs5g&oe=6963D94D" alt="Emma Ruiz Band featuring The Sundogs" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Emma Ruiz Band featuring The Sundogs</h2>
+          
+          <p>Advanced notice of one you definitely do not want to miss! Come and help Gong celebrate his 21st again with the Emma Ruiz Band. Emma is a hugely talented ex BGT vocalist and entertainer who teams up o...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/538285796_1323648419770006_6811626690759595588_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Hs4Vd98tmVUQ7kNvwElBxIO&_nc_oc=Adl8fTHnjKL1yH41I1yDgcfpiOJGpyJIcHaJiYCzuVOhtoXCNlMEMcaY7CdULWUPnq4&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3hOBCdz-wN62_jsY0W2YQA&_nc_tpa=Q5bMBQF1HlwqNTGPeJ_-BYDxxbjcb_zx29uOUvF_VV6yELOYCcXGGaOfyg36lC4Rx0tCywA5VdTi-fq-&oh=00_AfrYQlk6XrfM2ybRHp3ez6AkuLFDwZzVklO6tDyWndegGg&oe=6963E2EC" alt="Fortunate Sons" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Fortunate Sons</h2>
+          <span class="date">Last played 19 Jan 2025</span>
+          <p>Tribute to Creedence Clearwater Revival and the classic American rock sound. Expect all the hits - Bad Moon Rising, Proud Mary, Fortunate Son and more swamp rock classics.</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/593981646_1415138793954301_3947679301873451538_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=JM8BXDR99_oQ7kNvwHc5ihN&_nc_oc=AdlkEc-Cdz_KEHgseMo71xNOTDf0crikgLhKygpwG485tEyGAhRGYlLpcG26ZaMHz0w&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=1tmIbxov2A2f7G2okBGmEg&_nc_tpa=Q5bMBQEDRLvvj-2LSRIvnCIOwG497NFH_JVo96_YMXyN2dyV6ALsfnwFSkS2hY2oL3-X8xLbLfMltbXd&oh=00_Afpp7325mYwo6N2c-ZpEhAZhInbvdpXgdmgC0kNx4au8DQ&oe=6963BAB9" alt="HELTER SKELTER" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>HELTER SKELTER</h2>
+          <span class="date">Last played 3 May 2025</span>
+          <p>This is live music the way it should be — loud, energetic, and built to get the bar bouncing. If you like your rock played hard and your nights unforgettable, this one’s for you.</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/496216650_1230569625744553_258705121072997954_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=0-uLG4aU_OgQ7kNvwGbJ1ea&_nc_oc=AdnuDQc9meDaN6YioTBqXVKlHwLsODCzP12RBF5r2k_wy1yhQGN9H1s2-mGiiAGOcCQ&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=YKTi4Z8TxXFFiklTNpKpqw&_nc_tpa=Q5bMBQEd_HVejTy6DPPK4_EuWF1hD6SZMc8tfo4ky-1AHfpWU9P4CS1cRPQysIiFCMoZtSkUQUBrI9iM&oh=00_Afq_KRhDvWaFzxG5XamjvAA7ebuSFMHXaCP5HKjvHz_tVQ&oe=6963E3C8" alt="Halfway Blues Band" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Halfway Blues Band</h2>
+          <span class="date">Last played 4 Jul 2025</span>
+          <p>Friday, July 4th 2025 | 8:30pm | First time at the clubGet ready to ride the lightning as Halfway Blues Band bring their explosive blend of guitar-fuelled blues and classic rock to The Earl Haig Club ...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583903675_1401663941968453_6536850422458866703_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=_p7NEhZ0UugQ7kNvwEZMBjR&_nc_oc=Adl0M0GLkSvmWVW9V_NbYRyZHfUYyf-Ac16cShH0Ft5cv0_Iq8xeO7fX2uiqqdlrnNE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3rtfzOY002gHGg6gJZ8M5A&_nc_tpa=Q5bMBQHDAqAxMKRBu2_4FwcPvFED1UE0UH9z_ZxgLF0J3NIGdI978a0570cVbJpukr3sWGT19bmBdoyK&oh=00_AfrP5dadOV4jrKcpMnJ12qNJuJq59QNiNbtj2f9HrfS4yA&oe=6963E001" alt="JUNIOR HACKSAW" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>JUNIOR HACKSAW</h2>
+          <span class="date">Last played 1 Aug 2025</span>
+          <p>• Front BarJunior Hacksaw are a tight, hard-hitting three-piece blues-rock ’n’ roll outfit from South Wales, fronted by the electrifying Pete Matheson on guitar and vocals. Between them, these seasone...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/495377840_1230578852410297_3629720762961115209_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=V1zoZsuLKGAQ7kNvwEJPuIt&_nc_oc=AdnuM_yMTGMQwzza3QEwVgIs7r5YRtKJPkdlTVy8jyOXk59N4ACsFR1TNjyO1TMdCWo&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Jct6BaNmhnfehbvpCkA4fQ&_nc_tpa=Q5bMBQENadb2saj3hR3IzET_s87lDgPn7YLUM_nXw91yWEECcTx8h_xJvqMENa5HBpkU81OUwEFoTcxs&oh=00_AfqV4NC6irFfnc4Ji_2C9lddoFJJ4w5tZhAedRF_TqytUg&oe=6963E140" alt="Jack the Biscuit" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Jack the Biscuit</h2>
+          <span class="date">Last played 18 Jul 2025</span>
+          <p>Friday, July 18th 2025 | 8:30 PMCalling all lovers of raw, rootsy blues—this one's for you.Jack the Biscuit bring their seasoned, bluesy sound to The Earl Haig Club Bar for a night steeped in deep blu...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/520295871_1291584872976361_7384881835510491926_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=jmprf_PpJogQ7kNvwGxVd8y&_nc_oc=AdkXQjZdsxuV38ubP65kI2URg6ertGn88TaRq8mLBpsP34uzupjU6OJWu5ZWdgZMf40&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=eQiaolCUaziiJ9JJCPYNEw&_nc_tpa=Q5bMBQEVI119-QhojIO5Vwjyq7LNYNf5YdkrHCrUzXbigzP_3zM18EQYLb-Oh6kwKW-PPtLFDFzPL7Sw&oh=00_AfrqTtZ1RwPTB1sXtDi8y_ZpcyLF5HLdLjEVBKObrayABA&oe=6963D4D0" alt="James Oliver Band" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>James Oliver Band</h2>
+          <span class="date">Last played 27 Apr 2025</span>
+          <p>James Oliver isn’t just one of the UK’s hardest-working guitar slingers – he’s also one of the funniest. Over 3,000 gigs across the UK, Europe, and the USA have taught him two things: how to melt face...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/537127417_1322662809868567_9199004981908526780_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=3xeRAb7Vu7oQ7kNvwECft4-&_nc_oc=AdlIyJEqfCWstWXcv0t_xKU7jqKSiVzT5hSZVvQr2E-9380NY_NLm-5N2cxATKB7_fQ&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3hOBCdz-wN62_jsY0W2YQA&_nc_tpa=Q5bMBQHeC_VG7jnOz9cdb0vQgtlpHUTmM9B1BTAzEBJY0L8GYg6Ij6qNKWzF7EURiwIVG_d51SWf5W5r&oh=00_AfpONQpZNfYl9B5ypsc6i-qxcmZOZIVuT_2kPkfpyI-NCw&oe=6963BDD5" alt="Jane Williams Band" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Jane Williams Band</h2>
+          <span class="date">Last played 25 Apr 2025</span>
+          <p>The Jane Williams Band back at  the Earl Haig. - Playing  some originals , covers, blues and requests as they come in . In the front bar - come and join us - Pete , Simon , Spence and Myself xxxx</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/496298517_1293693458762311_7096362149953729744_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=F4ugcTeiNqUQ7kNvwEyL0Ey&_nc_oc=AdnMwTTh_35bXekXNgGUcQnKMK3W_2b0nPNzJ3WgADWfEDzoO_aVUOfVzyXLlD6ibv4&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=MlkgZOnu-yCRd2yrp-x8zg&_nc_tpa=Q5bMBQFo7XnY5sL_yiPa8PfaNoG3JBqPsGQvOvsAP3K7rMycYfqoeBnaSznRQnhSJRbd1OWlJjVR93_M&oh=00_Afodu_Gp78rGwLBXX1_xRE1DPq8PxYc8WlG3rhIqLy9TMA&oe=6963CA4E" alt="John OTWAY & Wild Willy BARRETT" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>John OTWAY & Wild Willy BARRETT</h2>
+          
+          <p>Legendary cult duo known for their anarchic live shows and offbeat humour. John Otway and Wild Willy Barrett have been entertaining audiences since the 1970s with their unique blend of punk, rock and ...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/539415710_1326338019501046_3921977091697394576_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=tf4MQvJSyd8Q7kNvwEdB3Ch&_nc_oc=AdkGRFAKBX22v-6hq1FMYbMZc-_gdJcw2CXMyUBm7hbbyV0TRGEfym-esNBDynXSbYQ&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=LQMs_Ci9-e2n--j-KBPbRw&_nc_tpa=Q5bMBQGs4m46OMPlhrQw3CMGP6kHS79kiVWMb0evFk8ukejfkCdEpvu3aQNSrk_YNWnoivSiYA_dQMm3&oh=00_AfrEJyaW7CehMGb778ljlPKIoi1VGjlP82q3oTLY7d-QCw&oe=6963B92B" alt="Jon Amor Trio" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Jon Amor Trio</h2>
+          
+          <p>| Donations encouragedThe Jon Amor Trio are a proper power trio in every sense of the word – three outstanding musicians delivering a big, bold sound that demands attention. Their set effortlessly sli...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/546390460_1339467708188077_5308863621539844470_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=3_RJZcBDyVUQ7kNvwHv0K_w&_nc_oc=Adm5Nzzl28za45xYeqWXO888jXw5yCEGAZRZ2xhq2M2sHYRBwn8JWoDqLcyV2m2ewmU&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=SOtXQZT76_Vujs2vmlJC9A&_nc_tpa=Q5bMBQFAGM_u34VTbb-wswQvxa6hGakl6g7UvaBWxsVDunbBhzbMJ91fS3xPtnSv9a700Vwis1eh5Ium&oh=00_Afqnhob9JFSEyihw-EPrHbTPS14EnADcW30ZQ8H6TyKQIA&oe=6963BBE2" alt="Just Friends Jazz Band" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Just Friends Jazz Band</h2>
+          
+          <p>Join us for our monthly jazz evening with the exceptional Just Friends Jazz Band Venue: The Earl Haig Club Front Bar, Date: Tuesday,-  2025...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/593938928_1415135953954585_2426129918579529420_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=j6rqg4MlVrUQ7kNvwFRpaUT&_nc_oc=Adn1Uj8j7_dTWQxcronx0ilBN4A-IgiDcTgTL2rDtBUhCDqcktgs2L6x79gOkvYvYWU&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=MUzmZhBkBUzC3mAzibhdRA&_nc_tpa=Q5bMBQEoU1bD6D_jWJFkWz0opG2MYSk-U-8vjJM6rbyJn-szMrhd7xRHbmR4MBiRl1W9KM--CadgUcn9&oh=00_Afrl3W8LksaJpNgxsp2qlWAQe9OFYuNHk8mFuaXZIwR9YQ&oe=6963B550" alt="LEIGHTON JONES BAND" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>LEIGHTON JONES BAND</h2>
+          <span class="date">Last played 28 Jun 2024</span>
+          <p>Fronted by Cardiff-born vocalist Leighton Jones, who gained national recognition as a contestant on The Voice UK 2016, this performance showcases his powerful vocals, soulful interpretations, and comm...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/517007521_1280503670751148_2247297700560172870_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=gW757ANP9VgQ7kNvwHnyUW_&_nc_oc=AdlS1Q8dLpZkecfu-6IW7yDZ1utGwLLlX8013c-xIkbq8pCJu0opsUN6BbGXjFyusyg&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=MlkgZOnu-yCRd2yrp-x8zg&_nc_tpa=Q5bMBQFHkLtpybwWoyZBZVPInbEnJJWnSffcyZTrsgtOSlvkPFBjQpx18gdFEk3-aKR7y5QFyhujwIVX&oh=00_Afr1UQ5PGkRE65voKd2rlVxVLhrfFJ0kEHKzy4yxW0_Vuw&oe=6963CA70" alt="Late Shift" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Late Shift</h2>
+          <span class="date">Last played 13 Sept 2025</span>
+          <p>Popular local blues rock band delivering soulful grooves and gritty guitar-driven rock. A firm favourite on the South Wales circuit, always guaranteed to bring a great atmosphere.</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/584209752_1401666315301549_1975063040921295952_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=nYRRODigwFgQ7kNvwEzxZmL&_nc_oc=AdkNoSe_Ghdmey7sjgE4r6DWftiVVENgundz7JkJhepJGOlPZJVJgx1IUdprkQSQ4Pw&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Ubn2qYcCbqYNVkjdpRENRA&_nc_tpa=Q5bMBQHPME_eVt8HotRDhqqSCJDT64nC5nmXk5VanmoUEhzSAJlCFwmAnk8HRUE0kS7ShKaRqkkkCfsJ&oh=00_AfoTObnh-bySpDVwJtCStdx-hQoKDcSH938_Zvod-TAAeQ&oe=6963B931" alt="MOONSTORM" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>MOONSTORM</h2>
+          <span class="date">Last played 14 Sept 2025</span>
+          <p>•  •Moonstorm are a female-fronted rock band hitting the South Wales scene with serious force. Fronted by the unstoppable Amanda Seed, the band delivers a huge, commanding sound built around her power...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/577038236_1389724916495689_1281022384672279517_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=vsvzSJFnUyoQ7kNvwGt5xY0&_nc_oc=Admm0mPryBMcA9Xlobc9IltfrVbAGqHiO0J8Kb7TEFvnBRNUG0Fz2WCj6t9P_g4JNMc&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=elv8ZRc-zhZn2jUuo-2P1g&_nc_tpa=Q5bMBQG-eDQF5rBwKXMPtd7boIN6P1rxprxp4s-mXxF2uvunNflMlKnpYidxC6DxMVQ5ZAOQU5I_PkwX&oh=00_AfpjhP80q38KSPLVF9Ge9KxvZN407d6dCq8yjp7e2dj_9Q&oe=6963E5B1" alt="Nelly's Heroes" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Nelly's Heroes</h2>
+          
+          <p>The Earl Haig ClubGet ready for an evening of truly exceptional musicianship as Nelly’s Heroes take the stage. This prog-rock supergroup features elite players from some of your favourite local bands,...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492362687_1215032620631587_5749053722662763415_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ZR9ClD_1MiQQ7kNvwHI2n7x&_nc_oc=AdlGNHg9ZulA8Td84M39UrPLmDIrnGEFnraSOem7ikmnOYr30iW3V2EpJzdWa_EBmTY&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=tsR_doHbydXJXbN_azrqBA&_nc_tpa=Q5bMBQFJPKU3SHq_tCucGCx4_q6FM-WK1cqLlHaky72C2oxPAYdUIspPimq9aagenmfXLMii7Es7fn-G&oh=00_AfrbfL5T35_5Ptk99aIv49-GKWWfMU77a0vD7m14gendTA&oe=6963DE92" alt="Nelly”s Heros Earl Haig Club Bar" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Nelly”s Heros Earl Haig Club Bar</h2>
+          
+          <p>📅 Date: Saturday, 📍 Venue: The Earl Haig Club Bar, 🎟 Admission:!Please note a change from the previously advertised band. This Saturday, we’re excited to welcome Nelly's Heroes to the stage!This dy...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/598799553_1425997292868451_1532680115163955929_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=FunxIpKom54Q7kNvwGI4P2L&_nc_oc=AdmUh9WgodeP57xWAhZePMTUMNfWNQyJDjH7_pLUe7gFW542yXxnmCoTCGlwW_mquJE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=MUzmZhBkBUzC3mAzibhdRA&_nc_tpa=Q5bMBQEhCPLAUpmnxSfqsCOu5GA--lxYse9tXzLc-mirUOY7T90LSyoEkimtBjxno3lpyWTVl8O32TkT&oh=00_AfqChfDygDXAvz6mbefB9SMD9mRQ7xHJ5zbcja9yRQbf6w&oe=6963C781" alt="Outback" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Outback</h2>
+          <span class="date">Last played 6 Apr 2025</span>
+          <p>Concert Room | .The Earl Haig Club.Crank it up — Outback are back at the Haig.This powerhouse classic rock trio return with a hard-hitting set of timeless rock anthems, big riffs, and no-nonsense ener...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/582987884_1401665345301646_1581223936993479801_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=gtEOCGCYvSwQ7kNvwFOzt5Z&_nc_oc=AdluaHrhMwfIMyM4WFuo9akpCIZXUcA91f9c9nkyzqawgiYYPduuBnBCL8d6yN1JHc0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3rtfzOY002gHGg6gJZ8M5A&_nc_tpa=Q5bMBQGB7a1wj5MA48nQUo5lU8KEV5vnbhWgP8eXv4Zrx5kirCGL6F5bWyPSE55224moiHNB5TOiVqGG&oh=00_Afr_WgC2SgbGdK9z0Nh37MTuSQMRK9Xh7PYJs021HJOzGQ&oe=6963C458" alt="PALM TREE ANTICS" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>PALM TREE ANTICS</h2>
+          <span class="date">Last played 9 Aug 2025</span>
+          <p>• 8:30pm StartHide your pints, guard your crisps, and prepare your dancing shoes — Palm Tree Antics are back in Whitchurch, and they’re bringing their full dose of reggae-fuelled madness with them!The...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/584429176_1401666901968157_907272087649572374_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Kl-pJv2iBcMQ7kNvwEIDqxo&_nc_oc=Adn5_vx-yFskbt_RdwqrAhggu8dHw4Fc_OoE8D4gYLJ_6i8z-xV3BdcCS0uWYAAmieQ&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3rtfzOY002gHGg6gJZ8M5A&_nc_tpa=Q5bMBQFUzUzWEjEHR91NaxMv7nH0D022DaS5-AlWvzatbr5TY--ueyE8hIjaYZWJanGT-EijjUEC5TzT&oh=00_AfpTJFRZhyR0fe9tHrg0j4Uny7bQZvvmjdO2rbZEv7lg7w&oe=6963D3AC" alt="PANIC STATION" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>PANIC STATION</h2>
+          <span class="date">Last played 26 Sept 2025</span>
+          <p>•  •Get ready for a night of top-tier rhythm and blues as Panic Station bring their powerhouse sound to the Earl Haig Club Concert Room. These boys are seriously good — a tight, energetic band with bi...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/506435203_1260395109428671_1278997569847695600_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=sZw-ArLYhcQQ7kNvwHLYJ4d&_nc_oc=AdnQWFtDLivALC3hS0FfzQzm3929cd2CC3O62cz4YgwcuAPS_EBIdsKksHlyELw0BxM&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=7LHehKJo8LX7e72lPk9seA&_nc_tpa=Q5bMBQE1ObCEL2vvAZBy_dmDsW_2zWlM4TIMs70b_ByM-S4LaUz7Tt-8lMaomSIAiXekfVqdJpzHUkQK&oh=00_AforxFjafCz86RtRnawI9G_-ecj1eWZGPksbVv9kvs08Ig&oe=6963E39B" alt="Parcel Of Rogues" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Parcel Of Rogues</h2>
+          <span class="date">Last played 28 Apr 2024</span>
+          <p>📅 Sunday,South Wales’ own Parcel Of Rogues bring their unique fusion of folk, roots, and rock to the Earl Haig Club for an unforgettable Sunday evening. With rich melodies, foot-tapping rhythms, and ...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492480632_1216219407179575_2222543731149256968_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=dCSUfcsSc7cQ7kNvwGGkeZh&_nc_oc=Adk4uG2dFBPjIvHLMxWbRTyEl4ioq3k9I9AW5Mq0i6u63brshA8jM3hQF7kEZ538qaM&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=B4kmk0o_FrMRxV0w1xq6Fg&_nc_tpa=Q5bMBQEjdpQrUmkMIkMpw4OuWf4lb9Ws4VvEGoNokd4ChAddgHStJM5FJWRdMvVhAF8trydm5PpkBuEm&oh=00_Afq2Bw_oyIGDalKyCXcWDZ8oLKGt33SDMjj1jXo51a-FpQ&oe=6963E4FB" alt="Proper Crackin’ Comedy Club" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Proper Crackin’ Comedy Club</h2>
+          
+          <p>Proper Crackin' Comedy ClubGet ready to experience a fresh twist on live comedy that’ll have you rolling in the aisles! We heard you, and here it is—an evening of unbeatable laughs every month.Event D...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583805968_1401664808635033_4405761756406469964_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=nmP7Meo0EJ4Q7kNvwFW2fiZ&_nc_oc=Adl48KgpY8u5nVxWkoVNTr_Q_EnMploBZG34tiMJq2URz9hXKEkxAbcrRGnpQeAP0Yk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3rtfzOY002gHGg6gJZ8M5A&_nc_tpa=Q5bMBQGa1Wqh2TWg5ExyLRrZEKS9ykyk7LVo2hTfVKRpRXCdPHQ625tuS4Vjo2duqiWZxUgfH7ZYtnJ-&oh=00_Afr0aEObYNYowT8FEJgMlW2fxvPl0w_kd4TZRfzb6EwZog&oe=6963BD78" alt="RATTLESNAKE" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>RATTLESNAKE</h2>
+          <span class="date">Last played 20 Sept 2025</span>
+          <p>Valentine’s Day Rock SpecialThe Bar, Earl Haig Club, Forget the flowers and fancy dinners — this Valentine’s Day is about one thing: rock ’n’ roll.Rattlesnake, South Wales’ powerhouse four-piece class...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583710223_1400875538713960_5765326343619818954_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=j06eszygfcgQ7kNvwGmn1G9&_nc_oc=AdlbEUqHmRh7QAqoLOVFs5NdbZ_nyBefN08Yxo9cLdsdefgblpy4wfcnsKpjRMF2FNc&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=MUzmZhBkBUzC3mAzibhdRA&_nc_tpa=Q5bMBQGbyc-Um7zVdZmX3XUQUH5XV25xcth6XJN-zMMI7m9ew2M9t2_Azh5FsGSK7nGMoYajO0rPWe75&oh=00_AfpGa0cb5mrPFlzael2lcDk7pgjfKdT58MbjTJo09GY5iA&oe=6963D2E5" alt="ROCKIN' 58" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>ROCKIN' 58</h2>
+          
+          <p>Authentic rock and roll revival band celebrating the music of 1958 and the golden era of rock. Classic hits from Eddie Cochran, Gene Vincent, Jerry Lee Lewis and the pioneers who started it all.</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/490782179_1209092354558947_2943753018508866909_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=YhhPCzatFzwQ7kNvwGTxq7m&_nc_oc=AdnrjWYC9Hf6cL6PKnbTotEapI1t4hxc07OuAPkkzsObEcIBQIRv1FyXght2v2b729s&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=MMQuK6UQhBCa5ls3X3ilaA&_nc_tpa=Q5bMBQHa6FkETLH1WjmfB3rikQNELADhG9YlDEmkRDFOvFU6GEWS9gRyG0hFoSU0ykY0UpkDdCqsOGyY&oh=00_AfqpC70CPoDoWxlONn3Jbr2EBXC8kBABOFny8NRVknx6SA&oe=6963C9B1" alt="Rattlesnake Classic Rock Band" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Rattlesnake Classic Rock Band</h2>
+          
+          <p>📅 Date: 15.02.25⏰ Time: 9 PM Start 🎟 !Get ready for a high-energy night of classic rock as Rattlesnake returns to The Earl Haig Club Bar! 🎤🎸This talented 4-piece band from South Wales is set to de...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/577062132_1400869642047883_1337673708271919323_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=xQmueh4ItrgQ7kNvwF3SvAa&_nc_oc=Adkf6U6FaHD26ICG-YI_DaVWUWa2yVh-am9jlIt5j6gu4ZwmeTmWiTr67S9P7pfPCLM&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=6zYnnVKkuSkmmz0A9CUWEQ&_nc_tpa=Q5bMBQHNw-AgtkrkLPpqtOux5vF35EBz8pBQQrSx_NV5InUupZNum1uxYs83bbHuOsMHxUVQ_g3uNVJM&oh=00_Afpq4a4GHRo5s0Z9Au4nTtZNwYS8WJijqEpdUYdyzOYJZg&oe=6963CA6F" alt="Riff Raff" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Riff Raff</h2>
+          
+          <p>· 8:30 PM · Get ready for a night of blistering rhythm & blues as Riff Raff, one of Cardiff’s finest local R&B bands, return to shake the walls of the Earl Haig Club Bar. Expect raw groove, soulful vo...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/496304269_1231529225648593_5516451108998395322_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ig13qxwutPEQ7kNvwF9DXFl&_nc_oc=AdnzqwpKIGkOKUccMNpXr6-9Xo60P-KrRgf5pFNnmOUjLfLMA9pifVCKQO4SSjwqaa4&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=oX2iRctmnGlWaJ2H02QbHw&_nc_tpa=Q5bMBQEliBYsp7UOvvK4Ned7TNe4mQSdi_UflKL38FRNDSn-3SlAX_4UzqPuCDpiW7OiBA-CB0Nb7k5f&oh=00_Afpcs4lJP_kOJY00IAHlf-VvbLtfKj3ZPrkxixT9vqDshQ&oe=6963E411" alt="Rock n Roll Revival" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Rock n Roll Revival</h2>
+          <span class="date">Last played 4 May 2025</span>
+          <p>Taking you back to the golden age of rock and roll with authentic covers from the 50s and 60s. Expect classic hits from Chuck Berry, Elvis, Buddy Holly and more - pure nostalgia and good-time music.</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/517617045_1280473884087460_3025769533332448161_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=CK-cUwI-WZAQ7kNvwHTE3vS&_nc_oc=AdkXEDGN4k1xsoCBuhdUIcJj1UB0B8_pvpGO91g99ItgmvY6ZZkla3vcSJgKNXppCo0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=7LHehKJo8LX7e72lPk9seA&_nc_tpa=Q5bMBQF6j3Uu7_P27YE1AtPLWV9S1SVsxED5LAdzjrFtAIzE8aEyI8Fpbe4O4-O81y3xA3U7rKl7Bkty&oh=00_AfqivO6fwin_IzHltBlNVYo2sm1JFDU0MGxxy96jBiMwNQ&oe=6963B690" alt="Rockin 58" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Rockin 58</h2>
+          <span class="date">Last played 29 Aug 2025</span>
+          <p>8:30pm Friday, August 29th, 2025Get ready to step back in time and dance the night away with Rockin’ 58, the sensational rock ‘n’ roll band straight out of Barry, South Wales! 💃🕺Renowned for their e...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/565659356_1375448637923317_8043475755106798862_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=J4D__T_0b_QQ7kNvwEblJld&_nc_oc=AdlMwP1rMNuoQM8Xxd5yyO-mMJBoqc-8LHNZIQLCd_GWJigiU-qxGxe98BO57kl7zuI&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=SOtXQZT76_Vujs2vmlJC9A&_nc_tpa=Q5bMBQFMaKdGK95bRbDccFPU9OxHsYpwo7mJSimlFUXR3Pmtvc-HyafvwcVz7XHnen0uwjKZZOVG78qL&oh=00_Afpx058nsOWDLvMdnBWrl2cxE0U0fHn4E-m6IsdTFE2_1A&oe=6963C2F4" alt="Royal Scam A Tribute to Steely Dan" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Royal Scam A Tribute to Steely Dan</h2>
+          
+          <p>Wales' premier tribute to the legendary Steely Dan arrives at the Earl Haig Club for a night of jazz-rock perfection.  This outstanding six-piece band is renowned for its exceptional musicianship, del...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583324855_1401667411968106_2444133714064797480_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=0l2-GxPKyukQ7kNvwEKZH6T&_nc_oc=Adl5oILOvIaCj0r65FIwc7vSo4yd1q5yJqJ2Cjc_CNacy1vHlEy1pyIqE5bDCu4oa98&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3rtfzOY002gHGg6gJZ8M5A&_nc_tpa=Q5bMBQEVWS8pMMT2ecikYdTr3e2_NpVrCL8Q7OQeX4Gr5-nZzYmh7IQo7IjpIORAdSmSOLVlBXgahEFE&oh=00_Afo0ORawJ5v9SXI3tg6bDuHlxs7AgMAhLr1iPYDi7PQ_Dg&oe=6963CE9F" alt="STONEHOUSE" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>STONEHOUSE</h2>
+          <span class="date">Last played 12 Oct 2025</span>
+          <p>•  • Band on 6pm.The Earl Haig ClubStonehouse aren’t just another rock band — they’re one of the finest, most explosive live acts on the entire South Wales circuit. Every time they take the Haig stage...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/491169524_1209092311225618_1443133693030929650_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=oH0zSC5euP4Q7kNvwHwxcfb&_nc_oc=AdkrSalDXVdieIK4rIsSXJLiEHsrAvytGoxoayGvSti0t1igya4KfSFaAhEhfw__anI&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=WJlfQHG9REgs6_4SJ1BA4w&_nc_tpa=Q5bMBQEKNBWlRCWAYyU_JLQoiXjIDz6CdME9MNTadrmVUnVrTl8v5rW11YYJYC6Nxquoe_Zi7RO5dnnM&oh=00_AfoJunr6s7TzB9E7dqWp7m9gBln9EYHotGMVRr3p5GZJ6g&oe=6963D782" alt="Sand Boys" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Sand Boys</h2>
+          <span class="date">Last played 27 Sept 2025</span>
+          <p>Popular South Wales covers band known for their crowd-pleasing mix of classic rock, pop and party anthems. A local favourite guaranteed to fill the dance floor.</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540678251_1328807105920804_943006752831926568_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=sRxz5Qz49VsQ7kNvwEx54n2&_nc_oc=AdlrRCrwZfplPpX257KXIVK5TNCUSC-qaPn6PQzzH4OKSWTsjTmxizVrX_qoYdT8kzo&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=elv8ZRc-zhZn2jUuo-2P1g&_nc_tpa=Q5bMBQGGHfwnykEAjQ_KT1yAp3Jwt0mMcifeI6JmK0WgfK-s3WX0U29JJPjViXA_Y6RYoYukUoKlpyOQ&oh=00_Afr_H8jLyrDe5VYM1G29bdiNTFlWtZmLN2OGZhRWQ6Bu0A&oe=6963DD13" alt="Sandboys" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Sandboys</h2>
+          
+          <p>Christmas Special – Friday, December 19th, 2025The Earl Haig ClubBrace yourselves, Whitchurch – The Sand Boys are back for a Christmas blowout like no other! This Port Talbot powerhouse always tears t...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/499688331_1235955838539265_5810158122795151409_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=W_Y8nF1oVH0Q7kNvwF3bYQM&_nc_oc=AdmTeqvDKz78XOIVMw52LpDUWUva42QXpbzluKi_8uItOBgRNqiPaT1Kq9_HECneUn8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=49-e91tSTOZi1qDmWZMjZg&_nc_tpa=Q5bMBQHQumIVdeMJk6mNamZPsIgfxuQPjWXfKJlyioZs5FQDrKet2tmooCiM5Kq5Xfaft1PiUzLD-QcK&oh=00_AfpaiGgam73k-ZB-QhXJl9fsYsEH40rxJA0wopphiMARxA&oe=6963DE9E" alt="Scotch Corner" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Scotch Corner</h2>
+          <span class="date">Last played 6 Jun 2025</span>
+          <p>Get ready for an unforgettable night of rock, blues, and soul with Scotch Corner – a powerhouse 3-piece band bringing raw energy and timeless tunes to the stage. Featuring the incredible George Jones ...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/518092169_1280514230750092_43013902396723937_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=p6cxlMGbSsIQ7kNvwEYQS40&_nc_oc=AdmPxYP0s5pMh88xZ5ODevdZ60zo9TFLw-DaLkmvMCkaflShytPMUYTvXswgqF0PrQ4&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=bfnolEobSCCIoxY5vsy_BQ&_nc_tpa=Q5bMBQGnN1ObVmb-blP_Qf78K4GI-OUZF5CFnj64qoLUPWYRSUEe-FOpV3rY-2vzD_uoyzOLJWlcii2X&oh=00_AfomD2NYUFT_9Pl_vg3QIk2kaxmGGOdSSp6UNo_sp0Gc9g&oe=6963B1BB" alt="Second Chance" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Second Chance</h2>
+          <span class="date">Last played 4 Oct 2025</span>
+          <p>South Wales’ Mod Covers BandGet ready for a full-throttle night of mod anthems as South Wales’ premier mod covers band hit the stage at their favourite Whitchurch venue. Expect classics from The Who, ...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/606027088_1436485415152972_1472662522619398934_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ZsYHmd4lVqQQ7kNvwGZC5Yq&_nc_oc=Admh_8AChn_0AJW9jJctiBzziNsCPGfolAekoyL22lZGAb3xMHmGRGFPyoQIU3n64L0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=MUzmZhBkBUzC3mAzibhdRA&_nc_tpa=Q5bMBQGzdOBYavliEGtIiUoqGPsJHodtoa8qnaH7Vx_qTWdcCgklT4KyHPWHetyNdXPsJC-GMhEhhTc3&oh=00_AfoJ0-gJPanVF8zFFQuxfXdA6Bp4nJsWmEg9gzs1iPz2LQ&oe=6963B977" alt="Snatch It Back" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Snatch It Back</h2>
+          <span class="date">Last played 13 Jul 2025</span>
+          <p>Get ready for a night of no-nonsense, hard-hitting blues as Snatch It Back — widely regarded as South Wales’ number one blues band — return to The Earl Haig Club Front Bar for a powerful live show tha...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/494351301_1257023723099143_1296472844271234349_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=fGs83DjhxmMQ7kNvwHSxEI5&_nc_oc=Adl6YzXbbz6k83R9OSRHWeLEbDIfX_R9QCgOJBxvKpvO2qH0w_DL1aAT6237ZcEo6J0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=aqTHHJyT0ajlnTIAPjSQ7g&_nc_tpa=Q5bMBQGTo2khybnQB2jZntTwWmRjkIX400AIav1Lq9C_FkpgHdynvqQ4GQC5WupYy8n2ye5KrLqFKLeM&oh=00_AfrUwE_dewLSRi-npT9I-YM84bac37kn2fO_GVL9afNnYw&oe=6963DDEE" alt="Strictly Accoustic with Mickey from Folk Roll" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Strictly Accoustic with Mickey from Folk Roll</h2>
+          
+          <p>Our Strictly Acoustic Open Mic Session, hosted by the talented Mickey from Folk Roll and his team, invites musicians of all levels to take the stage and share their sound. Whether you're a singer, son...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/547185423_1339521051516076_3876989940710146137_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=udvdhBJTAIUQ7kNvwGjIvVu&_nc_oc=Adno-d-dk2Fyf7rXLazYOud5ce8v67z7j_XfU8gXjDlaiiwKbLGhLltxbs_1Uw6FABY&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=6zYnnVKkuSkmmz0A9CUWEQ&_nc_tpa=Q5bMBQFq414l3pb9IUnagpK4jxGLZt3eBODMLisOe2wxr04X1GMeGm5VLPjZ11i1YUXjxrQtuLaLeIr7&oh=00_Afq1oCt9G6e7qrRK83nOvw2WINPyMQf_E9jZKr32DpYm5g&oe=6963DD33" alt="String Fellows" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>String Fellows</h2>
+          <span class="date">Last played 20 Jun 2025</span>
+          <p>Friday,Swing into soul and step into a night of smokin’ jazz and blues as The String Fellows light up The Earl Haig Club Bar with their signature sound—smooth, sultry, and absolutely sensational.This ...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/499427086_1239397101528472_5543009948499774554_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=MyXItt-T4-QQ7kNvwEgM-lt&_nc_oc=Adl7u55PNklf3nspxlgO356qG8O83ULO6Dw_7Iq4LkYk4tcMcmdHERNlhghJXtQ1BTw&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=aqTHHJyT0ajlnTIAPjSQ7g&_nc_tpa=Q5bMBQHBmLyKTYjGmYFri0DpgWWxmxTH7htjccItUpmYHrmNPytgLYh-CtWefO0ZxwidqsUV_37mc6vN&oh=00_Afo2N4D_qpFeXbY_vqkYTyG_UGWiHLjgP09DFehO0v3nEQ&oe=6963DB9C" alt="Sudden Impact" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Sudden Impact</h2>
+          <span class="date">Last played 21 Jun 2025</span>
+          <p>Hard-hitting rock covers band delivering powerful performances of classic and modern rock anthems. High energy and loud guitars guaranteed.</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/585146516_1400876292047218_4033176376429697068_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=22ZmbRH_zAcQ7kNvwGUG7XC&_nc_oc=AdlPjBXIof6QF-KBX2mFtm35JAQXFBLrQsjIjHUxmwb-JcKVrLSoMsc08Wu1-EVeM4U&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3rtfzOY002gHGg6gJZ8M5A&_nc_tpa=Q5bMBQEMFnc0JVqLmqGc5dssXGASm58ilrR4OKColHHb8HH8X1B42mOo3QBl1e6FaMMyS3LnWXfWGlfK&oh=00_AfpQoAafMVjbeIqwmtUWL4jwgfzemVa5gGIx2xHJ9ZSlaA&oe=6963C5D3" alt="THE SANDBOYS" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>THE SANDBOYS</h2>
+          
+          <p>Popular South Wales covers band known for their crowd-pleasing mix of classic rock, pop and party anthems. A local favourite guaranteed to fill the dance floor.</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/495233697_1243455004456015_2732043991235998904_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=IBcrC5Va1XUQ7kNvwHQpLJE&_nc_oc=AdkR4lBDd4tQ9_jIzI4L-1Ry6AFf9Ix7YJvJsceoYL4PwvSZcklC996AhcndvjEtWU0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Q4MvQvy7ht9fB1F1X_1-dw&_nc_tpa=Q5bMBQElipUAzGd_VlqtHWCfZ7tXTNgjHzQzhU-e24S4P6-c16dzf8NTz0gmvU0Mu3Lxte6DSLXaALiZ&oh=00_AfpnkO5nK_TKHcKr0QmFiTW1M2yggHLGPKVGYsISCUd-tw&oe=6963C761" alt="THE SIDEWINDER BAND" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>THE SIDEWINDER BAND</h2>
+          
+          <p>Sunday, June 1st, 2025•The Sidewinder Band Straight outta the Valleys, this powerhouse five-piece brings the thunder of classic rock roaring back to life!Expect epic covers from: LED ZEPPELIN • DEEP P...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583613233_1401665811968266_3352676807259897880_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=GlB6pRDKppgQ7kNvwGEAz2e&_nc_oc=Adk3COsLElLx9nNWkNH04DY6MJTskC_sc2XYEKxLPoRNq4Y2kS7nHgrrTQ819o_NevM&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Ubn2qYcCbqYNVkjdpRENRA&_nc_tpa=Q5bMBQGoMD8CwiIf1MsL-M3G-v9REnLTE4TKUnTm-CXS57BMs3QsyWmuII8fFe9w4VMb1V0DLn6_2T6d&oh=00_AfrTpp-RzOPQUvjqFCh24XoZ1USByDqgcGRMa_Q7rqKlUA&oe=6963DBF7" alt="THE WILDFLOWERS" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>THE WILDFLOWERS</h2>
+          
+          <p>•Back by massive demand, The Wildflowers return to Whitchurch — but this time with something special… It’s their first-ever show in the Earl Haig Club Bar, bringing their explosive sound right up clos...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/494152937_1218258056975710_8344471692218966010_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=dudXQKK9JBUQ7kNvwHYjyBM&_nc_oc=Adl5VJ9VKQnA_FrVhTfbMcxT5qneoqou_Hsj7gHhxvbd37MPdrSHU2lKojHa1vtGp7w&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Q4MvQvy7ht9fB1F1X_1-dw&_nc_tpa=Q5bMBQEdfm8k4Uys87ST5a-BCH7d5DMHJ4Vql4i6EeEE5xqeKPtCGXRQjhH8hQ44F-9duJyjCCtPx2gs&oh=00_AfqqFq7QErSXM1KksbF9WXltxFbq88Zg3az2I0NKnCiEfA&oe=6963B371" alt="The Blues Sisters" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Blues Sisters</h2>
+          
+          <p>Get ready for a night to remember! Join us for an unforgettable evening of Rock 'n' Roll, Swing, Country, and Blues – all wrapped up in a high-energy, toe-tapping, dancefloor-shaking show.Bring your d...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/518117410_1324759669658881_2924064307611654607_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ecKe1xMmSngQ7kNvwERaDHY&_nc_oc=Adkp_mvE6bWfhLwD7AADFC9rmgVcIDXRQ6ORktoZy2NPnu1DNkQf9ZHdmageb7vUrDU&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=vKwJ64-4fLg-cQZV950bLA&_nc_tpa=Q5bMBQE1jgPfvTggponbAFi8Ts_L4mT5GCK5beAG8n5VyXCmdiW2ZO0CdLJTbgZHj5n3bldqgCI_kyrR&oh=00_AfqlQLPHEI4Gk4i0KbrfTIyt8Tioi7reqyVQ4PrUr_DksQ&oe=6963B240" alt="The Bluesters" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Bluesters</h2>
+          <span class="date">Last played 29 Jun 2024</span>
+          <p>The Bluesters are usually a five-piece band, consisting of guitar, bass, drums, trumpet, and Hammond organ. Occasionally, we have guest star soloists, bringing our number to six. We play a mix of blue...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540431638_1326326786168836_1225704233347092062_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=kp65LA3Ld_sQ7kNvwH_CcNt&_nc_oc=Adkhyze-D9sTakUKSLN63wNDBkt6F8e3WRVz40Z3pssbub8k-REozoI0uEwrh8u3d9o&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=bfnolEobSCCIoxY5vsy_BQ&_nc_tpa=Q5bMBQH-PzWyeKorIAC6akW37De7w6yZ2_x5IMAKnvhOO3oo6HjJ0Und9McWVyCpDSCfMzIGFmfhYXyV&oh=00_AfpY3DBWes2225ji0XTT4yahniDZqWCmynODxygJgdfvjw&oe=6963DAC2" alt="The Flares" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Flares</h2>
+          <span class="date">Last played 11 Oct 2025</span>
+          <p>Get ready for a Saturday night to remember as The Flares bring their powerful blend of 60s and 70s melodic hard rock to the Earl Haig Club Bar. These guys are the real deal – tight, passionate, and gu...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/494700085_1228647442601561_475993999915600769_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=lOGdB2_qHkIQ7kNvwHZVgJi&_nc_oc=AdnaZYP0rGdqhpZ-LfTeKRh80GdWI1OXNQc9s2pZ75HHP_2LMRYkQOGvj0utTAxFwQo&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=oX2iRctmnGlWaJ2H02QbHw&_nc_tpa=Q5bMBQHcYZlS0UZX_HEkpLUv8tvpWwopdRMQM5EDwBWBovrmZbDqblrmCRAOQh5DFwd8bC1QyR6KRyPy&oh=00_AfqC9kOGlcV_Y8MxHOBzvF92GDogCKdOEiVZESpq1MVhpw&oe=6963E037" alt="The Fugititives" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Fugititives</h2>
+          
+          <p>Hey there! You won't want to miss The Fugitives, South Wales' top Rhythm & Blues band. Get ready for a night of non-stop rockin' and rollin' with Cardiff's premier R&B combo. These guys have been tear...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/511810854_1273774078088897_9062111406318551819_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=iVwggAvPJUoQ7kNvwE2B0Lw&_nc_oc=Adn1Wf9rnmIDvJx2NSOh29N0JjDLfGiMEkV2f2wDfnQvgSsX58mjdX3qaoVMH_s-vVE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Jct6BaNmhnfehbvpCkA4fQ&_nc_tpa=Q5bMBQE6hECmicT5epMv--ambMc4tJDIf7QMYOaWNwT4SCdr7Cle5dUypp7rcNnrAXq5MY4ntyNGi78y&oh=00_AfoJyqAJLoE4kU_HBE3qpwfE87vESoA17YSZ6bTIVFdIRw&oe=6963BB8C" alt="The Fugitives" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Fugitives</h2>
+          <span class="date">Last played 3 Oct 2025</span>
+          <p>📅Get ready for a night of soul-shaking rhythm and blues as The Fugitives return to The Earl Haig Club! With over 25 years of tight grooves, powerhouse guitars, and floor-filling energy, these South W...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540626794_1327554619379386_616911358534366615_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=V1KN4Fcg7EkQ7kNvwGfExJV&_nc_oc=AdmPFkpZvFhET1MkO27dWp4cbRdrpx60jHAYIAx-5LHbzm4_MCpr57M5nr93maIdGk8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=gFaU0tDieUGTL8PrExIwyA&_nc_tpa=Q5bMBQEKca7RXPGZNDUI5LS5m8-akIHcr0PautdJNmHnUhewbNzOpgtEMwtGpJjtC7YDrBrYPK_DxDWJ&oh=00_AfojdEG8cWNu_TWMfnQSbdhRPkoPAA3j1PO4hKeLQAL2eA&oe=6963CF5D" alt="The Hindenburgs" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Hindenburgs</h2>
+          
+          <p>Saturday,It’s been a long time since these boys last played here, and they’re back with a vengeance. Outstanding musicians one and all, The Hindenburgs know how to bring the house down—blazing riffs, ...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/510461551_1266560552145460_7358441881257195708_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=7XELSwiEy1AQ7kNvwGdlWLZ&_nc_oc=Adl0cJlF7EM6PNhN3LQ0lQf1G-BgE1eNCI159PMEXKf93fSPnjideWY7PaeBLy3vwwI&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=vKwJ64-4fLg-cQZV950bLA&_nc_tpa=Q5bMBQF3jKebkpxxo93V8OiiJL5I8o6hzmUbLIV0vPo--95vO3CzPvUe68DXJy5S5YkP-YkNWLiDb4NC&oh=00_AfqtuHL3X2A3uPwLg55mOLBCOODNLOAmQYo7VFRsiKkbow&oe=6963C22B" alt="The Jedis" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Jedis</h2>
+          <span class="date">Last played 5 Sept 2025</span>
+          <p>Versatile covers band from South Wales delivering an eclectic mix of rock, pop and soul classics. Known for their tight sound and ability to read a crowd, they keep the party going all night.</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/574887313_1388792963255551_3697406390794823803_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=zsPnfZxMo8QQ7kNvwGuY7CY&_nc_oc=AdlVIZaNJ9RRHwYvmSiQOeNeC6_fi7mbV0WKcoqwyVd084KycY_8L-l5pA_vHMo5b0I&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=1tmIbxov2A2f7G2okBGmEg&_nc_tpa=Q5bMBQHGe9hOmIujSDEa_Ovr_lHLaTYjLXWgyOCDB5T9w73cepssNt_x3nfVz_9bJ_0A3p-lZahB7Wga&oh=00_Afr-dcVcwG0-tOrQ2gUSazyHq5PH4EucJBLOw8gDcZlbJg&oe=6963C2AA" alt="The Jug Band Christmas Extravaganza" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Jug Band Christmas Extravaganza</h2>
+          
+          <p>The Earl Haig ClubAre you craving a Christmas night out that’s a little bit different? Forget polite carols and quiet mince pies — this is jugband mayhem at its merry finest!The Almost Legendary Jug B...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492299303_1215038500630999_7936043837499442411_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=GCKQ3ukr8WYQ7kNvwHtvZ57&_nc_oc=Adk1Jhr7o0imOTf0lE17Jov6s4fThbYghVqCR-U8vvnT3M2vgswjq6oA6qAoi6lLFfA&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=tsR_doHbydXJXbN_azrqBA&_nc_tpa=Q5bMBQHMYlYW8g34Xg3wBszYH4UsaA1tH2e_AJVenu3QVX7S4wbVmD6f4dg0Ix-TWZVqVCop2MNClzN4&oh=00_Afr3qafeIqD2Q2JFGQe9Wdc7bgCnMoLXpqq-PTIz2K6hIg&oe=6963D127" alt="The Leighton Jones Band" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Leighton Jones Band</h2>
+          
+          <p>STEPPING IN FOR THE S'PUNKLES 🎤 Experience an unforgettable evening of soulful music! 🎶 Join us for a captivating performance by the Leighton Jones Band, featuring the exceptional talent of Leighton...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/496134621_1232708972197285_961894307230370538_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=cZj5JPtElHUQ7kNvwEnpgLC&_nc_oc=Adm87bKRVq2eByIGzBaHkTCvcnYHyburHGabnsyYtOHr9BKxN3SKPSQOx_xdO_JuZzo&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0Jl-FMDkSOy2AkPaknm7mw&_nc_tpa=Q5bMBQGAm08_S8yjECril50x9ylqkDlGpLRxmpZ_bfOPGsAKSkpFApGoJ93m2enivt2hIgufHZnlFTJi&oh=00_AfrAepaAIYF4L8uP70zXE7lniZ0VsyWkBcSwExKq3EOWhA&oe=6963B534" alt="The Lonely Hearts Band" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Lonely Hearts Band</h2>
+          
+          <p>The Lonely Hearts Band was formed around 10 years ago by Colin Edwards, George Cox, and Dai Watkins, along with Adrian Llewellyn (also known as Paul Ryman) on guitar and vocals.After Adrian sadly pass...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/493265428_1218243860310463_3503174788021023127_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=oNaSNkpOZWMQ7kNvwE8Xvb0&_nc_oc=AdkGMqcvPHTZ1v-3gOIA7HR3kjyIqaEUGbd2Rk0nM_AwQtFBbWLTUv1PG3Ol-E2RKoE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0Jl-FMDkSOy2AkPaknm7mw&_nc_tpa=Q5bMBQH_1l2mJ1OYED0kcLRilDPpZ6wmEOae3oaATW4_P9tAdNDBeZDU49sS3gXkHAMzD1pEpq7pjyBC&oh=00_Afo78EwVdFmQzzN-Ni7J6uqIdOV5Sg4NWEPYntHA6t2vBQ&oe=6963C61D" alt="The Marc Davies Band" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Marc Davies Band</h2>
+          
+          <p>The Marc Davies Band – Saturday,Get ready for an unforgettable night of blistering blues-rock as The Marc Davies Band takes the stage. These top-tier musicians aren’t just incredible performers—they’r...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/516080080_1281391990662316_2753974935477974698_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=2TqQ5laDH4AQ7kNvwFv3vpg&_nc_oc=AdksU1zWCd8AD3XuU6RrE3SXrVNEFGcG4hxsCfnUJo7o3M-xKrStrhhyosSrPrWJbK8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=dGZ0sj1Mmb5MU4dvGN1zYQ&_nc_tpa=Q5bMBQGnMZoPye-i6YgnwZUpM4NTGor8QuAh52ZOSgDxhR6EHcIeMYZ3d784RNoxa3P4Kwf6yWyC8X7I&oh=00_AfoAq2G8wfeyR_6VYzz402J_Ls_TUYXb6g87ViAnzZT0kw&oe=6963AF69" alt="The Mother Truckers🔥" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Mother Truckers🔥</h2>
+          
+          <p>Introducing this Rock Power Trio to Whitchurch!https://www.facebook.com/TheMotherTruckersHQGet ready for a serious blast of classic rock as this 3-piece covers band hits The Earl Haig Club stage for t...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/505808410_1260402869427895_28407012769851650_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=NlTVfN_AF-EQ7kNvwH2LNqf&_nc_oc=Adk7yXJbRmNz7SyjgaJIvM1hBq8TOr69d0TH6JlD68Gt40AllbxFcjHgn99QzXmW8HI&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0v2fGwQqHsLOs0iLea5iQw&_nc_tpa=Q5bMBQGFE-wSmoOFWgdtqcF7jGhEy3Vfin8W1_c_ir0CfOX76bSAkaapUNgLcQ-EnxUYvcFsw2zxGakC&oh=00_AfqAGw6265LcvVRWCMJ89JJAsRAY3g8PWSIS8zY6NwbGJw&oe=6963B296" alt="The Raiders" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Raiders</h2>
+          <span class="date">Last played 15 Aug 2025</span>
+          <p>On Stage: 8:30pm Venue: The Earl Haig Club, 23-25 Penlline Road, Whitchurch, Collection Bucket at the BreakHigh-energy. Crowd favourites. Big singalongs.The Raiders are back – a Cardiff-based four-pie...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540617683_1326320319502816_4025000482722028033_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=78n84VfvZCYQ7kNvwGi82Gb&_nc_oc=Adn1spDdl-XvVCi5Q5uz6sQAI7u3QaxwHTf9hX-PGRgHd_BUaOS_bTtv4VR7Tid9qvo&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=bfnolEobSCCIoxY5vsy_BQ&_nc_tpa=Q5bMBQGVLfDd4jJjMfnISsDTNshD97kLA4Lfz93OASGmP22ccwWwFHkSzdxWnZUUR8KlxNq549cJcl4L&oh=00_AfotOF9AZYFZUl9dOst93px_-FLtHQxSReg11Vr-BhHY1g&oe=6963DA30" alt="The Red Hot Pokers" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Red Hot Pokers</h2>
+          
+          <p>The Red Hot Pokers atThe Earl Haig Club Bar.Join us for a soul-stirring Friday night as one of the Earl Haig Club’s most beloved bands, The Red Hot Pokers, return to the front bar.Formed in 1984, The ...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/544507483_1332360642232117_7962064456479085260_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=oza00TSr570Q7kNvwEx_Du3&_nc_oc=AdlgxhYNbFMRpc2JRuioZaqDh6B1nQqU-hGWiAKOStQh4_6QBwRPCtX7kdB2H8NELW8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3hOBCdz-wN62_jsY0W2YQA&_nc_tpa=Q5bMBQHbkmQVJGrn1IZAs4tZj6ztdFIpopgKpfyUWGrWwL4cYInB6SR_uUmuhA63FcI1zWaYDWdtoCY-&oh=00_AfqHjaTxrE-tpwo3zCCrafDdFaNeheUYmSaVtdhUskxf7g&oe=6963DB56" alt="The S'punkles" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The S'punkles</h2>
+          <span class="date">Last played 5 Feb 2024</span>
+          <p>Sunday, October 26th 2025 |Lock up your pint glasses and hold on tight — The S’punkles are crashing back into the Haig with a Molotov cocktail of pure punk chaos. No frills. No filters. Just sweat, sp...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/538597004_1323651903102991_1351839784528244531_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=DKlCMJrtH4MQ7kNvwGd-8J6&_nc_oc=Admm7kmDSZOM3DpUaLvb_hmk0GYAfjIglatNtkj7HlHkHlEbRBYbOwBflCIomoeEMQI&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3hOBCdz-wN62_jsY0W2YQA&_nc_tpa=Q5bMBQHRt5aHAH3WSdeANBgU4CuzAPRI8gJxlbc7PPewEKFH_g2_1mdCw1qntnIabJSzXMtJcdlAVo0e&oh=00_Afqxoq6Vn6ti4ms41dXwA3QfwO1xcy1uteMOniCSpHv4lQ&oe=6963E1EA" alt="The Semantics" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Semantics</h2>
+          <span class="date">Last played 29 Nov 2024</span>
+          <p>Versatile covers band bringing a mix of rock, pop and indie classics to the stage. Known for their energetic performances and crowd-pleasing setlists.</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/572034355_1382619250539589_1624039481790790037_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=q4qHYI5yrg4Q7kNvwFn4F1d&_nc_oc=Adm_uSq_RmBfmtYKGIkbju1fgjTTje9ltHBPbUQ0kyQHvR39R6ZZT4zsyuKfCn4_5ek&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=SOtXQZT76_Vujs2vmlJC9A&_nc_tpa=Q5bMBQEBP-5awFm8oFBidLIM7W9KCSjgrxwmAn74kalbhXP0VyZXuxf1xxPYUlfiSmdrp63gmLB_e6kY&oh=00_AfrT_1CATFNdyK_8r0WnOxJfdhL3j-I5VjpgQlGfntU1Kg&oe=6963E41F" alt="The Sundogs" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Sundogs</h2>
+          <span class="date">Last played 19 Oct 2024</span>
+          <p>Tight rhythm and blues outfit bringing classic R&B, soul and blues to the stage. Known for their groove-heavy sound and energetic performances.</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/587118074_780884871648530_8380698643398414306_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ppIFHKgYFeQQ7kNvwEAKL7j&_nc_oc=Adlrz2zA-58F96D3mVetHLLzOD9VLFcgDt7Df9nGSCCGXdWBRO_CrfHaqOZ63iBYo7o&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=elv8ZRc-zhZn2jUuo-2P1g&_nc_tpa=Q5bMBQGTt7FoXCReb1LaSYBFdnu3RPAX3Tk4YS-kJUFD9wsYSvlCCU24Gjpsk7EdjERnWgtpHG3omf_n&oh=00_AfptpQqELrC_T363jaJ1bFmAdFF7tBPqaszyOwBEN8w0qA&oe=6963C6E1" alt="The S’punkles Christmas Special" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The S’punkles Christmas Special</h2>
+          
+          <p>Christmas with The S’punkles — The Earl Haig Club Bar .The Earl Haig ClubLock up your pint glasses and brace yourself — The S’punkles are storming back into the Haig for a Christmas blow-out like no o...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/530583252_691633820573636_5603574691625076511_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=vxdnEZW12nIQ7kNvwGl1V8B&_nc_oc=AdmXqOrV507cCuJKkcfZux5hXnHh1c8D-Vg5HP6u4WSYOptWBTnh62nK1ggCNgbixfE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=vKwJ64-4fLg-cQZV950bLA&_nc_tpa=Q5bMBQFqdeZ0MsmR4K3ly3JiwIBWcQVWZhOI5FugSE-TmSYPYK-2nltISDavKI5PqFmBi84U-oHayyiW&oh=00_AfpcDPCThDRbu7X2ewRmqJ-lnmZt9EBkFG6fELdcUhpKPA&oe=6963CCE0" alt="The S”punkles" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The S”punkles</h2>
+          
+          <p>Sunday, August 31st 2025 |Lock up your pint glasses and brace yourself — The S’punkles are crashing into the Haig like a Molotov of pure punk chaos. No frills, no safety nets — just sweat, spit, and a...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/539620405_1326549889479859_5012033203794354195_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ej9p8kTkgLEQ7kNvwEWfC-e&_nc_oc=AdmhlczIDoJXJxLxhhxJhm0bfNi8EdJAa52hsA5FoxqRboCuqA3UmPOyBxm63OAh6Jk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=dBtMRToO6P3FA0H8EmHMHg&_nc_tpa=Q5bMBQHCcGDtC63wKE1AMio5iKnC9k2_5WH3PH1FAeIx10UdG6lLKipRMl4zAiXEsASUPpvtatuSBlkZ&oh=00_Afpury9AD3RLu6ZuOlIaf8AJj2yNh_-hGF0vaT29ZOJxWg&oe=6963CA8E" alt="The Troubadours" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Troubadours</h2>
+          
+          <p>– Wales 🆚 Argentina 3:10 Kick OffSunday, November 9th, 2025 | Step into a time machine and relive the spirit of Woodstock and beyond with The Troubadours – a powerhouse trio fusing electrifying rock ...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/541450584_1326549086146606_3265435573927248003_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=FKQ43VnkQfUQ7kNvwHLaQly&_nc_oc=AdmJFqP8kbTdKA4Y4px-jXObnJpU9V0D75BsNrWUQBl5RdQThUzJEhbTqH8sqUeBWWQ&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=LQMs_Ci9-e2n--j-KBPbRw&_nc_tpa=Q5bMBQF4mq0IXc2FW0oS19vI6-GjPN3b0Rxj2nnLKka8FQcC82NeP-jbIpZx7aM7yDJT8t_HUYYOThPv&oh=00_AfqOUrpF0Nk4wf9ZuJf-s_pTpIkO_Htkii2CpjC9_uBrMg&oe=6963C369" alt="The Vanderbilts" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Vanderbilts</h2>
+          <span class="date">Last played 14 Apr 2024</span>
+          <p>|Get ready for a full-throttle evening of powerhouse rock as The Vanderbilts storm into The Earl Haig Club.Straight out of the Rhondda, this family-driven covers band delivers a blistering mix of anth...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/506697599_1266448998823282_9024282517317998935_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Hv52w6otdrgQ7kNvwFr8dos&_nc_oc=AdkHDRKbz-6WslVuDYsmhQb2UGa4ZVZsJ7CCvToPbxSnCU3ydftT-weILudRqfdMtn0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=YKTi4Z8TxXFFiklTNpKpqw&_nc_tpa=Q5bMBQGGHzIY1zVqRfEOeQn5nkTgTEWlT8MiLM5rlA_4fALLN_RRjPJrX-WGoh8x8MYG2vFYlbQ34EuG&oh=00_Afrd1239JyRnSUCCTvP3nBFMa8cBVBu0X43bn2yaJsQVRw&oe=6963B710" alt="The Wildflowers," class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Wildflowers,</h2>
+          
+          <p>Get ready for a real treat — The Wildflowers are hitting the stage and they're bringing a wall of sound with them!This South Wales-based 4-piece cover band delivers a high-energy mix of Punk, Rock, an...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/571107528_1382457650555749_6561174080354064333_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=QD3mVVMkdWgQ7kNvwHQoPjb&_nc_oc=AdmkBj_VPLXMjZeuFodkMiqMOSxUn0xHI_grsw20_LinUKvmip_jwb5awOoQ9sHoBrY&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=SOtXQZT76_Vujs2vmlJC9A&_nc_tpa=Q5bMBQE61ftdVAaCbZZ58mFHG2lMZdDQxuSoVffXI2G_eQWW2xvBBKn2G_7NWFHCIVIQKQjZJ4CWcexp&oh=00_Afp-YtfqFXgd02LmIk6IKAAhicRbmsdGB-Pr7GVspPuL4w&oe=6963DCFB" alt="Tony Morleys Little Giants" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Tony Morleys Little Giants</h2>
+          
+          <p>🎃 Tony Morley’s Little Giants — Halloween Special🗓️ Friday, October 31st, 2025 💷 🕗 MusicThe Human Jukebox is back! Join us for another unforgettable evening of live music with Tony Morley’s Little...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/505710933_1260410726093776_7292382660666932887_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=AA2YGzYKJrkQ7kNvwEVAd5-&_nc_oc=Adk0l4s6bZske6pT-LFO6Jn-FgS_sl5IUUbJBwbZe-DGoVaVuIsOaUnkDMuubsH_ja8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=7LHehKJo8LX7e72lPk9seA&_nc_tpa=Q5bMBQHfEJ_EbGNBnzjW7b7M1bOoROwmshVAFDGWsf-3FSn6NO5kNmjis_1fveC1p3m5kBWl3dsJe4v8&oh=00_Afr171R1-XP46Ir1eLUqye0TUQ6-6Ul2rVdlckftCXKJXg&oe=6963D023" alt="Trade Street" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Trade Street</h2>
+          <span class="date">Last played 23 Aug 2025</span>
+          <p>📅 Saturday, 🕣 8:30 PM 💷 Get ready for a night of pure soul and disco magic as Cardiff’s very own Trade Street return to The Earl Haig Club by very popular demand!This incredible 5-piece covers band...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/491959879_1218255600309289_1864477892571067169_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=cHKjXGi-Y8AQ7kNvwFx23En&_nc_oc=Adlw2POtgfhmu-65AARNXhCpRFbnpgtbNMdrNOyAK_mMQJm1PkongAMOXbOHEO1ifFc&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0Jl-FMDkSOy2AkPaknm7mw&_nc_tpa=Q5bMBQFk5aJvNhrUI2TIidMRzTA4rjLha7liZvDl1qQ5minlF9sP6J1D0kpY_1R3DDgSzPHw9pr0IkGM&oh=00_AfrKHFqYcM848PSwIp1uwgQKebYuJum-GXQFx96Ah9xTqQ&oe=6963D35A" alt="Tumblin’ Dice" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Tumblin’ Dice</h2>
+          
+          <p>Sunday, May 18th, 2025Expect a thunderous setlist filled with legendary tracks from The Rolling Stones, The Who, Led Zeppelin, Pink Floyd, and many more. Known for their high-energy performances and m...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492533299_1215691323899050_1826277966478055463_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Id-_9a0kRZ0Q7kNvwEsOC_E&_nc_oc=AdmUkCgjW1DNKczY97KcaHkXbqyZC0PfI3aWtqmM_7c0Fy5L_tsuSVaYoGWAzWuKN-w&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3XPEHR1hDn4eqFZqoTHKPg&_nc_tpa=Q5bMBQHZYHxz4sazNTcMuzvmsoZsQL0skn_dBLHggsJSqHtYEWZam3s2lsXEiV24hkNys0Y2lZ3fSZig&oh=00_AfrYr124mvVfN1eB8Wl_Ank4KraB-ZDr0MyEv47pQtn-vA&oe=6963C3A2" alt="Will Hay Band" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Will Hay Band</h2>
+          <span class="date">Last played 13 Apr 2025</span>
+          <p>Will Hay Band Venue: The Earl Haig Club Concert RoomSchedule: Doors open at 5pm...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/539383813_1326329156168599_6805608809797158441_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=jqTdc4VPRh0Q7kNvwGMNfHA&_nc_oc=Adkrs_YSuf1lZpeMn-5cd-HqNP0WUJChT-d6i6KycCacAeYdNTcdHrYDC9-_OvATIsU&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=bfnolEobSCCIoxY5vsy_BQ&_nc_tpa=Q5bMBQGRmECNVs8rO6GCsabiw0V-9gJTA9yR38A1_gPkR3hRiFLPaa3A2TPl5gTNuulyw911FyFGF9aT&oh=00_AforR92FhGe9CQo4dDn28hyZ9Ko8CWFwZOuthkk1IHC7Vw&oe=6963B117" alt="Worried Men" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Worried Men</h2>
+          <span class="date">Last played 5 Oct 2025</span>
+          <p>| Band on stage: 6 PMSouthwest England’s finest blues-rock powerhouse, Worried Men, are coming to Whitchurch for a night of raw energy and top-class musicianship. Led by the incomparable Jamie Thyer, ...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492048605_1214958160639033_3650455129072563138_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=WHNR1KDc06sQ7kNvwFNdSu_&_nc_oc=AdnOgBspzFOJP2P91wF-DDLtTu8oU-EkIiKh4y2Lc9-mQv_P81b0w-4eJbs49muX3rM&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=WJlfQHG9REgs6_4SJ1BA4w&_nc_tpa=Q5bMBQF007aVA1-X76I-QrprqebTupdyZ-aTTFvqfh5kWmWFzwt_8btVapxlcnRpTzsVhoCMv391UO7t&oh=00_Afp1Eqog0tlGDk4tYgNqEQ1MUKZwQz3LKiWnw612UpgMug&oe=6963B938" alt="🎤 Proper Crackin' Comedy Club! 🎭" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>🎤 Proper Crackin' Comedy Club! 🎭</h2>
+          
+          <p>🎤 Proper Crackin' Comedy Club! 🎭You've been asking for something different, and here it is! Get ready to laugh your socks off at Proper Crackin' Comedy Club—bringing you top-notch comedy every month...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492560766_1214817537319762_2194237470841049636_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=x1ceB01_POgQ7kNvwFz6Dtf&_nc_oc=AdmJKbGdDwNHz65o8332IkceRz0onHSKIfQAZGQtOeI-YCs2hlTdrxSD09qIxuL8uZU&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=B4kmk0o_FrMRxV0w1xq6Fg&_nc_tpa=Q5bMBQGPP6OoraSyWbqUB4S1ku5Zt9wCpdIMRtcpWG2f9-4yMRdcg-GZqkA3B4I-jC-jcYK5oF0oKNWo&oh=00_AfpKxCAEHPtJA2S3C5_pZJDbOAr12cSq_CuOMfchptVztQ&oe=6963E5DC" alt="🎸 Junior Hacksaw" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>🎸 Junior Hacksaw</h2>
+          
+          <p>Back by very popular demand, Junior Hacksaw is here to rock your socks off! This tight three-piece blues rock 'n' roll band hails from South Wales and is led by the legendary Pete Mathison on guitar a...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492367868_1214817540653095_8433180781122626473_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=TzsUILn3H8MQ7kNvwFaCNxF&_nc_oc=AdkXDd3M3NRKHy7TP_J-UAuiCQkpfWO6PhZ4peE75mD6zgOzThMu47PICuA7EfC6PcA&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=XH4pXehoZGsa46qakgFtmw&_nc_tpa=Q5bMBQHWHuKmCiHfTKWOEYr1F-b-0lMCPymnHXk6xzBDJD3WykXtrYI-FBghQfu2q3Xo0PiYDsI0-ARU&oh=00_AfoFTCpwsDq6Xm7ZbM46aJ6npDLONRraMzU9gKpN9X2rZQ&oe=6963E032" alt="🎸 Snatch It Back" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>🎸 Snatch It Back</h2>
+          
+          <p>📅  | 📍 Prepare yourself for an unforgettable night of blues brilliance as South Wales' #1 Blues Band, Snatch It Back, brings their electrifying energy to The Earl Haig Club Bar!Expect killer riffs, ...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/493317589_1214817487319767_8133455216108275800_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=DW2NCam3D7oQ7kNvwFKHTjp&_nc_oc=AdlVTMfzleY0GOd-ouXxgkiQMQMbBmEeGycHABWoYJCphwn1hAOJms8heAWVQU4yKj8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=XH4pXehoZGsa46qakgFtmw&_nc_tpa=Q5bMBQE77H5zHmG5ro0i-JYuLKn5I3-VHJtzEj_j-xZ102DwHY4KBr8yEXP9EYpT25ydcUayyDJg2G9V&oh=00_Afr_R-FZ-KRwjeLNxx_vig9veDGoopuAHpubBNDVMH63DQ&oe=6963C937" alt="🎸 Stonehouse" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>🎸 Stonehouse</h2>
+          
+          <p>📅 When: Saturday, March 8th, 2025🎟  – Everyone’s welcome!The wait is over! Stonehouse, the legendary rock 'n' roll band, is making their much-anticipated return to The Earl Haig Memorial Club. Known...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492190139_1214817610653088_655958214835468705_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=re1w3OjbMAAQ7kNvwEIbMOv&_nc_oc=AdkFJtv3NG2ibCyk6snVKqTwrotbNF6H-zn3JzGprZeI_owjBV3TS_08_yDXpHay-dk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=B4kmk0o_FrMRxV0w1xq6Fg&_nc_tpa=Q5bMBQG-bCCNIH_71ogZ7IN09gUib9krSa6YqJQ0MVOCvcDg8kZ2VoPX3vJ5Z-kbjBq580MKIN_1B7s5&oh=00_Afp9DGkXhMxthtq8tYB8XSgrPXysEAMYxmTBDUy_pfhLZQ&oe=6963C1F2" alt="🎸 The Jedis" class="band-image" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>🎸 The Jedis</h2>
+          
+          <p>📅 When: Saturday, March 15th, 2025🎟  – Don’t miss out!Prepare to be transported to a galaxy of rock 'n' roll as The Jedis take the stage! Known for their high-energy performances and incredible musi...</p>
+        </div>
+      </article>
+    
+    </div>
+
+    <footer>
+      <p><a href="https://www.earlhaigclub.com">www.earlhaigclub.com</a></p>
+    </footer>
+  </div>
+
+  <script>
+    function filterBands() {
+      const query = document.getElementById('search').value.toLowerCase();
+      const cards = document.querySelectorAll('.band-card');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(query) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
