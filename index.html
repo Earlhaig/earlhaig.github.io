@@ -493,6 +493,16 @@
       transition: color 0.3s ease;
     }
 
+    .event-details h3 a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .event-details h3 a:hover {
+      color: var(--color-accent);
+    }
+
     .calendar-event:hover .event-details h3 {
       color: var(--color-accent);
     }
@@ -513,6 +523,35 @@
     .event-location::before {
       content: '◆';
       font-size: 0.5rem;
+    }
+
+    .event-action {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .view-event-btn {
+      display: inline-block;
+      min-width: 160px;
+      padding: 1rem 1.5rem;
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      color: var(--color-text);
+      background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .view-event-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 60, 56, 0.4);
     }
 
     .event-bio {
@@ -1263,7 +1302,7 @@
         </div>
         <div class="band-content">
           <h2>ROCKIN' 58</h2>
-          <span class="date">Last played 29 Aug 2025</span>
+          <span class="date">Last played 24 Jan 2026</span>
           <p>Authentic rock and roll revival band celebrating the music of 1958 and the golden era of rock. Classic hits from Eddie Cochran, Gene Vincent, Jerry Lee Lewis and the pioneers who started it all.</p>
         </div>
       </article>
@@ -1311,7 +1350,7 @@
         </div>
         <div class="band-content">
           <h2>Rockin 58</h2>
-          <span class="date">Last played 29 Aug 2025</span>
+          <span class="date">Last played 24 Jan 2026</span>
           <p>8:30pm Friday, August 29th, 2025Get ready to step back in time and dance the night away with Rockin’ 58, the sensational rock ‘n’ roll band straight out of Barry, South Wales! 💃🕺Renowned for their e...</p>
         </div>
       </article>

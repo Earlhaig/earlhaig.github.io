@@ -493,6 +493,16 @@
       transition: color 0.3s ease;
     }
 
+    .event-details h3 a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .event-details h3 a:hover {
+      color: var(--color-accent);
+    }
+
     .calendar-event:hover .event-details h3 {
       color: var(--color-accent);
     }
@@ -513,6 +523,35 @@
     .event-location::before {
       content: '◆';
       font-size: 0.5rem;
+    }
+
+    .event-action {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .view-event-btn {
+      display: inline-block;
+      min-width: 160px;
+      padding: 1rem 1.5rem;
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      color: var(--color-text);
+      background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .view-event-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 60, 56, 0.4);
     }
 
     .event-bio {
@@ -789,7 +828,7 @@
   <main class="container">
     <div class="stats">
       <div class="stat">
-        <div class="stat-number">48</div>
+        <div class="stat-number">47</div>
         <div class="stat-label">Upcoming Gigs</div>
       </div>
     </div>
@@ -803,30 +842,13 @@
           <div class="event-weekday">Saturday</div>
         </div>
         <div class="event-details">
-          <h3>Rockin '58</h3>
+          <h3>Saturday Night Live with Rockin' 58</h3>
           <div class="event-location">Bar</div>
-          
-          <button class="fb-btn" onclick="openModal(0)">Copy for Facebook</button>
         </div>
-        
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/saturday-night-live-with-rockin-58/7414539" target="_blank" rel="noopener" class="view-event-btn">Free Entry</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-0" onclick="closeModal(0, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(0)">&times;</button>
-          <h3>Rockin '58</h3>
-          <div class="fb-text">Rockin '58
-
-Saturday 24 January 2026 at 20:30
-Bar - Earl Haig Club
-
-
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -835,30 +857,28 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Sunday</div>
         </div>
         <div class="event-details">
-          <h3>Mark Pontin</h3>
+          <h3>The Troubadours</h3>
           <div class="event-location">Concert Room</div>
-          
-          <button class="fb-btn" onclick="openModal(1)">Copy for Facebook</button>
         </div>
-        
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/the-troubadours/7417685" target="_blank" rel="noopener" class="view-event-btn">£3 OTD</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-1" onclick="closeModal(1, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(1)">&times;</button>
-          <h3>Mark Pontin</h3>
-          <div class="fb-text">Mark Pontin
-
-Sunday 25 January 2026 at 18:00
-Concert Room - Earl Haig Club
-
-
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">26</div>
+          <div class="event-month">Jan</div>
+          <div class="event-weekday">Monday</div>
         </div>
-      </div>
+        <div class="event-details">
+          <h3>Monday Jam Session with James Oliver</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/monday-jam-session-with-james-oliver/7414540" target="_blank" rel="noopener" class="view-event-btn">Free Entry</a>
+        </div>
+      </article>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -867,30 +887,13 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Tuesday</div>
         </div>
         <div class="event-details">
-          <h3>Dave Durnleys Blues Night</h3>
+          <h3>Dave & Tonys Acoustic Blues Night</h3>
           <div class="event-location">Bar</div>
-          
-          <button class="fb-btn" onclick="openModal(2)">Copy for Facebook</button>
         </div>
-        
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/dave-and-tonys-acoustic-blues-night/7417686" target="_blank" rel="noopener" class="view-event-btn">Free Entry</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-2" onclick="closeModal(2, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(2)">&times;</button>
-          <h3>Dave Durnleys Blues Night</h3>
-          <div class="fb-text">Dave Durnleys Blues Night
-
-Tuesday 27 January 2026 at 19:00
-Bar - Earl Haig Club
-
-
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -899,33 +902,28 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Friday</div>
         </div>
         <div class="event-details">
-          <h3>Snatch it Back</h3>
+          <h3>Friday Night Live with Snatch It Back</h3>
           <div class="event-location">Bar</div>
-          <p class="event-bio">Get ready for a night of no-nonsense, hard-hitting blues as Snatch It Back — widely regarded as South Wales’ number one blues band — return to The Earl Haig Club Front Bar for a powerful live show that promises grit, groove, and serious musical fire.Formed in 1983, Snatch It Back are true veterans of the blues scene. For over four decades they’ve been delivering authentic, sweat-soaked blues with authority and soul, earning a reputation as one of the tightest and most respected live bands in the region. This is not blues by numbers — this is music played by musicians who live it.Their sound moves effortlessly from deep, slow-burning blues to driving shuffles and roof-raising grooves, powered by razor-sharp guitar work, a rock-solid rhythm section, and vocals packed with character and conviction. Every set is a masterclass in feel, dynamics, and raw energy.Expect the Front Bar to be transformed into a proper blues joint for the night — close, loud, and full of atmosphere. This is music that pulls you in, locks you into the groove, and doesn’t let go until the final note fades.Local heroes since 1983.</p>
-          <button class="fb-btn" onclick="openModal(3)">Copy for Facebook</button>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/606027088_1436485415152972_1472662522619398934_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=6Y4-_Dog7NcQ7kNvwEShEJL&_nc_oc=AdnxNTPTnUvbOxtXDA_cIqjfzjYx2L5iqTXMUQDCzg9X_h1ufPHypZ1n1T_tZjmoObA&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=VtKTDrfxN04S2uH5oAHJew&_nc_tpa=Q5bMBQFLjtFG3HUeZS1vo1BB_rNBUPhulTIDeNrauFC9gR_WpMYdFagsAx-UY8W21bQ4RiBi5fop1L27&oh=00_Afql9xaFIb6kYSx-ZG5c_XdWRrOPQylOWiX1pU9wU2egTA&oe=697A22F7" alt="Snatch it Back" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/friday-night-live-with-snatch-it-back/7419315" target="_blank" rel="noopener" class="view-event-btn">Free Entry</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-3" onclick="closeModal(3, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(3)">&times;</button>
-          <h3>Snatch it Back</h3>
-          <div class="fb-text">Snatch it Back
-
-Friday 30 January 2026 at 20:30
-Bar - Earl Haig Club
-
-Get ready for a night of no-nonsense, hard-hitting blues as Snatch It Back — widely regarded as South Wales’ number one blues band — return to The Earl Haig Club Front Bar for a powerful live show that promises grit, groove, and serious musical fire.Formed in 1983, Snatch It Back are true veterans of the blues scene. For over four decades they’ve been delivering authentic, sweat-soaked blues with authority and soul, earning a reputation as one of the tightest and most respected live bands in the region. This is not blues by numbers — this is music played by musicians who live it.Their sound moves effortlessly from deep, slow-burning blues to driving shuffles and roof-raising grooves, powered by razor-sharp guitar work, a rock-solid rhythm section, and vocals packed with character and conviction. Every set is a masterclass in feel, dynamics, and raw energy.Expect the Front Bar to be transformed into a proper blues joint for the night — close, loud, and full of atmosphere. This is music that pulls you in, locks you into the groove, and doesn’t let go until the final note fades.Local heroes since 1983.
-Timeless blues — raw, real, and uncompromising.
-Let the good times roll at The Haig.Venue:
-The Earl Haig ClubWhitchurch,More info:
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">30</div>
+          <div class="event-month">Jan</div>
+          <div class="event-weekday">Friday</div>
         </div>
-      </div>
+        <div class="event-details">
+          <h3>Big Mac's Wholly Soul Band</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/big-macs-wholly-soul-band/7396235" target="_blank" rel="noopener" class="view-event-btn">Free Entry</a>
+        </div>
+      </article>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -934,66 +932,43 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Saturday</div>
         </div>
         <div class="event-details">
-          <h3>Sandboys</h3>
+          <h3>Saturday Night Live with The Sandboys</h3>
           <div class="event-location">Bar</div>
-          <p class="event-bio">Christmas Special – Friday, December 19th, 2025The Earl Haig ClubBrace yourselves, Whitchurch – The Sand Boys are back for a Christmas blowout like no other! This Port Talbot powerhouse always tears the roof off the Haig, and this festive Friday promises to be absolute chaos (the good kind).Expect a night of blistering originals mixed with killer covers from the likes of Queens of the Stone Age, Radiohead, The White Stripes, Kings of Leon, David Bowie, The Hives, and The Strokes – all delivered with that trademark Sand Boys intensity that makes every gig unforgettable.Live Music From: 8:30 PM</p>
-          <button class="fb-btn" onclick="openModal(4)">Copy for Facebook</button>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540678251_1328807105920804_943006752831926568_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=GZEpftyCTKsQ7kNvwHIS9j3&_nc_oc=Adn59-_pi9iEOxr6M_BkBQpAcDDPV1c-dcctTACI2E0gboVKwsB9F5OsVWVwL1TssJA&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=X0jmFJkYXoFudfuKJNDTEg&_nc_tpa=Q5bMBQHF0bdwHrUzjJiz2pEHSx60w3yTFDsROT9frGJQGS1C0JWYRC3VUlaioSAXOgeDBOglAOC7YhuV&oh=00_Afobh1w7xFohJ7h4M8awlZbaLQfL6_P3dO83vfPEz0-gNQ&oe=697A4693" alt="Sandboys" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/saturday-night-live-with-the-sandboys/7414543" target="_blank" rel="noopener" class="view-event-btn">Free Entry</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-4" onclick="closeModal(4, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(4)">&times;</button>
-          <h3>Sandboys</h3>
-          <div class="fb-text">Sandboys
-
-Saturday 31 January 2026 at 20:30
-Bar - Earl Haig Club
-
-Christmas Special – Friday, December 19th, 2025The Earl Haig ClubBrace yourselves, Whitchurch – The Sand Boys are back for a Christmas blowout like no other! This Port Talbot powerhouse always tears the roof off the Haig, and this festive Friday promises to be absolute chaos (the good kind).Expect a night of blistering originals mixed with killer covers from the likes of Queens of the Stone Age, Radiohead, The White Stripes, Kings of Leon, David Bowie, The Hives, and The Strokes – all delivered with that trademark Sand Boys intensity that makes every gig unforgettable.Live Music From: 8:30 PM
-No tickets, no nonsense, just pure mayhem.Get down early, because once the band kicks off, the bar is going to be rammed and rocking. This one is set to be a howler of a Christmas special – high-energy, loud, and absolutely unmissable.And don’t forget – there’ll be a collection bucket at halftime, so show the lads some love and bring a bit of Christmas cheer their way.Come early. Grab a pint. Claim your spot.
-When The Sand Boys hit the stage, it’s going to be mental.
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">31</div>
+          <div class="event-month">Jan</div>
+          <div class="event-weekday">Saturday</div>
         </div>
-      </div>
+        <div class="event-details">
+          <h3>Big Mac's Wholly Soul Band</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/big-macs-wholly-soul-band/7396236" target="_blank" rel="noopener" class="view-event-btn">Free Entry</a>
+        </div>
+      </article>
     <h2 class="month-header">February 2026</h2>
       <article class="calendar-event">
         <div class="event-date">
-          <div class="event-day">1</div>
+          <div class="event-day">2</div>
           <div class="event-month">Feb</div>
-          <div class="event-weekday">Sunday</div>
+          <div class="event-weekday">Monday</div>
         </div>
         <div class="event-details">
-          <h3>Stonehouse</h3>
-          <div class="event-location">Concert Room</div>
-          <p class="event-bio">•  • Band on 6pm.The Earl Haig ClubStonehouse aren’t just another rock band — they’re one of the finest, most explosive live acts on the entire South Wales circuit. Every time they take the Haig stage, they blow the roof off and leave the crowd shouting for one more song… and then another.Armed with a powerhouse setlist of the greatest rock ’n’ roll classics and anthems ever written, Stonehouse deliver the kind of night that sticks with you.</p>
-          <button class="fb-btn" onclick="openModal(5)">Copy for Facebook</button>
+          <h3>Monday Jam Session with Mark Pontin</h3>
+          <div class="event-location">Bar</div>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/543400820_1332320752236106_5568857516233891720_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=R69nidkWA_wQ7kNvwGKd4En&_nc_oc=Adn4mnYWnUtJHowESPkr6elgJQtih49aJzbg4qdAwgG9njiG8H22PshxmaLoJ2qhz28&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=VD0lS-Y6SAKsNFPO3dbHbg&_nc_tpa=Q5bMBQGdMVwnrDlDzYzMNvr6Kr4modOfbmvk4aetIqsIz6CKJt_MvLEWzNvPGiyylGfbnpeDHRZYxlM2&oh=00_AfrgvVTPqD1BBI5TdTKkYiGJ_Fw_QzzBBA0BAOzHTFu_SA&oe=697A2D23" alt="Stonehouse" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/monday-jam-session-with-mark-pontin/7419300" target="_blank" rel="noopener" class="view-event-btn">Free Entry</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-5" onclick="closeModal(5, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(5)">&times;</button>
-          <h3>Stonehouse</h3>
-          <div class="fb-text">Stonehouse
-
-Sunday 1 February 2026 at 18:00
-Concert Room - Earl Haig Club
-
-•  • Band on 6pm.The Earl Haig ClubStonehouse aren’t just another rock band — they’re one of the finest, most explosive live acts on the entire South Wales circuit. Every time they take the Haig stage, they blow the roof off and leave the crowd shouting for one more song… and then another.Armed with a powerhouse setlist of the greatest rock ’n’ roll classics and anthems ever written, Stonehouse deliver the kind of night that sticks with you.
-Think the swagger of The Rolling Stones and The Beatles, the raw power of The Doors and AC/DC, the grit of Pearl Jam and Alice in Chains — all played with fire, precision, and absolute authenticity.What makes them stand out? Passion. Pure, undeniable passion.
-Every riff means something. Every vocal hits hard. Every beat lands like a punch. They’re tight, they’re polished, and the chemistry between them is electric — the kind of energy you only get from a real, road-tested rock band.If you love live music, this is not a night to sit out. Get down early, grab a drink, bring your mates, and experience Stonehouse the way they’re meant to be heard — loud, raw, and right in front of you.🕔
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -1002,41 +977,13 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Saturday</div>
         </div>
         <div class="event-details">
-          <h3>Palm tree Antics</h3>
+          <h3>Saturday Night Live with Palm Tree Antics</h3>
           <div class="event-location">Bar</div>
-          <p class="event-bio">• 8:30pm StartHide your pints, guard your crisps, and prepare your dancing shoes — Palm Tree Antics are back in Whitchurch, and they’re bringing their full dose of reggae-fuelled madness with them!These loveable troublemakers have built a reputation for turning every Haig gig into a riot of skanking, sunshine vibes, and pure cheeky chaos. If you’ve seen them before, you already know: nothing is safe, everything is funny, and somehow they still manage to blast out some of the tightest reggae and ska in South Wales.Expect a scorching set packed with feel-good favourites from:</p>
-          <button class="fb-btn" onclick="openModal(6)">Copy for Facebook</button>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/582987884_1401665345301646_1581223936993479801_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=90H-WUVj03MQ7kNvwGu5sUu&_nc_oc=AdmLO-MT69IUWVHOK5owPxv97aOIzE6GmplbLvfD-mxsd07_ghG5IQnnAyMkKejkw9M&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=E3DHkRbmIHaciL69HEb04Q&_nc_tpa=Q5bMBQH7xcJGyad86BHYNHBTyfhWnw2AUOeSJMzLIAgVbzVJmx1JpdangQNUU_8wPGDpA7k0gTo_puFR&oh=00_Afo9zdo73N-WRUa6rE71dc05Jx3k_5mRY4nsHQG08vR-yw&oe=697A2DD8" alt="Palm tree Antics" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/saturday-night-live-with-palm-tree-antics/7415895" target="_blank" rel="noopener" class="view-event-btn">Free Entry</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-6" onclick="closeModal(6, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(6)">&times;</button>
-          <h3>Palm tree Antics</h3>
-          <div class="fb-text">Palm tree Antics
-
-Saturday 7 February 2026 at 20:30
-Bar - Earl Haig Club
-
-• 8:30pm StartHide your pints, guard your crisps, and prepare your dancing shoes — Palm Tree Antics are back in Whitchurch, and they’re bringing their full dose of reggae-fuelled madness with them!These loveable troublemakers have built a reputation for turning every Haig gig into a riot of skanking, sunshine vibes, and pure cheeky chaos. If you’ve seen them before, you already know: nothing is safe, everything is funny, and somehow they still manage to blast out some of the tightest reggae and ska in South Wales.Expect a scorching set packed with feel-good favourites from:
-🔥 Bob Marley
-🔥 UB40
-🔥 Desmond Dekker
-🔥 Toots & The Maytals
-🔥 …and plenty more reggae & ska gems delivered with their signature wink-and-grin style.But it’s not just the music — it’s the mayhem.
-These lads bring banter that flies faster than the bar staff can pour pints, hooks that stick in your head, and a vibe that turns an ordinary Saturday night into a proper village party.Why you shouldn’t miss this:
-✨ Reggae & ska classics played with soul, swagger, and mischief
-✨ Non-stop laughs and on-stage chaos
-✨ A crowd that always ends up dancing
-✨ One of the Haig’s favourite bands and great friends of the clubArrive early, grab your drink, and get ready for an unforgettable night with Palm Tree Antics — the band that proves reggae, humour, and absolute carnage can (and should) go together.📅
-🕣This one’s going to be a belter. Don’t miss it.The Earl Haig Club
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -1045,238 +992,88 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Sunday</div>
         </div>
         <div class="event-details">
-          <h3>Panic Station</h3>
+          <h3>Sunday Sessions with Panic Station Rhythm & Blues Band</h3>
           <div class="event-location">Concert Room</div>
-          <p class="event-bio">•  •Get ready for a night of top-tier rhythm and blues as Panic Station bring their powerhouse sound to the Earl Haig Club Concert Room. These boys are seriously good — a tight, energetic band with big grooves, slick playing, and a style that fills the room from wall to wall.Expect sharp musicianship, soulful vocals, and a setlist loaded with rhythm and blues favourites, classic gems, and a few of their own tunes, including the always-popular “Rockin’ Down the A48.” Whether they’re delivering slow, smoky blues or upbeat, feel-good stompers, Panic Station know exactly how to keep a crowd hooked.If you’re looking for a proper live music night, this is a Sunday worth marking down. Great band, great sound, great atmosphere — exactly what the Concert Room is made for.Earl Haig Club – Concert RoomDoors open 5pm</p>
-          <button class="fb-btn" onclick="openModal(7)">Copy for Facebook</button>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/584429176_1401666901968157_907272087649572374_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=QKVX4T0b-1oQ7kNvwF1TPEg&_nc_oc=AdmQbok6KLyrQ4jN1xXDUaoB5HvgmnO1CGL1obTclXUe8XhM1gWeuQAvd6ZDUSBvhJA&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=E3DHkRbmIHaciL69HEb04Q&_nc_tpa=Q5bMBQE2a6jl6f7hxXh0x4vjsQhNQNdZJKf7O4LzTXZ_4_8hOeRwrdaWSnRLAp7HT-opVUtrH-NNpnXY&oh=00_Afp3MMA1nDAgV1rdGrWOWYzUlIXyMlpLRK6hAibSFLUqJQ&oe=697A3D2C" alt="Panic Station" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/sunday-sessions-with-panic-station-rhythm-and-blues-band/7415896" target="_blank" rel="noopener" class="view-event-btn">£3 OTD</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-7" onclick="closeModal(7, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(7)">&times;</button>
-          <h3>Panic Station</h3>
-          <div class="fb-text">Panic Station
-
-Sunday 8 February 2026 at 18:00
-Concert Room - Earl Haig Club
-
-•  •Get ready for a night of top-tier rhythm and blues as Panic Station bring their powerhouse sound to the Earl Haig Club Concert Room. These boys are seriously good — a tight, energetic band with big grooves, slick playing, and a style that fills the room from wall to wall.Expect sharp musicianship, soulful vocals, and a setlist loaded with rhythm and blues favourites, classic gems, and a few of their own tunes, including the always-popular “Rockin’ Down the A48.” Whether they’re delivering slow, smoky blues or upbeat, feel-good stompers, Panic Station know exactly how to keep a crowd hooked.If you’re looking for a proper live music night, this is a Sunday worth marking down. Great band, great sound, great atmosphere — exactly what the Concert Room is made for.Earl Haig Club – Concert RoomDoors open 5pm
-Show starts 6pm
-— pay on the doorCome down, grab a drink, and settle in for a full evening of rhythm and blues from a band that always delivers.The Earl Haig Club
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
-          <div class="event-day">12</div>
+          <div class="event-day">9</div>
+          <div class="event-month">Feb</div>
+          <div class="event-weekday">Monday</div>
+        </div>
+        <div class="event-details">
+          <h3>Monday Jam with Ken Woods</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/monday-jam-with-ken-woods/7419301" target="_blank" rel="noopener" class="view-event-btn">Free Entry</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">14</div>
+          <div class="event-month">Feb</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Saturday Night Live with Rattlesnake</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/saturday-night-live-with-rattlesnake/7415900" target="_blank" rel="noopener" class="view-event-btn">Free Entry</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">15</div>
+          <div class="event-month">Feb</div>
+          <div class="event-weekday">Sunday</div>
+        </div>
+        <div class="event-details">
+          <h3>Sunday Sessions with Bendricks Rock</h3>
+          <div class="event-location">Concert Room</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/sunday-sessions-with-bendricks-rock/7415902" target="_blank" rel="noopener" class="view-event-btn">£3 OTD</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">21</div>
+          <div class="event-month">Feb</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Saturday Night Live with Elk Redemption</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/saturday-night-live-with-elk-redemption/7415903" target="_blank" rel="noopener" class="view-event-btn">Free Entry</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">26</div>
           <div class="event-month">Feb</div>
           <div class="event-weekday">Thursday</div>
         </div>
         <div class="event-details">
-          <h3>Glyn Griffths wake</h3>
+          <h3>Hayseed Dixie</h3>
           <div class="event-location">Bar</div>
-          
-          <button class="fb-btn" onclick="openModal(8)">Copy for Facebook</button>
         </div>
-        
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/hayseed-dixie/7389776" target="_blank" rel="noopener" class="view-event-btn">£26.75</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-8" onclick="closeModal(8, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(8)">&times;</button>
-          <h3>Glyn Griffths wake</h3>
-          <div class="fb-text">Glyn Griffths wake
-
-Thursday 12 February 2026 at 14:30
-Bar - Earl Haig Club
-
-
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">13</div>
-          <div class="event-month">Feb</div>
-          <div class="event-weekday">Friday</div>
-        </div>
-        <div class="event-details">
-          <h3>Junior Hacksaw</h3>
-          <div class="event-location">Bar</div>
-          <p class="event-bio">• Front BarJunior Hacksaw are a tight, hard-hitting three-piece blues-rock ’n’ roll outfit from South Wales, fronted by the electrifying Pete Matheson on guitar and vocals. Between them, these seasoned players have performed with some of the biggest names in the business, touring stages across the UK, Europe, and beyond.Expect gritty blues, fiery riffs, soulful vocals, and a rhythm section that doesn’t let up for a second. This is straight-up, full-tilt, blues-driven rock ’n’ roll — no fluff, no filler, just the good stuff.A rockin’, blues-wail, soulful night is guaranteed.📅The Earl Haig Club</p>
-          <button class="fb-btn" onclick="openModal(9)">Copy for Facebook</button>
-        </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583903675_1401663941968453_6536850422458866703_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=cLAIaVcEXRMQ7kNvwHxhU5i&_nc_oc=AdmcNPcgWMyEptwI32PZc3cMBivngjHZmJe2tzav8VT1lEfJc9EJMwf9O7z2gwGcIq8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=E3DHkRbmIHaciL69HEb04Q&_nc_tpa=Q5bMBQFolyn-QSIJMzE5X_35Zs1jEgRoMXFlOTM5uDjMQejkdxQvvwCAnDS9czXghfOKyuphEPIZybe6&oh=00_AfqGukZDXGX7Qf3QUtfjC-EyLBwOMsdwfK4LvPcRtMWywg&oe=697A4981" alt="Junior Hacksaw" class="event-image" loading="lazy"></div>
-      </article>
-      <div class="modal-overlay" id="modal-9" onclick="closeModal(9, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(9)">&times;</button>
-          <h3>Junior Hacksaw</h3>
-          <div class="fb-text">Junior Hacksaw
-
-Friday 13 February 2026 at 20:30
-Bar - Earl Haig Club
-
-• Front BarJunior Hacksaw are a tight, hard-hitting three-piece blues-rock ’n’ roll outfit from South Wales, fronted by the electrifying Pete Matheson on guitar and vocals. Between them, these seasoned players have performed with some of the biggest names in the business, touring stages across the UK, Europe, and beyond.Expect gritty blues, fiery riffs, soulful vocals, and a rhythm section that doesn’t let up for a second. This is straight-up, full-tilt, blues-driven rock ’n’ roll — no fluff, no filler, just the good stuff.A rockin’, blues-wail, soulful night is guaranteed.📅The Earl Haig Club
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">14</div>
-          <div class="event-month">Feb</div>
-          <div class="event-weekday">Saturday</div>
-        </div>
-        <div class="event-details">
-          <h3>Rattlesnakes</h3>
-          <div class="event-location">Bar</div>
-          
-          <button class="fb-btn" onclick="openModal(10)">Copy for Facebook</button>
-        </div>
-        
-      </article>
-      <div class="modal-overlay" id="modal-10" onclick="closeModal(10, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(10)">&times;</button>
-          <h3>Rattlesnakes</h3>
-          <div class="fb-text">Rattlesnakes
-
-Saturday 14 February 2026 at 20:30
-Bar - Earl Haig Club
-
-
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">15</div>
-          <div class="event-month">Feb</div>
-          <div class="event-weekday">Sunday</div>
-        </div>
-        <div class="event-details">
-          <h3>Bendricks Rock</h3>
-          <div class="event-location">Concert Room</div>
-          <p class="event-bio">• Band on 6pm •Their setlist spans the very best of classic rock and indie rock, covering iconic artists from the 60s right through to modern-day anthems. Expect big riffs, bold vocals, driving rhythms, and the kind of onstage energy that puts a grin on your face from the first song to the last.Bendricks Rock might be a new name on the scene, but they play with the confidence, commitment, and musical punch of a seasoned live band. This gig is the perfect chance to get in early and support a rising group who are determined to make their mark on the South Wales circuit.If you’re into classic rock, indie favourites, and lively Sunday nights filled with proper live music, this is exactly the show to be at.Earl Haig Club – Concert Room, WhitchurchDoors open 5pm</p>
-          <button class="fb-btn" onclick="openModal(11)">Copy for Facebook</button>
-        </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/584057447_1401752641959583_2791725179094258578_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=bDl_Lk_WwT0Q7kNvwFrfl1Z&_nc_oc=Adnnfx4_LqYacAcY60BHTQQFd_ncy3nk11bcbjAu0wRHgRseUHwjpY3hmVa7S1zx-RE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=E3DHkRbmIHaciL69HEb04Q&_nc_tpa=Q5bMBQHoDoWh9mL7jZOf5Jo37EOpqhpOHKSk82IgLWKK1Rq5TufDDJ7W8W9iHWQ_l9Adgv0ES7_cYcLM&oh=00_AfqJI1wCCgub6gxQfc-zSrLCLvyt0MhNS-oiHiVPdnMLmw&oe=697A3C89" alt="Bendricks Rock" class="event-image" loading="lazy"></div>
-      </article>
-      <div class="modal-overlay" id="modal-11" onclick="closeModal(11, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(11)">&times;</button>
-          <h3>Bendricks Rock</h3>
-          <div class="fb-text">Bendricks Rock
-
-Sunday 15 February 2026 at 18:00
-Concert Room - Earl Haig Club
-
-• Band on 6pm •Their setlist spans the very best of classic rock and indie rock, covering iconic artists from the 60s right through to modern-day anthems. Expect big riffs, bold vocals, driving rhythms, and the kind of onstage energy that puts a grin on your face from the first song to the last.Bendricks Rock might be a new name on the scene, but they play with the confidence, commitment, and musical punch of a seasoned live band. This gig is the perfect chance to get in early and support a rising group who are determined to make their mark on the South Wales circuit.If you’re into classic rock, indie favourites, and lively Sunday nights filled with proper live music, this is exactly the show to be at.Earl Haig Club – Concert Room, WhitchurchDoors open 5pm
-Band starts 6pm
-on the doorCome down, grab a drink, and support a brand new band with a big sound and even bigger potential. Bendricks Rock are ready — let’s give them the audience they deserve.The Earl Haig Club
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">21</div>
-          <div class="event-month">Feb</div>
-          <div class="event-weekday">Saturday</div>
-        </div>
-        <div class="event-details">
-          <h3>Elk Redemption</h3>
-          <div class="event-location">Bar</div>
-          <p class="event-bio">• Get ready, Whitchurch — Elk Redemption are rolling into the Haig for a rare Saturday night appearance, and they’re bringing 15 years of chemistry, class, and sheer musical firepower with them. This isn’t your standard pub gig — this is a band that takes on the songs most others wouldn’t dream of touching… and absolutely nails them.This dynamic 5-piece delivers a setlist that jumps from rock legends to cult icons without missing a beat. Expect powerful, inventive takes on tracks by:🎤 The Doors🎤 Bob Dylan🎤 Rod Stewart🔥 Small Faces, Lynyrd Skynyrd & moreEvery tune comes with their signature twist — lush harmonies, killer solos, and a stage presence that grabs you from the first note.What to expect on the night:</p>
-          <button class="fb-btn" onclick="openModal(12)">Copy for Facebook</button>
-        </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583322686_1401664361968411_6922880703729848751_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=WdzpIVdcAgYQ7kNvwGhFvyT&_nc_oc=AdmtcI0AIi_ApsYCyfILKwSdEY7KWlaKXfT5YQrNc7PffNWkOf11hVacZii4_o15q6c&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=E3DHkRbmIHaciL69HEb04Q&_nc_tpa=Q5bMBQEEpyar5Rp3XJMSCLdUL59N1g3TSqbv6ZB1HRsX2vqRHi78w733nspD6cBlB0YgqQ8L9QSy85R3&oh=00_Afrdx2nPN_9iGCJXzjjDmOn4jSJBroZLbMzXiFKlx42XUg&oe=697A454C" alt="Elk Redemption" class="event-image" loading="lazy"></div>
-      </article>
-      <div class="modal-overlay" id="modal-12" onclick="closeModal(12, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(12)">&times;</button>
-          <h3>Elk Redemption</h3>
-          <div class="fb-text">Elk Redemption
-
-Saturday 21 February 2026 at 20:30
-Bar - Earl Haig Club
-
-• Get ready, Whitchurch — Elk Redemption are rolling into the Haig for a rare Saturday night appearance, and they’re bringing 15 years of chemistry, class, and sheer musical firepower with them. This isn’t your standard pub gig — this is a band that takes on the songs most others wouldn’t dream of touching… and absolutely nails them.This dynamic 5-piece delivers a setlist that jumps from rock legends to cult icons without missing a beat. Expect powerful, inventive takes on tracks by:🎤 The Doors🎤 Bob Dylan🎤 Rod Stewart🔥 Small Faces, Lynyrd Skynyrd & moreEvery tune comes with their signature twist — lush harmonies, killer solos, and a stage presence that grabs you from the first note.What to expect on the night:
-✨ Unique arrangements that make each classic their own
-✨ Huge vocals and tight, layered harmonies
-✨ A rotating mix of instruments (these lads do it properly)
-✨ A guaranteed good-time atmosphere from start to finishThis is Elk Redemption at full strength — loud, slick, fearless, and ready to tear up the Front Bar.🕣  sharp
-🎟 (but throw a couple of quid in the bucket at half-time!)Get in early, grab a pint, and be part of a night that’s shaping up to be something special. Elk Redemption don’t play here often — don’t miss your chance to see them at their absolute best.The Earl Haig Club
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">22</div>
-          <div class="event-month">Feb</div>
-          <div class="event-weekday">Sunday</div>
-        </div>
-        <div class="event-details">
-          <h3>Moonstorm</h3>
-          <div class="event-location">Concert Room</div>
-          <p class="event-bio">•  •Moonstorm are a female-fronted rock band hitting the South Wales scene with serious force. Fronted by the unstoppable Amanda Seed, the band delivers a huge, commanding sound built around her powerhouse vocals — a voice that cuts through the mix and grabs the room every single time.On lead guitar is the legendary Viv Lock, a six-string slinger known for tone, taste, and solos that hit with real weight. Together with a tight, driving rhythm section, Moonstorm don’t just play rock — they bring it to life.Their set is packed with big, arena-sized classics, with bold, high-energy takes on songs by:Tom Petty</p>
-          <button class="fb-btn" onclick="openModal(13)">Copy for Facebook</button>
-        </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/584209752_1401666315301549_1975063040921295952_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=vZLhxSQqisIQ7kNvwEbjixS&_nc_oc=Adk02nj2ftxtXuV-ZaV33V8vgRR1-bKDB7Q_IvCxchFQDjMYVI5oZBlIDg_scGeSSCk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=E3DHkRbmIHaciL69HEb04Q&_nc_tpa=Q5bMBQFLQzgvBJI74IsKfdwRr-2eowZutwRUmoARMfKwB3QVuQkCvXiz_jTPDmYLnoXgeGamQfJc8mGQ&oh=00_AfpqVdhQMrlr0DfvCYgT0O_jLECpSuMVHWWrj3-dsR0KoA&oe=697A22B1" alt="Moonstorm" class="event-image" loading="lazy"></div>
-      </article>
-      <div class="modal-overlay" id="modal-13" onclick="closeModal(13, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(13)">&times;</button>
-          <h3>Moonstorm</h3>
-          <div class="fb-text">Moonstorm
-
-Sunday 22 February 2026 at 18:00
-Concert Room - Earl Haig Club
-
-•  •Moonstorm are a female-fronted rock band hitting the South Wales scene with serious force. Fronted by the unstoppable Amanda Seed, the band delivers a huge, commanding sound built around her powerhouse vocals — a voice that cuts through the mix and grabs the room every single time.On lead guitar is the legendary Viv Lock, a six-string slinger known for tone, taste, and solos that hit with real weight. Together with a tight, driving rhythm section, Moonstorm don’t just play rock — they bring it to life.Their set is packed with big, arena-sized classics, with bold, high-energy takes on songs by:Tom Petty
-Toto
-Heart
-Fleetwood Mac
-Kansas
-Journey
-Elton John
-Michael McDonaldThe Earl Haig ClubQueenExpect huge choruses, soaring vocals, guitars that bite, and the kind of live energy that turns a Sunday night into something special.Moonstorm are storming the Haig stage for one night only — and if you love classic rock delivered with power, personality, and proper musicianship, you’ll want to be in the room.Earl Haig Club – WhitchurchDoors open 5pmGet in early, grab a drink, and settle in for a big night of live rock with Moonstorm.
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -1285,30 +1082,13 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Friday</div>
         </div>
         <div class="event-details">
-          <h3>Dean & The Blues Boys</h3>
+          <h3>Friday Night Live with Dean & The Blues Bros</h3>
           <div class="event-location">Bar</div>
-          
-          <button class="fb-btn" onclick="openModal(14)">Copy for Facebook</button>
         </div>
-        
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/friday-night-live-with-dean-and-the-blues-bros/7422308" target="_blank" rel="noopener" class="view-event-btn">Free Entry</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-14" onclick="closeModal(14, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(14)">&times;</button>
-          <h3>Dean & The Blues Boys</h3>
-          <div class="fb-text">Dean & The Blues Boys
-
-Friday 27 February 2026 at 20:30
-Bar - Earl Haig Club
-
-
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -1317,63 +1097,14 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Saturday</div>
         </div>
         <div class="event-details">
-          <h3>Wild Flowers</h3>
+          <h3>The Big Motown'N'Soul Disco</h3>
           <div class="event-location">Bar</div>
-          
-          <button class="fb-btn" onclick="openModal(15)">Copy for Facebook</button>
         </div>
-        
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/the-big-motownnsoul-disco/7407647" target="_blank" rel="noopener" class="view-event-btn">£10.00</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-15" onclick="closeModal(15, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(15)">&times;</button>
-          <h3>Wild Flowers</h3>
-          <div class="fb-text">Wild Flowers
-
-Saturday 28 February 2026 at 20:30
-Bar - Earl Haig Club
-
-
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     <h2 class="month-header">March 2026</h2>
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">1</div>
-          <div class="event-month">Mar</div>
-          <div class="event-weekday">Sunday</div>
-        </div>
-        <div class="event-details">
-          <h3>Hindenburgs</h3>
-          <div class="event-location">Concert Room</div>
-          
-          <button class="fb-btn" onclick="openModal(16)">Copy for Facebook</button>
-        </div>
-        
-      </article>
-      <div class="modal-overlay" id="modal-16" onclick="closeModal(16, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(16)">&times;</button>
-          <h3>Hindenburgs</h3>
-          <div class="fb-text">Hindenburgs
-
-Sunday 1 March 2026 at 18:00
-Concert Room - Earl Haig Club
-
-
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
       <article class="calendar-event">
         <div class="event-date">
           <div class="event-day">7</div>
@@ -1381,192 +1112,28 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Saturday</div>
         </div>
         <div class="event-details">
-          <h3>Lonely Hearts</h3>
+          <h3>The Adele Experience</h3>
           <div class="event-location">Bar</div>
-          
-          <button class="fb-btn" onclick="openModal(17)">Copy for Facebook</button>
         </div>
-        
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/the-adele-experience/7407648" target="_blank" rel="noopener" class="view-event-btn">£15.00</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-17" onclick="closeModal(17, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(17)">&times;</button>
-          <h3>Lonely Hearts</h3>
-          <div class="fb-text">Lonely Hearts
-
-Saturday 7 March 2026 at 20:30
-Bar - Earl Haig Club
-
-
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
-          <div class="event-day">8</div>
-          <div class="event-month">Mar</div>
-          <div class="event-weekday">Sunday</div>
-        </div>
-        <div class="event-details">
-          <h3>Scotch Corner</h3>
-          <div class="event-location">Concert Room</div>
-          <p class="event-bio">Get ready for an unforgettable night of rock, blues, and soul with Scotch Corner – a powerhouse 3-piece band bringing raw energy and timeless tunes to the stage. Featuring the incredible George Jones of Son of Man, this is a gig you won’t want to miss.🔥 Expect classics, deep cuts, and electrifying performances – all in the heart of the Haig!| Great drinks | Good vibes</p>
-          <button class="fb-btn" onclick="openModal(18)">Copy for Facebook</button>
-        </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/499688331_1235955838539265_5810158122795151409_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=JtZscpT7SeIQ7kNvwH3MnxL&_nc_oc=AdnU-JIKV0OhZez3uREcm8IPawWojtX1uMYHku_7aGNDdBKUatKzby5KUiv_uV9LEr0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=kup11l3UtAy3kPrO0Fg1yg&_nc_tpa=Q5bMBQH5qATBVA-qNSWCvBudGmtctJDezX5xLphwsyGPAknOgb4aUx2eomYXhUVtieCgVuKCij467kU7&oh=00_AfoXsjWw4jFqcKQlQW9TLZYZU19d8xc7ekILUekvy1b5cw&oe=697A481E" alt="Scotch Corner" class="event-image" loading="lazy"></div>
-      </article>
-      <div class="modal-overlay" id="modal-18" onclick="closeModal(18, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(18)">&times;</button>
-          <h3>Scotch Corner</h3>
-          <div class="fb-text">Scotch Corner
-
-Sunday 8 March 2026 at 18:00
-Concert Room - Earl Haig Club
-
-Get ready for an unforgettable night of rock, blues, and soul with Scotch Corner – a powerhouse 3-piece band bringing raw energy and timeless tunes to the stage. Featuring the incredible George Jones of Son of Man, this is a gig you won’t want to miss.🔥 Expect classics, deep cuts, and electrifying performances – all in the heart of the Haig!| Great drinks | Good vibes
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">13</div>
+          <div class="event-day">20</div>
           <div class="event-month">Mar</div>
           <div class="event-weekday">Friday</div>
         </div>
         <div class="event-details">
-          <h3>The Fugitives</h3>
+          <h3>Global Promotions Present Ed Force One</h3>
           <div class="event-location">Bar</div>
-          <p class="event-bio">📅Get ready for a night of soul-shaking rhythm and blues as The Fugitives return to The Earl Haig Club! With over 25 years of tight grooves, powerhouse guitars, and floor-filling energy, these South Wales legends know how to bring the house down.But this isn’t just any gig — it’s a party!</p>
-          <button class="fb-btn" onclick="openModal(19)">Copy for Facebook</button>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/511810854_1273774078088897_9062111406318551819_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=lZMbntBUuFUQ7kNvwGFy7QZ&_nc_oc=Adlu2X-xne7IE6XbnBft-BlPg76xZ89W34z1yBEx23rrJIJ_gVSdQcbv1TxkEkUCqUk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=soSG7wNYnd4uLzarcTu_0Q&_nc_tpa=Q5bMBQFYKNRlw1oBD3TAsxPcg2VWuKi6sgC_dfo15EqZXDH8upUqs56InbhGvHxczGV7lBEn2uBBZaMI&oh=00_AfrMkBDqWINxNG9lBvEGmb6GeymjwwASSnULWrChO4CNTA&oe=697A250C" alt="The Fugitives" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/global-promotions-present-ed-force-one/7364832" target="_blank" rel="noopener" class="view-event-btn">£19.00</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-19" onclick="closeModal(19, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(19)">&times;</button>
-          <h3>The Fugitives</h3>
-          <div class="fb-text">The Fugitives
-
-Friday 13 March 2026 at 20:30
-Bar - Earl Haig Club
-
-📅Get ready for a night of soul-shaking rhythm and blues as The Fugitives return to The Earl Haig Club! With over 25 years of tight grooves, powerhouse guitars, and floor-filling energy, these South Wales legends know how to bring the house down.But this isn’t just any gig — it’s a party!
-We’re celebrating the birthday of our iconic drummer, the one and only Gary "Shag" Davies. Expect big tunes, big laughs, and big love as we honour the man behind the beat.🔥 Fun Fact: Voted 4th best R&B band within an 8.7-mile radius of Whitchurch Village – and proudly so! With unmatched energy and a cheeky charm, The Fugitives are the ultimate crowd-pleasers.Whether you’re a loyal follower or new to the party, this is one night you won’t want to miss.
-Come for the birthday, stay for the groove.
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">14</div>
-          <div class="event-month">Mar</div>
-          <div class="event-weekday">Saturday</div>
-        </div>
-        <div class="event-details">
-          <h3>The Jedis</h3>
-          <div class="event-location">Bar</div>
-          <p class="event-bio">Versatile covers band from South Wales delivering an eclectic mix of rock, pop and soul classics. Known for their tight sound and ability to read a crowd, they keep the party going all night.</p>
-          <button class="fb-btn" onclick="openModal(20)">Copy for Facebook</button>
-        </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/510461551_1266560552145460_7358441881257195708_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=gwi8hEhuzD4Q7kNvwF7DMWR&_nc_oc=AdnWXRO3VmtySz15l1tjsltq2rMfpWe1bOn8BxiVn2zTA2dvQ2Y_BILCvhECi6lGdq0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=lAuDF7HqCkXwtL3uL9aEgQ&_nc_tpa=Q5bMBQHGVKbhQz5zDXZKwV6vRVTOc6sWrKQvQVMkVIm69rEBQ2ogWCIH_mBf8Z28-fOwjMTEbKpmYuVz&oh=00_Afp2yBl_ymcRNBUZJ-ve0xud84-YyG8ZkR_1cMpEpBhs3w&oe=697A2BAB" alt="The Jedis" class="event-image" loading="lazy"></div>
-      </article>
-      <div class="modal-overlay" id="modal-20" onclick="closeModal(20, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(20)">&times;</button>
-          <h3>The Jedis</h3>
-          <div class="fb-text">The Jedis
-
-Saturday 14 March 2026 at 20:30
-Bar - Earl Haig Club
-
-Versatile covers band from South Wales delivering an eclectic mix of rock, pop and soul classics. Known for their tight sound and ability to read a crowd, they keep the party going all night.
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">15</div>
-          <div class="event-month">Mar</div>
-          <div class="event-weekday">Sunday</div>
-        </div>
-        <div class="event-details">
-          <h3>The Spunkles</h3>
-          <div class="event-location">Concert Room</div>
-          
-          <button class="fb-btn" onclick="openModal(21)">Copy for Facebook</button>
-        </div>
-        
-      </article>
-      <div class="modal-overlay" id="modal-21" onclick="closeModal(21, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(21)">&times;</button>
-          <h3>The Spunkles</h3>
-          <div class="fb-text">The Spunkles
-
-Sunday 15 March 2026 at 18:00
-Concert Room - Earl Haig Club
-
-
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">21</div>
-          <div class="event-month">Mar</div>
-          <div class="event-weekday">Saturday</div>
-        </div>
-        <div class="event-details">
-          <h3>Late Shift</h3>
-          <div class="event-location">Bar</div>
-          <p class="event-bio">Popular local blues rock band delivering soulful grooves and gritty guitar-driven rock. A firm favourite on the South Wales circuit, always guaranteed to bring a great atmosphere.</p>
-          <button class="fb-btn" onclick="openModal(22)">Copy for Facebook</button>
-        </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/517007521_1280503670751148_2247297700560172870_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=l0WPhK7ZBg0Q7kNvwF-prDt&_nc_oc=AdnFIcIsenzkZSHlgYFNbT5mTP2TeIfcAmgVG32SdB2628RSfgfc1-VlfwMC_5SAdXQ&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=c-aCSiEmfbgb6zm0OtQJyA&_nc_tpa=Q5bMBQFArCb5mVsqPfH0yTZq86dmvaUsnOVfGtCNFCRE-FrmwTmMTJVgR1h2Efyc9nWPWAIP98KPad5g&oh=00_AfqKKvo5PIpT9RUSoaA8iqwuSzRR-xPVgmmB8L3qJYMTkw&oe=697A33F0" alt="Late Shift" class="event-image" loading="lazy"></div>
-      </article>
-      <div class="modal-overlay" id="modal-22" onclick="closeModal(22, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(22)">&times;</button>
-          <h3>Late Shift</h3>
-          <div class="fb-text">Late Shift
-
-Saturday 21 March 2026 at 20:30
-Bar - Earl Haig Club
-
-Popular local blues rock band delivering soulful grooves and gritty guitar-driven rock. A firm favourite on the South Wales circuit, always guaranteed to bring a great atmosphere.
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -1575,65 +1142,13 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Friday</div>
         </div>
         <div class="event-details">
-          <h3>Snatch it Back</h3>
+          <h3>Neil Diamond & Tom Jones Tribute Show</h3>
           <div class="event-location">Bar</div>
-          <p class="event-bio">Get ready for a night of no-nonsense, hard-hitting blues as Snatch It Back — widely regarded as South Wales’ number one blues band — return to The Earl Haig Club Front Bar for a powerful live show that promises grit, groove, and serious musical fire.Formed in 1983, Snatch It Back are true veterans of the blues scene. For over four decades they’ve been delivering authentic, sweat-soaked blues with authority and soul, earning a reputation as one of the tightest and most respected live bands in the region. This is not blues by numbers — this is music played by musicians who live it.Their sound moves effortlessly from deep, slow-burning blues to driving shuffles and roof-raising grooves, powered by razor-sharp guitar work, a rock-solid rhythm section, and vocals packed with character and conviction. Every set is a masterclass in feel, dynamics, and raw energy.Expect the Front Bar to be transformed into a proper blues joint for the night — close, loud, and full of atmosphere. This is music that pulls you in, locks you into the groove, and doesn’t let go until the final note fades.Local heroes since 1983.</p>
-          <button class="fb-btn" onclick="openModal(23)">Copy for Facebook</button>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/606027088_1436485415152972_1472662522619398934_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=6Y4-_Dog7NcQ7kNvwEShEJL&_nc_oc=AdnxNTPTnUvbOxtXDA_cIqjfzjYx2L5iqTXMUQDCzg9X_h1ufPHypZ1n1T_tZjmoObA&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=VtKTDrfxN04S2uH5oAHJew&_nc_tpa=Q5bMBQFLjtFG3HUeZS1vo1BB_rNBUPhulTIDeNrauFC9gR_WpMYdFagsAx-UY8W21bQ4RiBi5fop1L27&oh=00_Afql9xaFIb6kYSx-ZG5c_XdWRrOPQylOWiX1pU9wU2egTA&oe=697A22F7" alt="Snatch it Back" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/neil-diamond-and-tom-jones-tribute-show/7407649" target="_blank" rel="noopener" class="view-event-btn">£15.00</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-23" onclick="closeModal(23, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(23)">&times;</button>
-          <h3>Snatch it Back</h3>
-          <div class="fb-text">Snatch it Back
-
-Friday 27 March 2026 at 20:30
-Bar - Earl Haig Club
-
-Get ready for a night of no-nonsense, hard-hitting blues as Snatch It Back — widely regarded as South Wales’ number one blues band — return to The Earl Haig Club Front Bar for a powerful live show that promises grit, groove, and serious musical fire.Formed in 1983, Snatch It Back are true veterans of the blues scene. For over four decades they’ve been delivering authentic, sweat-soaked blues with authority and soul, earning a reputation as one of the tightest and most respected live bands in the region. This is not blues by numbers — this is music played by musicians who live it.Their sound moves effortlessly from deep, slow-burning blues to driving shuffles and roof-raising grooves, powered by razor-sharp guitar work, a rock-solid rhythm section, and vocals packed with character and conviction. Every set is a masterclass in feel, dynamics, and raw energy.Expect the Front Bar to be transformed into a proper blues joint for the night — close, loud, and full of atmosphere. This is music that pulls you in, locks you into the groove, and doesn’t let go until the final note fades.Local heroes since 1983.
-Timeless blues — raw, real, and uncompromising.
-Let the good times roll at The Haig.Venue:
-The Earl Haig ClubWhitchurch,More info:
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">28</div>
-          <div class="event-month">Mar</div>
-          <div class="event-weekday">Saturday</div>
-        </div>
-        <div class="event-details">
-          <h3>The Semantics</h3>
-          <div class="event-location">Bar</div>
-          <p class="event-bio">Versatile covers band bringing a mix of rock, pop and indie classics to the stage. Known for their energetic performances and crowd-pleasing setlists.</p>
-          <button class="fb-btn" onclick="openModal(24)">Copy for Facebook</button>
-        </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/538597004_1323651903102991_1351839784528244531_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=HZmZZXfL57sQ7kNvwFIxhHG&_nc_oc=AdnhkkOf4MQQZuAUtbc975O-9i8OOF95M4X7lAJyVpey9Fsaq_9aJmnTCt3x-GI1xkw&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=VD0lS-Y6SAKsNFPO3dbHbg&_nc_tpa=Q5bMBQHFXl2LHmEK10DzeKyUElwajm5XlNxhtAEUP8WphDf_d0nLpN2OyxrOyRjaLzz4RxlsCcrMmLdp&oh=00_AfqGicHQepu-7w_y6KEk17tHbQ4MVH46AzWODCxxeHWaoQ&oe=697A4B6A" alt="The Semantics" class="event-image" loading="lazy"></div>
-      </article>
-      <div class="modal-overlay" id="modal-24" onclick="closeModal(24, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(24)">&times;</button>
-          <h3>The Semantics</h3>
-          <div class="fb-text">The Semantics
-
-Saturday 28 March 2026 at 20:30
-Bar - Earl Haig Club
-
-Versatile covers band bringing a mix of rock, pop and indie classics to the stage. Known for their energetic performances and crowd-pleasing setlists.
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     <h2 class="month-header">April 2026</h2>
       <article class="calendar-event">
         <div class="event-date">
@@ -1642,31 +1157,13 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Friday</div>
         </div>
         <div class="event-details">
-          <h3>The Bluesters</h3>
+          <h3>Legend - The Music Of Bob Marley</h3>
           <div class="event-location">Bar</div>
-          <p class="event-bio">The Bluesters are usually a five-piece band, consisting of guitar, bass, drums, trumpet, and Hammond organ. Occasionally, we have guest star soloists, bringing our number to six. We play a mix of blues, jazz fusion, and funk, including music from artists such as John Scofield, The Meters, Booker T and the MGs, Jimmy Smith, Scary Goldings, The Crusaders, and more.</p>
-          <button class="fb-btn" onclick="openModal(25)">Copy for Facebook</button>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/518117410_1324759669658881_2924064307611654607_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Dyo30ycJK9UQ7kNvwH6bawd&_nc_oc=AdlrrMvsrX9GAPvRrGAqG6bHw4uLMoRQ-yJtMjEJMItIDB3qJhqH6EX5TWVoBgKXNGs&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=lAuDF7HqCkXwtL3uL9aEgQ&_nc_tpa=Q5bMBQEMQpcA6hrnE7psPbjxpMa9v6wLTkKo5MrDUghJUohaVE0j2eVJBYMJjjiKMxjGMkJQ40ESYdVH&oh=00_AfrxKVjw1FesGZWhqI1HrL_Y1rMvAuQltOBLpFMgAbELEg&oe=697A1BC0" alt="The Bluesters" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/legend-the-music-of-bob-marley/7425816" target="_blank" rel="noopener" class="view-event-btn">£26.75</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-25" onclick="closeModal(25, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(25)">&times;</button>
-          <h3>The Bluesters</h3>
-          <div class="fb-text">The Bluesters
-
-Friday 3 April 2026 at 20:30
-Bar - Earl Haig Club
-
-The Bluesters are usually a five-piece band, consisting of guitar, bass, drums, trumpet, and Hammond organ. Occasionally, we have guest star soloists, bringing our number to six. We play a mix of blues, jazz fusion, and funk, including music from artists such as John Scofield, The Meters, Booker T and the MGs, Jimmy Smith, Scary Goldings, The Crusaders, and more.
-.
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -1675,94 +1172,13 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Saturday</div>
         </div>
         <div class="event-details">
-          <h3>Albino Frogs</h3>
+          <h3>The World's Premier Bon Jovi Tribute: Bon Giovi</h3>
           <div class="event-location">Bar</div>
-          <p class="event-bio">|  |From funky, sing-along originals to rhythm-packed jams that keep the floor moving, The Albino Frogs know how to put on a show that’s as vibrant as it is unforgettable. Whether you’re a long-time fan or seeing them for the first time, expect a performance full of energy, fun, and first-class musicianship.Come early, grab a drink, and secure your spot—this is live music at its finest, and a night you won’t want to miss.</p>
-          <button class="fb-btn" onclick="openModal(26)">Copy for Facebook</button>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/539591024_1326549329479915_7023611207170396781_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=fQHKpCbhkOgQ7kNvwHcO5WM&_nc_oc=AdkXT8GEtT-FwgzaN56GwUzCqoOrBytixtDoF0NNOlvyzyUhwDQw1Uv--1VOQHqgEMo&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=06KlJ9NYcls0ok3aLEtZjA&_nc_tpa=Q5bMBQEVB45dmvpU4rP4N46xbFsEF8ILBz7hsAB5kaMg0HhqxIyOKaq4x5n8lJOHG7Muae9-PhyFpbH_&oh=00_AfqgGytpBqrKS0rST-ydnan_SQxrWd7UEQ_2NOO7VbjWjA&oe=697A2E75" alt="Albino Frogs" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/the-worlds-premier-bon-jovi-tribute-bon-giovi/7417917" target="_blank" rel="noopener" class="view-event-btn">£22.75</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-26" onclick="closeModal(26, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(26)">&times;</button>
-          <h3>Albino Frogs</h3>
-          <div class="fb-text">Albino Frogs
-
-Saturday 4 April 2026 at 20:30
-Bar - Earl Haig Club
-
-|  |From funky, sing-along originals to rhythm-packed jams that keep the floor moving, The Albino Frogs know how to put on a show that’s as vibrant as it is unforgettable. Whether you’re a long-time fan or seeing them for the first time, expect a performance full of energy, fun, and first-class musicianship.Come early, grab a drink, and secure your spot—this is live music at its finest, and a night you won’t want to miss.
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">5</div>
-          <div class="event-month">Apr</div>
-          <div class="event-weekday">Sunday</div>
-        </div>
-        <div class="event-details">
-          <h3>Red Hot Pokers</h3>
-          <div class="event-location">Concert Room</div>
-          
-          <button class="fb-btn" onclick="openModal(27)">Copy for Facebook</button>
-        </div>
-        
-      </article>
-      <div class="modal-overlay" id="modal-27" onclick="closeModal(27, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(27)">&times;</button>
-          <h3>Red Hot Pokers</h3>
-          <div class="fb-text">Red Hot Pokers
-
-Sunday 5 April 2026 at 18:00
-Concert Room - Earl Haig Club
-
-
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">9</div>
-          <div class="event-month">Apr</div>
-          <div class="event-weekday">Thursday</div>
-        </div>
-        <div class="event-details">
-          <h3>Al Steel & Friends</h3>
-          <div class="event-location">Bar</div>
-          
-          <button class="fb-btn" onclick="openModal(28)">Copy for Facebook</button>
-        </div>
-        
-      </article>
-      <div class="modal-overlay" id="modal-28" onclick="closeModal(28, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(28)">&times;</button>
-          <h3>Al Steel & Friends</h3>
-          <div class="fb-text">Al Steel & Friends
-
-Thursday 9 April 2026 at 20:30
-Bar - Earl Haig Club
-
-
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -1771,30 +1187,13 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Friday</div>
         </div>
         <div class="event-details">
-          <h3>Tony Morley</h3>
+          <h3>Oliver Wakeman</h3>
           <div class="event-location">Bar</div>
-          
-          <button class="fb-btn" onclick="openModal(29)">Copy for Facebook</button>
         </div>
-        
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/oliver-wakeman/7386214" target="_blank" rel="noopener" class="view-event-btn">£25.75</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-29" onclick="closeModal(29, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(29)">&times;</button>
-          <h3>Tony Morley</h3>
-          <div class="fb-text">Tony Morley
-
-Friday 10 April 2026 at 20:30
-Bar - Earl Haig Club
-
-
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -1803,95 +1202,13 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Saturday</div>
         </div>
         <div class="event-details">
-          <h3>Parcel of Rouges</h3>
+          <h3>Martin Turner (ex Wishbone Ash)</h3>
           <div class="event-location">Bar</div>
-          
-          <button class="fb-btn" onclick="openModal(30)">Copy for Facebook</button>
         </div>
-        
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/martin-turner-ex-wishbone-ash/7375900" target="_blank" rel="noopener" class="view-event-btn">£21.00</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-30" onclick="closeModal(30, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(30)">&times;</button>
-          <h3>Parcel of Rouges</h3>
-          <div class="fb-text">Parcel of Rouges
-
-Saturday 11 April 2026 at 20:30
-Bar - Earl Haig Club
-
-
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">12</div>
-          <div class="event-month">Apr</div>
-          <div class="event-weekday">Sunday</div>
-        </div>
-        <div class="event-details">
-          <h3>Outback</h3>
-          <div class="event-location">Concert Room</div>
-          <p class="event-bio">Concert Room | .The Earl Haig Club.Crank it up — Outback are back at the Haig.This powerhouse classic rock trio return with a hard-hitting set of timeless rock anthems, big riffs, and no-nonsense energy. Expect a loud, fast-moving night packed with songs you know, love, and can’t help singing along to.No frills. No fillers. Just pure, full-throttle classic rock.Live from: 6:00pm</p>
-          <button class="fb-btn" onclick="openModal(31)">Copy for Facebook</button>
-        </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/598799553_1425997292868451_1532680115163955929_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=YOABnctXg1QQ7kNvwFvJLlD&_nc_oc=AdlhQpy89-B06-dpXMn3SH62j8iJH2lebwJUEFEjHBthDUNSpZpn6e-qZfNQOWVNqSk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=9fJNP4h6kqFimHr-dMGMqw&_nc_tpa=Q5bMBQE0QVwwu8hii0efetsc5-VgyGD1LZCBr8yKW0fvbDI3xhjIoCGRQXidXOTGxAasGmRwvqeZvveS&oh=00_AfrVasig92SCvtu9Ka8TvD0gi1XVY7xWlojDsAcD1warnw&oe=697A3101" alt="Outback" class="event-image" loading="lazy"></div>
-      </article>
-      <div class="modal-overlay" id="modal-31" onclick="closeModal(31, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(31)">&times;</button>
-          <h3>Outback</h3>
-          <div class="fb-text">Outback
-
-Sunday 12 April 2026 at 18:00
-Concert Room - Earl Haig Club
-
-Concert Room | .The Earl Haig Club.Crank it up — Outback are back at the Haig.This powerhouse classic rock trio return with a hard-hitting set of timeless rock anthems, big riffs, and no-nonsense energy. Expect a loud, fast-moving night packed with songs you know, love, and can’t help singing along to.No frills. No fillers. Just pure, full-throttle classic rock.Live from: 6:00pm
-Entry:If you like your rock honest, powerful, and played the way it should be — this one’s for you.
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">17</div>
-          <div class="event-month">Apr</div>
-          <div class="event-weekday">Friday</div>
-        </div>
-        <div class="event-details">
-          <h3>Marc Davies Band</h3>
-          <div class="event-location">Bar</div>
-          
-          <button class="fb-btn" onclick="openModal(32)">Copy for Facebook</button>
-        </div>
-        
-      </article>
-      <div class="modal-overlay" id="modal-32" onclick="closeModal(32, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(32)">&times;</button>
-          <h3>Marc Davies Band</h3>
-          <div class="fb-text">Marc Davies Band
-
-Friday 17 April 2026 at 20:30
-Bar - Earl Haig Club
-
-
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -1900,62 +1217,28 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Saturday</div>
         </div>
         <div class="event-details">
-          <h3>Dansette</h3>
+          <h3>Flash: A Tribute To Queen</h3>
           <div class="event-location">Bar</div>
-          <p class="event-bio">| 8:30pm | Get ready for a night of pure soul power as Dansette take over the Earl Haig Club Bar. This dynamic seven-piece, horn-driven band are masters of the 60’s Soul sound—authentic, energetic, and guaranteed to get you moving.From floor-filling classics to heartfelt standards, their rich and vibrant sound transports you straight back to the golden era of Soul. Expect soaring horns, irresistible rhythms, and powerhouse vocals that will have you dancing from the first note to the last.all night — but be warned, these guys always pack the place. Arrive early, grab a drink, and secure your spot on the dance floor.</p>
-          <button class="fb-btn" onclick="openModal(33)">Copy for Facebook</button>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540268504_1326550526146462_1602143277764803097_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=2G1aQAQTEd8Q7kNvwF9ulSy&_nc_oc=AdmDyTBzrhDNfIb24BswSM7oKTTJaUP5cKTuvL2o5wYH-qs7UOisTTNF5fpQ1CU1zj0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=06KlJ9NYcls0ok3aLEtZjA&_nc_tpa=Q5bMBQHdKpuXAF8D1XZJp7F2JM6ObxhOMBi06GkVB7twC7eMyjdlRgD0pPZ_O8WtYbE_HHOLhVRX-ydk&oh=00_Afry9TnJlo7v5IeZbZ4TNN14CzngubnkQDwR2t0cxiW62w&oe=697A327B" alt="Dansette" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/flash-a-tribute-to-queen/7425820" target="_blank" rel="noopener" class="view-event-btn">£25.75</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-33" onclick="closeModal(33, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(33)">&times;</button>
-          <h3>Dansette</h3>
-          <div class="fb-text">Dansette
-
-Saturday 18 April 2026 at 20:30
-Bar - Earl Haig Club
-
-| 8:30pm | Get ready for a night of pure soul power as Dansette take over the Earl Haig Club Bar. This dynamic seven-piece, horn-driven band are masters of the 60’s Soul sound—authentic, energetic, and guaranteed to get you moving.From floor-filling classics to heartfelt standards, their rich and vibrant sound transports you straight back to the golden era of Soul. Expect soaring horns, irresistible rhythms, and powerhouse vocals that will have you dancing from the first note to the last.all night — but be warned, these guys always pack the place. Arrive early, grab a drink, and secure your spot on the dance floor.
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
-          <div class="event-day">19</div>
+          <div class="event-day">24</div>
           <div class="event-month">Apr</div>
-          <div class="event-weekday">Sunday</div>
+          <div class="event-weekday">Friday</div>
         </div>
         <div class="event-details">
-          <h3>Royal Scam</h3>
-          <div class="event-location">Concert Room</div>
-          
-          <button class="fb-btn" onclick="openModal(34)">Copy for Facebook</button>
+          <h3>Spice Girls Tribute & 90's Night</h3>
+          <div class="event-location">Bar</div>
         </div>
-        
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/spice-girls-tribute-and-90s-night/7407650" target="_blank" rel="noopener" class="view-event-btn">£17.50</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-34" onclick="closeModal(34, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(34)">&times;</button>
-          <h3>Royal Scam</h3>
-          <div class="fb-text">Royal Scam
-
-Sunday 19 April 2026 at 18:00
-Concert Room - Earl Haig Club
-
-
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -1964,67 +1247,28 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Saturday</div>
         </div>
         <div class="event-details">
-          <h3>The Raiders</h3>
+          <h3>Forever Elton & Billy Joel Tribute Band</h3>
           <div class="event-location">Bar</div>
-          <p class="event-bio">On Stage: 8:30pm</p>
-          <button class="fb-btn" onclick="openModal(35)">Copy for Facebook</button>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/505808410_1260402869427895_28407012769851650_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=8WNZCmeByU8Q7kNvwFtk4ZV&_nc_oc=AdnJ70MbW3llPtDln89Uhz_MDPyyDyxOZW2kDX13raMF38_0DQNq-NvHVM8Ba4k-9ZA&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=LRb8iIS4DXF4FWx8HfRphQ&_nc_tpa=Q5bMBQG-6vnCPI4R9oMKewPsLpWiVsdCbSuc2rg3om52kk0ag2Dbgzsrf6VcLanacOULyfFgTY3My7-5&oh=00_AfpwBlVVEX7MpT-i5BmW1bkqE4oxcg_JzfpdiWhT88PhLQ&oe=697A1C16" alt="The Raiders" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/forever-elton-and-billy-joel-tribute-band/7407651" target="_blank" rel="noopener" class="view-event-btn">£17.50</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-35" onclick="closeModal(35, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(35)">&times;</button>
-          <h3>The Raiders</h3>
-          <div class="fb-text">The Raiders
-
-Saturday 25 April 2026 at 20:30
-Bar - Earl Haig Club
-
-On Stage: 8:30pm
-Venue: The Earl Haig Club, 23-25 Penlline Road, Whitchurch,
-Collection Bucket at the BreakHigh-energy. Crowd favourites. Big singalongs.The Raiders are back – a Cardiff-based four-piece made up of local lads who know exactly how to work a crowd. With a setlist packed full of rock and pop anthems you know and love, these guys are guaranteed to get the room bouncing.Expect huge tunes from:INXSTom PettyBryan Adams...and plenty more classic bangers from the 70s, 80s and beyond.With tight guitars, powerful vocals, and no shortage of charisma, The Raiders bring the party wherever they go — and this Friday, they’re bringing it to Whitchurch.Grab your mates, get here early, and come ready to sing your heart out.
-Cold pints, big tunes, and that Friday feeling — what more do you need?
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
-          <div class="event-day">26</div>
+          <div class="event-day">27</div>
           <div class="event-month">Apr</div>
-          <div class="event-weekday">Sunday</div>
+          <div class="event-weekday">Monday</div>
         </div>
         <div class="event-details">
-          <h3>The Troubadours</h3>
-          <div class="event-location">Concert Room</div>
-          <p class="event-bio">– Wales 🆚 Argentina 3:10 Kick OffSunday, November 9th, 2025 | Step into a time machine and relive the spirit of Woodstock and beyond with The Troubadours – a powerhouse trio fusing electrifying rock ’n’ roll with reggae grooves, funky rhythms, and soulful blues.Fronted by guitar virtuoso Mark Pontin, this band doesn’t just play music – they ignite the stage. Expect soaring solos, infectious energy, and a setlist packed with timeless classics and surprising gems.Whether you’re a die-hard rock fan or just in the mood for something unforgettable, this is your night.The Earl Haig Concert Room will be alive with energy, and with a band of this calibre, it’s one you won’t want to miss.Doors open 2:30pm</p>
-          <button class="fb-btn" onclick="openModal(36)">Copy for Facebook</button>
+          <h3>Focus</h3>
+          <div class="event-location">Bar</div>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/618082789_1455869089881271_6418118655450846534_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=VIWgN0ymOZwQ7kNvwGObHAM&_nc_oc=AdlrskKsy80u8N3mGCWBKGj1hhi7QfRGLxFgc-MBKAmz3xxNgkSvZ7IC9OTcDdsrOmA&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=VtKTDrfxN04S2uH5oAHJew&_nc_tpa=Q5bMBQEJpYq1es4Wa88Pi_j_tj29vsuAzhMiVFih7X_BMglLiBF-dwNlvZpeSWUNap6eo1EfODUbBeZc&oh=00_Afokn8ml2rI_gN3uK0emL4Wuvs_a-umON_1wr8X-yIkMAg&oe=697A25B7" alt="The Troubadours" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/focus/7237073" target="_blank" rel="noopener" class="view-event-btn">£25.75</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-36" onclick="closeModal(36, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(36)">&times;</button>
-          <h3>The Troubadours</h3>
-          <div class="fb-text">The Troubadours
-
-Sunday 26 April 2026 at 18:00
-Concert Room - Earl Haig Club
-
-– Wales 🆚 Argentina 3:10 Kick OffSunday, November 9th, 2025 | Step into a time machine and relive the spirit of Woodstock and beyond with The Troubadours – a powerhouse trio fusing electrifying rock ’n’ roll with reggae grooves, funky rhythms, and soulful blues.Fronted by guitar virtuoso Mark Pontin, this band doesn’t just play music – they ignite the stage. Expect soaring solos, infectious energy, and a setlist packed with timeless classics and surprising gems.Whether you’re a die-hard rock fan or just in the mood for something unforgettable, this is your night.The Earl Haig Concert Room will be alive with energy, and with a band of this calibre, it’s one you won’t want to miss.Doors open 2:30pm
-Rugby on first Wales 🆚 Argentina 3:10 Kick Off
-Band on 6pm
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     <h2 class="month-header">May 2026</h2>
       <article class="calendar-event">
         <div class="event-date">
@@ -2033,66 +1277,13 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Saturday</div>
         </div>
         <div class="event-details">
-          <h3>Sundogs</h3>
+          <h3>Letz Zep</h3>
           <div class="event-location">Bar</div>
-          
-          <button class="fb-btn" onclick="openModal(37)">Copy for Facebook</button>
         </div>
-        
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/letz-zep/7391440" target="_blank" rel="noopener" class="view-event-btn">£22.75</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-37" onclick="closeModal(37, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(37)">&times;</button>
-          <h3>Sundogs</h3>
-          <div class="fb-text">Sundogs
-
-Saturday 2 May 2026 at 20:30
-Bar - Earl Haig Club
-
-
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">3</div>
-          <div class="event-month">May</div>
-          <div class="event-weekday">Sunday</div>
-        </div>
-        <div class="event-details">
-          <h3>Expecting Company</h3>
-          <div class="event-location">Concert Room</div>
-          <p class="event-bio">•  • Show 6pmThe Earl Haig ClubGet ready for a night of pure classic rock brilliance as Expecting Company return to the Earl Haig Club Concert Room — and trust us, you’ll want to be in the room for this one.Fronted by the legendary Richie Galloni (Son of Man / Sassafras), Expecting Company are a band that never, ever disappoint. Richie’s powerhouse vocals, paired with a band that plays with real heart, grit, and top-tier musicianship, guarantees a night of rock anthems delivered with absolute class.Expect a set packed with:</p>
-          <button class="fb-btn" onclick="openModal(38)">Copy for Facebook</button>
-        </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/582732702_1401667948634719_3214844880455063305_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=aeFp_TFOzaMQ7kNvwE8uXjS&_nc_oc=Adm0kx3jc4Pcn1_VmDK3yghJDPSILeUp_Qfb-7MHOUIJAgUlicj2ReZbYj_8FL2uNGw&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=cF4yNTlwGAQ0p0N0uQWg7w&_nc_tpa=Q5bMBQEgWJ3W62IyhLKd3lCWnS7yun9vYEHSMY79FwiNQN5Yml9f93lO5EOC2sboYXIF2XVXAuD8iZGf&oh=00_AfokkAYJGonxuvkmqAtk1MjqppAgFMIzR89_gUtGj7tL_Q&oe=697A2309" alt="Expecting Company" class="event-image" loading="lazy"></div>
-      </article>
-      <div class="modal-overlay" id="modal-38" onclick="closeModal(38, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(38)">&times;</button>
-          <h3>Expecting Company</h3>
-          <div class="fb-text">Expecting Company
-
-Sunday 3 May 2026 at 18:00
-Concert Room - Earl Haig Club
-
-•  • Show 6pmThe Earl Haig ClubGet ready for a night of pure classic rock brilliance as Expecting Company return to the Earl Haig Club Concert Room — and trust us, you’ll want to be in the room for this one.Fronted by the legendary Richie Galloni (Son of Man / Sassafras), Expecting Company are a band that never, ever disappoint. Richie’s powerhouse vocals, paired with a band that plays with real heart, grit, and top-tier musicianship, guarantees a night of rock anthems delivered with absolute class.Expect a set packed with:
-🔥 Timeless classics
-🔥 Stunning solos
-🔥 That unmistakable Galloni magicThese guys are one of the most loved acts to hit our stage — and every time they play, they draw a crowd. Let’s fill the Concert Room and give them the audience they deserve. Bring your mates, grab a drink, and get ready to sing along from the first chord to the last.💷 Only  — unbeatable for a night of live music at this level.🕔
-🎤 Show: 6pmCome early, grab your seat, and settle in for an early evening to remember. This one’s going to be special.
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -2101,202 +1292,28 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Friday</div>
         </div>
         <div class="event-details">
-          <h3>Snatch it Back</h3>
+          <h3>Creedence Clearwater Review</h3>
           <div class="event-location">Bar</div>
-          <p class="event-bio">Get ready for a night of no-nonsense, hard-hitting blues as Snatch It Back — widely regarded as South Wales’ number one blues band — return to The Earl Haig Club Front Bar for a powerful live show that promises grit, groove, and serious musical fire.Formed in 1983, Snatch It Back are true veterans of the blues scene. For over four decades they’ve been delivering authentic, sweat-soaked blues with authority and soul, earning a reputation as one of the tightest and most respected live bands in the region. This is not blues by numbers — this is music played by musicians who live it.Their sound moves effortlessly from deep, slow-burning blues to driving shuffles and roof-raising grooves, powered by razor-sharp guitar work, a rock-solid rhythm section, and vocals packed with character and conviction. Every set is a masterclass in feel, dynamics, and raw energy.Expect the Front Bar to be transformed into a proper blues joint for the night — close, loud, and full of atmosphere. This is music that pulls you in, locks you into the groove, and doesn’t let go until the final note fades.Local heroes since 1983.</p>
-          <button class="fb-btn" onclick="openModal(39)">Copy for Facebook</button>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/606027088_1436485415152972_1472662522619398934_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=6Y4-_Dog7NcQ7kNvwEShEJL&_nc_oc=AdnxNTPTnUvbOxtXDA_cIqjfzjYx2L5iqTXMUQDCzg9X_h1ufPHypZ1n1T_tZjmoObA&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=VtKTDrfxN04S2uH5oAHJew&_nc_tpa=Q5bMBQFLjtFG3HUeZS1vo1BB_rNBUPhulTIDeNrauFC9gR_WpMYdFagsAx-UY8W21bQ4RiBi5fop1L27&oh=00_Afql9xaFIb6kYSx-ZG5c_XdWRrOPQylOWiX1pU9wU2egTA&oe=697A22F7" alt="Snatch it Back" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/creedence-clearwater-review/7425821" target="_blank" rel="noopener" class="view-event-btn">£22.75</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-39" onclick="closeModal(39, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(39)">&times;</button>
-          <h3>Snatch it Back</h3>
-          <div class="fb-text">Snatch it Back
-
-Friday 8 May 2026 at 20:30
-Bar - Earl Haig Club
-
-Get ready for a night of no-nonsense, hard-hitting blues as Snatch It Back — widely regarded as South Wales’ number one blues band — return to The Earl Haig Club Front Bar for a powerful live show that promises grit, groove, and serious musical fire.Formed in 1983, Snatch It Back are true veterans of the blues scene. For over four decades they’ve been delivering authentic, sweat-soaked blues with authority and soul, earning a reputation as one of the tightest and most respected live bands in the region. This is not blues by numbers — this is music played by musicians who live it.Their sound moves effortlessly from deep, slow-burning blues to driving shuffles and roof-raising grooves, powered by razor-sharp guitar work, a rock-solid rhythm section, and vocals packed with character and conviction. Every set is a masterclass in feel, dynamics, and raw energy.Expect the Front Bar to be transformed into a proper blues joint for the night — close, loud, and full of atmosphere. This is music that pulls you in, locks you into the groove, and doesn’t let go until the final note fades.Local heroes since 1983.
-Timeless blues — raw, real, and uncompromising.
-Let the good times roll at The Haig.Venue:
-The Earl Haig ClubWhitchurch,More info:
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
-          <div class="event-day">9</div>
-          <div class="event-month">May</div>
-          <div class="event-weekday">Saturday</div>
-        </div>
-        <div class="event-details">
-          <h3>Blues Central</h3>
-          <div class="event-location">Bar</div>
-          <p class="event-bio">Saturday December 13th, 2025This sensational 4 to 6-piece band delivers a bold, funky take on the blues—paying powerful tribute to legends like T-Bone Walker, Willie Dixon, and Muddy Waters, while injecting their own modern fire and flavour. With blistering guitar licks, grooving basslines, and a stage presence that grabs you from the first note, Blues Central are more than a band—they're an experience.</p>
-          <button class="fb-btn" onclick="openModal(40)">Copy for Facebook</button>
-        </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540962770_1326544529480395_375971559035566013_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=XrEmITWxT-oQ7kNvwH4xX_S&_nc_oc=AdnsQpzSu8TCHV9akREMLG0PnkIo8NTZ1_QsB2X7GxbCT9LwYZrcBQJvS-qKImSDYiM&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=X0jmFJkYXoFudfuKJNDTEg&_nc_tpa=Q5bMBQGT2btfq6qjj3ohewRDcRlF-XUoAOjBCEKkaJW0VVBWoEUNbhGh8cek-fgv_YgDbZy9Jb2orGsO&oh=00_Afqd01e9VbTSn0Ltj6nRAMUMai75KnSFtXZs80BOEq4pLg&oe=697A4896" alt="Blues Central" class="event-image" loading="lazy"></div>
-      </article>
-      <div class="modal-overlay" id="modal-40" onclick="closeModal(40, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(40)">&times;</button>
-          <h3>Blues Central</h3>
-          <div class="fb-text">Blues Central
-
-Saturday 9 May 2026 at 20:30
-Bar - Earl Haig Club
-
-Saturday December 13th, 2025This sensational 4 to 6-piece band delivers a bold, funky take on the blues—paying powerful tribute to legends like T-Bone Walker, Willie Dixon, and Muddy Waters, while injecting their own modern fire and flavour. With blistering guitar licks, grooving basslines, and a stage presence that grabs you from the first note, Blues Central are more than a band—they're an experience.
-Expect tight rhythms, raw emotion, and a whole lot of soul as you're taken on a musical journey packed with grit, groove, and good vibes.
-Grab your friends, hit the bar, and soak up the sound. This one’s not to be missed.
-but the energy is priceless.
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">10</div>
-          <div class="event-month">May</div>
-          <div class="event-weekday">Sunday</div>
-        </div>
-        <div class="event-details">
-          <h3>Rattlesnake</h3>
-          <div class="event-location">Concert Room</div>
-          <p class="event-bio">Valentine’s Day Rock SpecialThe Bar, Earl Haig Club,</p>
-          <button class="fb-btn" onclick="openModal(41)">Copy for Facebook</button>
-        </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583805968_1401664808635033_4405761756406469964_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=kJ9MBqtS3xsQ7kNvwEKwLHW&_nc_oc=Adl3qcpz2dDL8RXuRSXFkJCk1bQRyi1lFVGwJqqzbhgqsw6MoLoSiyaIeYScRwDrVxo&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=E3DHkRbmIHaciL69HEb04Q&_nc_tpa=Q5bMBQG1xVOadJ2obT4RBPmCsBHzX5_rzZDaQ0pEs80ofxZI_RL_L6rUk0k2COfSlJbiRNi1lEYxZMtW&oh=00_Afr_YWUN9br7e5549WLPm3NsOWV-NMp0toD-fBotHNkguw&oe=697A26F8" alt="Rattlesnake" class="event-image" loading="lazy"></div>
-      </article>
-      <div class="modal-overlay" id="modal-41" onclick="closeModal(41, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(41)">&times;</button>
-          <h3>Rattlesnake</h3>
-          <div class="fb-text">Rattlesnake
-
-Sunday 10 May 2026 at 18:00
-Concert Room - Earl Haig Club
-
-Valentine’s Day Rock SpecialThe Bar, Earl Haig Club,
-Forget the flowers and fancy dinners — this Valentine’s Day is about one thing: rock ’n’ roll.Rattlesnake, South Wales’ powerhouse four-piece classic rock band, return to the Haig Bar for a full-throttle night of loud, raw, unapologetic rock. Their last visit shook the walls with scorching covers of Deep Purple, AC/DC, Thin Lizzy and more, and the buzz hasn’t stopped since. Now they’re back to deliver another hard-hitting set that promises to be even bigger.Expect driving riffs, thunderous drums, top-tier musicianship, and a stage presence that grabs the room from the first note. This is classic rock done properly — high energy, no nonsense, and guaranteed to get the crowd fired up.If you love the sound of real guitars, real volume, and real rock, this is the night to be at the Haig. Whether you’re celebrating Valentine’s Day or escaping it, you’ll get an evening of pure rock energy.— no tickets required.
-Bring a few quid for the band’s bucket at half-time.
-Arrive early to get a seat; this one is going to pack out fast.Rattlesnake is back.
-Let’s make some noise.The Earl Haig Club
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">16</div>
-          <div class="event-month">May</div>
-          <div class="event-weekday">Saturday</div>
-        </div>
-        <div class="event-details">
-          <h3>Pieces of Mind</h3>
-          <div class="event-location">Bar</div>
-          
-          <button class="fb-btn" onclick="openModal(42)">Copy for Facebook</button>
-        </div>
-        
-      </article>
-      <div class="modal-overlay" id="modal-42" onclick="closeModal(42, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(42)">&times;</button>
-          <h3>Pieces of Mind</h3>
-          <div class="fb-text">Pieces of Mind
-
-Saturday 16 May 2026 at 20:30
-Bar - Earl Haig Club
-
-
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">17</div>
-          <div class="event-month">May</div>
-          <div class="event-weekday">Sunday</div>
-        </div>
-        <div class="event-details">
-          <h3>Revolverlites</h3>
-          <div class="event-location">Concert Room</div>
-          
-          <button class="fb-btn" onclick="openModal(43)">Copy for Facebook</button>
-        </div>
-        
-      </article>
-      <div class="modal-overlay" id="modal-43" onclick="closeModal(43, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(43)">&times;</button>
-          <h3>Revolverlites</h3>
-          <div class="fb-text">Revolverlites
-
-Sunday 17 May 2026 at 18:00
-Concert Room - Earl Haig Club
-
-
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
-    
-      <article class="calendar-event">
-        <div class="event-date">
-          <div class="event-day">22</div>
+          <div class="event-day">15</div>
           <div class="event-month">May</div>
           <div class="event-weekday">Friday</div>
         </div>
         <div class="event-details">
-          <h3>The Fugitives</h3>
+          <h3>London Calling</h3>
           <div class="event-location">Bar</div>
-          <p class="event-bio">📅Get ready for a night of soul-shaking rhythm and blues as The Fugitives return to The Earl Haig Club! With over 25 years of tight grooves, powerhouse guitars, and floor-filling energy, these South Wales legends know how to bring the house down.But this isn’t just any gig — it’s a party!</p>
-          <button class="fb-btn" onclick="openModal(44)">Copy for Facebook</button>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/511810854_1273774078088897_9062111406318551819_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=lZMbntBUuFUQ7kNvwGFy7QZ&_nc_oc=Adlu2X-xne7IE6XbnBft-BlPg76xZ89W34z1yBEx23rrJIJ_gVSdQcbv1TxkEkUCqUk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=soSG7wNYnd4uLzarcTu_0Q&_nc_tpa=Q5bMBQFYKNRlw1oBD3TAsxPcg2VWuKi6sgC_dfo15EqZXDH8upUqs56InbhGvHxczGV7lBEn2uBBZaMI&oh=00_AfrMkBDqWINxNG9lBvEGmb6GeymjwwASSnULWrChO4CNTA&oe=697A250C" alt="The Fugitives" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/london-calling/7417944" target="_blank" rel="noopener" class="view-event-btn">£28.00</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-44" onclick="closeModal(44, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(44)">&times;</button>
-          <h3>The Fugitives</h3>
-          <div class="fb-text">The Fugitives
-
-Friday 22 May 2026 at 20:30
-Bar - Earl Haig Club
-
-📅Get ready for a night of soul-shaking rhythm and blues as The Fugitives return to The Earl Haig Club! With over 25 years of tight grooves, powerhouse guitars, and floor-filling energy, these South Wales legends know how to bring the house down.But this isn’t just any gig — it’s a party!
-We’re celebrating the birthday of our iconic drummer, the one and only Gary "Shag" Davies. Expect big tunes, big laughs, and big love as we honour the man behind the beat.🔥 Fun Fact: Voted 4th best R&B band within an 8.7-mile radius of Whitchurch Village – and proudly so! With unmatched energy and a cheeky charm, The Fugitives are the ultimate crowd-pleasers.Whether you’re a loyal follower or new to the party, this is one night you won’t want to miss.
-Come for the birthday, stay for the groove.
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
@@ -2305,96 +1322,223 @@ https://www.earlhaigclub.com</div>
           <div class="event-weekday">Saturday</div>
         </div>
         <div class="event-details">
-          <h3>Second Chance</h3>
+          <h3>The Big Motown'N'Soul Nite with Jacky Webbe & Gary D</h3>
           <div class="event-location">Bar</div>
-          <p class="event-bio">South Wales’ Mod Covers BandGet ready for a full-throttle night of mod anthems as South Wales’ premier mod covers band hit the stage at their favourite Whitchurch venue. Expect classics from The Who, The Jam, The Small Faces and plenty more – delivered with the energy, swagger and style that always gets the place buzzing.These boys have torn it up at the Earl Haig before and never fail to bring the house down – so let’s give them the big Whitchurch welcome they deserve.📅</p>
-          <button class="fb-btn" onclick="openModal(45)">Copy for Facebook</button>
         </div>
-        <div class="event-image-wrapper"><img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/518092169_1280514230750092_43013902396723937_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=0KYOS4yqDu4Q7kNvwEEXW-5&_nc_oc=AdlHe6Y5_dcQXbpm7SbQPv2_k7VZ48pewVMlfkWfzdCZfPKBW6R7gXizNAI9cIQUPMw&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=8uepCOYNXDq0Gl0_uqwmfg&_nc_tpa=Q5bMBQFbiIk1H_YTh42cgKTE_Vz63O9JIRFxr7BaOZYrzvbaSRp9PrgeJhd5KEEZ_fZptIuktOY6Qqyl&oh=00_AfoHi3g5Hl8KVGDM1nUeZ32QNbx8bkaOh8vHKLgkQ-5xag&oe=697A1B3B" alt="Second Chance" class="event-image" loading="lazy"></div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/the-big-motownnsoul-nite-with-jacky-webbe-and-gary-d/7407652" target="_blank" rel="noopener" class="view-event-btn">£15.00</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-45" onclick="closeModal(45, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(45)">&times;</button>
-          <h3>Second Chance</h3>
-          <div class="fb-text">Second Chance
-
-Saturday 23 May 2026 at 20:30
-Bar - Earl Haig Club
-
-South Wales’ Mod Covers BandGet ready for a full-throttle night of mod anthems as South Wales’ premier mod covers band hit the stage at their favourite Whitchurch venue. Expect classics from The Who, The Jam, The Small Faces and plenty more – delivered with the energy, swagger and style that always gets the place buzzing.These boys have torn it up at the Earl Haig before and never fail to bring the house down – so let’s give them the big Whitchurch welcome they deserve.📅
-⏰
-💷 A night of timeless mod tunes, great atmosphere and top-class live music – don’t miss it!
-
-Free entry - all welcome!
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
-        </div>
-      </div>
     
       <article class="calendar-event">
         <div class="event-date">
-          <div class="event-day">24</div>
+          <div class="event-day">29</div>
           <div class="event-month">May</div>
-          <div class="event-weekday">Sunday</div>
+          <div class="event-weekday">Friday</div>
         </div>
         <div class="event-details">
-          <h3>Leighton Jones</h3>
-          <div class="event-location">Concert Room</div>
-          
-          <button class="fb-btn" onclick="openModal(46)">Copy for Facebook</button>
+          <h3>Treacherous Cretins play Zappa</h3>
+          <div class="event-location">Bar</div>
         </div>
-        
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/treacherous-cretins-play-zappa/7417984" target="_blank" rel="noopener" class="view-event-btn">£20.25</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-46" onclick="closeModal(46, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(46)">&times;</button>
-          <h3>Leighton Jones</h3>
-          <div class="fb-text">Leighton Jones
-
-Sunday 24 May 2026 at 18:00
-Concert Room - Earl Haig Club
-
-
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">30</div>
+          <div class="event-month">May</div>
+          <div class="event-weekday">Saturday</div>
         </div>
-      </div>
+        <div class="event-details">
+          <h3>Absolute Bowie</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/absolute-bowie/7426168" target="_blank" rel="noopener" class="view-event-btn">£25.75</a>
+        </div>
+      </article>
+    <h2 class="month-header">June 2026</h2>
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">5</div>
+          <div class="event-month">Jun</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>Blackmore's Blood</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/blackmores-blood/7417179" target="_blank" rel="noopener" class="view-event-btn">£23.75</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">6</div>
+          <div class="event-month">Jun</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Maniac Street Preachers, StereoIronics</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/maniac-street-preachers-stereoironics/7426170" target="_blank" rel="noopener" class="view-event-btn">£20.25</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">12</div>
+          <div class="event-month">Jun</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>The Rollin' Stoned</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/the-rollin-stoned/7426171" target="_blank" rel="noopener" class="view-event-btn">£23.75</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">13</div>
+          <div class="event-month">Jun</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>ABBA Tribute Band</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/abba-tribute-band/7407653" target="_blank" rel="noopener" class="view-event-btn">£17.50</a>
+        </div>
+      </article>
+    <h2 class="month-header">July 2026</h2>
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">4</div>
+          <div class="event-month">Jul</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Country Legends Show</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/country-legends-show/7407655" target="_blank" rel="noopener" class="view-event-btn">£12.00</a>
+        </div>
+      </article>
     
       <article class="calendar-event">
         <div class="event-date">
           <div class="event-day">31</div>
-          <div class="event-month">May</div>
-          <div class="event-weekday">Sunday</div>
+          <div class="event-month">Jul</div>
+          <div class="event-weekday">Friday</div>
         </div>
         <div class="event-details">
-          <h3>James Oliver</h3>
-          <div class="event-location">Concert Room</div>
-          
-          <button class="fb-btn" onclick="openModal(47)">Copy for Facebook</button>
+          <h3>Parallel Blondes</h3>
+          <div class="event-location">Bar</div>
         </div>
-        
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/parallel-blondes/7426172" target="_blank" rel="noopener" class="view-event-btn">£20.25</a>
+        </div>
       </article>
-      <div class="modal-overlay" id="modal-47" onclick="closeModal(47, event)">
-        <div class="modal-card" onclick="event.stopPropagation()">
-          <button class="modal-close" onclick="closeModal(47)">&times;</button>
-          <h3>James Oliver</h3>
-          <div class="fb-text">James Oliver
-
-Sunday 31 May 2026 at 18:00
-Concert Room - Earl Haig Club
-
-
-
-£3 on the door
-
-https://www.earlhaigclub.com</div>
-          <p class="modal-hint">Select all text above and copy (Ctrl+C / Cmd+C)</p>
+    <h2 class="month-header">September 2026</h2>
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">18</div>
+          <div class="event-month">Sep</div>
+          <div class="event-weekday">Friday</div>
         </div>
-      </div>
+        <div class="event-details">
+          <h3>The Doors Rising</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/the-doors-rising/7426173" target="_blank" rel="noopener" class="view-event-btn">£20.25</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">19</div>
+          <div class="event-month">Sep</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>The Small Fakers</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/the-small-fakers/7426175" target="_blank" rel="noopener" class="view-event-btn">£20.25</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">26</div>
+          <div class="event-month">Sep</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Desperado - The UK's Premier LIVE 'Eagles' Tribute</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/desperado-the-uks-premier-live-eagles-tribute/7426176" target="_blank" rel="noopener" class="view-event-btn">£24.75</a>
+        </div>
+      </article>
+    <h2 class="month-header">October 2026</h2>
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">2</div>
+          <div class="event-month">Oct</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>Metallica Reloaded</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/metallica-reloaded/7426178" target="_blank" rel="noopener" class="view-event-btn">£20.25</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">10</div>
+          <div class="event-month">Oct</div>
+          <div class="event-weekday">Saturday</div>
+        </div>
+        <div class="event-details">
+          <h3>Electrik Live Orchestra</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/electrik-live-orchestra/7426180" target="_blank" rel="noopener" class="view-event-btn">£26.75</a>
+        </div>
+      </article>
+    <h2 class="month-header">November 2026</h2>
+      <article class="calendar-event">
+        <div class="event-date">
+          <div class="event-day">13</div>
+          <div class="event-month">Nov</div>
+          <div class="event-weekday">Friday</div>
+        </div>
+        <div class="event-details">
+          <h3>ZZ TOPPD</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/zz-toppd/7426182" target="_blank" rel="noopener" class="view-event-btn">£20.25</a>
+        </div>
+      </article>
     
     </div>
   </main>
@@ -2403,26 +1547,5 @@ https://www.earlhaigclub.com</div>
     <p><span>Earl Haig Club</span> · Whitchurch, Cardiff</p>
   </footer>
 
-  <script>
-    function openModal(idx) {
-      document.getElementById('modal-' + idx).classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal(idx, e) {
-      if (e && e.target !== e.currentTarget) return;
-      document.getElementById('modal-' + idx).classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        document.querySelectorAll('.modal-overlay.active').forEach(function(m) {
-          m.classList.remove('active');
-        });
-        document.body.style.overflow = '';
-      }
-    });
-  </script>
 </body>
 </html>
