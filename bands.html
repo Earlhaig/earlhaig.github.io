@@ -153,7 +153,6 @@
       background: var(--color-surface);
       position: relative;
       overflow: hidden;
-      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
       border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
@@ -163,21 +162,11 @@
       top: 0;
       left: 0;
       width: 4px;
-      height: 0;
-      background: linear-gradient(180deg, var(--color-accent), var(--color-accent-secondary));
-      transition: height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .band-card:hover {
-      transform: translateY(-8px);
-      box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(255, 60, 56, 0.1);
-    }
-
-    .band-card:hover::before {
       height: 100%;
+      background: linear-gradient(180deg, var(--color-accent), var(--color-accent-secondary));
     }
+
+    /* No hover effects - cards are not clickable */
 
     .band-image-wrapper {
       position: relative;
@@ -193,9 +182,6 @@
       transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .band-card:hover .band-image {
-      transform: scale(1.08);
-    }
 
     .band-image.placeholder {
       background: linear-gradient(135deg, var(--color-surface-elevated) 0%, var(--color-bg) 100%);
@@ -235,9 +221,6 @@
       transition: color 0.3s ease;
     }
 
-    .band-card:hover .band-content h2 {
-      color: var(--color-accent);
-    }
 
     .date {
       display: inline-flex;
@@ -311,7 +294,7 @@
       
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/539591024_1326549329479915_7023611207170396781_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=QK2cwdhBk8QQ7kNvwFi5CJ5&_nc_oc=Adl7PmC0XfNdnVfdHFZIcLCNdP1eVP1FYd7BF0BwDVKT_sDzTRxQ1fjNn7XSDjRnef8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=LQMs_Ci9-e2n--j-KBPbRw&_nc_tpa=Q5bMBQHr-i23jIUIOgZ_3jPAurKTdzED-7sIklN5HkmPIcCMTBsUyMxMDxjc9DDZFDGXO9dtkeJUJWTK&oh=00_AfqBEC2tuoE7BSRmtsYXGNpkFZKqAikkOdb-yRxf9vlE9w&oe=6963C4F5" alt="Albino Frogs" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/539591024_1326549329479915_7023611207170396781_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=f0Gz4qCuqNAQ7kNvwHXuWIm&_nc_oc=AdnsvbpjZPTxI0LMFk3mduYWOTX1tOxr2JjS3ep9sLw1MEVDxoWSwRiIrHt-RGTCa18&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=FL5ehW4pEC7k6dhLZSKPwQ&_nc_tpa=Q5bMBQF-Tc_joS8QPEEfqV88YPlgV6fJOETFZB-8fAUfXFJ5DGoHMdGg8U5WNyHGiUreUXoLbQUq2LPp&oh=00_Aftqr2HuyYsThzINbYT0wCgK62ZSaUH3pu_miFVyNrvJsg&oe=698CA375" alt="Albino Frogs" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -323,7 +306,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/584057447_1401752641959583_2791725179094258578_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=py53DxdOZrcQ7kNvwGm0xjk&_nc_oc=Adm1RzUC9HBCkKPDieJ0acF06JQPndcEbhn27Bd_GPjzmVCvNwew_pyJumrGQy13iUc&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3rtfzOY002gHGg6gJZ8M5A&_nc_tpa=Q5bMBQFNpqtF6z6LgVKL1NrejOW2cwkgQTUTJh1VwVg3bcUImTj6ChfqW14Ck_hsxnV4O2JZAvHBBtyD&oh=00_AfrFY1V_JF3ILtdrx10SaOZ2QMP1_QCIyHsc-BVVKzalCw&oe=6963D309" alt="BENDRICKS ROCK" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/584057447_1401752641959583_2791725179094258578_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=NdAkDZB94SsQ7kNvwGffH3v&_nc_oc=AdlynPqCGLa5IZ15qbYD_UYkRB76W9LjSE5zFyL-7_SOKnWHqI_HxYHCirqZuEum2JQ&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=n1QcybKxyNE1mc_fDK0pUQ&_nc_tpa=Q5bMBQGTnR35gwVSPjO0uxtM_VELQ0lkuPEfZbo1UHLDGo5pynU8TjScfG_XDM_oy82RNAJkA_y3eLUH&oh=00_AfsW4LhfRyfxS-lba8hph6BJHitomC4hLdecikMKJJFuZw&oe=698CB189" alt="BENDRICKS ROCK" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -335,7 +318,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540962770_1326544529480395_375971559035566013_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=vWETdjmEucgQ7kNvwFO6cN1&_nc_oc=AdnA_7tljSM48s2t8kE7MwRr02UZNVtlZ2BBQfi9i2KuNRuo54y93E-uO5idXwJvVzs&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=gFaU0tDieUGTL8PrExIwyA&_nc_tpa=Q5bMBQGDISkJ5VWfkexemgv7L5M03_TDKPJW3wmFCwmA48ImsA_PCTaZmDF_XuyxVviKbCi1B8xaaSoE&oh=00_AfpxVwZAuW4Kj21FMHVE12sVkhbrvFbFlXd4CyPFWudVcg&oe=6963DF16" alt="Blues Central" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/540962770_1326544529480395_375971559035566013_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=K8WemzFjjVwQ7kNvwE8n4Wn&_nc_oc=AdktioJz9KR20x61sCDjrtHrIRuR4HAvUGlleMzG39jdsMY4yy9z_O02XPeoT_sWqfw&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=jl49jJ0OsteaLgfJPyDrbQ&_nc_tpa=Q5bMBQHMh44mTiHacaMx6c3E6xUdGU_wUwFQLeMr10YazNazI9s0pIPLMd07BwzDWllMlgCQ0CVQu5Pk&oh=00_Aftc9OArX1YG0cgE4nhS4HzdCTMwoBbnJ2e8OGOd8SE3xQ&oe=698CBD96" alt="Blues Central" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -347,7 +330,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/585062270_1403102401824607_7313429198470694217_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=manUW9pkFIsQ7kNvwEwZwxB&_nc_oc=AdmrtYccTwY-eCF2bRAnlaAc7SyMwnhJ9YQdsg7SDLIAKYFvnT-_V_psdw0mlR5vOTk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=LQMs_Ci9-e2n--j-KBPbRw&_nc_tpa=Q5bMBQEFvPnki2ISKb8KcmeAw-ee6Rw_kDhJq_6jAsB13ag6PKyk2iirX7X7EfLz6H-XUj7LZHIIU9AN&oh=00_AfqahH7aabsJOs8dRfXvK3_L2NXD97zEuiS3c93oqWwASQ&oe=6963AE17" alt="Blues Sisters" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/585062270_1403102401824607_7313429198470694217_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=X8xzeabL-sUQ7kNvwEA0iv1&_nc_oc=AdmhF0XqcVeIw6MrqObBqzj2B4gTCL1eGPdhR5M0RpGLsiogwcwnd03iNb_wNlhzHyE&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=FL5ehW4pEC7k6dhLZSKPwQ&_nc_tpa=Q5bMBQHpVr-PXnPS5R86FOpQnCUPInGcBUcZvihmeHnB9cuF-vqlZJmbiYH3SMwPXdgW-1RWxWne2Wok&oh=00_Afs4WX0LKjrktOQJHbdvAmVc1k-H3ZTsIJ2hyig1i9P0GQ&oe=698C8C97" alt="Blues Sisters" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -359,7 +342,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/491832512_1209092221225627_7771820751065659147_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=rvr8xeRW6SQQ7kNvwGO_Vls&_nc_oc=AdmuqsRVU0S_rPm8ui3GFpNmsTfMQebTwAXb7mVAiwkVE0AncYnvTTgt2Ja8rmpJ7II&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=WJlfQHG9REgs6_4SJ1BA4w&_nc_tpa=Q5bMBQHmIyGjPo89lpF7w6p1ubRV8JdLzGSQIJUhGbPeHw06stE9yGJKZkwPwEp4oB0ylzMwHnsfl2AL&oh=00_Afp7klrxXjiD9kH1P7h2PmL6JVrofaXivr3jcQR0hR6htg&oe=6963E338" alt="Bluesfire" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/491721465_1209527211182128_1347814707346476646_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=OmAzFxo_12oQ7kNvwEdqDcy&_nc_oc=AdkR2UKl7UbzjrNXJD71hh_51_WE8oSsd-EnDhyCmFqs0yDdGQEz7kRrxqwoZqUlx4k&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=SHkPbUE9wdKQbQqYT4bmgw&_nc_tpa=Q5bMBQElOzCqR6qWMo600i4PAQKKiNjueG37iMymPxKkJP96d5jC4_b0HPYmsRzGWwbhfFDMpyHJEuNn&oh=00_AfudnwTxXMJeGXza8C1Puj_NwI_KzX-6TuWPaeURvRHJ1A&oe=6989EDBA" alt="Bluesfire" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -371,7 +354,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/547103047_1339489631519218_4316007360358763621_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=PRt-bdTA41QQ7kNvwHc6v0s&_nc_oc=Adn2nRc1RYJu2jc7CLp6s3cZH8h-gax6iHX7gP98EBOlzOpKZQbYPwfias9U-0LbqV4&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=dBtMRToO6P3FA0H8EmHMHg&_nc_tpa=Q5bMBQH7I3aMBnhg-zxxE5ZichtLJJtGk_5fVVXGM8_D4wSGVJLLu8YJhPx7Yx69vIJzlbfX15AnKePi&oh=00_AfoHcoSpdJzj3DxoSImaRRZ90gCZ_QajW8UMYc2z9lg5Kw&oe=6963B947" alt="Bus Pass" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/547103047_1339489631519218_4316007360358763621_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=RJpbLCS7-dcQ7kNvwFE07rF&_nc_oc=AdmqzTD7-rZGbXILzI-Zto8cH9_09-E33sBgbCjzyxH3t8mbXcyhTsOnAitrwckT53s&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=FL5ehW4pEC7k6dhLZSKPwQ&_nc_tpa=Q5bMBQEkSdVfmspn0Yvaij2Ceg06AfNuzmUIkGcSX7ixoDYHQ0HILx0nUBEYMWsFcOTrlbk4bu9jl7ax&oh=00_Afvlgxb2b9JOmXk2XPTmKjFQ8MSGbJaBv11zglNWKWQqDA&oe=698C97C7" alt="Bus Pass" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -383,19 +366,19 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492723378_1214817627319753_4504969922458879951_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=0VAUiydnPUoQ7kNvwGz_ak-&_nc_oc=Adll7fDvhVeuNnGM4Mpj9aimknp29ZngJ8f8VpPIrhD1GCdk_Z3pOsdyTg7XmxR0tVU&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=B4kmk0o_FrMRxV0w1xq6Fg&_nc_tpa=Q5bMBQGZYUHqvPFFv-1rq8xYN0xyslLOIOyhtuonp-ietdhk76mDOXLs-cy-vcWjdkyUWtjWqpy2fDCo&oh=00_AfpSABM9nXPYb-k_75HTNJVSPL0Y1NPDIBQjsTnStLdwjg&oe=6963BF39" alt="Bus Pass Blues Rock Band" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/492723378_1214817627319753_4504969922458879951_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=4bSBZ5kMeMsQ7kNvwE3DDs3&_nc_oc=AdknMYOUmLZwj9B7F8xB66H4_7YWur4mmTZaife3jCCJlsBgRIFr_0F7ukdhGQVZi_Q&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=_BDYH7AlFT4sl8Zf5YYOCA&_nc_tpa=Q5bMBQGpJ24xdfCKwvhzfWhjNLSGCXxk2zBA8pNDJIgikwomqalyzujFbL_cqygDXw8IAA_ZkQlAcpy4&oh=00_Afub4LPPRjvLwp4eSNR3GgGkb7yhr9AUU3xJxkxDRklGkQ&oe=698C9DB9" alt="Bus Pass Blues Rock Band" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>Bus Pass Blues Rock Band</h2>
-          
+          <span class="date">Last played 12 Jul 2025</span>
           <p>📅 When: Sunday, March 23rd, 2025🎟 Entry: Get ready to groove with Bus Pass, a sensational 5-piece blues-rock band bringing the best of 60s and 70s blues-rock to life! These seasoned musicians know h...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/496034261_1230599899074859_188085935283302866_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=sK1P_cBn5DAQ7kNvwEvDeNn&_nc_oc=Adkc0z1mooxAIvhEtzKCbNQ6uFEmTKIf0F2Q_de2ClactO8YZ6EscHpUPhw8IOX3o5M&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=vKwJ64-4fLg-cQZV950bLA&_nc_tpa=Q5bMBQFt91SId5D10-aYLkrW_JgYWGqJx_ExzrLgxqXkE-ZKLlh7Lvsk2CEJuBlwgEXvcxFxr0fVAZ5s&oh=00_Afo6sVDOIGTjgqCdBKItlEa9inXOZKOd_h8EYaZv9f-3ow&oe=6963D511" alt="Buttonsville" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/496034261_1230599899074859_188085935283302866_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=akz8d629gU8Q7kNvwHe7nT8&_nc_oc=Adnc5KFRsyIEdVdNtKh-w89NISRoGjLlAodWZjQoLCeX3KJIqjLBAL_Vu7MRamS2gg4&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=rwXoUr-ZP3sATDOmPhDw3Q&_nc_tpa=Q5bMBQEyHojWdbQCfGG-bVvYQSh7vxUwOUBEVoV7aJiqekzfczebIdQV3u63WKojqIdLDOqYzegqTXDf&oh=00_AfuHVPpDrAMHVsMpjo0rIONPGd93mxrOdKMDmKIdXca5-A&oe=698CB391" alt="Buttonsville" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -407,7 +390,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/593827782_1415136600621187_3573252146180513147_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=qYW51PQ4ZvIQ7kNvwEsbGSg&_nc_oc=AdlV6q3l_Kz_oiC0INZQb2nRni27vhHgEv2AIyRvhM68VwHWAJLNYsceGl7lk1MamPg&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=1tmIbxov2A2f7G2okBGmEg&_nc_tpa=Q5bMBQHsL92n7xZqOnPJJtyagWvKOR4jgTWOVoqg7akrB9wzC5DLV05ntOY2wO5Zopi30Z976h2GSRlw&oh=00_Afr-KSemCPUEsVNwn03ujpebtcc9UHIQ7vE3Jmy_OolONQ&oe=6963BC57" alt="COLD SHOT" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/593827782_1415136600621187_3573252146180513147_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=qIRuZo89-3kQ7kNvwGJWotn&_nc_oc=AdluDCBlSUVPfBfL-SoXqHmgX10guOobjkR8Ds1ZCpL71TDLfW6VXxoDhuLmhrFdmCU&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=7XyxyyPe1fCXeUPf1U3y6A&_nc_tpa=Q5bMBQGngu9mpOOKPev2Y6iuHK3pzwC6_-wx-EBvVyTwYORFYGlim1v-A0urgJ-AyHSrzF3Y3drX9w78&oh=00_AfuPf1EYaThY-2detfPahUZldBNtSWAqV76sIL1cAQbgtw&oe=698C9AD7" alt="COLD SHOT" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -419,7 +402,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540268504_1326550526146462_1602143277764803097_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=yo90nVPUBsMQ7kNvwHJzfHQ&_nc_oc=AdmaWPWfFOiJVXLSEb_NvgQaTkC8V2ETfrHybSBKIsSKoH5HExbqffNMrPkRaIpu1xk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=dBtMRToO6P3FA0H8EmHMHg&_nc_tpa=Q5bMBQFZP0VI4Hd3UY6f14SUpVTq8r_DXbz66x1YETMTA-K-QZco7qdIuN-ANjmkD7bEeLwWjYvA9fxZ&oh=00_Afq1OIVCupdI9GrjjeiauwNR6ymHFWztwBWhR8KfmRLv0w&oe=6963C8FB" alt="Dansette" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/540268504_1326550526146462_1602143277764803097_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=aeXzWzlxOkIQ7kNvwFVUq8a&_nc_oc=Adko9zBD9MpbKCwrY-U-jLI8UOvzvnjIpm0IdLJT4zYr9D7LWQfNcllkqyzWYsEwe50&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=FL5ehW4pEC7k6dhLZSKPwQ&_nc_tpa=Q5bMBQGAaGC_8IuB2Ef0M29pM5gMfyfuKvPYlhhkmEFEdKTI1S0z6DoVzrgHM6f1_3wam1B1RTTy7x69&oh=00_Afvjq2iOREx1ZKpHsk64O6jJFKGLnA9zkCrox0NQ2Wps3g&oe=698CA77B" alt="Dansette" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -431,19 +414,31 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/608892674_1443081004493413_7337120022677873390_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=r3Z3sVGC6KsQ7kNvwHjPp0_&_nc_oc=Adm37E2atWs3mAhU5A3QR6cblpmLAau5YsVphbkKW8NmIvEEwxPs8dEd7kVCPo2sVr4&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Ubn2qYcCbqYNVkjdpRENRA&_nc_tpa=Q5bMBQESEvAhE747IBupmTm_Bml5HMJlm1pzlp5pVeLm1EzUJfxqmlaIGG5iNapQK70OVHL2wZcyvs_4&oh=00_Afrv_RjgKp86Ar7J_9wiWRj8aAimG2HJzB-19ZlLVSYLXg&oe=6963DCD2" alt="Dean & The Blue Bros" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/571177836_1383347127133468_7129005732310394144_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=tC0j9IBXKVQQ7kNvwGOQazM&_nc_oc=AdlPIFP9Iw7xZBaj8u174M_pAQ8rM-OdKmq-hUZpqJ0OqW7DbRwkUplf35zn8_uXNLc&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=VaFSwowgzKA_1Cqwv8Wavw&_nc_tpa=Q5bMBQGJt1H6BeYTQAdsw1D_ZpQ6dFd7XSKQIydg5culYwVFiyrYJ5u-qW751s__bn_YG2LIosK05ENy&oh=00_Afv-qE07yF_02q3qjCZYZsjudCqvQ2dsFu8nDuwaWFVlLw&oe=698CB58B" alt="Dave's Party" class="band-image" style="object-position: 50% 50%" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Dave's Party</h2>
+          
+          <p>🎉 Party at The Earl Haig Club 📅 Sunday, November 30th, 2025 ...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/608892674_1443081004493413_7337120022677873390_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=dy48xTFujM4Q7kNvwHA9eiJ&_nc_oc=AdkSRzXve8An8J_SWg9zZQFbkqjtQRmEBdfxTpW2UdEfp4ppP9m_5KRM2lALFdIFPgk&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=8UomHb0ZKxP_qRRSOKotfg&_nc_tpa=Q5bMBQGl_FRZRhetSob8SfBuFu0ZjijEoK6_tMC6Up2ZH0fUrBr4qYa4JBcUDdFbwpbGZpWaXup6XGsQ&oh=00_Afto4SmbKuWbD9l_HJOoANRbQvuGBeS1x42O-4OQrqJ9bg&oe=698CBB52" alt="Dean & The Blue Bros" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>Dean & The Blue Bros</h2>
-          
+          <span class="date">Last played 14 Feb 2025</span>
           <p>Dean Newman Guitar / Vocals, Markus Buscher Kontrabass,Dieter Mobers Guitar/Sax, Werner (Snoop) Volkner Blues Harp und Roland Kaiser DrumsDon’t miss it!The Earl Haig Club</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583322686_1401664361968411_6922880703729848751_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=rh1QYeCC0MoQ7kNvwFTqjm9&_nc_oc=AdnZHbI-ITYJ06P_bXFM8Ji9jg9Dv0u4ZjD5tjmsveuV9HxNXbAap9P_6cYl0s3IQ3g&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Ubn2qYcCbqYNVkjdpRENRA&_nc_tpa=Q5bMBQFp-LNiTSierOdXmmemDzIHhkvuCBgSA7inGyMpOpIkeeTau00oOAEPH7xF3txE0VIJ_oNPHLyI&oh=00_Afp1MxVMPHGGawKBONClRwCDf-QaChI7Mm6OjawH4ZhFtg&oe=6963DBCC" alt="ELK REDEMPTION" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/583322686_1401664361968411_6922880703729848751_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=L0cFrs9ckFoQ7kNvwGsz7XB&_nc_oc=AdnyKTd3y-FHUgULJaHgtjAJ1OBhkHzD7gmItny2MCw2MbGunklKZY9-IHUHzrzvmnc&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=n1QcybKxyNE1mc_fDK0pUQ&_nc_tpa=Q5bMBQFE72VdCcCgEm0bSv1cqmhvdNZShNoF9-478yS16iHsNZDLix3eb7cV7Ypk9gRH1A15HxhwzEjs&oh=00_Afvs5-ArevIkYP445jdDdxakFvdRNx97c-dakcaRWHYuhQ&oe=698CBA4C" alt="ELK REDEMPTION" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -455,7 +450,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/582732702_1401667948634719_3214844880455063305_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Fsv_pSt5qvYQ7kNvwGwT-yn&_nc_oc=Adm-vlNTd0JwgnXsexZFhXmvAC_TgQTDdYEe6AUn0NxD9nI1mV_3LjbgbTPTWgmGBC8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=1tmIbxov2A2f7G2okBGmEg&_nc_tpa=Q5bMBQHCsvj0kC9HFpKM5oC7siokOauZgkp2Zr0vALDpYHePqW2az1Ks8K7UVEJZVa0d_UC5bikxzm1T&oh=00_AfoNNEv--pAR9vvwzlO92JA5mRGYyOkNilWFVppaJBn_ZQ&oe=6963B989" alt="EXPECTING COMPANY" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/582732702_1401667948634719_3214844880455063305_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=sfzNbq219zwQ7kNvwF-6wvi&_nc_oc=AdlWMclh8K4Z91Lg--T5Go4fyLmBdlbfcz-6rRyh-V5hXIRKNlx06Ll8OPwdaK1_hec&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=7XyxyyPe1fCXeUPf1U3y6A&_nc_tpa=Q5bMBQGila3Mmf0GZEwZhuDvyXIGDzqy2_317HoCD5UCFSlWIIQJSEsG8b3ZNr4qKM8_EltOOXxp2RtS&oh=00_AfsD0El5aavv01KDN1vLL-cEemef0jSQMGzMzuuRuQaN4A&oe=698C9809" alt="EXPECTING COMPANY" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -467,19 +462,19 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/491564073_1209097151225134_5438361662591759640_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=NOUWJORpAKoQ7kNvwExoize&_nc_oc=AdndcyHOOVVTqfr8wy0bz2aQ1e5hIaOdaxJ5QnWOl9Aa834K3hTIjZ5e3m80VsM4K48&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=dGZ0sj1Mmb5MU4dvGN1zYQ&_nc_tpa=Q5bMBQF04pv7X7EyZUUzTRb07PPmKBNBUDTPNIGQ5sW4YsHlMkJJWod4Ty4rNxfrFGJUKbezLVjlX2Gh&oh=00_AfrpgbQjfOSaJ6Y07cs1CFhi2NM8_v-AC5wfC_t3L2Vs5g&oe=6963D94D" alt="Emma Ruiz Band featuring The Sundogs" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/491564073_1209097151225134_5438361662591759640_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Y4lvHzg0dDwQ7kNvwFTTaVn&_nc_oc=AdlcXf9JaW4fFZ5Qu66KE2GZUlPMsHD3y6pSmJpnuDFYJMntfDHepluakGFzsVjoTNw&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=aBf-6b6GfsMtshmHsREs7w&_nc_tpa=Q5bMBQEh8JNdI6iDKNI59uwUcDmvkAwb53nh--PMZKU3YCi9EPVzirob3RX4qwIN-O5xp6TQrbmRt09D&oh=00_AftN2zHwmqTSnfPtk2K9yLPYbFEmEcwiHOS6G4-sk_SnyA&oe=698CB7CD" alt="Emma Ruiz Band featuring The Sundogs" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>Emma Ruiz Band featuring The Sundogs</h2>
-          
+          <span class="date">Last played 25 Jul 2025</span>
           <p>Advanced notice of one you definitely do not want to miss! Come and help Gong celebrate his 21st again with the Emma Ruiz Band. Emma is a hugely talented ex BGT vocalist and entertainer who teams up o...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/538285796_1323648419770006_6811626690759595588_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Hs4Vd98tmVUQ7kNvwElBxIO&_nc_oc=Adl8fTHnjKL1yH41I1yDgcfpiOJGpyJIcHaJiYCzuVOhtoXCNlMEMcaY7CdULWUPnq4&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3hOBCdz-wN62_jsY0W2YQA&_nc_tpa=Q5bMBQF1HlwqNTGPeJ_-BYDxxbjcb_zx29uOUvF_VV6yELOYCcXGGaOfyg36lC4Rx0tCywA5VdTi-fq-&oh=00_AfrYQlk6XrfM2ybRHp3ez6AkuLFDwZzVklO6tDyWndegGg&oe=6963E2EC" alt="Fortunate Sons" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/538285796_1323648419770006_6811626690759595588_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=BuOYrgB7LgIQ7kNvwF7Fcek&_nc_oc=AdkMVAyajHYRKdKqyHkl68rmSoYMF4JYdECUI9UBELhQga3fIjBoed58zCHesdXO4pk&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=qaaSMQR57o44D51hm1c3Fg&_nc_tpa=Q5bMBQE0YtZiEmNdJEHTvDFUqk1HX21ldKz6PWwTPUdjyNm_c6VhZHG8bMEx2RZH6hKIXYDUPXN97JAl&oh=00_AftD3iDk4HlPAoUpwMaMg0ef1UknkGRKFu7wvdgXduVihg&oe=698CC16C" alt="Fortunate Sons" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -491,19 +486,19 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/593981646_1415138793954301_3947679301873451538_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=JM8BXDR99_oQ7kNvwHc5ihN&_nc_oc=AdlkEc-Cdz_KEHgseMo71xNOTDf0crikgLhKygpwG485tEyGAhRGYlLpcG26ZaMHz0w&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=1tmIbxov2A2f7G2okBGmEg&_nc_tpa=Q5bMBQEDRLvvj-2LSRIvnCIOwG497NFH_JVo96_YMXyN2dyV6ALsfnwFSkS2hY2oL3-X8xLbLfMltbXd&oh=00_Afpp7325mYwo6N2c-ZpEhAZhInbvdpXgdmgC0kNx4au8DQ&oe=6963BAB9" alt="HELTER SKELTER" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/593981646_1415138793954301_3947679301873451538_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=A-n8DBFg2kMQ7kNvwE9_ipg&_nc_oc=AdlZNZLSUBlXht-8AnNCi9mo5gl0L1XQJRmBHsWGarnkmeAa4cGtR_L3xLtEF9NYU9E&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=7XyxyyPe1fCXeUPf1U3y6A&_nc_tpa=Q5bMBQFsBSSf6jbtxbUQe2tKjf-zBB-KQvi-vwZhzet_wZnncl6ZSScoxJb31Mdr8xyhxvtVwPgThiLg&oh=00_AfspTzP8wm9AJbwKyzlzR6T-8Zbpr9rkUyuWlTBcV1MWDA&oe=698C9939" alt="HELTER SKELTER" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>HELTER SKELTER</h2>
-          <span class="date">Last played 3 May 2025</span>
+          <span class="date">Last played 10 Jan 2026</span>
           <p>This is live music the way it should be — loud, energetic, and built to get the bar bouncing. If you like your rock played hard and your nights unforgettable, this one’s for you.</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/496216650_1230569625744553_258705121072997954_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=0-uLG4aU_OgQ7kNvwGbJ1ea&_nc_oc=AdnuDQc9meDaN6YioTBqXVKlHwLsODCzP12RBF5r2k_wy1yhQGN9H1s2-mGiiAGOcCQ&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=YKTi4Z8TxXFFiklTNpKpqw&_nc_tpa=Q5bMBQEd_HVejTy6DPPK4_EuWF1hD6SZMc8tfo4ky-1AHfpWU9P4CS1cRPQysIiFCMoZtSkUQUBrI9iM&oh=00_Afq_KRhDvWaFzxG5XamjvAA7ebuSFMHXaCP5HKjvHz_tVQ&oe=6963E3C8" alt="Halfway Blues Band" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/496216650_1230569625744553_258705121072997954_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=POGvWFNsdBoQ7kNvwEHn33w&_nc_oc=AdlRCFiWW2Hjwr5EsHRQnmSEbUWMpis2oPgHGJndHvJ05nAYTt672o3s72PI4yS2tMU&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=P9iBrCmWz21oTpbhMggjTw&_nc_tpa=Q5bMBQED4NveMD2HSq72PDpX0kUc6ywYn7wNWdsqDLnjVrR47UykVfYvYDIzZqldi502ttgTjKzTc4wF&oh=00_Afv0QJ0V9ogC_h_Bgw0WtUvdKjdKeREDd7b0uTuE8lLusQ&oe=698CC248" alt="Halfway Blues Band" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -515,7 +510,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583903675_1401663941968453_6536850422458866703_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=_p7NEhZ0UugQ7kNvwEZMBjR&_nc_oc=Adl0M0GLkSvmWVW9V_NbYRyZHfUYyf-Ac16cShH0Ft5cv0_Iq8xeO7fX2uiqqdlrnNE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3rtfzOY002gHGg6gJZ8M5A&_nc_tpa=Q5bMBQHDAqAxMKRBu2_4FwcPvFED1UE0UH9z_ZxgLF0J3NIGdI978a0570cVbJpukr3sWGT19bmBdoyK&oh=00_AfrP5dadOV4jrKcpMnJ12qNJuJq59QNiNbtj2f9HrfS4yA&oe=6963E001" alt="JUNIOR HACKSAW" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/583903675_1401663941968453_6536850422458866703_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=E9g0VpoZaAoQ7kNvwFjXs8T&_nc_oc=AdkNRzbJEDgt2O93n4mP1GAn3glHDXKMHHN8P8zDajyFw4HjTFs0wtPit6Y0lqT3SJA&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=n1QcybKxyNE1mc_fDK0pUQ&_nc_tpa=Q5bMBQGOno4tAx32oMJCx5qOCNXrT_BGQPGpl0fCF0-Li4_FEOvCtL2qZr53aINrIZftcbxZwfnklqSI&oh=00_AfslwOBsbrPZp2eciO8227bjSSKGSgsVCZ-LBLlNFG_y0w&oe=698CBE81" alt="JUNIOR HACKSAW" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -527,7 +522,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/495377840_1230578852410297_3629720762961115209_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=V1zoZsuLKGAQ7kNvwEJPuIt&_nc_oc=AdnuM_yMTGMQwzza3QEwVgIs7r5YRtKJPkdlTVy8jyOXk59N4ACsFR1TNjyO1TMdCWo&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Jct6BaNmhnfehbvpCkA4fQ&_nc_tpa=Q5bMBQENadb2saj3hR3IzET_s87lDgPn7YLUM_nXw91yWEECcTx8h_xJvqMENa5HBpkU81OUwEFoTcxs&oh=00_AfqV4NC6irFfnc4Ji_2C9lddoFJJ4w5tZhAedRF_TqytUg&oe=6963E140" alt="Jack the Biscuit" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/495377840_1230578852410297_3629720762961115209_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=DNw6QlfCk5QQ7kNvwGbgz5Q&_nc_oc=AdmvlVBAARp3l5VoOjQ5JY2ryX1rn3ULmuw96ORNm2TptHz2aXV1Rwgvb91Xh_ebyCY&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=aBf-6b6GfsMtshmHsREs7w&_nc_tpa=Q5bMBQFB-DrQ89POw0-r7qe1R1r6Df6jqG5qG0xgWBFl60auJxgg78QGWduhVk6CxTrZSvTUZYQh06qJ&oh=00_AfuwZOq1qAfDPI_o8bPBL46P00otib_QwQUs1o13pobLbQ&oe=698CBFC0" alt="Jack the Biscuit" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -539,19 +534,19 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/520295871_1291584872976361_7384881835510491926_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=jmprf_PpJogQ7kNvwGxVd8y&_nc_oc=AdkXQjZdsxuV38ubP65kI2URg6ertGn88TaRq8mLBpsP34uzupjU6OJWu5ZWdgZMf40&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=eQiaolCUaziiJ9JJCPYNEw&_nc_tpa=Q5bMBQEVI119-QhojIO5Vwjyq7LNYNf5YdkrHCrUzXbigzP_3zM18EQYLb-Oh6kwKW-PPtLFDFzPL7Sw&oh=00_AfrqTtZ1RwPTB1sXtDi8y_ZpcyLF5HLdLjEVBKObrayABA&oe=6963D4D0" alt="James Oliver Band" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/520295871_1291584872976361_7384881835510491926_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=aDj7Nax3xQIQ7kNvwExz1MI&_nc_oc=AdlX1dKD1BoIPTdgFnhw9DILD26B_zXut5lEb4v8LVzn1itYDnPpEPN-mOLq8Tk3nKk&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=HnD-eCg__X7vN6H5Iw61iw&_nc_tpa=Q5bMBQHsU_yQscxDY_3g__dJZi72K4tRkF58gDe2Pt-LgFnVoWY-J7bCK5FsvhOYIUgUqMVZtTkzQBaw&oh=00_AftgILj1cRGiwd-TpDsrNQfcdFpBQYvGMcqgT3IykBRayQ&oe=698CB350" alt="James Oliver Band" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>James Oliver Band</h2>
-          <span class="date">Last played 27 Apr 2025</span>
+          <span class="date">Last played 21 Sept 2025</span>
           <p>James Oliver isn’t just one of the UK’s hardest-working guitar slingers – he’s also one of the funniest. Over 3,000 gigs across the UK, Europe, and the USA have taught him two things: how to melt face...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/537127417_1322662809868567_9199004981908526780_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=3xeRAb7Vu7oQ7kNvwECft4-&_nc_oc=AdlIyJEqfCWstWXcv0t_xKU7jqKSiVzT5hSZVvQr2E-9380NY_NLm-5N2cxATKB7_fQ&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3hOBCdz-wN62_jsY0W2YQA&_nc_tpa=Q5bMBQHeC_VG7jnOz9cdb0vQgtlpHUTmM9B1BTAzEBJY0L8GYg6Ij6qNKWzF7EURiwIVG_d51SWf5W5r&oh=00_AfpONQpZNfYl9B5ypsc6i-qxcmZOZIVuT_2kPkfpyI-NCw&oe=6963BDD5" alt="Jane Williams Band" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/537127417_1322662809868567_9199004981908526780_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=3EvZo_zPvnsQ7kNvwGHg0D2&_nc_oc=Adl1JEOQzzELNUXandocYsKmDI6MtZnzM6UTRe2JrQUJkudV_XSujd-d0Oi1XHGsm60&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=SpwLVCZk72o0RgYw4nSN5w&_nc_tpa=Q5bMBQFp7MunQMHl9gJIl2P30kTioasfqiSzl7r-uKJrNdnVwNPamQy8Etv7DDz90qtte25JS3d9RIHk&oh=00_Afv6lWwCdu_64g1R5hoRXDNh0adh9FcVDuYR7Lofdnka_Q&oe=698C9C55" alt="Jane Williams Band" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -563,7 +558,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/496298517_1293693458762311_7096362149953729744_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=F4ugcTeiNqUQ7kNvwEyL0Ey&_nc_oc=AdnMwTTh_35bXekXNgGUcQnKMK3W_2b0nPNzJ3WgADWfEDzoO_aVUOfVzyXLlD6ibv4&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=MlkgZOnu-yCRd2yrp-x8zg&_nc_tpa=Q5bMBQFo7XnY5sL_yiPa8PfaNoG3JBqPsGQvOvsAP3K7rMycYfqoeBnaSznRQnhSJRbd1OWlJjVR93_M&oh=00_Afodu_Gp78rGwLBXX1_xRE1DPq8PxYc8WlG3rhIqLy9TMA&oe=6963CA4E" alt="John OTWAY & Wild Willy BARRETT" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/496298517_1293693458762311_7096362149953729744_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=rhyNnVaOPTkQ7kNvwE7zMAQ&_nc_oc=AdnedZD8eAhkzmBArRbkxE-tLPRW8uOECczVu47Ohy8trDB3xwG7JaN0pXLrmes1NSM&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=x3rAPef1EbftC9H9bUebVw&_nc_tpa=Q5bMBQEKr29HZGHBTcZEcQiMKLuQh1bQyZQsW1rgolw1tXGFQxDunvAkZZOQBUUZtzh15S-eaejAFkbS&oh=00_AfvkfLgwpU9IARWRKjJeRrhVAyjKaXSX-mB68okyD21ijA&oe=698CA8CE" alt="John OTWAY & Wild Willy BARRETT" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -575,7 +570,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/539415710_1326338019501046_3921977091697394576_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=tf4MQvJSyd8Q7kNvwEdB3Ch&_nc_oc=AdkGRFAKBX22v-6hq1FMYbMZc-_gdJcw2CXMyUBm7hbbyV0TRGEfym-esNBDynXSbYQ&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=LQMs_Ci9-e2n--j-KBPbRw&_nc_tpa=Q5bMBQGs4m46OMPlhrQw3CMGP6kHS79kiVWMb0evFk8ukejfkCdEpvu3aQNSrk_YNWnoivSiYA_dQMm3&oh=00_AfrEJyaW7CehMGb778ljlPKIoi1VGjlP82q3oTLY7d-QCw&oe=6963B92B" alt="Jon Amor Trio" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/539415710_1326338019501046_3921977091697394576_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=_-uiP1uvQPAQ7kNvwFbFAeS&_nc_oc=Admm70058yBSGIu9BFdhsCiAzL8mr6XqLm_HhzjaV4wnUwzXwDquJiWZwAvmviAv4CY&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=FL5ehW4pEC7k6dhLZSKPwQ&_nc_tpa=Q5bMBQGetqo6roQijpSRPFePRdjdLBJaMVdUDBKW3K2Y1HY7lHX4bXMdyjEt-AKefLc2J9c6g2bpf7zd&oh=00_AfvIvcULL0_cqlqgVwFq1PeCJHvVVmTmk8_UF1lU_2wPwA&oe=698C97AB" alt="Jon Amor Trio" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -587,31 +582,31 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/546390460_1339467708188077_5308863621539844470_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=3_RJZcBDyVUQ7kNvwHv0K_w&_nc_oc=Adm5Nzzl28za45xYeqWXO888jXw5yCEGAZRZ2xhq2M2sHYRBwn8JWoDqLcyV2m2ewmU&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=SOtXQZT76_Vujs2vmlJC9A&_nc_tpa=Q5bMBQFAGM_u34VTbb-wswQvxa6hGakl6g7UvaBWxsVDunbBhzbMJ91fS3xPtnSv9a700Vwis1eh5Ium&oh=00_Afqnhob9JFSEyihw-EPrHbTPS14EnADcW30ZQ8H6TyKQIA&oe=6963BBE2" alt="Just Friends Jazz Band" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/546390460_1339467708188077_5308863621539844470_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=nOx72driVkEQ7kNvwESlRxk&_nc_oc=Adl_HB_tSyEnXi3J-eBDH-GhBZDjSc_KO30CyjmZzzblZ1Qay0m4Rf6Rvg4RoWTUbkQ&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=7p_ZJALhcYiFw1NBafNP_Q&_nc_tpa=Q5bMBQGYQJlSVsUVvbHwZ2tDYV0rVrfgW1XfknsmD8MrcP-t8OLXmshCETxfedICnGL83o5BO06Z3KDQ&oh=00_Afv6EPSnv7kYRJWjAUDUBldKIietmq2KzffUYURYGGbvmw&oe=698C9A62" alt="Just Friends Jazz Band" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>Just Friends Jazz Band</h2>
-          
+          <span class="date">Last played 3 Feb 2026</span>
           <p>Join us for our monthly jazz evening with the exceptional Just Friends Jazz Band Venue: The Earl Haig Club Front Bar, Date: Tuesday,-  2025...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/593938928_1415135953954585_2426129918579529420_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=j6rqg4MlVrUQ7kNvwFRpaUT&_nc_oc=Adn1Uj8j7_dTWQxcronx0ilBN4A-IgiDcTgTL2rDtBUhCDqcktgs2L6x79gOkvYvYWU&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=MUzmZhBkBUzC3mAzibhdRA&_nc_tpa=Q5bMBQEoU1bD6D_jWJFkWz0opG2MYSk-U-8vjJM6rbyJn-szMrhd7xRHbmR4MBiRl1W9KM--CadgUcn9&oh=00_Afrl3W8LksaJpNgxsp2qlWAQe9OFYuNHk8mFuaXZIwR9YQ&oe=6963B550" alt="LEIGHTON JONES BAND" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/593938928_1415135953954585_2426129918579529420_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=VA9x5TtSAgkQ7kNvwG0z_9n&_nc_oc=Adm0s6zeMuTxf0W_G6O_W-dJbtOGF81yoCH7RkoRHNVwHp5O0YCf9DvOs9DXG-PZZOU&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=nu9oHGMLrP1P4_EHiXK9rg&_nc_tpa=Q5bMBQGwazCsZHhYMJ7DnqlCV0Eb9CyEdGev2rAPR7eFDvbBLPgqmcgnEEyw11kz_wkmC0p4GPH_LlQG&oh=00_Afs7cakfXEvCBTyyM19AIFI3h0C-o0O0EPL4Up6HByztCA&oe=698C93D0" alt="LEIGHTON JONES BAND" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>LEIGHTON JONES BAND</h2>
-          <span class="date">Last played 28 Jun 2024</span>
+          <span class="date">Last played 17 Jan 2026</span>
           <p>Fronted by Cardiff-born vocalist Leighton Jones, who gained national recognition as a contestant on The Voice UK 2016, this performance showcases his powerful vocals, soulful interpretations, and comm...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/517007521_1280503670751148_2247297700560172870_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=gW757ANP9VgQ7kNvwHnyUW_&_nc_oc=AdlS1Q8dLpZkecfu-6IW7yDZ1utGwLLlX8013c-xIkbq8pCJu0opsUN6BbGXjFyusyg&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=MlkgZOnu-yCRd2yrp-x8zg&_nc_tpa=Q5bMBQFHkLtpybwWoyZBZVPInbEnJJWnSffcyZTrsgtOSlvkPFBjQpx18gdFEk3-aKR7y5QFyhujwIVX&oh=00_Afr1UQ5PGkRE65voKd2rlVxVLhrfFJ0kEHKzy4yxW0_Vuw&oe=6963CA70" alt="Late Shift" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/617881143_1459107126224134_6813946968227552172_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=CYHxmlahi-8Q7kNvwGg68uv&_nc_oc=AdlHR9I8McK5KVzOLO1ApdG3dWIhBjEw32avm7tAv44nsqsnuCK99UKBO2YaOwIQxPA&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=nT44iuHD-eQMkXv6RO0eNg&_nc_tpa=Q5bMBQE2m3zVkPikak7m4rluJxiUpXZGnJZb44sB5roi6MGYrPMQvZrppOWHbHZRkMITUQ85BRajaXiw&oh=00_Aft-FgXJroUdmtXPbqVGEZBz2xDuvav_1aSLec1ObkCI5Q&oe=698C926E" alt="Late Shift" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -623,7 +618,19 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/584209752_1401666315301549_1975063040921295952_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=nYRRODigwFgQ7kNvwEzxZmL&_nc_oc=AdkNoSe_Ghdmey7sjgE4r6DWftiVVENgundz7JkJhepJGOlPZJVJgx1IUdprkQSQ4Pw&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Ubn2qYcCbqYNVkjdpRENRA&_nc_tpa=Q5bMBQHPME_eVt8HotRDhqqSCJDT64nC5nmXk5VanmoUEhzSAJlCFwmAnk8HRUE0kS7ShKaRqkkkCfsJ&oh=00_AfoTObnh-bySpDVwJtCStdx-hQoKDcSH938_Zvod-TAAeQ&oe=6963B931" alt="MOONSTORM" class="band-image" loading="lazy">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/617127399_1456784469789733_5411203053652676579_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=RQ4o8olkY34Q7kNvwFxb6fv&_nc_oc=AdkHwxvoIAIZfc_bGYAx6cEkeIiNoIXVVKqwq0OFb_h4Kv80PlLgQzXSAt4yp9yTbbs&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=r0RnmC1evRGCR2tFTaKdcg&_nc_tpa=Q5bMBQHt5YaJfvQURCzqYnn8rO8OjxQXAfM5P6GQK0Q0Tl2q_0uOFissVcV2NFJ8ovhLdyT463JooA76&oh=00_Afqku20yH8D_YWA3FuQV_uDxeSHbn3Hmktk6CVBppV9-sg&oe=6978D4E6" alt="Live Music" class="band-image" style="object-position: 50% 50%" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Live Music</h2>
+          
+          <p>Live Music at The Earl Haig Club Concert Room.  Sunday 1st February 2026 • Doors 5pm • Band on 6pm....</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/584209752_1401666315301549_1975063040921295952_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=wkObOPGK4KsQ7kNvwGygJXg&_nc_oc=AdkQLXL89p4vQv1zt1sUndp8Sq2oSZDQEnQGcVazUC5926LdtX95wmf3_mo1_uNEPHo&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=n1QcybKxyNE1mc_fDK0pUQ&_nc_tpa=Q5bMBQHoViAk5Cp-JRZwC0xFc5woCQ9g-VB-Yk5_a1mcR9ckfhEIO94VnxllmTjrZtLtXt6vAIunvUvn&oh=00_AfsPav9mVbvt5KgEH_HsIHdU6kBuoo0C1Ro1a3jWumE2Ow&oe=698C97B1" alt="MOONSTORM" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -635,7 +642,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/577038236_1389724916495689_1281022384672279517_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=vsvzSJFnUyoQ7kNvwGt5xY0&_nc_oc=Admm0mPryBMcA9Xlobc9IltfrVbAGqHiO0J8Kb7TEFvnBRNUG0Fz2WCj6t9P_g4JNMc&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=elv8ZRc-zhZn2jUuo-2P1g&_nc_tpa=Q5bMBQG-eDQF5rBwKXMPtd7boIN6P1rxprxp4s-mXxF2uvunNflMlKnpYidxC6DxMVQ5ZAOQU5I_PkwX&oh=00_AfpjhP80q38KSPLVF9Ge9KxvZN407d6dCq8yjp7e2dj_9Q&oe=6963E5B1" alt="Nelly's Heroes" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/577038236_1389724916495689_1281022384672279517_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=6T9nC54_lLgQ7kNvwFCQHDr&_nc_oc=AdkyiWZ3aYCx9TwPDm_ULnvIjMf8XOlndu2SrDDC8PR51ZNNEK8bQOh2NOZcp0p7zbs&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=Xr_EP_gy4ugDiH7pZU9tNQ&_nc_tpa=Q5bMBQHa_INK5QttK_IisvJ7mnp8wxZbXM_-TicdF_-H8rhlt75mt9sezqq_PpevdrfPZUZ9JjJpl2V9&oh=00_AfubSQBrT3XB3Y8iydOo7E-Q0mhD5AI_TRJOhNpk4kk40A&oe=698CC431" alt="Nelly's Heroes" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -647,7 +654,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492362687_1215032620631587_5749053722662763415_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ZR9ClD_1MiQQ7kNvwHI2n7x&_nc_oc=AdlGNHg9ZulA8Td84M39UrPLmDIrnGEFnraSOem7ikmnOYr30iW3V2EpJzdWa_EBmTY&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=tsR_doHbydXJXbN_azrqBA&_nc_tpa=Q5bMBQFJPKU3SHq_tCucGCx4_q6FM-WK1cqLlHaky72C2oxPAYdUIspPimq9aagenmfXLMii7Es7fn-G&oh=00_AfrbfL5T35_5Ptk99aIv49-GKWWfMU77a0vD7m14gendTA&oe=6963DE92" alt="Nelly”s Heros Earl Haig Club Bar" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/492362687_1215032620631587_5749053722662763415_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=eMV0kxlQZ28Q7kNvwEWS_4i&_nc_oc=Adn2MAfM3LY-UJjzvME_wP1Tiw0xs9bfm99U_ThQTKxLTnIlFjof-3Wtx-U59MeHivw&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=feZECeigeFSZVSidwODLrA&_nc_tpa=Q5bMBQHBOCLF2TIuLFIb3nCYdE_RICmfL9q8DkEse1XDxDEIV2D9D6iLCk1AlgJUulo_-iwuY1EselAn&oh=00_AftsLPzUm70FFsT1-jx4Zt5B3yTNhoRjPL-pk9m2T3U5fg&oe=6988C892" alt="Nelly”s Heros Earl Haig Club Bar" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -659,19 +666,19 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/598799553_1425997292868451_1532680115163955929_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=FunxIpKom54Q7kNvwGI4P2L&_nc_oc=AdmUh9WgodeP57xWAhZePMTUMNfWNQyJDjH7_pLUe7gFW542yXxnmCoTCGlwW_mquJE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=MUzmZhBkBUzC3mAzibhdRA&_nc_tpa=Q5bMBQEhCPLAUpmnxSfqsCOu5GA--lxYse9tXzLc-mirUOY7T90LSyoEkimtBjxno3lpyWTVl8O32TkT&oh=00_AfqChfDygDXAvz6mbefB9SMD9mRQ7xHJ5zbcja9yRQbf6w&oe=6963C781" alt="Outback" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/598799553_1425997292868451_1532680115163955929_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=e6T2Ob7_OXoQ7kNvwFSqh6I&_nc_oc=AdnJf2bxQRlvlIHfBbvbNZ70X8wRuylAn5PQOiR0YrkQdkisYuKPxD9cRNVm0sVwSfc&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=nu9oHGMLrP1P4_EHiXK9rg&_nc_tpa=Q5bMBQEvNiewqlLj4HKWAw_6geqECm1QmN33pTxz3OxWwKkGb7ucAfJhYrADFxyembSkLN8EpHzjZmqO&oh=00_AfvRlfmnuDRW4mZhwPq-uUPxvncHyUldiXDCusUnP094Vg&oe=698CA601" alt="Outback" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>Outback</h2>
-          <span class="date">Last played 6 Apr 2025</span>
+          <span class="date">Last played 18 Jan 2026</span>
           <p>Concert Room | .The Earl Haig Club.Crank it up — Outback are back at the Haig.This powerhouse classic rock trio return with a hard-hitting set of timeless rock anthems, big riffs, and no-nonsense ener...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/582987884_1401665345301646_1581223936993479801_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=gtEOCGCYvSwQ7kNvwFOzt5Z&_nc_oc=AdluaHrhMwfIMyM4WFuo9akpCIZXUcA91f9c9nkyzqawgiYYPduuBnBCL8d6yN1JHc0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3rtfzOY002gHGg6gJZ8M5A&_nc_tpa=Q5bMBQGB7a1wj5MA48nQUo5lU8KEV5vnbhWgP8eXv4Zrx5kirCGL6F5bWyPSE55224moiHNB5TOiVqGG&oh=00_Afr_WgC2SgbGdK9z0Nh37MTuSQMRK9Xh7PYJs021HJOzGQ&oe=6963C458" alt="PALM TREE ANTICS" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/582987884_1401665345301646_1581223936993479801_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=esn_ZUd31REQ7kNvwGtBinW&_nc_oc=Admcs49OSBLGaXJiW0L-6IzNQ29UjhautrHC9Zgk-zzYPNRye0KpUSSS5Sns4kmZKuw&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=iTI4pCk8t8rWqKR42p59dw&_nc_tpa=Q5bMBQHbg4G1fDfgTCZ88GcuzzuDihU50sYwVKfdfskQsQVFw0AJqjSH9mj2YLJgrULJpZswDoar4wIQ&oh=00_Afv9FQ46fSHzjrIbQH6EYewDvrLwoTs2C8jSUwbYnprpHA&oe=698CA2D8" alt="PALM TREE ANTICS" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -683,7 +690,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/584429176_1401666901968157_907272087649572374_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Kl-pJv2iBcMQ7kNvwEIDqxo&_nc_oc=Adn5_vx-yFskbt_RdwqrAhggu8dHw4Fc_OoE8D4gYLJ_6i8z-xV3BdcCS0uWYAAmieQ&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3rtfzOY002gHGg6gJZ8M5A&_nc_tpa=Q5bMBQFUzUzWEjEHR91NaxMv7nH0D022DaS5-AlWvzatbr5TY--ueyE8hIjaYZWJanGT-EijjUEC5TzT&oh=00_AfpTJFRZhyR0fe9tHrg0j4Uny7bQZvvmjdO2rbZEv7lg7w&oe=6963D3AC" alt="PANIC STATION" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/584429176_1401666901968157_907272087649572374_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=R0apBKsX3WcQ7kNvwGJL2jz&_nc_oc=AdnXO_ny-70GpZ7k2_Vmj2NVQtQWVv6V1bvWtADmYm7gKMH4bBnziZpmP-kISHinAl8&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=n1QcybKxyNE1mc_fDK0pUQ&_nc_tpa=Q5bMBQF5841WOWM--mES4eASdMK_LUujh_YLMPFdOlRYiBVPzN7tq6mX9u4T2LyPOdz0fWmj9GBWedzt&oh=00_AftN0S-1Vxch9G1TYJsEjT15X2A-XNZmSe5YnwJ3o_Soow&oe=698CB22C" alt="PANIC STATION" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -695,19 +702,31 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/506435203_1260395109428671_1278997569847695600_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=sZw-ArLYhcQQ7kNvwHLYJ4d&_nc_oc=AdnQWFtDLivALC3hS0FfzQzm3929cd2CC3O62cz4YgwcuAPS_EBIdsKksHlyELw0BxM&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=7LHehKJo8LX7e72lPk9seA&_nc_tpa=Q5bMBQE1ObCEL2vvAZBy_dmDsW_2zWlM4TIMs70b_ByM-S4LaUz7Tt-8lMaomSIAiXekfVqdJpzHUkQK&oh=00_AforxFjafCz86RtRnawI9G_-ecj1eWZGPksbVv9kvs08Ig&oe=6963E39B" alt="Parcel Of Rogues" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/506435203_1260395109428671_1278997569847695600_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=MzQKW5Y81jQQ7kNvwFCcS-p&_nc_oc=AdmDf_QchThxVP8vVjiJ3fAkYucDZKdzn8SFWlerJlIxJG01FxWwgy1M_HD5IQMbv7M&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=Nj3snM5y0F5e09xXt8VLnQ&_nc_tpa=Q5bMBQGW4m5BDnrC2_OMBMSC2OytI6QUppcONfuQ9H2dZ607UhVmmo2FufAs2cCpjOMQHJeuHNYjQnFH&oh=00_AfuRENadLa0WXwC3M42joTnbQPX7HInEyjstZ1UUkwqIjA&oe=698CC21B" alt="Parcel Of Rogues" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>Parcel Of Rogues</h2>
-          <span class="date">Last played 28 Apr 2024</span>
+          <span class="date">Last played 24 Aug 2025</span>
           <p>📅 Sunday,South Wales’ own Parcel Of Rogues bring their unique fusion of folk, roots, and rock to the Earl Haig Club for an unforgettable Sunday evening. With rich melodies, foot-tapping rhythms, and ...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492480632_1216219407179575_2222543731149256968_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=dCSUfcsSc7cQ7kNvwGGkeZh&_nc_oc=Adk4uG2dFBPjIvHLMxWbRTyEl4ioq3k9I9AW5Mq0i6u63brshA8jM3hQF7kEZ538qaM&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=B4kmk0o_FrMRxV0w1xq6Fg&_nc_tpa=Q5bMBQEjdpQrUmkMIkMpw4OuWf4lb9Ws4VvEGoNokd4ChAddgHStJM5FJWRdMvVhAF8trydm5PpkBuEm&oh=00_Afq2Bw_oyIGDalKyCXcWDZ8oLKGt33SDMjj1jXo51a-FpQ&oe=6963E4FB" alt="Proper Crackin’ Comedy Club" class="band-image" loading="lazy">
+          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492069586_1214457830689066_8767927161184724945_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=6caFi63NbQcQ7kNvwECHTBY&_nc_oc=AdmnC_mikdzgsl6S61BseL6ZfQmugjZPobqhk807Hw2Xnbnpd31Hny0Co86MNJNR4nc&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=qQHidx3M2bYRI-YJEAfCnQ&_nc_tpa=Q5bMBQFquROl5rJyblwDyKfwoxYtTlRvE3DJmafVHJtpKgoICmho0UwELS7b8oSRfKSgDSfFUhWBUAwG&oh=00_Afv7_PFB_tsldSM_nl3ofxdYgyDoaqrStlt1AmIUHZrR5Q&oe=6983677B" alt="Proper Crackin' Comedy Club" class="band-image" style="object-position: 50% 50%" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>Proper Crackin' Comedy Club</h2>
+          
+          <p>🎤 Proper Crackin' Comedy Club 🎭  A lot of you have been asking for something a bit different, so here it is! Get ready to laugh your socks off at our Proper Crackin' Comedy Club, bringing you top-no...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/492480632_1216219407179575_2222543731149256968_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=wRTaYlEThjkQ7kNvwGnFXSP&_nc_oc=Adng19x2XY-BCsCf2hfRoZ2VKHfOtxdGMzHtLtlsqBKWpe0vjc7z0NM9Z7ZMeA66g2E&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=_BDYH7AlFT4sl8Zf5YYOCA&_nc_tpa=Q5bMBQEP1rI6bdB3qIBBd5c_mFzjCWE0iD1I2X-LIHvI0CcSOijhSPH3oTctlUXzUCc3eoLzbk9X7PtS&oh=00_Afv6HSJum-nqujUPgYi_yK7khmJs2oNGRG2QBzicrthfbw&oe=698CC37B" alt="Proper Crackin’ Comedy Club" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -719,7 +738,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583805968_1401664808635033_4405761756406469964_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=nmP7Meo0EJ4Q7kNvwFW2fiZ&_nc_oc=Adl48KgpY8u5nVxWkoVNTr_Q_EnMploBZG34tiMJq2URz9hXKEkxAbcrRGnpQeAP0Yk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3rtfzOY002gHGg6gJZ8M5A&_nc_tpa=Q5bMBQGa1Wqh2TWg5ExyLRrZEKS9ykyk7LVo2hTfVKRpRXCdPHQ625tuS4Vjo2duqiWZxUgfH7ZYtnJ-&oh=00_Afr0aEObYNYowT8FEJgMlW2fxvPl0w_kd4TZRfzb6EwZog&oe=6963BD78" alt="RATTLESNAKE" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/583805968_1401664808635033_4405761756406469964_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=aBAMjzbxiPoQ7kNvwGFNaDl&_nc_oc=AdlIDXCBJRvXFvburGCfoXsAy42_sbx2xb9r1H3P5QqkPMDgNjAOtfh5xKm7R8rSAp8&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=n1QcybKxyNE1mc_fDK0pUQ&_nc_tpa=Q5bMBQFkRO4kfiT-S6ZmszkIPioU7TPKHls2oSZwAte-CxJAFuWk0G298sdanzolD7xdIKAYoQKQxWEt&oh=00_AfsEBLfjhInx86mRUv6IT8x7KS5J4Gt-u_PnRVukROJP9g&oe=698C9BF8" alt="RATTLESNAKE" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -731,19 +750,19 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583710223_1400875538713960_5765326343619818954_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=j06eszygfcgQ7kNvwGmn1G9&_nc_oc=AdlbEUqHmRh7QAqoLOVFs5NdbZ_nyBefN08Yxo9cLdsdefgblpy4wfcnsKpjRMF2FNc&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=MUzmZhBkBUzC3mAzibhdRA&_nc_tpa=Q5bMBQGbyc-Um7zVdZmX3XUQUH5XV25xcth6XJN-zMMI7m9ew2M9t2_Azh5FsGSK7nGMoYajO0rPWe75&oh=00_AfpGa0cb5mrPFlzael2lcDk7pgjfKdT58MbjTJo09GY5iA&oe=6963D2E5" alt="ROCKIN' 58" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/616400034_1454016330066547_418004618462476174_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=6f4heEpzjMQQ7kNvwFbSgFr&_nc_oc=AdnQFskjB3YE9eYv9Vg4RhzmEKssd0_DTiYdPABtSDPoYIBC__qnLS5PLAQeJyM_cKc&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=nu9oHGMLrP1P4_EHiXK9rg&_nc_tpa=Q5bMBQHQrQX_c2MM-trPHtMFsmDNZRfqCZ1i50J5sZlXnX6aAd6iQpmL_PS-AK7xSr3hdx_hXe-BUcEV&oh=00_AfsnbAqP3gj9H8puyc5f9tW9Mr386K6Z1AMXNKmkTIovMQ&oe=698CAB0F" alt="ROCKIN' 58" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>ROCKIN' 58</h2>
-          
+          <span class="date">Last played 24 Jan 2026</span>
           <p>Authentic rock and roll revival band celebrating the music of 1958 and the golden era of rock. Classic hits from Eddie Cochran, Gene Vincent, Jerry Lee Lewis and the pioneers who started it all.</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/490782179_1209092354558947_2943753018508866909_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=YhhPCzatFzwQ7kNvwGTxq7m&_nc_oc=AdnrjWYC9Hf6cL6PKnbTotEapI1t4hxc07OuAPkkzsObEcIBQIRv1FyXght2v2b729s&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=MMQuK6UQhBCa5ls3X3ilaA&_nc_tpa=Q5bMBQHa6FkETLH1WjmfB3rikQNELADhG9YlDEmkRDFOvFU6GEWS9gRyG0hFoSU0ykY0UpkDdCqsOGyY&oh=00_AfqpC70CPoDoWxlONn3Jbr2EBXC8kBABOFny8NRVknx6SA&oe=6963C9B1" alt="Rattlesnake Classic Rock Band" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/490782179_1209092354558947_2943753018508866909_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=yfwGd6HjJYQQ7kNvwHpwWDS&_nc_oc=AdmZ6EL1lpiUdGetYMnJeVo3dGXDGADAAGSqMvt6id_hcpfFgKSJ5tDPeSu3FujUSlc&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=feZECeigeFSZVSidwODLrA&_nc_tpa=Q5bMBQGCHQkZX4qtm4tzvuuzaCzt8k-IWGrydJ-Tx4-4l7MYQ0-Iw6Xh12AI43rJ4uRaEsENvvZcGQ43&oh=00_Afv8Om6dbK1eTlOVkTncVqDWWnn1qeFNr0PqgfQzB8yjDA&oe=6988B3B1" alt="Rattlesnake Classic Rock Band" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -755,7 +774,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/577062132_1400869642047883_1337673708271919323_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=xQmueh4ItrgQ7kNvwF3SvAa&_nc_oc=Adkf6U6FaHD26ICG-YI_DaVWUWa2yVh-am9jlIt5j6gu4ZwmeTmWiTr67S9P7pfPCLM&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=6zYnnVKkuSkmmz0A9CUWEQ&_nc_tpa=Q5bMBQHNw-AgtkrkLPpqtOux5vF35EBz8pBQQrSx_NV5InUupZNum1uxYs83bbHuOsMHxUVQ_g3uNVJM&oh=00_Afpq4a4GHRo5s0Z9Au4nTtZNwYS8WJijqEpdUYdyzOYJZg&oe=6963CA6F" alt="Riff Raff" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/577062132_1400869642047883_1337673708271919323_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=XQXTKx6391AQ7kNvwFAiYWC&_nc_oc=AdmE2AqrdBywkg8JcGYncjvbmzpofzQOa8OceQQQmyJQcXbSgOgpUn053i5kvfnuq88&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=VaFSwowgzKA_1Cqwv8Wavw&_nc_tpa=Q5bMBQHNtGjFbGXxQzhQTJ_f5yN0jL7bmL7iOIeQckSG-Pq9gIFONBhZGScBIpaXxSeOev026U8mDD8m&oh=00_AftCKd03pQXAjfgQZn4MNnXh8-7_BBasd2EZt8iulYJ-bQ&oe=698CA8EF" alt="Riff Raff" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -767,7 +786,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/496304269_1231529225648593_5516451108998395322_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ig13qxwutPEQ7kNvwF9DXFl&_nc_oc=AdnzqwpKIGkOKUccMNpXr6-9Xo60P-KrRgf5pFNnmOUjLfLMA9pifVCKQO4SSjwqaa4&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=oX2iRctmnGlWaJ2H02QbHw&_nc_tpa=Q5bMBQEliBYsp7UOvvK4Ned7TNe4mQSdi_UflKL38FRNDSn-3SlAX_4UzqPuCDpiW7OiBA-CB0Nb7k5f&oh=00_Afpcs4lJP_kOJY00IAHlf-VvbLtfKj3ZPrkxixT9vqDshQ&oe=6963E411" alt="Rock n Roll Revival" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/496304269_1231529225648593_5516451108998395322_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=L_41wzEwyIkQ7kNvwGfo6Ln&_nc_oc=AdnLYV4tzpW-FzMGK1Mf6RCjWhY0cZ-u60HDfI_Fn2qVts7sndfyVXCzMGQWPQlD5Zw&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=ViPHrEyOOOQzkYKSjCE9mA&_nc_tpa=Q5bMBQHA5eTn0vbO22Gfn67BKF2oADZADDF1qfe-biWezuTNajPFTIJAHIlrHEmlJbWjFTZrsXfHzmjc&oh=00_Afu6kQ1czYRPn1ROU_PFbQClOrVTCa8RrjzQIkPW_YJG1A&oe=698CC291" alt="Rock n Roll Revival" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -779,31 +798,31 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/517617045_1280473884087460_3025769533332448161_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=CK-cUwI-WZAQ7kNvwHTE3vS&_nc_oc=AdkXEDGN4k1xsoCBuhdUIcJj1UB0B8_pvpGO91g99ItgmvY6ZZkla3vcSJgKNXppCo0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=7LHehKJo8LX7e72lPk9seA&_nc_tpa=Q5bMBQF6j3Uu7_P27YE1AtPLWV9S1SVsxED5LAdzjrFtAIzE8aEyI8Fpbe4O4-O81y3xA3U7rKl7Bkty&oh=00_AfqivO6fwin_IzHltBlNVYo2sm1JFDU0MGxxy96jBiMwNQ&oe=6963B690" alt="Rockin 58" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/517617045_1280473884087460_3025769533332448161_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=9wBbhl5qSQsQ7kNvwHXTwGJ&_nc_oc=AdkLdmQGE2STbYromRlBROZYl76iPu4HHOrDlhliGjR0c_D0o5uaEieLCVBzg7sQqEk&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=rwXoUr-ZP3sATDOmPhDw3Q&_nc_tpa=Q5bMBQE7d-5IFdHEspf4Q2F7SKWguNcvxnrp6mx61Gg22-ae_tMeZwaU5OgRClRb9TXvC5ULuHu6JPsZ&oh=00_AftaeAohFLRwd_qcQH82C2jc7w0KxMJnhRKdv0vrHvj-PA&oe=698C9510" alt="Rockin 58" class="band-image" style="object-position: 41% 90%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>Rockin 58</h2>
-          <span class="date">Last played 29 Aug 2025</span>
+          <span class="date">Last played 24 Jan 2026</span>
           <p>8:30pm Friday, August 29th, 2025Get ready to step back in time and dance the night away with Rockin’ 58, the sensational rock ‘n’ roll band straight out of Barry, South Wales! 💃🕺Renowned for their e...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/565659356_1375448637923317_8043475755106798862_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=J4D__T_0b_QQ7kNvwEblJld&_nc_oc=AdlMwP1rMNuoQM8Xxd5yyO-mMJBoqc-8LHNZIQLCd_GWJigiU-qxGxe98BO57kl7zuI&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=SOtXQZT76_Vujs2vmlJC9A&_nc_tpa=Q5bMBQFMaKdGK95bRbDccFPU9OxHsYpwo7mJSimlFUXR3Pmtvc-HyafvwcVz7XHnen0uwjKZZOVG78qL&oh=00_Afpx058nsOWDLvMdnBWrl2cxE0U0fHn4E-m6IsdTFE2_1A&oe=6963C2F4" alt="Royal Scam A Tribute to Steely Dan" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/565659356_1375448637923317_8043475755106798862_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=H027Qqr3k8kQ7kNvwEWIkTq&_nc_oc=AdksGyYto_qJKIYpVf_x9SJ5TQWbt1zpNjZTBwqrJYxFUBLqBzUl-aIrjVO7hbysWEo&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=qaaSMQR57o44D51hm1c3Fg&_nc_tpa=Q5bMBQH2LfD4I0evIJaEeNV2zH_c4AcxAdHx5D1AwkOTL8ZYs5wUZRn2EIwNxT1YAlK-RjO8cDkXfhoU&oh=00_AfvP4OmULG4uga_dsCEf3DyWdYslGtBvhMY-5G9jaBW8rw&oe=698CA174" alt="Royal Scam A Tribute to Steely Dan" class="band-image" style="object-position: 51% 100%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>Royal Scam A Tribute to Steely Dan</h2>
-          
+          <span class="date">Last played 20 Apr 2025</span>
           <p>Wales' premier tribute to the legendary Steely Dan arrives at the Earl Haig Club for a night of jazz-rock perfection.  This outstanding six-piece band is renowned for its exceptional musicianship, del...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583324855_1401667411968106_2444133714064797480_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=0l2-GxPKyukQ7kNvwEKZH6T&_nc_oc=Adl5oILOvIaCj0r65FIwc7vSo4yd1q5yJqJ2Cjc_CNacy1vHlEy1pyIqE5bDCu4oa98&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3rtfzOY002gHGg6gJZ8M5A&_nc_tpa=Q5bMBQEVWS8pMMT2ecikYdTr3e2_NpVrCL8Q7OQeX4Gr5-nZzYmh7IQo7IjpIORAdSmSOLVlBXgahEFE&oh=00_Afo0ORawJ5v9SXI3tg6bDuHlxs7AgMAhLr1iPYDi7PQ_Dg&oe=6963CE9F" alt="STONEHOUSE" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/543400820_1332320752236106_5568857516233891720_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=g6_f-BivqbAQ7kNvwE1BAmo&_nc_oc=AdnYJC66e6_iChVYYIhKNZa-QAtK_huIi2FmzWjRrsNXkyqNFPlYSftF3YcFIoxFbEk&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=SpwLVCZk72o0RgYw4nSN5w&_nc_tpa=Q5bMBQGVHoLXtuPjXxA0wo_NIRcVBLWJOKiCE5wbirUN-fw3FtrGNXUXWH2CuNcloxmcGoBsoHffkUCq&oh=00_AfuFgCx4l8qpwnExhuikHNbBL4KkeopOha9Fkfv65qKY_A&oe=698CA223" alt="STONEHOUSE" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -815,7 +834,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/491169524_1209092311225618_1443133693030929650_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=oH0zSC5euP4Q7kNvwHwxcfb&_nc_oc=AdkrSalDXVdieIK4rIsSXJLiEHsrAvytGoxoayGvSti0t1igya4KfSFaAhEhfw__anI&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=WJlfQHG9REgs6_4SJ1BA4w&_nc_tpa=Q5bMBQEKNBWlRCWAYyU_JLQoiXjIDz6CdME9MNTadrmVUnVrTl8v5rW11YYJYC6Nxquoe_Zi7RO5dnnM&oh=00_AfoJunr6s7TzB9E7dqWp7m9gBln9EYHotGMVRr3p5GZJ6g&oe=6963D782" alt="Sand Boys" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/491169524_1209092311225618_1443133693030929650_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=WiKHOeRNlKcQ7kNvwF8IpF3&_nc_oc=Adn5AqwTci5rKFKkODdoA1q1aHT0Mbv7_D88pOCmzG7mhWZYfCi4cBluwR5dQip9GvY&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=SHkPbUE9wdKQbQqYT4bmgw&_nc_tpa=Q5bMBQFxPI4efJTFgtDw5UbTnI_ODinLv5_yVdm6-KRnn8AmZhyWy-qqYxU0ODrKttwnXZMr22lCk5n5&oh=00_AfshHUHGDFAEcF5kDF5TLqKg0fhEkIJH81jvudOVjBwwZw&oe=698A1302" alt="Sand Boys" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -827,19 +846,19 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540678251_1328807105920804_943006752831926568_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=sRxz5Qz49VsQ7kNvwEx54n2&_nc_oc=AdlrRCrwZfplPpX257KXIVK5TNCUSC-qaPn6PQzzH4OKSWTsjTmxizVrX_qoYdT8kzo&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=elv8ZRc-zhZn2jUuo-2P1g&_nc_tpa=Q5bMBQGGHfwnykEAjQ_KT1yAp3Jwt0mMcifeI6JmK0WgfK-s3WX0U29JJPjViXA_Y6RYoYukUoKlpyOQ&oh=00_Afr_H8jLyrDe5VYM1G29bdiNTFlWtZmLN2OGZhRWQ6Bu0A&oe=6963DD13" alt="Sandboys" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/540678251_1328807105920804_943006752831926568_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=OCrp9EZQzfAQ7kNvwH0lg7b&_nc_oc=AdnydjWQcgpKsUw5YXs9A5v1lPjg3KUCh81Hs5_JG-NLmVUxIu6UFFgO1ywbvstkp-w&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=Xr_EP_gy4ugDiH7pZU9tNQ&_nc_tpa=Q5bMBQGUvrtBZgRKzu9qs7VtjnXgAEyIs7fni6oXDODMwHPwHaW8qGcmb1pM3lQ5Gz6B8eerhxhOFS9A&oh=00_AftQpHyMa-5qTvgxksbfA5n0IRrfFrufA4qxghzW0ytrJQ&oe=698CBB93" alt="Sandboys" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>Sandboys</h2>
-          
+          <span class="date">Last played 31 Jan 2026</span>
           <p>Christmas Special – Friday, December 19th, 2025The Earl Haig ClubBrace yourselves, Whitchurch – The Sand Boys are back for a Christmas blowout like no other! This Port Talbot powerhouse always tears t...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/499688331_1235955838539265_5810158122795151409_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=W_Y8nF1oVH0Q7kNvwF3bYQM&_nc_oc=AdmTeqvDKz78XOIVMw52LpDUWUva42QXpbzluKi_8uItOBgRNqiPaT1Kq9_HECneUn8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=49-e91tSTOZi1qDmWZMjZg&_nc_tpa=Q5bMBQHQumIVdeMJk6mNamZPsIgfxuQPjWXfKJlyioZs5FQDrKet2tmooCiM5Kq5Xfaft1PiUzLD-QcK&oh=00_AfpaiGgam73k-ZB-QhXJl9fsYsEH40rxJA0wopphiMARxA&oe=6963DE9E" alt="Scotch Corner" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/619278914_1459119056222941_4326111485805534110_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=YlF_a-YHZ8UQ7kNvwG_iIua&_nc_oc=AdlT7-8PR2MSJ-AP0hKi8W4Zsl_kIOxBjkY2Yt6rnifB4WChygHMY7nr5AR-bPaoJu8&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=8UomHb0ZKxP_qRRSOKotfg&_nc_tpa=Q5bMBQH-GD1j5a1Uozj7vbVO34LNZU2LgX3WIi8QwqUMvSmcSx0lRkpKUViA9asIzzJgwqQuZpt7M8JF&oh=00_Aft3Z6CY2W6sG0BZumcfRxkj9Oj3JWy8dUtoBVQtRceNaA&oe=698CB228" alt="Scotch Corner" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -851,7 +870,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/518092169_1280514230750092_43013902396723937_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=p6cxlMGbSsIQ7kNvwEYQS40&_nc_oc=AdmPxYP0s5pMh88xZ5ODevdZ60zo9TFLw-DaLkmvMCkaflShytPMUYTvXswgqF0PrQ4&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=bfnolEobSCCIoxY5vsy_BQ&_nc_tpa=Q5bMBQGnN1ObVmb-blP_Qf78K4GI-OUZF5CFnj64qoLUPWYRSUEe-FOpV3rY-2vzD_uoyzOLJWlcii2X&oh=00_AfomD2NYUFT_9Pl_vg3QIk2kaxmGGOdSSp6UNo_sp0Gc9g&oe=6963B1BB" alt="Second Chance" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/518092169_1280514230750092_43013902396723937_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=zAhVLDhKBWsQ7kNvwGZO0Zu&_nc_oc=AdnRwGB8_Uu_oj-53pG4zAuh8zH0sG20UDxst-ge-mHePv1kMZWFh_ZWsT34sAQjq0k&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=sUZLvS5uqxpPn5Ns0nDjIQ&_nc_tpa=Q5bMBQH-YLVQwuMNHAO6kmfzfw5VHntf2GUp8EMFb387aq4HkCeFwwZ1s6CgCksfDdofufTtLT3iVxJI&oh=00_Aft-vfqI_jv42dqUNwiM1Dh65Qd26rZwzZnfIWA-TxNxzw&oe=698C903B" alt="Second Chance" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -863,19 +882,19 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/606027088_1436485415152972_1472662522619398934_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ZsYHmd4lVqQQ7kNvwGZC5Yq&_nc_oc=Admh_8AChn_0AJW9jJctiBzziNsCPGfolAekoyL22lZGAb3xMHmGRGFPyoQIU3n64L0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=MUzmZhBkBUzC3mAzibhdRA&_nc_tpa=Q5bMBQGzdOBYavliEGtIiUoqGPsJHodtoa8qnaH7Vx_qTWdcCgklT4KyHPWHetyNdXPsJC-GMhEhhTc3&oh=00_AfoJ0-gJPanVF8zFFQuxfXdA6Bp4nJsWmEg9gzs1iPz2LQ&oe=6963B977" alt="Snatch It Back" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/619521771_1459100702891443_4691166014280859736_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=DAcPAJQE4X0Q7kNvwHulwit&_nc_oc=AdmyGvLgVoQj6gdP5ymmV1m7FU42tz5OscZwXDRa9iUXAFQ-obvUKajiJc_dYUAWGEM&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=nT44iuHD-eQMkXv6RO0eNg&_nc_tpa=Q5bMBQEhKaS6uHe4N5X7A6OIvTel4CDofcgXg6g13Kbc3thAEyZwtmJK4aWxG3zv_zsOZQuxADMZmicT&oh=00_Afvv9s-a63t7QqUmxx8MHAI28OaTIbxam3vRGh7WNyZ8GA&oe=698CA257" alt="Snatch It Back" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>Snatch It Back</h2>
-          <span class="date">Last played 13 Jul 2025</span>
+          <span class="date">Last played 30 Jan 2026</span>
           <p>Get ready for a night of no-nonsense, hard-hitting blues as Snatch It Back — widely regarded as South Wales’ number one blues band — return to The Earl Haig Club Front Bar for a powerful live show tha...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/494351301_1257023723099143_1296472844271234349_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=fGs83DjhxmMQ7kNvwHSxEI5&_nc_oc=Adl6YzXbbz6k83R9OSRHWeLEbDIfX_R9QCgOJBxvKpvO2qH0w_DL1aAT6237ZcEo6J0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=aqTHHJyT0ajlnTIAPjSQ7g&_nc_tpa=Q5bMBQGTo2khybnQB2jZntTwWmRjkIX400AIav1Lq9C_FkpgHdynvqQ4GQC5WupYy8n2ye5KrLqFKLeM&oh=00_AfrUwE_dewLSRi-npT9I-YM84bac37kn2fO_GVL9afNnYw&oe=6963DDEE" alt="Strictly Accoustic with Mickey from Folk Roll" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/494351301_1257023723099143_1296472844271234349_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=RVHS4TdA-rsQ7kNvwG1Jpkb&_nc_oc=AdmmNwOwUDGO6YH9qyOqpU_AmjQwYaWNCj0NANa94y-obhQaV1psJZOBuA_w4OqhyTM&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=cvWn6LggMWnD72yF2cJIvA&_nc_tpa=Q5bMBQFYjnW_SAAakRIyqTeQJGQbXu0C6YDTmpYWSUnPFrMGVpmrRxezspIMxOrJt7LdZ8HawMddRD-t&oh=00_AfsGmB3mYi_AUvyiedFVKbuqH9vI1-ekuszO-0d9hcNLew&oe=698CBC6E" alt="Strictly Accoustic with Mickey from Folk Roll" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -887,7 +906,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/547185423_1339521051516076_3876989940710146137_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=udvdhBJTAIUQ7kNvwGjIvVu&_nc_oc=Adno-d-dk2Fyf7rXLazYOud5ce8v67z7j_XfU8gXjDlaiiwKbLGhLltxbs_1Uw6FABY&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=6zYnnVKkuSkmmz0A9CUWEQ&_nc_tpa=Q5bMBQFq414l3pb9IUnagpK4jxGLZt3eBODMLisOe2wxr04X1GMeGm5VLPjZ11i1YUXjxrQtuLaLeIr7&oh=00_Afq1oCt9G6e7qrRK83nOvw2WINPyMQf_E9jZKr32DpYm5g&oe=6963DD33" alt="String Fellows" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/547185423_1339521051516076_3876989940710146137_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=5n8bY89L_EgQ7kNvwFxGx71&_nc_oc=AdmBNqCNMqFk4hxER8ZkFObDL9qqj7U2OaLe6imWqAmwkibFuwIal5zW2lqg8GVBgjI&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=VaFSwowgzKA_1Cqwv8Wavw&_nc_tpa=Q5bMBQEufPEtO4y4KLWsmftxLX859wZR_NH2wSw6tprngMeKyUvVfLvQJAghgRfl6BqopPNsaRBU8o_G&oh=00_AfuA3eEyubQ7Div87-OSS8r2IK1SNPtAsEUX4epGZkKUkQ&oe=698CBBB3" alt="String Fellows" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -899,7 +918,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/499427086_1239397101528472_5543009948499774554_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=MyXItt-T4-QQ7kNvwEgM-lt&_nc_oc=Adl7u55PNklf3nspxlgO356qG8O83ULO6Dw_7Iq4LkYk4tcMcmdHERNlhghJXtQ1BTw&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=aqTHHJyT0ajlnTIAPjSQ7g&_nc_tpa=Q5bMBQHBmLyKTYjGmYFri0DpgWWxmxTH7htjccItUpmYHrmNPytgLYh-CtWefO0ZxwidqsUV_37mc6vN&oh=00_Afo2N4D_qpFeXbY_vqkYTyG_UGWiHLjgP09DFehO0v3nEQ&oe=6963DB9C" alt="Sudden Impact" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/499427086_1239397101528472_5543009948499774554_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=g_qEDfqKDkoQ7kNvwG8cRUF&_nc_oc=AdnH83obmAzAoTaceYGfCWQkWUpPH9pZSYpt-8Bg2gCh0ph3WUbqJcbVhmcD4jL4P30&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=BLmZZLwekf922fOnMP6_jQ&_nc_tpa=Q5bMBQG7OUMLIa-gO-wV5jVDUMwyt1jPXcmm2bM-vJmZnQ920pDDHKpw0NSrKQmz3yXXUxwHN-wKC8ZC&oh=00_Aftn5SJSTFSMN1_pnzbD1Q2bDMObP8KUE190_cGEiqubYg&oe=698CBA1C" alt="Sudden Impact" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -911,31 +930,43 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/585146516_1400876292047218_4033176376429697068_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=22ZmbRH_zAcQ7kNvwGUG7XC&_nc_oc=AdlPjBXIof6QF-KBX2mFtm35JAQXFBLrQsjIjHUxmwb-JcKVrLSoMsc08Wu1-EVeM4U&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3rtfzOY002gHGg6gJZ8M5A&_nc_tpa=Q5bMBQEMFnc0JVqLmqGc5dssXGASm58ilrR4OKColHHb8HH8X1B42mOo3QBl1e6FaMMyS3LnWXfWGlfK&oh=00_AfpQoAafMVjbeIqwmtUWL4jwgfzemVa5gGIx2xHJ9ZSlaA&oe=6963C5D3" alt="THE SANDBOYS" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/617798472_1456614866473360_4700415527608385048_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=fWMq96q_0akQ7kNvwHbNBeT&_nc_oc=Adlu3E-R-qWpWE2yQ1TiVGqvtxxR8D2ZDChZ_dA6EdhUEApe5idQYygddGIbEYWxpkA&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=iTI4pCk8t8rWqKR42p59dw&_nc_tpa=Q5bMBQEiRaSHBEPLsLmr54KJ-Qoab1a4BgdKHWvFODvyTRET4mxw96wLEDAenf0wFyAmYZzHdolgB6Ya&oh=00_AftdpSUz30ObKBAuDdp34KZFv-yGlMkeCgasHplprnOuKA&oe=698C9A19" alt="THE SANDBOYS" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>THE SANDBOYS</h2>
-          
+          <span class="date">Last played 31 Jan 2026</span>
           <p>Popular South Wales covers band known for their crowd-pleasing mix of classic rock, pop and party anthems. A local favourite guaranteed to fill the dance floor.</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/495233697_1243455004456015_2732043991235998904_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=IBcrC5Va1XUQ7kNvwHQpLJE&_nc_oc=AdkR4lBDd4tQ9_jIzI4L-1Ry6AFf9Ix7YJvJsceoYL4PwvSZcklC996AhcndvjEtWU0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Q4MvQvy7ht9fB1F1X_1-dw&_nc_tpa=Q5bMBQElipUAzGd_VlqtHWCfZ7tXTNgjHzQzhU-e24S4P6-c16dzf8NTz0gmvU0Mu3Lxte6DSLXaALiZ&oh=00_AfpnkO5nK_TKHcKr0QmFiTW1M2yggHLGPKVGYsISCUd-tw&oe=6963C761" alt="THE SIDEWINDER BAND" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/495233697_1243455004456015_2732043991235998904_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=J8P2i_3B-G8Q7kNvwE8nk12&_nc_oc=AdmGtMycKhHGBT-bsFq4dl3Wq6iSbndLSFSUCZsxp6LlLBfx15p8iDgSkp6l3Rb5VE0&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=jGj7CvjuI-MazU271-bB2A&_nc_tpa=Q5bMBQFBaeeFVsg2HG8ptFFT7vu7mXpy11vcEsnGTHVA_7ORBokpPZor6lp-p7FUcFexMVZTVR3tpqZp&oh=00_AfurE6_m2AS60cnBMFmQaTNjJS4aX9Pj-bV4oMMjNmMJRQ&oe=698CA5E1" alt="THE SIDEWINDER BAND" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>THE SIDEWINDER BAND</h2>
-          
+          <span class="date">Last played 1 Jun 2025</span>
           <p>Sunday, June 1st, 2025•The Sidewinder Band Straight outta the Valleys, this powerhouse five-piece brings the thunder of classic rock roaring back to life!Expect epic covers from: LED ZEPPELIN • DEEP P...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/583613233_1401665811968266_3352676807259897880_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=GlB6pRDKppgQ7kNvwGEAz2e&_nc_oc=Adk3COsLElLx9nNWkNH04DY6MJTskC_sc2XYEKxLPoRNq4Y2kS7nHgrrTQ819o_NevM&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Ubn2qYcCbqYNVkjdpRENRA&_nc_tpa=Q5bMBQGoMD8CwiIf1MsL-M3G-v9REnLTE4TKUnTm-CXS57BMs3QsyWmuII8fFe9w4VMb1V0DLn6_2T6d&oh=00_AfrTpp-RzOPQUvjqFCh24XoZ1USByDqgcGRMa_Q7rqKlUA&oe=6963DBF7" alt="THE WILDFLOWERS" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/618660007_1456624306472416_4752806071724992865_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=GFjZV-6rJ58Q7kNvwFZ39uZ&_nc_oc=AdnPwIXl_sTVmTqE3Nw1C8ChHFBBA9CfsorE0u5m8sxPggc_d7lc5HLMTiz2vk2xC3g&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=nT44iuHD-eQMkXv6RO0eNg&_nc_tpa=Q5bMBQGcSyowbvYPIV9oUKvo8Kkolbz9EAQogjOKmw6iHBU4IcrQVwWla5o8hyAj5tfysapOr56WDoqw&oh=00_AfsF0aBMwt9lJUbJWbkqaNQrv-09O_-ac4dlKkGfXL-8Ig&oe=698C8ECF" alt="THE S’PUNKLES + VICTIMIZE" class="band-image" style="object-position: 50% 50%" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>THE S’PUNKLES + VICTIMIZE</h2>
+          
+          <p>Well folks… It’s happening. We bring you a very special Sunday special.  THE S’PUNKLES + VICTIMIZE...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/583613233_1401665811968266_3352676807259897880_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=EqrpBJecyP8Q7kNvwGfOK88&_nc_oc=AdkaXzLIejIdu_SZ-PkvBmxXzle9dipzOpTq7cLck1k_M-tRJIMwsrHbTkWW6wk0GkI&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=8UomHb0ZKxP_qRRSOKotfg&_nc_tpa=Q5bMBQGDRrXHKrEQCB2z0jDirFCXrKrU7M6QOsxqyqTMb8u0m7ARJ79ILXSaxA5XGHL0xBg7ZyWePlaw&oh=00_AfvFsH3_I5myaHcSp9x-YiyuvdK5bvX9d36DxlGYeuiy7g&oe=698CBA77" alt="THE WILDFLOWERS" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -947,31 +978,43 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/494152937_1218258056975710_8344471692218966010_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=dudXQKK9JBUQ7kNvwHYjyBM&_nc_oc=Adl5VJ9VKQnA_FrVhTfbMcxT5qneoqou_Hsj7gHhxvbd37MPdrSHU2lKojHa1vtGp7w&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Q4MvQvy7ht9fB1F1X_1-dw&_nc_tpa=Q5bMBQEdfm8k4Uys87ST5a-BCH7d5DMHJ4Vql4i6EeEE5xqeKPtCGXRQjhH8hQ44F-9duJyjCCtPx2gs&oh=00_AfqqFq7QErSXM1KksbF9WXltxFbq88Zg3az2I0NKnCiEfA&oe=6963B371" alt="The Blues Sisters" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/618532565_1459110449557135_5088577451776934727_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=SMrtYNxEy1QQ7kNvwH25YzN&_nc_oc=Admkzn4_IXUnhCgmI7ZzB-n4QvGpfA8hcMiZ8ELDk_w9K44wUaMLnevvbizJwTsYCr0&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=D2iFONcIO3wySzeAMxB6Dg&_nc_tpa=Q5bMBQGv51Zr5Rk6qM3qX0vGj4yl67S_ILuAgagfsdGV0oWsNnS3Z7M1raPlyrQ9dnLLxQbaQjFP-SJa&oh=00_AftBejlRzTsOmceZocn6-LiDyfFUj-kP51GmiD3qAIWs2w&oe=698C9A8C" alt="The Albino Frogs" class="band-image" style="object-position: 50% 50%" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Albino Frogs</h2>
+          <span class="date">Last played 12 Apr 2025</span>
+          <p>The Albino Frogs at The Earl Haig Club Bar  Free entry</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/494152937_1218258056975710_8344471692218966010_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=NLWqiwg9wJwQ7kNvwE9B7_9&_nc_oc=AdkavZR73RjvHvnqnxA8UA12W1FDkSds5M76gu33gZ1L5bwD4cy0kbYEMOOZ56Wob5I&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=6rplddTw2yTtdIJsk7-kvg&_nc_tpa=Q5bMBQEb0Uu9-8yvKFAePrSrfmVax2SL5w77yycy_eTkCpLHFFZaIZvtoq70acA_bMTy1GQchb6SOe52&oh=00_AfthITIeQtpdBgJ7V6mZ4Le2YlwdEh_QbnqYJJDWYlNJ7w&oe=698C91F1" alt="The Blues Sisters" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>The Blues Sisters</h2>
-          
+          <span class="date">Last played 27 Jan 2026</span>
           <p>Get ready for a night to remember! Join us for an unforgettable evening of Rock 'n' Roll, Swing, Country, and Blues – all wrapped up in a high-energy, toe-tapping, dancefloor-shaking show.Bring your d...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/518117410_1324759669658881_2924064307611654607_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ecKe1xMmSngQ7kNvwERaDHY&_nc_oc=Adkp_mvE6bWfhLwD7AADFC9rmgVcIDXRQ6ORktoZy2NPnu1DNkQf9ZHdmageb7vUrDU&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=vKwJ64-4fLg-cQZV950bLA&_nc_tpa=Q5bMBQE1jgPfvTggponbAFi8Ts_L4mT5GCK5beAG8n5VyXCmdiW2ZO0CdLJTbgZHj5n3bldqgCI_kyrR&oh=00_AfqlQLPHEI4Gk4i0KbrfTIyt8Tioi7reqyVQ4PrUr_DksQ&oe=6963B240" alt="The Bluesters" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/619025721_1459111402890373_7964306797892923409_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=kwG8jDOLFq0Q7kNvwHA87Io&_nc_oc=AdkPMQ9XyCiVqQOgZEP5baV23QgDyE3SskaUsVj_ih6pe5dmmOaD6Rm3BciYbf9pjEU&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=D2iFONcIO3wySzeAMxB6Dg&_nc_tpa=Q5bMBQH21lrwYaRhYEJpKkRsU0zyePWO51dPtCnVgiGdbktcRg43lG_ng38WIiiktW0T_bD9JjatsxQe&oh=00_AfvAhU8tkhy3qhhtog2Cw9Es0rPKkuE4R7kvnQmD5Z-Hhg&oe=698CA153" alt="The Bluesters" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>The Bluesters</h2>
-          <span class="date">Last played 29 Jun 2024</span>
+          <span class="date">Last played 6 Sept 2025</span>
           <p>The Bluesters are usually a five-piece band, consisting of guitar, bass, drums, trumpet, and Hammond organ. Occasionally, we have guest star soloists, bringing our number to six. We play a mix of blue...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540431638_1326326786168836_1225704233347092062_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=kp65LA3Ld_sQ7kNvwH_CcNt&_nc_oc=Adkhyze-D9sTakUKSLN63wNDBkt6F8e3WRVz40Z3pssbub8k-REozoI0uEwrh8u3d9o&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=bfnolEobSCCIoxY5vsy_BQ&_nc_tpa=Q5bMBQH-PzWyeKorIAC6akW37De7w6yZ2_x5IMAKnvhOO3oo6HjJ0Und9McWVyCpDSCfMzIGFmfhYXyV&oh=00_AfpY3DBWes2225ji0XTT4yahniDZqWCmynODxygJgdfvjw&oe=6963DAC2" alt="The Flares" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/540431638_1326326786168836_1225704233347092062_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=1DjfDu7ulXoQ7kNvwGBUuWJ&_nc_oc=AdmI6GWy1qRPd6wrdHvbMqYCe3skPs81YGSL-uKcaCFtXauJnKU-R4OhXSqB1WHjorU&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=SpwLVCZk72o0RgYw4nSN5w&_nc_tpa=Q5bMBQEowBL4Ql7hOBQiVQbIQ48BsY_6nPoBKPLGMnrdQgugzI7RzAtXlRhWL__sBA4uSdNAu4IZCq0g&oh=00_AftJB78wzJLd3ESFFrbST2eHl5S46AN3hCgb_iXbXZiv2Q&oe=698CB942" alt="The Flares" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -983,7 +1026,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/494700085_1228647442601561_475993999915600769_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=lOGdB2_qHkIQ7kNvwHZVgJi&_nc_oc=AdnaZYP0rGdqhpZ-LfTeKRh80GdWI1OXNQc9s2pZ75HHP_2LMRYkQOGvj0utTAxFwQo&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=oX2iRctmnGlWaJ2H02QbHw&_nc_tpa=Q5bMBQHcYZlS0UZX_HEkpLUv8tvpWwopdRMQM5EDwBWBovrmZbDqblrmCRAOQh5DFwd8bC1QyR6KRyPy&oh=00_AfqC9kOGlcV_Y8MxHOBzvF92GDogCKdOEiVZESpq1MVhpw&oe=6963E037" alt="The Fugititives" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/494700085_1228647442601561_475993999915600769_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=fmR402rDMIQQ7kNvwF-8TM3&_nc_oc=Adn-pgBThR2g2srN2NCq2DdY882Vf3u6TOw3R36Nk6KsyPNLdyfy8iyTFDwL3j_1-N0&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=qGYfFMP7VNO4Dz4sRlgrMQ&_nc_tpa=Q5bMBQFKJzH-pKtwnzXTroVaiZ1Js_omgINzeblVHOgefJ85oaJmdgaWhNmmpTJdD9SQXAcLCDi_HjsM&oh=00_AfvnCyc_9HOU1GE8mCndygBirOjuT4SEdVz2zJcsrK75sQ&oe=698CBEB7" alt="The Fugititives" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -995,7 +1038,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/511810854_1273774078088897_9062111406318551819_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=iVwggAvPJUoQ7kNvwE2B0Lw&_nc_oc=Adn1Wf9rnmIDvJx2NSOh29N0JjDLfGiMEkV2f2wDfnQvgSsX58mjdX3qaoVMH_s-vVE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=Jct6BaNmhnfehbvpCkA4fQ&_nc_tpa=Q5bMBQE6hECmicT5epMv--ambMc4tJDIf7QMYOaWNwT4SCdr7Cle5dUypp7rcNnrAXq5MY4ntyNGi78y&oh=00_AfoJyqAJLoE4kU_HBE3qpwfE87vESoA17YSZ6bTIVFdIRw&oe=6963BB8C" alt="The Fugitives" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/511810854_1273774078088897_9062111406318551819_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Gw89ozPu5MEQ7kNvwHz5Cg3&_nc_oc=Adms7yQq-7_MEgaofdQ_g9RYVID9fnKyPHZIlnIvU1l-BZk96KQnMYClWEuhlBUubzo&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=P9iBrCmWz21oTpbhMggjTw&_nc_tpa=Q5bMBQHjzjn7VlCzCQdAiQ6iMLHAaSF-2U6SQnyIfITbEeYU8q0_1f9J82YMTRU2-tWUcGSSOwslE7Zw&oh=00_AfvLtLW6a3FZV1El56fI-fF-3e6SGc5xg1OCpo2spr1M6g&oe=698C9A0C" alt="The Fugitives" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -1007,19 +1050,31 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540626794_1327554619379386_616911358534366615_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=V1KN4Fcg7EkQ7kNvwGfExJV&_nc_oc=AdmPFkpZvFhET1MkO27dWp4cbRdrpx60jHAYIAx-5LHbzm4_MCpr57M5nr93maIdGk8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=gFaU0tDieUGTL8PrExIwyA&_nc_tpa=Q5bMBQEKca7RXPGZNDUI5LS5m8-akIHcr0PautdJNmHnUhewbNzOpgtEMwtGpJjtC7YDrBrYPK_DxDWJ&oh=00_AfojdEG8cWNu_TWMfnQSbdhRPkoPAA3j1PO4hKeLQAL2eA&oe=6963CF5D" alt="The Hindenburgs" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/618987384_1467639072035729_7407714145577165885_n.png?stp=dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=TDd6KWVRukYQ7kNvwHvTk8x&_nc_oc=Adl3CMcz2AEQvMMeFTU2kMFaJFSGvQ_ajZtsLv5HNAgo6spgRKC68w462HIOWhFlWcE&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=nT44iuHD-eQMkXv6RO0eNg&_nc_tpa=Q5bMBQEQPrutwC77kryjWlS0YeuRnvQMSuaDR0_b3v39jtkXU7Ln3HWAPGPdTkUAOdzKf8wi7szLWVdR&oh=00_AfvDb53fBIL4IcV5IDiuEUiPoeznEsmbg0kovAuC_vSdnA&oe=698CB168" alt="The Fugitves" class="band-image" style="object-position: 50% 50%" loading="lazy">
+          <div class="band-image-overlay"></div>
+        </div>
+        <div class="band-content">
+          <h2>The Fugitves</h2>
+          
+          <p>The Fugitves at The Earl Haig Club Bar.  Clear your schedule and prepare for a full-throttle night of rhythm and blues as The Fugitives, South Wales’ premier R&B outfit, return to the stage at The Ear...</p>
+        </div>
+      </article>
+    
+      <article class="band-card">
+        <div class="band-image-wrapper">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/619402617_1459128312888682_6730656541214042330_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=L6PXduukgOYQ7kNvwForpUo&_nc_oc=AdlM2Uf7TkePz-RKfVM9Ak5EIk6JmFhpTDKUv0eRv48ugz6XFh0iAZHtm4BHVMAoS4M&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=8UomHb0ZKxP_qRRSOKotfg&_nc_tpa=Q5bMBQEbgnuwM0wWAAY7oI8F0qdEDQAxIWv73G56fcq_698-7eLfsoE3ZHbrsaxMsjsOMcHwnKzcm95U&oh=00_AfsS-F6CKL_nhWmvQXi40DLhqnURBLURaxZ44x0Nvh8pcQ&oe=698CB95D" alt="The Hindenburgs" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>The Hindenburgs</h2>
-          
+          <span class="date">Last played 5 Apr 2025</span>
           <p>Saturday,It’s been a long time since these boys last played here, and they’re back with a vengeance. Outstanding musicians one and all, The Hindenburgs know how to bring the house down—blazing riffs, ...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/510461551_1266560552145460_7358441881257195708_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=7XELSwiEy1AQ7kNvwGdlWLZ&_nc_oc=Adl0cJlF7EM6PNhN3LQ0lQf1G-BgE1eNCI159PMEXKf93fSPnjideWY7PaeBLy3vwwI&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=vKwJ64-4fLg-cQZV950bLA&_nc_tpa=Q5bMBQF3jKebkpxxo93V8OiiJL5I8o6hzmUbLIV0vPo--95vO3CzPvUe68DXJy5S5YkP-YkNWLiDb4NC&oh=00_AfqtuHL3X2A3uPwLg55mOLBCOODNLOAmQYo7VFRsiKkbow&oe=6963C22B" alt="The Jedis" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/622848049_1459106322890881_7388300897504956151_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=DFGsGuYcVmUQ7kNvwHORn59&_nc_oc=AdlKVlSP1A6sEHn8UQVdgpu8y_h1zTbUYu603zMfbI1z9CWQyKXEUPtqGAXY-Xq_Ofg&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=nT44iuHD-eQMkXv6RO0eNg&_nc_tpa=Q5bMBQEvHbKvTRCmNVaJ3xiQvXXTDwl26nTbmV7E_Q8tYzfP5JNq7mlk96nAuwlFpyfAAxBEdZ-9A0Nu&oh=00_AfsJdiZ8ih48ynOC5tljUsiFFj69Tui4b4kK5maAeSaWyQ&oe=698CA5B0" alt="The Jedis" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -1031,67 +1086,67 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/574887313_1388792963255551_3697406390794823803_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=zsPnfZxMo8QQ7kNvwGuY7CY&_nc_oc=AdlVIZaNJ9RRHwYvmSiQOeNeC6_fi7mbV0WKcoqwyVd084KycY_8L-l5pA_vHMo5b0I&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=1tmIbxov2A2f7G2okBGmEg&_nc_tpa=Q5bMBQHGe9hOmIujSDEa_Ovr_lHLaTYjLXWgyOCDB5T9w73cepssNt_x3nfVz_9bJ_0A3p-lZahB7Wga&oh=00_Afr-dcVcwG0-tOrQ2gUSazyHq5PH4EucJBLOw8gDcZlbJg&oe=6963C2AA" alt="The Jug Band Christmas Extravaganza" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/574887313_1388792963255551_3697406390794823803_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Sy3ZEhgLs4QQ7kNvwFiVqiD&_nc_oc=AdnM0wVSWBnrlTOQoZsFV9eC9zOw33eIwT3vUl1TUy8kAVhxhJ63G-YRJovNCRfmqM4&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=7XyxyyPe1fCXeUPf1U3y6A&_nc_tpa=Q5bMBQFdcLyp0U2cfN_JsjNNxdXoHgq7Tp1vjmMoq4LhyT7RQp8OSIvxnz8o3CzaquH5BddhoilI7zKU&oh=00_AfvDeQFo1LHDWUdQEiF4BERA3Uobj1j4GMUw8b4cm9smsg&oe=698CA12A" alt="The Jug Band Christmas Extravaganza" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>The Jug Band Christmas Extravaganza</h2>
-          
+          <span class="date">Last played 20 Apr 2024</span>
           <p>The Earl Haig ClubAre you craving a Christmas night out that’s a little bit different? Forget polite carols and quiet mince pies — this is jugband mayhem at its merry finest!The Almost Legendary Jug B...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492299303_1215038500630999_7936043837499442411_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=GCKQ3ukr8WYQ7kNvwHtvZ57&_nc_oc=Adk1Jhr7o0imOTf0lE17Jov6s4fThbYghVqCR-U8vvnT3M2vgswjq6oA6qAoi6lLFfA&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=tsR_doHbydXJXbN_azrqBA&_nc_tpa=Q5bMBQHMYlYW8g34Xg3wBszYH4UsaA1tH2e_AJVenu3QVX7S4wbVmD6f4dg0Ix-TWZVqVCop2MNClzN4&oh=00_Afr3qafeIqD2Q2JFGQe9Wdc7bgCnMoLXpqq-PTIz2K6hIg&oe=6963D127" alt="The Leighton Jones Band" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/492299303_1215038500630999_7936043837499442411_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=0tIKBV7aYxsQ7kNvwE78iD_&_nc_oc=AdlX-QFD_ZE49FWVgmtCcM3-ujjekagw7IF4P4A1Du1w_HWdwbEoAlHyS4v3I-H6OgE&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=feZECeigeFSZVSidwODLrA&_nc_tpa=Q5bMBQEn3Y47ekoww3Cnvm7t8GtUNiVC6WuAeKA3QYQ4UC72eXuMqN85zlUNz652Z-NE73ejCpSzKC7_&oh=00_AfvT7IIwC8yMQZUZiMCwIUQWx2uNey1fNTHHK3MRjA5cfw&oe=6988BB27" alt="The Leighton Jones Band" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>The Leighton Jones Band</h2>
-          
+          <span class="date">Last played 17 Jan 2026</span>
           <p>STEPPING IN FOR THE S'PUNKLES 🎤 Experience an unforgettable evening of soulful music! 🎶 Join us for a captivating performance by the Leighton Jones Band, featuring the exceptional talent of Leighton...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/496134621_1232708972197285_961894307230370538_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=cZj5JPtElHUQ7kNvwEnpgLC&_nc_oc=Adm87bKRVq2eByIGzBaHkTCvcnYHyburHGabnsyYtOHr9BKxN3SKPSQOx_xdO_JuZzo&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0Jl-FMDkSOy2AkPaknm7mw&_nc_tpa=Q5bMBQGAm08_S8yjECril50x9ylqkDlGpLRxmpZ_bfOPGsAKSkpFApGoJ93m2enivt2hIgufHZnlFTJi&oh=00_AfrAepaAIYF4L8uP70zXE7lniZ0VsyWkBcSwExKq3EOWhA&oe=6963B534" alt="The Lonely Hearts Band" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/496134621_1232708972197285_961894307230370538_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=OERDLKkadzAQ7kNvwG7micD&_nc_oc=AdnkFjlOCjicMeBoXHRwF4rNIzTeYHdaIYFGd8Fmoa-F39eSK3Cr91pRFa4Yb-Yzki8&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=6rplddTw2yTtdIJsk7-kvg&_nc_tpa=Q5bMBQGqNTfeXn5lBn2rR7w6IuHc_6uzDSfoe29Nzsh4iyXehz3V5QugGbxhJxcHGdM9t-E_bntMTqQD&oh=00_Afv4owVYOqmjsXOdIevB8gfNfKWS9YpAgrMQ0b0fYK7Vlg&oe=698C93B4" alt="The Lonely Hearts Band" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>The Lonely Hearts Band</h2>
-          
+          <span class="date">Last played 16 May 2025</span>
           <p>The Lonely Hearts Band was formed around 10 years ago by Colin Edwards, George Cox, and Dai Watkins, along with Adrian Llewellyn (also known as Paul Ryman) on guitar and vocals.After Adrian sadly pass...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/493265428_1218243860310463_3503174788021023127_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=oNaSNkpOZWMQ7kNvwE8Xvb0&_nc_oc=AdkGMqcvPHTZ1v-3gOIA7HR3kjyIqaEUGbd2Rk0nM_AwQtFBbWLTUv1PG3Ol-E2RKoE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0Jl-FMDkSOy2AkPaknm7mw&_nc_tpa=Q5bMBQH_1l2mJ1OYED0kcLRilDPpZ6wmEOae3oaATW4_P9tAdNDBeZDU49sS3gXkHAMzD1pEpq7pjyBC&oh=00_Afo78EwVdFmQzzN-Ni7J6uqIdOV5Sg4NWEPYntHA6t2vBQ&oe=6963C61D" alt="The Marc Davies Band" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/493265428_1218243860310463_3503174788021023127_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=HhbypKb_s_wQ7kNvwHE435-&_nc_oc=Adlr76NMCIs8S1LrjlF9vjLpfIj_hZjTbTKCPJS9oKjTIKgagwzNTDGWWg-7fUk_H0s&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=ViPHrEyOOOQzkYKSjCE9mA&_nc_tpa=Q5bMBQGXSXbMwXv4ShV6-JEnIUaI1qSlCD_PePZoZ_cGOuVP7kmY3K43CUiBJ_RGdXcW1_yB9PiaHTlo&oh=00_Afvm7BMmV8PwXuOVFf72cVi8z2DZBewJh6do3USixEVxUg&oe=698CA49D" alt="The Marc Davies Band" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>The Marc Davies Band</h2>
-          
+          <span class="date">Last played 10 May 2025</span>
           <p>The Marc Davies Band – Saturday,Get ready for an unforgettable night of blistering blues-rock as The Marc Davies Band takes the stage. These top-tier musicians aren’t just incredible performers—they’r...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/516080080_1281391990662316_2753974935477974698_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=2TqQ5laDH4AQ7kNvwFv3vpg&_nc_oc=AdksU1zWCd8AD3XuU6RrE3SXrVNEFGcG4hxsCfnUJo7o3M-xKrStrhhyosSrPrWJbK8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=dGZ0sj1Mmb5MU4dvGN1zYQ&_nc_tpa=Q5bMBQGnMZoPye-i6YgnwZUpM4NTGor8QuAh52ZOSgDxhR6EHcIeMYZ3d784RNoxa3P4Kwf6yWyC8X7I&oh=00_AfoAq2G8wfeyR_6VYzz402J_Ls_TUYXb6g87ViAnzZT0kw&oe=6963AF69" alt="The Mother Truckers🔥" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/516080080_1281391990662316_2753974935477974698_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=iqiF4F7gliAQ7kNvwGYMGGj&_nc_oc=AdnB29DPM50tBK8B9lucE2W4x2XuzmEVxFX4E9xdbNHiW2aKqCRtcVU54yaJkPnf-NA&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=aBf-6b6GfsMtshmHsREs7w&_nc_tpa=Q5bMBQF8PhGs6CkbO7h9txYF8P6nK8rPN_ktlSLn55I8tm73sMr0r53BlwScuWj0LCWgY4CxAypkurEE&oh=00_AftzvA2CmsxMgPPuImgnLqQY8EQCQdK0fwgyFOP2fN4XhQ&oe=698C8DE9" alt="The Mother Truckers🔥" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>The Mother Truckers🔥</h2>
-          
+          <span class="date">Last played 11 Jan 2026</span>
           <p>Introducing this Rock Power Trio to Whitchurch!https://www.facebook.com/TheMotherTruckersHQGet ready for a serious blast of classic rock as this 3-piece covers band hits The Earl Haig Club stage for t...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/505808410_1260402869427895_28407012769851650_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=NlTVfN_AF-EQ7kNvwH2LNqf&_nc_oc=Adk7yXJbRmNz7SyjgaJIvM1hBq8TOr69d0TH6JlD68Gt40AllbxFcjHgn99QzXmW8HI&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0v2fGwQqHsLOs0iLea5iQw&_nc_tpa=Q5bMBQGFE-wSmoOFWgdtqcF7jGhEy3Vfin8W1_c_ir0CfOX76bSAkaapUNgLcQ-EnxUYvcFsw2zxGakC&oh=00_AfqAGw6265LcvVRWCMJ89JJAsRAY3g8PWSIS8zY6NwbGJw&oe=6963B296" alt="The Raiders" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/505808410_1260402869427895_28407012769851650_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=aupHzmbkRbsQ7kNvwEEGHxs&_nc_oc=Admxxnefk-Av9-BFumcIuqm9Txt_-UegAgcCjU-sB2qWVzK4SqrFtasSntnms_K6Tmw&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=9GiTYAmiO1dqw9jXt3ZAeQ&_nc_tpa=Q5bMBQGNaEQNR-PNj_hBc6f-NPjCJfFWgAlfiYRa9KuVFxZs670mcjQxTPV2mbYOBdfe1sMdyD0zw4rw&oh=00_AfuajKuFHQc3_02Im-ltBnMMGuXa9s7E7aCN7WlrzlTZKQ&oe=698C9116" alt="The Raiders" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -1103,55 +1158,55 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/540617683_1326320319502816_4025000482722028033_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=78n84VfvZCYQ7kNvwGi82Gb&_nc_oc=Adn1spDdl-XvVCi5Q5uz6sQAI7u3QaxwHTf9hX-PGRgHd_BUaOS_bTtv4VR7Tid9qvo&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=bfnolEobSCCIoxY5vsy_BQ&_nc_tpa=Q5bMBQGVLfDd4jJjMfnISsDTNshD97kLA4Lfz93OASGmP22ccwWwFHkSzdxWnZUUR8KlxNq549cJcl4L&oh=00_AfotOF9AZYFZUl9dOst93px_-FLtHQxSReg11Vr-BhHY1g&oe=6963DA30" alt="The Red Hot Pokers" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/618744735_1459098192891694_3709397494352439688_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=1sele5nRzqgQ7kNvwHagHvv&_nc_oc=AdlRu9wdgq8KScxdG8x0WV0jahNlMAn3MnSKlvmYQGAdDuHjTL3KhvsarQ-e1LqdRuM&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=D2iFONcIO3wySzeAMxB6Dg&_nc_tpa=Q5bMBQGZ_w2l0h9LEZJf0qLTtoKseNfuJVVdFaYE64Ca4R8oHX0L6ANZqtDdDf9nCIisu170OrpDruRV&oh=00_AftDv0OxAMDKjxmvGu7tHY74Oj5alcNgPhoaF0HpO1Tk9g&oe=698C8FC7" alt="The Red Hot Pokers" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>The Red Hot Pokers</h2>
-          
+          <span class="date">Last played 16 Jan 2026</span>
           <p>The Red Hot Pokers atThe Earl Haig Club Bar.Join us for a soul-stirring Friday night as one of the Earl Haig Club’s most beloved bands, The Red Hot Pokers, return to the front bar.Formed in 1984, The ...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/544507483_1332360642232117_7962064456479085260_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=oza00TSr570Q7kNvwEx_Du3&_nc_oc=AdlgxhYNbFMRpc2JRuioZaqDh6B1nQqU-hGWiAKOStQh4_6QBwRPCtX7kdB2H8NELW8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3hOBCdz-wN62_jsY0W2YQA&_nc_tpa=Q5bMBQHbkmQVJGrn1IZAs4tZj6ztdFIpopgKpfyUWGrWwL4cYInB6SR_uUmuhA63FcI1zWaYDWdtoCY-&oh=00_AfqHjaTxrE-tpwo3zCCrafDdFaNeheUYmSaVtdhUskxf7g&oe=6963DB56" alt="The S'punkles" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/544507483_1332360642232117_7962064456479085260_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=T8vWe1FdmooQ7kNvwHc5iI1&_nc_oc=Adlou9ABZn3ajD_QvV8DNhLq2gl3dl49AFx6rYR_8rt0SrokvKF2oDUWX54QzaCbZhk&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=qaaSMQR57o44D51hm1c3Fg&_nc_tpa=Q5bMBQFn4N_9yZw9KfuZWrpUhHmBfQAt9MnZS5Hqrp6I0Rg22VjdrywIXWC2dOL21OCH2gAUg1_weygN&oh=00_Afs6qkoTJOBzej18E3YTmma-9OzXg1gzS9Z4I0JQ3xDtfg&oe=698CB9D6" alt="The S'punkles" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>The S'punkles</h2>
-          <span class="date">Last played 5 Feb 2024</span>
+          <span class="date">Last played 19 Dec 2024</span>
           <p>Sunday, October 26th 2025 |Lock up your pint glasses and hold on tight — The S’punkles are crashing back into the Haig with a Molotov cocktail of pure punk chaos. No frills. No filters. Just sweat, sp...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/538597004_1323651903102991_1351839784528244531_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=DKlCMJrtH4MQ7kNvwGd-8J6&_nc_oc=Admm7kmDSZOM3DpUaLvb_hmk0GYAfjIglatNtkj7HlHkHlEbRBYbOwBflCIomoeEMQI&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3hOBCdz-wN62_jsY0W2YQA&_nc_tpa=Q5bMBQHRt5aHAH3WSdeANBgU4CuzAPRI8gJxlbc7PPewEKFH_g2_1mdCw1qntnIabJSzXMtJcdlAVo0e&oh=00_Afqxoq6Vn6ti4ms41dXwA3QfwO1xcy1uteMOniCSpHv4lQ&oe=6963E1EA" alt="The Semantics" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/622373155_1459108846223962_7970415730464397249_n.jpg?stp=cp1_dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=NaA4F_Asp8wQ7kNvwGnVIs_&_nc_oc=AdnVDB4HeyUkWqjr6CMAdfYod-aeEnES_9rgo_8rcA4nryFC88AU8QL5W7Q_rzpqbTw&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=nT44iuHD-eQMkXv6RO0eNg&_nc_tpa=Q5bMBQFs99E_--vX8yqIdnnaFe0b5ihWdVaIM4W9M7qUooEMqTo7PAnVousrXa62XrDs2usZ341s_IRz&oh=00_AfvqM2OEygDJJmkCOB_gQMlv0K4CMeos6XP6TUzBYYMc_w&oe=698C90D5" alt="The Semantics" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>The Semantics</h2>
-          <span class="date">Last played 29 Nov 2024</span>
+          <span class="date">Last played 7 Jun 2025</span>
           <p>Versatile covers band bringing a mix of rock, pop and indie classics to the stage. Known for their energetic performances and crowd-pleasing setlists.</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/572034355_1382619250539589_1624039481790790037_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=q4qHYI5yrg4Q7kNvwFn4F1d&_nc_oc=Adm_uSq_RmBfmtYKGIkbju1fgjTTje9ltHBPbUQ0kyQHvR39R6ZZT4zsyuKfCn4_5ek&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=SOtXQZT76_Vujs2vmlJC9A&_nc_tpa=Q5bMBQEBP-5awFm8oFBidLIM7W9KCSjgrxwmAn74kalbhXP0VyZXuxf1xxPYUlfiSmdrp63gmLB_e6kY&oh=00_AfrT_1CATFNdyK_8r0WnOxJfdhL3j-I5VjpgQlGfntU1Kg&oe=6963E41F" alt="The Sundogs" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/572034355_1382619250539589_1624039481790790037_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=jsLQ3sr5GkUQ7kNvwHrvSrp&_nc_oc=AdlZx0mfefkRp5Ty0-TiYqbn7ai6Oai_qhr7g6O9Y76s0PjQS3M-EpGboMbXQYZHQ3s&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=qaaSMQR57o44D51hm1c3Fg&_nc_tpa=Q5bMBQF2KoVtWZXcNFjSj9khGAxm8QMZuCT-fcZjaxQ7tLWk8lC5bMiCYG86TQI0IpVMgtoP2J5a5Ppc&oh=00_AfvE4Iz9stk-22cTKlw6-J_vo0UBWjgFcDXAGaNgbFBSRQ&oe=698CC29F" alt="The Sundogs" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>The Sundogs</h2>
-          <span class="date">Last played 19 Oct 2024</span>
+          <span class="date">Last played 25 Jul 2025</span>
           <p>Tight rhythm and blues outfit bringing classic R&B, soul and blues to the stage. Known for their groove-heavy sound and energetic performances.</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/587118074_780884871648530_8380698643398414306_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ppIFHKgYFeQQ7kNvwEAKL7j&_nc_oc=Adlrz2zA-58F96D3mVetHLLzOD9VLFcgDt7Df9nGSCCGXdWBRO_CrfHaqOZ63iBYo7o&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=elv8ZRc-zhZn2jUuo-2P1g&_nc_tpa=Q5bMBQGTt7FoXCReb1LaSYBFdnu3RPAX3Tk4YS-kJUFD9wsYSvlCCU24Gjpsk7EdjERnWgtpHG3omf_n&oh=00_AfptpQqELrC_T363jaJ1bFmAdFF7tBPqaszyOwBEN8w0qA&oe=6963C6E1" alt="The S’punkles Christmas Special" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/587118074_780884871648530_8380698643398414306_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=lwF3iuy6wzkQ7kNvwG86qOR&_nc_oc=AdmLnM4NZlZoq_oFeqCHUCoUqepJq5oWRiu6M8grpbBO89Iz37yDMwx2_MxFQsjXdvo&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=7XyxyyPe1fCXeUPf1U3y6A&_nc_tpa=Q5bMBQELRqKGPuypKnBU3C2csiBfe_KmVJGuhu1aeAnLYaFrVKaHoXlX8g-nq4COnm6ZYOVijWydReIM&oh=00_AfuT5LPiqC74OINy3qtIA7VKZ9jI6y47pQcOE9tZkQOFGg&oe=698CA561" alt="The S’punkles Christmas Special" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -1163,19 +1218,19 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/530583252_691633820573636_5603574691625076511_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=vxdnEZW12nIQ7kNvwGl1V8B&_nc_oc=AdmXqOrV507cCuJKkcfZux5hXnHh1c8D-Vg5HP6u4WSYOptWBTnh62nK1ggCNgbixfE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=vKwJ64-4fLg-cQZV950bLA&_nc_tpa=Q5bMBQFqdeZ0MsmR4K3ly3JiwIBWcQVWZhOI5FugSE-TmSYPYK-2nltISDavKI5PqFmBi84U-oHayyiW&oh=00_AfpcDPCThDRbu7X2ewRmqJ-lnmZt9EBkFG6fELdcUhpKPA&oe=6963CCE0" alt="The S”punkles" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/530583252_691633820573636_5603574691625076511_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=EWslpHWgh_YQ7kNvwFVrNZm&_nc_oc=Adly4ZzkghTSVPKLX_zJfU2gUdcgAX_CsOxTUTuRtu-6iyzucynE4RdMuIEs8BuJlsg&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=rwXoUr-ZP3sATDOmPhDw3Q&_nc_tpa=Q5bMBQEeqmx_dQGbArG0IZgufCzjaSu9ZxR_aztbbbeOCABy8-3w1W4aThb3PdB49K8GN97WZvUlzWio&oh=00_AfvULZ8wbOkoL9bs6FcEotwOwcjP2sCce3F_YRx5Gp-gxg&oe=698CAB60" alt="The S”punkles" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>The S”punkles</h2>
-          
+          <span class="date">Last played 5 Feb 2024</span>
           <p>Sunday, August 31st 2025 |Lock up your pint glasses and brace yourself — The S’punkles are crashing into the Haig like a Molotov of pure punk chaos. No frills, no safety nets — just sweat, spit, and a...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/539620405_1326549889479859_5012033203794354195_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=ej9p8kTkgLEQ7kNvwEWfC-e&_nc_oc=AdmhlczIDoJXJxLxhhxJhm0bfNi8EdJAa52hsA5FoxqRboCuqA3UmPOyBxm63OAh6Jk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=dBtMRToO6P3FA0H8EmHMHg&_nc_tpa=Q5bMBQHCcGDtC63wKE1AMio5iKnC9k2_5WH3PH1FAeIx10UdG6lLKipRMl4zAiXEsASUPpvtatuSBlkZ&oh=00_Afpury9AD3RLu6ZuOlIaf8AJj2yNh_-hGF0vaT29ZOJxWg&oe=6963CA8E" alt="The Troubadours" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/618082789_1455869089881271_6418118655450846534_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=qDXMYyvqJSEQ7kNvwH3Vonp&_nc_oc=AdmCPIIe6I061gpLBkOueFz2RtgHaw347oIvo6OidC6ePsMkoPQ_YK26RYYoXuVYjGk&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=nu9oHGMLrP1P4_EHiXK9rg&_nc_tpa=Q5bMBQG6yy3A1qZtz7uNvQ2zagPvdmq8IF5I3SOzIav1pzyKXDY16Udg2Hunnba6bp7MPjfTioTs9mNm&oh=00_AftXO7rWJu7l1AmxvxYPzrJifPD38dJUXQwDKdiUeFTdGA&oe=698C9AB7" alt="The Troubadours" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -1187,19 +1242,19 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/541450584_1326549086146606_3265435573927248003_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=FKQ43VnkQfUQ7kNvwHLaQly&_nc_oc=AdmJFqP8kbTdKA4Y4px-jXObnJpU9V0D75BsNrWUQBl5RdQThUzJEhbTqH8sqUeBWWQ&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=LQMs_Ci9-e2n--j-KBPbRw&_nc_tpa=Q5bMBQF4mq0IXc2FW0oS19vI6-GjPN3b0Rxj2nnLKka8FQcC82NeP-jbIpZx7aM7yDJT8t_HUYYOThPv&oh=00_AfqOUrpF0Nk4wf9ZuJf-s_pTpIkO_Htkii2CpjC9_uBrMg&oe=6963C369" alt="The Vanderbilts" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/541450584_1326549086146606_3265435573927248003_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=DeKAcb-BmiIQ7kNvwHaD-Ks&_nc_oc=AdlHONqBLBj0_AkXoecNFOnGh6NMXaQWFZ5D9gdi0eDmEY2Y_v5FB_UcssVMwQ0nq08&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=VaFSwowgzKA_1Cqwv8Wavw&_nc_tpa=Q5bMBQE04S9qCHJ4e-u3mKYR2Qos6por5SjnM4Y43B2etT49J9OidtuYgcFBaL-KcaaWeZ2p8cXP0Rwb&oh=00_AfuRTEW1qbaDWLU3fYukcwgY3dcbodcUoS1EpURchr_etA&oe=698CA1E9" alt="The Vanderbilts" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>The Vanderbilts</h2>
-          <span class="date">Last played 14 Apr 2024</span>
+          <span class="date">Last played 12 Sept 2025</span>
           <p>|Get ready for a full-throttle evening of powerhouse rock as The Vanderbilts storm into The Earl Haig Club.Straight out of the Rhondda, this family-driven covers band delivers a blistering mix of anth...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/506697599_1266448998823282_9024282517317998935_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Hv52w6otdrgQ7kNvwFr8dos&_nc_oc=AdkHDRKbz-6WslVuDYsmhQb2UGa4ZVZsJ7CCvToPbxSnCU3ydftT-weILudRqfdMtn0&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=YKTi4Z8TxXFFiklTNpKpqw&_nc_tpa=Q5bMBQGGHzIY1zVqRfEOeQn5nkTgTEWlT8MiLM5rlA_4fALLN_RRjPJrX-WGoh8x8MYG2vFYlbQ34EuG&oh=00_Afrd1239JyRnSUCCTvP3nBFMa8cBVBu0X43bn2yaJsQVRw&oe=6963B710" alt="The Wildflowers," class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/506697599_1266448998823282_9024282517317998935_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=m9sg1AISmZcQ7kNvwHL2bc-&_nc_oc=Adl4TAF5RSGC7IZ0pSWbf5f7DuNkIY12hqqFVsZPQsw7IW_eCJ-50Qjf2-97JjlOegQ&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=P9iBrCmWz21oTpbhMggjTw&_nc_tpa=Q5bMBQFLbrwR30R_-huOdJG0RJRIxG-kfNFVAQtYJ1NKe_EyVDLYtoWXibcJGE1mo2KzH9eWdE1pF407&oh=00_Afs9DfBb-dHF9LeYEyN1Nzznjy9NP63etySkfgn7AfVaZw&oe=698C9590" alt="The Wildflowers," class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -1211,7 +1266,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/571107528_1382457650555749_6561174080354064333_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=QD3mVVMkdWgQ7kNvwHQoPjb&_nc_oc=AdmkBj_VPLXMjZeuFodkMiqMOSxUn0xHI_grsw20_LinUKvmip_jwb5awOoQ9sHoBrY&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=SOtXQZT76_Vujs2vmlJC9A&_nc_tpa=Q5bMBQE61ftdVAaCbZZ58mFHG2lMZdDQxuSoVffXI2G_eQWW2xvBBKn2G_7NWFHCIVIQKQjZJ4CWcexp&oh=00_Afp-YtfqFXgd02LmIk6IKAAhicRbmsdGB-Pr7GVspPuL4w&oe=6963DCFB" alt="Tony Morleys Little Giants" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/571107528_1382457650555749_6561174080354064333_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=i8focZgkP5AQ7kNvwGxb4n-&_nc_oc=Adl8G3x3vsWbJgnLEypN4mT4TRqlaDIoidy4zL73BpD5uTdYTODfvHxX94x0vM9NKBE&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=qaaSMQR57o44D51hm1c3Fg&_nc_tpa=Q5bMBQG8HGkia85oUVG37sT_tZkBdmsaRa7KNXIwGNiMJrgphSNsKWGWyaD5OG8gAbHOv13O-eAXfSGI&oh=00_Afvc-iQlTguFRhqxssYaP1b0oGIMfPOu9Y9nMIhoi2_azg&oe=698CBB7B" alt="Tony Morleys Little Giants" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -1223,7 +1278,7 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/505710933_1260410726093776_7292382660666932887_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=AA2YGzYKJrkQ7kNvwEVAd5-&_nc_oc=Adk0l4s6bZske6pT-LFO6Jn-FgS_sl5IUUbJBwbZe-DGoVaVuIsOaUnkDMuubsH_ja8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=7LHehKJo8LX7e72lPk9seA&_nc_tpa=Q5bMBQHfEJ_EbGNBnzjW7b7M1bOoROwmshVAFDGWsf-3FSn6NO5kNmjis_1fveC1p3m5kBWl3dsJe4v8&oh=00_Afr171R1-XP46Ir1eLUqye0TUQ6-6Ul2rVdlckftCXKJXg&oe=6963D023" alt="Trade Street" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/505710933_1260410726093776_7292382660666932887_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=hZNHee39FQIQ7kNvwGMUkY3&_nc_oc=Adnf22pKTzqwjnCGqJRSCu5cq86cUfIFSl7O9fTKAdP0ZsWJmXvg-As3TlZXcDLBgNM&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=Nj3snM5y0F5e09xXt8VLnQ&_nc_tpa=Q5bMBQGXhsp4q-TlbW-bMBDeBONeE-LgVACLhZrhAywfau4PuDBfnBY2eqmKxUVRgPjwUNVP7IU0XM3J&oh=00_Afu3HN1RfYcvzowBRD5H3O5X1CZywQN6tf98QHTzvrrUzw&oe=698CAEA3" alt="Trade Street" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -1235,19 +1290,19 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/491959879_1218255600309289_1864477892571067169_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=cHKjXGi-Y8AQ7kNvwFx23En&_nc_oc=Adlw2POtgfhmu-65AARNXhCpRFbnpgtbNMdrNOyAK_mMQJm1PkongAMOXbOHEO1ifFc&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=0Jl-FMDkSOy2AkPaknm7mw&_nc_tpa=Q5bMBQFk5aJvNhrUI2TIidMRzTA4rjLha7liZvDl1qQ5minlF9sP6J1D0kpY_1R3DDgSzPHw9pr0IkGM&oh=00_AfrKHFqYcM848PSwIp1uwgQKebYuJum-GXQFx96Ah9xTqQ&oe=6963D35A" alt="Tumblin’ Dice" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-3.fna.fbcdn.net/v/t39.30808-6/618869392_1458982926236554_4572107821683821110_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=_addykT_MR4Q7kNvwGoHdjf&_nc_oc=Adn1x0QD_OyxVcSyduqxVSdJ7qKa94fp34x6CPGq7Qf7BW9qJ-C_4-BaezPCf31bOTs&_nc_zt=23&_nc_ht=scontent.flhr3-3.fna&edm=ABTKTjYEAAAA&_nc_gid=iTI4pCk8t8rWqKR42p59dw&_nc_tpa=Q5bMBQFL9Q-p3FOgH82JnVDjLea59lMezMWcAzv1tBORxx4vKpsRR6ZJxoifa2xZMp8dV4A6pWnYeXwJ&oh=00_Afs1nD945mojXGM8gAdjSLzZAS7Eawv4skra-oYqX93mvw&oe=698C9ABA" alt="Tumblin’ Dice" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>Tumblin’ Dice</h2>
-          
+          <span class="date">Last played 1 Feb 2026</span>
           <p>Sunday, May 18th, 2025Expect a thunderous setlist filled with legendary tracks from The Rolling Stones, The Who, Led Zeppelin, Pink Floyd, and many more. Known for their high-energy performances and m...</p>
         </div>
       </article>
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492533299_1215691323899050_1826277966478055463_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=Id-_9a0kRZ0Q7kNvwEsOC_E&_nc_oc=AdmUkCgjW1DNKczY97KcaHkXbqyZC0PfI3aWtqmM_7c0Fy5L_tsuSVaYoGWAzWuKN-w&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=3XPEHR1hDn4eqFZqoTHKPg&_nc_tpa=Q5bMBQHZYHxz4sazNTcMuzvmsoZsQL0skn_dBLHggsJSqHtYEWZam3s2lsXEiV24hkNys0Y2lZ3fSZig&oh=00_AfrYr124mvVfN1eB8Wl_Ank4KraB-ZDr0MyEv47pQtn-vA&oe=6963C3A2" alt="Will Hay Band" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/492533299_1215691323899050_1826277966478055463_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=1oO1Mn3ZZy8Q7kNvwESVobk&_nc_oc=Adk1lqTlfxIx-BZHbVBgqQ3QETY7xi9p7NxXfSRG_tYzIhT-HhBsvVIpAJCEZYTkl4o&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=OUbFIBKB5BN7lkk3WQGhtA&_nc_tpa=Q5bMBQGRnXFIO-om_c0dP9bD1tfD1BzFzH5Gjjf5GCJQc3nuxLNuYT-W3uONUScz4OwnRc-xNfzZImDT&oh=00_AfvI6BMIgNIOPkp-X9BObfmw9lCivICaBYizL5mqyBtaZg&oe=698CA222" alt="Will Hay Band" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
@@ -1259,73 +1314,13 @@
     
       <article class="band-card">
         <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/539383813_1326329156168599_6805608809797158441_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=jqTdc4VPRh0Q7kNvwGMNfHA&_nc_oc=Adkrs_YSuf1lZpeMn-5cd-HqNP0WUJChT-d6i6KycCacAeYdNTcdHrYDC9-_OvATIsU&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=bfnolEobSCCIoxY5vsy_BQ&_nc_tpa=Q5bMBQGRmECNVs8rO6GCsabiw0V-9gJTA9yR38A1_gPkR3hRiFLPaa3A2TPl5gTNuulyw911FyFGF9aT&oh=00_AforR92FhGe9CQo4dDn28hyZ9Ko8CWFwZOuthkk1IHC7Vw&oe=6963B117" alt="Worried Men" class="band-image" loading="lazy">
+          <img src="https://scontent.flhr3-4.fna.fbcdn.net/v/t39.30808-6/539383813_1326329156168599_6805608809797158441_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=6xjmYu8tapwQ7kNvwGdIsYA&_nc_oc=AdlG-xO1jaO1ntEqZjajbPxZnCVz6gYXIBar_2unsNYNcArIGIFsWZWfe6l1TLcerUM&_nc_zt=23&_nc_ht=scontent.flhr3-4.fna&edm=ABTKTjYEAAAA&_nc_gid=sUZLvS5uqxpPn5Ns0nDjIQ&_nc_tpa=Q5bMBQEbKqLGxeNulQNHj65SHUkQGlKAre2ooDilC4oSEuqNYWXYPxQRpvvs102ru6fVu667xzmoDMhQ&oh=00_AftINtkG1iIx65OcQN8C0qgLj0dm3TM15wHzVzSl5SkSIg&oe=698C8F97" alt="Worried Men" class="band-image" style="object-position: 50% 50%" loading="lazy">
           <div class="band-image-overlay"></div>
         </div>
         <div class="band-content">
           <h2>Worried Men</h2>
           <span class="date">Last played 5 Oct 2025</span>
           <p>| Band on stage: 6 PMSouthwest England’s finest blues-rock powerhouse, Worried Men, are coming to Whitchurch for a night of raw energy and top-class musicianship. Led by the incomparable Jamie Thyer, ...</p>
-        </div>
-      </article>
-    
-      <article class="band-card">
-        <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492048605_1214958160639033_3650455129072563138_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=WHNR1KDc06sQ7kNvwFNdSu_&_nc_oc=AdnOgBspzFOJP2P91wF-DDLtTu8oU-EkIiKh4y2Lc9-mQv_P81b0w-4eJbs49muX3rM&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=WJlfQHG9REgs6_4SJ1BA4w&_nc_tpa=Q5bMBQF007aVA1-X76I-QrprqebTupdyZ-aTTFvqfh5kWmWFzwt_8btVapxlcnRpTzsVhoCMv391UO7t&oh=00_Afp1Eqog0tlGDk4tYgNqEQ1MUKZwQz3LKiWnw612UpgMug&oe=6963B938" alt="🎤 Proper Crackin' Comedy Club! 🎭" class="band-image" loading="lazy">
-          <div class="band-image-overlay"></div>
-        </div>
-        <div class="band-content">
-          <h2>🎤 Proper Crackin' Comedy Club! 🎭</h2>
-          
-          <p>🎤 Proper Crackin' Comedy Club! 🎭You've been asking for something different, and here it is! Get ready to laugh your socks off at Proper Crackin' Comedy Club—bringing you top-notch comedy every month...</p>
-        </div>
-      </article>
-    
-      <article class="band-card">
-        <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492560766_1214817537319762_2194237470841049636_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=x1ceB01_POgQ7kNvwFz6Dtf&_nc_oc=AdmJKbGdDwNHz65o8332IkceRz0onHSKIfQAZGQtOeI-YCs2hlTdrxSD09qIxuL8uZU&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=B4kmk0o_FrMRxV0w1xq6Fg&_nc_tpa=Q5bMBQGPP6OoraSyWbqUB4S1ku5Zt9wCpdIMRtcpWG2f9-4yMRdcg-GZqkA3B4I-jC-jcYK5oF0oKNWo&oh=00_AfpKxCAEHPtJA2S3C5_pZJDbOAr12cSq_CuOMfchptVztQ&oe=6963E5DC" alt="🎸 Junior Hacksaw" class="band-image" loading="lazy">
-          <div class="band-image-overlay"></div>
-        </div>
-        <div class="band-content">
-          <h2>🎸 Junior Hacksaw</h2>
-          
-          <p>Back by very popular demand, Junior Hacksaw is here to rock your socks off! This tight three-piece blues rock 'n' roll band hails from South Wales and is led by the legendary Pete Mathison on guitar a...</p>
-        </div>
-      </article>
-    
-      <article class="band-card">
-        <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492367868_1214817540653095_8433180781122626473_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=TzsUILn3H8MQ7kNvwFaCNxF&_nc_oc=AdkXDd3M3NRKHy7TP_J-UAuiCQkpfWO6PhZ4peE75mD6zgOzThMu47PICuA7EfC6PcA&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=XH4pXehoZGsa46qakgFtmw&_nc_tpa=Q5bMBQHWHuKmCiHfTKWOEYr1F-b-0lMCPymnHXk6xzBDJD3WykXtrYI-FBghQfu2q3Xo0PiYDsI0-ARU&oh=00_AfoFTCpwsDq6Xm7ZbM46aJ6npDLONRraMzU9gKpN9X2rZQ&oe=6963E032" alt="🎸 Snatch It Back" class="band-image" loading="lazy">
-          <div class="band-image-overlay"></div>
-        </div>
-        <div class="band-content">
-          <h2>🎸 Snatch It Back</h2>
-          
-          <p>📅  | 📍 Prepare yourself for an unforgettable night of blues brilliance as South Wales' #1 Blues Band, Snatch It Back, brings their electrifying energy to The Earl Haig Club Bar!Expect killer riffs, ...</p>
-        </div>
-      </article>
-    
-      <article class="band-card">
-        <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/493317589_1214817487319767_8133455216108275800_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=DW2NCam3D7oQ7kNvwFKHTjp&_nc_oc=AdlVTMfzleY0GOd-ouXxgkiQMQMbBmEeGycHABWoYJCphwn1hAOJms8heAWVQU4yKj8&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=XH4pXehoZGsa46qakgFtmw&_nc_tpa=Q5bMBQE77H5zHmG5ro0i-JYuLKn5I3-VHJtzEj_j-xZ102DwHY4KBr8yEXP9EYpT25ydcUayyDJg2G9V&oh=00_Afr_R-FZ-KRwjeLNxx_vig9veDGoopuAHpubBNDVMH63DQ&oe=6963C937" alt="🎸 Stonehouse" class="band-image" loading="lazy">
-          <div class="band-image-overlay"></div>
-        </div>
-        <div class="band-content">
-          <h2>🎸 Stonehouse</h2>
-          
-          <p>📅 When: Saturday, March 8th, 2025🎟  – Everyone’s welcome!The wait is over! Stonehouse, the legendary rock 'n' roll band, is making their much-anticipated return to The Earl Haig Memorial Club. Known...</p>
-        </div>
-      </article>
-    
-      <article class="band-card">
-        <div class="band-image-wrapper">
-          <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/492190139_1214817610653088_655958214835468705_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9e60e4&_nc_ohc=re1w3OjbMAAQ7kNvwEIbMOv&_nc_oc=AdkFJtv3NG2ibCyk6snVKqTwrotbNF6H-zn3JzGprZeI_owjBV3TS_08_yDXpHay-dk&_nc_zt=23&_nc_ht=scontent-man2-1.xx&edm=ABTKTjYEAAAA&_nc_gid=B4kmk0o_FrMRxV0w1xq6Fg&_nc_tpa=Q5bMBQG-bCCNIH_71ogZ7IN09gUib9krSa6YqJQ0MVOCvcDg8kZ2VoPX3vJ5Z-kbjBq580MKIN_1B7s5&oh=00_Afp9DGkXhMxthtq8tYB8XSgrPXysEAMYxmTBDUy_pfhLZQ&oe=6963C1F2" alt="🎸 The Jedis" class="band-image" loading="lazy">
-          <div class="band-image-overlay"></div>
-        </div>
-        <div class="band-content">
-          <h2>🎸 The Jedis</h2>
-          
-          <p>📅 When: Saturday, March 15th, 2025🎟  – Don’t miss out!Prepare to be transported to a galaxy of rock 'n' roll as The Jedis take the stage! Known for their high-energy performances and incredible musi...</p>
         </div>
       </article>
     
