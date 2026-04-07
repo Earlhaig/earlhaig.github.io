@@ -828,29 +828,13 @@
   <main class="container">
     <div class="stats">
       <div class="stat">
-        <div class="stat-number">85</div>
+        <div class="stat-number">84</div>
         <div class="stat-label">Upcoming Gigs</div>
       </div>
     </div>
 
     <div class="calendar-list">
       <h2 class="month-header">April 2026</h2>
-      <article class="calendar-event" data-id="wa68AL" data-sources='{"title":"Ents24","location":"Google Calendar → Monday Jam","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Monday Jm Session with The Octave Doctors" onclick="openEditCard(this)">
-        <div class="event-date">
-          <div class="event-day">6</div>
-          <div class="event-month">Apr</div>
-          <div class="event-weekday">Monday</div>
-        </div>
-        <div class="event-details">
-          <h3 class="event-title">Monday Jm Session with The Octave Doctors</h3>
-          <div class="event-location">Bar</div>
-        </div>
-        <div class="event-action">
-          <span class="event-btn-text">Free Entry</span>
-          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/monday-jm-session-with-the-octave-doctors/7456729" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
-        </div>
-      </article>
-    
       <article class="calendar-event" data-id="zawNyA" data-sources='{"title":"Ents24","location":"Google Calendar → Just Friends Jazz","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Just Friends Jazz Club" onclick="openEditCard(this)">
         <div class="event-date">
           <div class="event-day">7</div>
@@ -979,14 +963,14 @@
         </div>
       </article>
     
-      <article class="calendar-event" data-id="bkRxvy" data-sources='{"title":"Ents24","location":"Google Calendar → Rockers Reunion","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Rockers Reunion" onclick="openEditCard(this)">
+      <article class="calendar-event" data-id="bkRxvy" data-sources='{"title":"Saved edit","location":"Saved edit","price":"Saved edit","date":"Ents24","link":"Saved edit"}' data-orig-title="Rockers Reunion" onclick="openEditCard(this)">
         <div class="event-date">
           <div class="event-day">14</div>
           <div class="event-month">Apr</div>
           <div class="event-weekday">Tuesday</div>
         </div>
         <div class="event-details">
-          <h3 class="event-title">Rockers Reunion</h3>
+          <h3 class="event-title">Rockers Reunion with Fortunate Sons</h3>
           <div class="event-location">Bar</div>
         </div>
         <div class="event-action">
@@ -995,14 +979,14 @@
         </div>
       </article>
     
-      <article class="calendar-event" data-id="6BP2nm" data-sources='{"title":"Ents24","location":"Google Calendar → Lounge","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Friday Night Live with The Mark Davies Band" onclick="openEditCard(this)">
+      <article class="calendar-event" data-id="6BP2nm" data-sources='{"title":"Saved edit","location":"Saved edit","price":"Saved edit","date":"Ents24","link":"Saved edit"}' data-orig-title="Friday Night Live with The Mark Davies Band" onclick="openEditCard(this)">
         <div class="event-date">
           <div class="event-day">17</div>
           <div class="event-month">Apr</div>
           <div class="event-weekday">Friday</div>
         </div>
         <div class="event-details">
-          <h3 class="event-title">Friday Night Live with The Mark Davies Band</h3>
+          <h3 class="event-title">Friday Night Live with The Marc Davies Band</h3>
           <div class="event-location">Bar</div>
         </div>
         <div class="event-action">
@@ -2219,11 +2203,17 @@
         </div>
         <div class="edit-field" style="flex:1">
           <label>Price / Button</label>
-          <select id="editPrice">
+          <select id="editPriceType" onchange="toggleOtdPrice()">
             <option value="Free Entry">Free Entry</option>
-            <option value="£3 OTD">£3 OTD</option>
+            <option value="OTD">OTD (custom price)</option>
             <option value="View Event">View Event</option>
           </select>
+        </div>
+      </div>
+      <div class="edit-row" id="otdPriceRow" style="display:none">
+        <div class="edit-field" style="flex:1">
+          <label>OTD Price (£)</label>
+          <input type="number" id="editOtdAmount" min="0" step="1" value="3">
         </div>
       </div>
       <div class="edit-row">
@@ -2427,6 +2417,39 @@
     let deletedIds = [];
     let currentEditArticle = null;
 
+    function toggleOtdPrice() {
+      const type = document.getElementById('editPriceType').value;
+      const row = document.getElementById('otdPriceRow');
+      row.style.display = type === 'OTD' ? 'flex' : 'none';
+    }
+
+    function getEditPrice() {
+      const type = document.getElementById('editPriceType').value;
+      if (type === 'OTD') {
+        const amount = document.getElementById('editOtdAmount').value || '3';
+        return '£' + amount + ' OTD';
+      }
+      return type;
+    }
+
+    function setEditPrice(btnText) {
+      const typeSelect = document.getElementById('editPriceType');
+      const otdMatch = btnText.match(/^£(\d+)\s*OTD$/i);
+      if (otdMatch) {
+        typeSelect.value = 'OTD';
+        document.getElementById('editOtdAmount').value = otdMatch[1];
+      } else if (btnText === 'Free Entry' || btnText === 'View Event') {
+        typeSelect.value = btnText;
+      } else {
+        const opt = document.createElement('option');
+        opt.value = btnText;
+        opt.textContent = btnText;
+        typeSelect.appendChild(opt);
+        typeSelect.value = btnText;
+      }
+      toggleOtdPrice();
+    }
+
     function toggleEditMode() {
       editMode = !editMode;
       const btn = document.getElementById('editToggle');
@@ -2463,27 +2486,9 @@
       document.getElementById('editId').value = id;
       document.getElementById('editTitle').value = title;
       document.getElementById('editLocation').value = location;
-      document.getElementById('editPrice').value = btnText;
+      setEditPrice(btnText);
       document.getElementById('editDate').value = dateVal;
       document.getElementById('editLink').value = link;
-
-      // Add custom price option if not in defaults
-      const priceSelect = document.getElementById('editPrice');
-      const defaultPrices = ['Free Entry', '£3 OTD', 'View Event'];
-      if (!defaultPrices.includes(btnText)) {
-        // Check if custom option already exists
-        let found = false;
-        for (const opt of priceSelect.options) {
-          if (opt.value === btnText) { found = true; break; }
-        }
-        if (!found) {
-          const opt = document.createElement('option');
-          opt.value = btnText;
-          opt.textContent = btnText;
-          priceSelect.appendChild(opt);
-        }
-        priceSelect.value = btnText;
-      }
 
       // Populate source info
       let sources = {};
@@ -2527,7 +2532,7 @@
       if (!currentEditArticle) return;
       const title = document.getElementById('editTitle').value.trim();
       const location = document.getElementById('editLocation').value;
-      const price = document.getElementById('editPrice').value;
+      const price = getEditPrice();
       const dateVal = document.getElementById('editDate').value;
       const link = document.getElementById('editLink').value.trim();
 
