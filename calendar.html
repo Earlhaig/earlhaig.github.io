@@ -876,7 +876,7 @@
       </div>
     </div>
 
-    <div class="sync-bar">
+    <div class="sync-bar" id="ents24SyncBar" hidden>
       <button id="ents24SyncBtn" class="sync-btn" onclick="forceSyncEnts24()" type="button">
         <span class="sync-icon">&#x21bb;</span>
         <span class="sync-label">Force sync with Ents24</span>
@@ -2451,6 +2451,21 @@
     let editMode = false;
     let deletedIds = [];
     let currentEditArticle = null;
+
+    // Only show the Ents24 sync button on the live dashboard. The static
+    // copy on GitHub Pages has no /api/pull-ents24 endpoint, so the button
+    // would just 404 there.
+    (function () {
+      const h = (location.hostname || '').toLowerCase();
+      const isLan =
+        h === 'events.lan' || h === 'www.events.lan' ||
+        h === 'events.local' || h === 'www.events.local' ||
+        h === 'localhost' || h === '127.0.0.1';
+      if (isLan) {
+        const bar = document.getElementById('ents24SyncBar');
+        if (bar) bar.hidden = false;
+      }
+    })();
 
     async function forceSyncEnts24() {
       const btn = document.getElementById('ents24SyncBtn');
