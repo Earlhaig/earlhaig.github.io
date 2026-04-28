@@ -200,6 +200,49 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
+    /* Force-sync bar */
+    .sync-bar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.75rem;
+      margin: -1.5rem 0 1.25rem;
+      flex-wrap: wrap;
+    }
+    .sync-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      padding: 0.45rem 0.95rem;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+    .sync-btn:hover:not(:disabled) {
+      border-color: var(--color-accent-secondary);
+      color: var(--color-accent-secondary);
+    }
+    .sync-btn:disabled { opacity: 0.6; cursor: progress; }
+    .sync-btn .sync-icon { font-size: 1rem; line-height: 1; }
+    .sync-btn.is-syncing .sync-icon {
+      display: inline-block;
+      animation: sync-spin 1s linear infinite;
+    }
+    @keyframes sync-spin { to { transform: rotate(360deg); } }
+    .sync-status {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .sync-status.is-success { color: var(--color-accent-tertiary); }
+    .sync-status.is-error { color: var(--color-accent); }
+
     .stat {
       text-align: center;
       position: relative;
@@ -828,9 +871,17 @@
   <main class="container">
     <div class="stats">
       <div class="stat">
-        <div class="stat-number">70</div>
+        <div class="stat-number">83</div>
         <div class="stat-label">Upcoming Gigs</div>
       </div>
+    </div>
+
+    <div class="sync-bar">
+      <button id="ents24SyncBtn" class="sync-btn" onclick="forceSyncEnts24()" type="button">
+        <span class="sync-icon">&#x21bb;</span>
+        <span class="sync-label">Force sync with Ents24</span>
+      </button>
+      <span id="ents24SyncStatus" class="sync-status"></span>
     </div>
 
     <div class="calendar-list">
@@ -896,22 +947,6 @@
         <div class="event-action">
           <span class="event-btn-text">£3 OTD</span>
           <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/sunday-sessions-with-expecting-company/7463722" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">£3 OTD</a>
-        </div>
-      </article>
-    
-      <article class="calendar-event" data-id="NLZRwE" data-sources='{"title":"Ents24","location":"Google Calendar → Monday Jam","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Monday Night Open Mic & Jam Session" onclick="openEditCard(this)">
-        <div class="event-date">
-          <div class="event-day">4</div>
-          <div class="event-month">May</div>
-          <div class="event-weekday">Monday</div>
-        </div>
-        <div class="event-details">
-          <h3 class="event-title">Monday Night Open Mic & Jam Session</h3>
-          <div class="event-location">Bar</div>
-        </div>
-        <div class="event-action">
-          <span class="event-btn-text">Free Entry</span>
-          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/monday-night-open-mic-and-jam-session/7463598" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
         </div>
       </article>
     
@@ -1011,35 +1046,35 @@
         </div>
       </article>
     
-      <article class="calendar-event" data-id="YYdL7A" data-sources='{"title":"Ents24","location":"Google Calendar → Monday Jam","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Monday Night Open Mic & Jam Session" onclick="openEditCard(this)">
+      <article class="calendar-event" data-id="YYdL7A" data-sources='{"title":"Ents24","location":"Google Calendar → Monday Jam","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Monday Night Open Mic & Jam Session with The S'punkles" onclick="openEditCard(this)">
         <div class="event-date">
           <div class="event-day">11</div>
           <div class="event-month">May</div>
           <div class="event-weekday">Monday</div>
         </div>
         <div class="event-details">
-          <h3 class="event-title">Monday Night Open Mic & Jam Session</h3>
+          <h3 class="event-title">Monday Night Open Mic & Jam Session with The S'punkles</h3>
           <div class="event-location">Bar</div>
         </div>
         <div class="event-action">
           <span class="event-btn-text">Free Entry</span>
-          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/monday-night-open-mic-and-jam-session/7463605" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/monday-night-open-mic-and-jam-session-with-the-spunkles/7463605" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
         </div>
       </article>
     
-      <article class="calendar-event" data-id="RxQeB9" data-sources='{"title":"Ents24","location":"Google Calendar → Lounge","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Rockers Reunion at The Earl Haig Club" onclick="openEditCard(this)">
+      <article class="calendar-event" data-id="RxQeB9" data-sources='{"title":"Ents24","location":"Google Calendar → Lounge","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Rockers Reunion at The Earl Haig Club with The BC 60's" onclick="openEditCard(this)">
         <div class="event-date">
           <div class="event-day">12</div>
           <div class="event-month">May</div>
           <div class="event-weekday">Tuesday</div>
         </div>
         <div class="event-details">
-          <h3 class="event-title">Rockers Reunion at The Earl Haig Club</h3>
+          <h3 class="event-title">Rockers Reunion at The Earl Haig Club with The BC 60's</h3>
           <div class="event-location">Bar</div>
         </div>
         <div class="event-action">
           <span class="event-btn-text">Free Entry</span>
-          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/rockers-reunion-at-the-earl-haig-club/7463624" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/rockers-reunion-at-the-earl-haig-club-with-the-bc-60s/7463624" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
         </div>
       </article>
     
@@ -1203,19 +1238,19 @@
         </div>
       </article>
     
-      <article class="calendar-event" data-id="nKYGbj" data-sources='{"title":"Ents24","location":"Google Calendar → Monday Jam","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Monday Night Open Mic & Jam Session" onclick="openEditCard(this)">
+      <article class="calendar-event" data-id="nKYGbj" data-sources='{"title":"Ents24","location":"Google Calendar → Monday Jam","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Monday Night Open Mic & Jam Session with Familiar Beerz" onclick="openEditCard(this)">
         <div class="event-date">
           <div class="event-day">25</div>
           <div class="event-month">May</div>
           <div class="event-weekday">Monday</div>
         </div>
         <div class="event-details">
-          <h3 class="event-title">Monday Night Open Mic & Jam Session</h3>
+          <h3 class="event-title">Monday Night Open Mic & Jam Session with Familiar Beerz</h3>
           <div class="event-location">Bar</div>
         </div>
         <div class="event-action">
           <span class="event-btn-text">Free Entry</span>
-          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/monday-night-open-mic-and-jam-session/7463616" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/monday-night-open-mic-and-jam-session-with-familiar-beerz/7463616" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
         </div>
       </article>
     
@@ -1363,19 +1398,19 @@
         </div>
       </article>
     
-      <article class="calendar-event" data-id="wa6A2a" data-sources='{"title":"Ents24","location":"Google Calendar → Lounge","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Saturday Night Live with Stonehouse" onclick="openEditCard(this)">
+      <article class="calendar-event" data-id="wa6A2a" data-sources='{"title":"Ents24","location":"Inferred","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Saturday Night Live" onclick="openEditCard(this)">
         <div class="event-date">
           <div class="event-day">13</div>
           <div class="event-month">Jun</div>
           <div class="event-weekday">Saturday</div>
         </div>
         <div class="event-details">
-          <h3 class="event-title">Saturday Night Live with Stonehouse</h3>
+          <h3 class="event-title">Saturday Night Live</h3>
           <div class="event-location">Bar</div>
         </div>
         <div class="event-action">
           <span class="event-btn-text">Free Entry</span>
-          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/saturday-night-live-with-stonehouse/7464029" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/saturday-night-live/7464029" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
         </div>
       </article>
     
@@ -1954,6 +1989,230 @@
           <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/legend-the-music-of-bob-marley/7476565" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">£26.75</a>
         </div>
       </article>
+    <h2 class="month-header">May 2026</h2>
+      <article class="calendar-event" data-id="QxENq4" data-sources='{"title":"Ents24","location":"Google Calendar → Lounge","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Dave & Tony’s Night of Acoustic Blues" onclick="openEditCard(this)">
+        <div class="event-date">
+          <div class="event-day">26</div>
+          <div class="event-month">May</div>
+          <div class="event-weekday">Tuesday</div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title">Dave & Tony’s Night of Acoustic Blues</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <span class="event-btn-text">Free Entry</span>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/dave-and-tonys-night-of-acoustic-blues/7477735" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+        </div>
+      </article>
+    <h2 class="month-header">June 2026</h2>
+      <article class="calendar-event" data-id="Lz6YKX" data-sources='{"title":"Ents24","location":"Google Calendar → Monday Jam","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Monday Night Open Mic & Jam Session with Tattsyrup" onclick="openEditCard(this)">
+        <div class="event-date">
+          <div class="event-day">1</div>
+          <div class="event-month">Jun</div>
+          <div class="event-weekday">Monday</div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title">Monday Night Open Mic & Jam Session with Tattsyrup</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <span class="event-btn-text">Free Entry</span>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/monday-night-open-mic-and-jam-session-with-tattsyrup/7477752" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event" data-id="ymZk08" data-sources='{"title":"Ents24","location":"Google Calendar → Lounge","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Just Friends Jazz Club at The Earl Haig Club Bar" onclick="openEditCard(this)">
+        <div class="event-date">
+          <div class="event-day">2</div>
+          <div class="event-month">Jun</div>
+          <div class="event-weekday">Tuesday</div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title">Just Friends Jazz Club at The Earl Haig Club Bar</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <span class="event-btn-text">Free Entry</span>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/just-friends-jazz-club-at-the-earl-haig-club-bar/7477758" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event" data-id="RxQAd6" data-sources='{"title":"Ents24","location":"Google Calendar → Concert Room","price":"Ents24 tickets","date":"Ents24","link":"Ents24"}' data-orig-title="Capital City Jazz Orchestra" onclick="openEditCard(this)">
+        <div class="event-date">
+          <div class="event-day">4</div>
+          <div class="event-month">Jun</div>
+          <div class="event-weekday">Thursday</div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title">Capital City Jazz Orchestra</h3>
+          <div class="event-location">Concert Hall</div>
+        </div>
+        <div class="event-action">
+          <span class="event-btn-text">£10.00</span>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/capital-city-jazz-orchestra/7477768" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">£10.00</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event" data-id="q5AWbR" data-sources='{"title":"Ents24","location":"Google Calendar → Monday Jam","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Monday Night Open Mic & Jam Session with Mark Pontin" onclick="openEditCard(this)">
+        <div class="event-date">
+          <div class="event-day">8</div>
+          <div class="event-month">Jun</div>
+          <div class="event-weekday">Monday</div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title">Monday Night Open Mic & Jam Session with Mark Pontin</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <span class="event-btn-text">Free Entry</span>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/monday-night-open-mic-and-jam-session-with-mark-pontin/7477753" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event" data-id="nKYOE0" data-sources='{"title":"Ents24","location":"Google Calendar → Lounge","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Rockers Reunion" onclick="openEditCard(this)">
+        <div class="event-date">
+          <div class="event-day">9</div>
+          <div class="event-month">Jun</div>
+          <div class="event-weekday">Tuesday</div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title">Rockers Reunion</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <span class="event-btn-text">Free Entry</span>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/rockers-reunion/7477760" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event" data-id="NLZ8d4" data-sources='{"title":"Ents24","location":"Google Calendar → Monday Jam","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Monday Night Open Mic & Jam Session with Joucie" onclick="openEditCard(this)">
+        <div class="event-date">
+          <div class="event-day">15</div>
+          <div class="event-month">Jun</div>
+          <div class="event-weekday">Monday</div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title">Monday Night Open Mic & Jam Session with Joucie</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <span class="event-btn-text">Free Entry</span>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/monday-night-open-mic-and-jam-session-with-joucie/7477754" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event" data-id="akPoEl" data-sources='{"title":"Ents24","location":"Google Calendar → Strictly Acoustic","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Strictly Acoustic with Andy Johnson" onclick="openEditCard(this)">
+        <div class="event-date">
+          <div class="event-day">16</div>
+          <div class="event-month">Jun</div>
+          <div class="event-weekday">Tuesday</div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title">Strictly Acoustic with Andy Johnson</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <span class="event-btn-text">Free Entry</span>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/strictly-acoustic-with-andy-johnson/7477763" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event" data-id="Bv0wQp" data-sources='{"title":"Ents24","location":"Google Calendar → Monday Jam","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Monday Night Open Mic & Jam Session with The Sundogs" onclick="openEditCard(this)">
+        <div class="event-date">
+          <div class="event-day">22</div>
+          <div class="event-month">Jun</div>
+          <div class="event-weekday">Monday</div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title">Monday Night Open Mic & Jam Session with The Sundogs</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <span class="event-btn-text">Free Entry</span>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/monday-night-open-mic-and-jam-session-with-the-sundogs/7477756" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event" data-id="6BPv2b" data-sources='{"title":"Ents24","location":"Google Calendar → Lounge","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Dave & Tony’s Night of Acoustic Blues" onclick="openEditCard(this)">
+        <div class="event-date">
+          <div class="event-day">23</div>
+          <div class="event-month">Jun</div>
+          <div class="event-weekday">Tuesday</div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title">Dave & Tony’s Night of Acoustic Blues</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <span class="event-btn-text">Free Entry</span>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/dave-and-tonys-night-of-acoustic-blues/7477767" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event" data-id="9412Q4" data-sources='{"title":"Ents24","location":"Google Calendar → Monday Jam","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Monday Night Open Mic & Jam Session" onclick="openEditCard(this)">
+        <div class="event-date">
+          <div class="event-day">29</div>
+          <div class="event-month">Jun</div>
+          <div class="event-weekday">Monday</div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title">Monday Night Open Mic & Jam Session</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <span class="event-btn-text">Free Entry</span>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/monday-night-open-mic-and-jam-session/7477757" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+        </div>
+      </article>
+    <h2 class="month-header">July 2026</h2>
+      <article class="calendar-event" data-id="4QX456" data-sources='{"title":"Ents24","location":"Google Calendar → Lounge","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Just Friends Jazz Club at The Earl Haig Club Bar," onclick="openEditCard(this)">
+        <div class="event-date">
+          <div class="event-day">7</div>
+          <div class="event-month">Jul</div>
+          <div class="event-weekday">Tuesday</div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title">Just Friends Jazz Club at The Earl Haig Club Bar,</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <span class="event-btn-text">Free Entry</span>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/just-friends-jazz-club-at-the-earl-haig-club-bar/7477759" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event" data-id="vblWmK" data-sources='{"title":"Ents24","location":"Google Calendar → Lounge","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Rockers Reunion – at The Earl Haig Club with Live Music" onclick="openEditCard(this)">
+        <div class="event-date">
+          <div class="event-day">14</div>
+          <div class="event-month">Jul</div>
+          <div class="event-weekday">Tuesday</div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title">Rockers Reunion – at The Earl Haig Club with Live Music</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <span class="event-btn-text">Free Entry</span>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/rockers-reunion-at-the-earl-haig-club-with-live-music/7477761" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+        </div>
+      </article>
+    
+      <article class="calendar-event" data-id="lGeWEz" data-sources='{"title":"Ents24","location":"Google Calendar → Strictly Acoustic","price":"Default (free)","date":"Ents24","link":"Ents24"}' data-orig-title="Strictly Acoustic with Andy Johnson" onclick="openEditCard(this)">
+        <div class="event-date">
+          <div class="event-day">21</div>
+          <div class="event-month">Jul</div>
+          <div class="event-weekday">Tuesday</div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title">Strictly Acoustic with Andy Johnson</h3>
+          <div class="event-location">Bar</div>
+        </div>
+        <div class="event-action">
+          <span class="event-btn-text">Free Entry</span>
+          <a href="https://www.ents24.com/cardiff-events/the-earl-haig-club/strictly-acoustic-with-andy-johnson/7477765" target="_blank" rel="noopener" class="view-event-btn" onclick="event.stopPropagation()">Free Entry</a>
+        </div>
+      </article>
     
     </div>
   </main>
@@ -2192,6 +2451,35 @@
     let editMode = false;
     let deletedIds = [];
     let currentEditArticle = null;
+
+    async function forceSyncEnts24() {
+      const btn = document.getElementById('ents24SyncBtn');
+      const status = document.getElementById('ents24SyncStatus');
+      const label = btn.querySelector('.sync-label');
+      btn.disabled = true;
+      btn.classList.add('is-syncing');
+      label.textContent = 'Syncing…';
+      status.className = 'sync-status';
+      status.textContent = 'Pulling from Ents24 and rebuilding the public site, this can take up to 90s…';
+      try {
+        const res = await fetch('/api/pull-ents24', { method: 'POST' });
+        const data = await res.json();
+        if (data.success) {
+          status.classList.add('is-success');
+          status.textContent = 'Synced. Reloading…';
+          setTimeout(() => window.location.reload(), 800);
+          return;
+        }
+        status.classList.add('is-error');
+        status.textContent = data.error || 'Sync failed';
+      } catch (err) {
+        status.classList.add('is-error');
+        status.textContent = 'Error: ' + err.message;
+      }
+      btn.disabled = false;
+      btn.classList.remove('is-syncing');
+      label.textContent = 'Force sync with Ents24';
+    }
 
     function toggleOtdPrice() {
       const type = document.getElementById('editPriceType').value;
