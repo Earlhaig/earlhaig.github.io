@@ -2462,19 +2462,30 @@
       status.className = 'sync-status';
       status.textContent = 'Pulling from Ents24 and rebuilding the public site, this can take up to 90s…';
       try {
-        const res = await fetch('/api/pull-ents24', { method: 'POST' });
-        const data = await res.json();
-        if (data.success) {
+        const res = await fetch('/api/pull-ents24', {
+          method: 'POST',
+          cache: 'no-store',
+          headers: { 'Accept': 'application/json' },
+        });
+        const text = await res.text();
+        let data = null;
+        try { data = JSON.parse(text); } catch (_) {}
+        if (data && data.success) {
           status.classList.add('is-success');
           status.textContent = 'Synced. Reloading…';
           setTimeout(() => window.location.reload(), 800);
           return;
         }
         status.classList.add('is-error');
-        status.textContent = data.error || 'Sync failed';
+        if (data && data.error) {
+          status.textContent = 'Sync failed: ' + data.error;
+        } else {
+          const snippet = (text || '').replace(/\s+/g, ' ').slice(0, 160);
+          status.textContent = 'HTTP ' + res.status + ' — ' + (snippet || 'empty body');
+        }
       } catch (err) {
         status.classList.add('is-error');
-        status.textContent = 'Error: ' + err.message;
+        status.textContent = 'Network error: ' + err.message;
       }
       btn.disabled = false;
       btn.classList.remove('is-syncing');
