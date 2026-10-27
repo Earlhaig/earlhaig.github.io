@@ -133,5 +133,32 @@
     "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196248389%2F285486837247%2F1%2Foriginal.20261021-031632?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c9b401562d5378665a1ce6dbcf8d4da6",
     "venueName": "The Earl Haig Club",
     "venueAddress": "22-23 Penlline Road Whitchurch, Cardiff, CF14  2 AA"
+  },
+  {
+    "name": "LETZ ZEP",
+    "description": "The Uks official no1 tribute to Led Zeppelin",
+    "url": "https://www.eventbrite.co.uk/e/letz-zep-tickets-2003923522199",
+    "start": "2027-03-19T19:15:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196654434%2F285486837247%2F1%2Foriginal.20261027-031929?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=8c157083c0087bd7af482428e516491e",
+    "venueName": "The Earl Haig Club",
+    "venueAddress": "22-23 Penlline Road, Cardiff, CF14 2AA"
+  },
+  {
+    "name": "THE KILTICS -Boxing Night Special !",
+    "description": "Boxing Night Special !",
+    "url": "https://www.eventbrite.co.uk/e/the-kiltics-boxing-night-special-tickets-2003932328539",
+    "start": "2026-12-26T19:00:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196654326%2F285486837247%2F1%2Foriginal.20261027-031655?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=38b50e3bf00db287c9699a535c0580f7",
+    "venueName": "The Potters Newport",
+    "venueAddress": "22-24 Upper Dock Street, Newport, NP20 1DL"
+  },
+  {
+    "name": "SO ABBA New Years Special !",
+    "description": "A night of great entertainment  to bring in the New Year !",
+    "url": "https://www.eventbrite.co.uk/e/so-abba-new-years-special-tickets-2003933255311",
+    "start": "2026-12-31T19:00:00",
+    "logoUrl": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196654384%2F285486837247%2F1%2Foriginal.20261027-031812?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=f286ce4066a3e0d09587291a97fd2c51",
+    "venueName": "THE POTTERS",
+    "venueAddress": "22-24 Upper Dock Street, Newport, NP20 1DL"
   }
 ]
